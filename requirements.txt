@@ -1,0 +1,7 @@
+opencv-python
+paddleocr
+paddlepaddle
+streamlit
+rapidfuzz
+pandas
+numpy
