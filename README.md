@@ -220,7 +220,7 @@ Interface web de démonstration construite avec **Streamlit** :
 | opencv-python | 4.x | Traitement d'image, morphologie, transformations affines |
 | paddleocr | 3.x | OCR layout-aware, reconnaissance de l'écriture manuscrite |
 | paddlepaddle | 3.x | Backend moteur de PaddleOCR |
-| streamlit | 1.x | Interface web Python-only |
+| streamlit | 1.x | Interface web |
 | rapidfuzz | 3.x | Distance de Levenshtein, correspondance floue de chaînes |
 | pandas | 2.x | Manipulation de données, export CSV |
 | numpy | 1.x | Calcul numérique, manipulation des tableaux image |
