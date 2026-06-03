@@ -1,1 +1,14 @@
-<annotation><filename>attendance register.jpg</filename><size><width>835</width><height>547</height><depth>3</depth></size><object><name>header</name><bndbox><xmin>832</xmin><ymin>208</ymin><xmax>0</xmax><ymax>0</ymax></bndbox></object><object><name>table</name><bndbox><xmin>2</xmin><ymin>211</ymin><xmax>831</xmax><ymax>544</ymax></bndbox></object></annotation>
+<annotation>
+<filename>attendance register.jpg</filename>
+<size><width>835</width><height>547</height><depth>3</depth></size>
+
+<object>
+   <name>header</name>
+   <bndbox><xmin>832</xmin><ymin>208</ymin><xmax>0</xmax><ymax>0</ymax></bndbox>
+</object>
+
+<object>
+   <name>table</name>
+   <bndbox><xmin>2</xmin><ymin>211</ymin><xmax>831</xmax><ymax>544</ymax></bndbox>
+</object>
+</annotation>
