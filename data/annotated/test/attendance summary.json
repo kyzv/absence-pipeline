@@ -1,0 +1,46 @@
+{
+  "version": "6.3.1",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "header",
+      "points": [
+        [
+          584.0492957746478,
+          112.95774647887322
+        ],
+        [
+          0.9507042253520694,
+          3.0985915492957474
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "table",
+      "points": [
+        [
+          0.9507042253520694,
+          108.73239436619716
+        ],
+        [
+          552.9690586960677,
+          1040.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\..\\raw\\test\\attendance summary.jpg",
+  "imageData": null,
+  "imageHeight": 1040,
+  "imageWidth": 585
+}

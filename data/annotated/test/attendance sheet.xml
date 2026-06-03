@@ -1,0 +1,1 @@
+<annotation><filename>attendance sheet.jpg</filename><size><width>721</width><height>1080</height><depth>3</depth></size><object><name>header</name><bndbox><xmin>112</xmin><ymin>71</ymin><xmax>718</xmax><ymax>181</ymax></bndbox></object><object><name>footer</name><bndbox><xmin>82</xmin><ymin>915</ymin><xmax>718</xmax><ymax>1078</ymax></bndbox></object></annotation>
