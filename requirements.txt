@@ -5,3 +5,4 @@ streamlit
 rapidfuzz
 pandas
 numpy
+labelImg
