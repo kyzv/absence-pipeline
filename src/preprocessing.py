@@ -53,7 +53,7 @@ def preprocess(image_path):
 # PRIVATE FUNCTIONS — internal steps, not called from outside this file
 # =============================================================================
 # Functions prefixed with _ are private by convention in Python.
-# They exist as separate functions purely for readability — each one does
+# They exist as separate functions purely for readability; each one does
 # exactly one thing, has a clear name, and can be tested individually.
 
 
@@ -82,10 +82,10 @@ def _deskew(image, max_angle=10.0):
     OUT: BGR image (h, w, 3) with rotation corrected
 
     HOW:
-      1. Convert to grayscale — Hough only needs intensity, not color
-      2. Binarize inverted — Hough needs white objects on black background
-      3. Close horizontally — merge letters on the same line into solid bars
-      4. Hough Line Transform — detect those bars as line segments
+      1. Convert to grayscale : Hough only needs intensity, not color
+      2. Binarize inverted : Hough needs white objects on black background
+      3. Close horizontally : merge letters on the same line into solid bars
+      4. Hough Line Transform : detect those bars as line segments
       5. Compute the median angle of all near-horizontal lines
       6. Rotate the original image by that angle
 
@@ -104,9 +104,9 @@ def _deskew(image, max_angle=10.0):
     # IN : (h, w) grayscale
     # cv2.threshold converts every pixel to either 0 or 255.
     # Parameters:
-    #   gray       — input array
-    #   0          — threshold value placeholder (Otsu ignores this)
-    #   255        — value assigned to pixels that pass the threshold
+    #   gray       -- input array
+    #   0          -- threshold value placeholder (Otsu ignores this)
+    #   255        -- value assigned to pixels that pass the threshold
     #   THRESH_BINARY_INV — pixels BELOW threshold → 255 (white)
     #                       pixels ABOVE threshold → 0   (black)
     #                       INV = inverted = text is white, background black
@@ -290,7 +290,7 @@ def _binarize(image, block_size=31, C=15):
     IN : BGR image (h, w, 3) OR grayscale image (h, w)
     OUT: binary image (h, w), dtype uint8, text=0 (black), background=255 (white)
 
-    HOW — adaptive Gaussian thresholding:
+    HOW : adaptive Gaussian thresholding:
 
     Why adaptive instead of Otsu?
       Otsu computes ONE threshold for the entire image.
