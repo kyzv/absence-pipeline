@@ -68,7 +68,7 @@ def extract_header(image_path: str,
     # ── 2. Run OCR ──────────────────────────────────────────────────────
     # ocr.ocr(image_path) returns a list of pages. Since we pass a single
     # image, we get a list with one element: [ [ [box, (text, confidence)], ... ] ].
-    result = ocr.ocr(image_path)
+    result = ocr.predict(image_path)
     if not result or not result[0]:
         print("Warning: No text found in header image.")
         return _empty_result()
