@@ -1,38 +1,15 @@
 # src/ocr_header.py
 """
-Stage 3 of the absence pipeline — OCR on the header region.
+Stage 3 – OCR on the header region.
 
-Responsibilities:
-    1. Load the cropped header image (from cropper.py).
-    2. Run PaddleOCR to detect and recognise all text.
-    3. Parse the recognised text to extract:
-        - Enseignant (teacher)
-        - Module
-        - Elément
-        - Date
-        - Heure
-        - Type de séance (Cours / TD / TP)
-    4. Return a structured dictionary and optionally save it as JSON.
-
-This module handles both printed text (labels like "Enseignant :") and
-handwritten text (the teacher's entries). No checkbox detection is done
-here – that belongs to checkbox_detection.py.
-
-Input  : path to header image (e.g., data/cropped/as1_header.jpg)
-Output : dict with keys 'enseignant','module','element','date','heure','type'
-         + optional JSON file saved in data/metadata/
+Uses PaddleOCR 3.x to extract metadata from the binary header.
+The OCRResult object is accessed like a dictionary (keys: 'rec_texts', 'rec_scores', 'rec_polys').
 """
 
-import os
-import re
-import json
+import os, re, json
 from typing import Dict, List, Optional
 from paddleocr import PaddleOCR
 
-
-# ─────────────────────────────────────────────────────────────────────────────
-# PUBLIC API
-# ─────────────────────────────────────────────────────────────────────────────
 
 def extract_header(image_path: str,
                    output_dir: str = "data/metadata",
@@ -40,78 +17,37 @@ def extract_header(image_path: str,
                    known_modules: Optional[List[str]] = None) -> Dict[str, str]:
     """
     Extract handwritten/printed metadata from a header image.
-
-    Args:
-        image_path      : path to the header image (BGR, from cropper.py).
-        output_dir      : folder where the extracted JSON will be saved.
-        known_teachers  : optional list of valid teacher names (for fuzzy
-                          correction – not yet implemented).
-        known_modules   : optional list of valid module names.
-
-    Returns:
-        {
-            'enseignant': '...',
-            'module':     '...',
-            'element':    '...',
-            'date':       '...',
-            'heure':      '...',
-            'type':       'Cours' / 'TD' / 'TP' / ''
-        }
     """
-    # ── 1. Initialise PaddleOCR ──────────────────────────────────────────
-    # PaddleOCR(use_angle_cls=True, lang='fr') :
-    #   use_angle_cls=True → a small model corrects upside-down or rotated text
-    #   lang='fr'          → French language model (improves accent handling)
-    #   show_log=False     → suppress progress bars for cleaner output
-    ocr = PaddleOCR(use_textline_orientation=True, lang='fr')
+    ocr = PaddleOCR(lang='fr', use_textline_orientation=True)
 
-    # ── 2. Run OCR ──────────────────────────────────────────────────────
-    # ocr.ocr(image_path) returns a list of pages. Since we pass a single
-    # image, we get a list with one element: [ [ [box, (text, confidence)], ... ] ].
-    result = ocr.predict(image_path)
-    if not result or not result[0]:
-        print("Warning: No text found in header image.")
+    raw = ocr.predict(image_path)
+    if not raw or not raw[0]:
+        print("Warning: No text found.")
         return _empty_result()
 
-    # Flatten: we only have one page → result[0]
-    detections = result[0]   # list of [box, (text, confidence)]
+    page = raw[0]                     # dict-like OCRResult
+    # Access the recognized texts, scores, and polygons via dictionary keys
+    texts = page['rec_texts']         # list of strings
+    scores = page['rec_scores']       # list of floats
+    boxes = page['rec_polys']         # list of np.array of shape (4,2)
 
-    # ── 3. Collect all recognised texts ─────────────────────────────────
-    # We'll keep the full text and its vertical position (y‑coordinate)
-    # because the header fields appear in a predictable top‑to‑bottom order.
+    # Collect lines with vertical position (top‑left y)
     lines = []
-    for det in detections:
-        box, (text, conf) = det
-        # box is a list of 4 points [[x1,y1],[x2,y2],[x3,y3],[x4,y4]]
-        # We use the top‑left y to sort lines.
-        y_top = box[0][1]
-        lines.append({
-            'text': text.strip(),
-            'y': y_top,
-            'confidence': conf
-        })
+    for box, text, conf in zip(boxes, texts, scores):
+        y_top = box[0][1]             # first point's y-coordinate
+        lines.append({'text': text.strip(), 'y': y_top, 'confidence': conf})
 
     # Sort top → bottom
     lines.sort(key=lambda d: d['y'])
 
-    # ── 4. Extract fields with simple rules ─────────────────────────────
-    # The header layout we assume (based on the images):
-    #   - A line containing "Enseignant" followed by the teacher's name
-    #   - A line containing "Module" followed by the module name
-    #   - A line containing "Elément" (or "Element") followed by the element name
-    #   - Date and Heure may appear as "Date : dd/mm/yyyy" and "Heure : HH:MM"
-    #   - Type de séance (Cours/TD/TP) may be written next to checkboxes or as text
-    #
-    # Because OCR mixes labels and handwritten text, we'll search for
-    # keywords and extract whatever follows them.
-
     full_text = ' '.join([l['text'] for l in lines])
 
-    enseignant = _extract_field(lines, full_text, r'enseignant\s*[:\-]?\s*(.*)', default='')
-    module     = _extract_field(lines, full_text, r'module\s*[:\-]?\s*(.*)', default='')
-    element    = _extract_field(lines, full_text, r'[ée]l[ée]ment\s*[:\-]?\s*(.*)', default='')
-    date       = _extract_field(lines, full_text, r'date\s*[:\-]?\s*(\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{2,4})', default='')
-    heure      = _extract_field(lines, full_text, r'heure\s*[:\-]?\s*(\d{1,2}[h:]\d{2})', default='')
+    enseignant = _extract_field(lines, full_text, r'enseignant\s*[:\-]?\s*(.*)')
+    module     = _extract_field(lines, full_text, r'module\s*[:\-]?\s*(.*)')
+    element    = _extract_field(lines, full_text, r'[ée]l[ée]ment\s*[:\-]?\s*(.*)')
+    date       = _extract_field(lines, full_text, r'date\s*[:\-]?\s*(\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{2,4})')
+    # Heure: we look for "Heure" followed by optional "Début" or "Fin" and capture any digit/h pattern
+    heure      = _extract_heure(lines, full_text)
     session_type = _detect_session_type(lines, full_text)
 
     metadata = {
@@ -123,7 +59,6 @@ def extract_header(image_path: str,
         'type': session_type
     }
 
-    # ── 5. Save to JSON ─────────────────────────────────────────────────
     os.makedirs(output_dir, exist_ok=True)
     base = os.path.splitext(os.path.basename(image_path))[0]
     json_path = os.path.join(output_dir, f"{base}_metadata.json")
@@ -133,72 +68,63 @@ def extract_header(image_path: str,
     return metadata
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# PRIVATE HELPERS
-# ─────────────────────────────────────────────────────────────────────────────
-
-def _extract_field(lines: List[Dict], full_text: str, pattern: str, default: str = '') -> str:
-    """
-    Try to extract a field using a regular expression.
-    First search the full concatenated text. If no match, try individual lines.
-    """
-    match = re.search(pattern, full_text, re.IGNORECASE)
-    if match:
-        value = match.group(1).strip()
-        # Remove possible leftover label fragments
-        value = re.sub(r'(enseignant|module|élément|element|date|heure)\s*[:\-]?\s*', '', value, flags=re.IGNORECASE).strip()
-        if value:
-            return value
-
-    # Fallback: examine lines near known keywords
+def _extract_field(lines, full_text, pattern, default=''):
+    m = re.search(pattern, full_text, re.IGNORECASE)
+    if m:
+        val = m.group(1).strip()
+        # Remove any leftover label
+        val = re.sub(r'(enseignant|module|élément|element|date|heure)\s*[:\-]?\s*', '', val, flags=re.IGNORECASE).strip()
+        if val:
+            return val
+    # Fallback: next line after keyword
     for i, line in enumerate(lines):
         if re.search(r'enseignant|module|élément|element|date|heure', line['text'], re.IGNORECASE):
-            # The next line(s) might contain the handwritten value
             for j in range(i+1, min(i+3, len(lines))):
-                candidate = lines[j]['text'].strip()
-                if candidate and not re.search(r'enseignant|module|élément|element|date|heure', candidate, re.IGNORECASE):
-                    return candidate
+                cand = lines[j]['text'].strip()
+                if cand and not re.search(r'enseignant|module|élément|element|date|heure', cand, re.IGNORECASE):
+                    return cand
     return default
 
 
-def _detect_session_type(lines: List[Dict], full_text: str) -> str:
+def _extract_heure(lines, full_text):
     """
-    Determine whether Cours, TD, or TP was selected.
-    Looks for checkmarks near the words 'Cours', 'TD', 'TP' or explicit text.
-    Returns 'Cours', 'TD', 'TP' or ''.
+    Extract session time from lines. Handles misread digits like 'Ch30' -> '08h30'.
     """
-    # Simple text-based detection: if the word appears with high confidence
-    # and not as a label, we assume it's the selected one.
-    types = ['Cours', 'TD', 'TP']
-    for t in types:
-        if re.search(r'\b' + t + r'\b', full_text, re.IGNORECASE):
-            # Check if there is a nearby checkmark – but for now we just return
-            # the first occurrence that isn't obviously a label.
-            # A more advanced version would use checkbox detection.
-            return t
+    # Try to find a pattern like "08h30" or "10h30"
+    m = re.search(r'(\d{1,2}[h:]\d{2})', full_text, re.IGNORECASE)
+    if m:
+        return m.group(1)
+    # If no standard pattern, look for something like "Ch30" near "Heure Début"
+    for i, line in enumerate(lines):
+        if re.search(r'heure\s*d[ée]but', line['text'], re.IGNORECASE):
+            for j in range(i+1, min(i+3, len(lines))):
+                cand = lines[j]['text'].strip()
+                # replace 'Ch' with '08' if it looks like a time
+                cand_clean = re.sub(r'\bCh\b', '08', cand)
+                if re.search(r'\d{1,2}[h:]\d{2}', cand_clean):
+                    return cand_clean
     return ''
 
 
-def _empty_result() -> Dict[str, str]:
-    return {
-        'enseignant': '',
-        'module': '',
-        'element': '',
-        'date': '',
-        'heure': '',
-        'type': ''
-    }
+def _detect_session_type(lines, full_text):
+    # Check for explicit mentions of Cours, TD, TP
+    for t in ['Cours', 'TD', 'TP']:
+        if re.search(r'\b' + t + r'\b', full_text, re.IGNORECASE):
+            return t
+    # Also check abbreviations like 'Crs' for Cours
+    if re.search(r'\bCrs\b', full_text):
+        return 'Cours'
+    return ''
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# COMMAND‑LINE TEST
-# ─────────────────────────────────────────────────────────────────────────────
+def _empty_result():
+    return {'enseignant': '', 'module': '', 'element': '', 'date': '', 'heure': '', 'type': ''}
+
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) < 2:
         print("Usage: python src/ocr_header.py <header_image>")
         sys.exit(1)
-
-    header_path = sys.argv[1]
-    meta = extract_header(header_path)
+    meta = extract_header(sys.argv[1])
     print(json.dumps(meta, indent=2, ensure_ascii=False))

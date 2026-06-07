@@ -1,6 +1,6 @@
 # src/cropper.py
 """
-Stage 2 of the absence pipeline -/  region separation.
+Stage 2 of the absence pipeline — region separation.
 
 Responsibilities:
     1. Load a preprocessed image (output of preprocessing.py).
@@ -19,7 +19,7 @@ Input  : path to a preprocessed image (e.g., data/preprocessed/as1.jpeg)
          + a flag indicating whether this is the first page of the document
 Output : header image saved to data/cropped/{base}_header.jpg
          table  image saved to data/cropped/{base}_table.jpg
-         + dict with keys 'header_path' (or None),   'table_path'
+         + dict with keys 'header_path' (or None), 'table_path'
 """
 
 import os
@@ -63,7 +63,7 @@ def crop_page(image_path: str,
             # Detection failed → use fallback (top 30% of height)
             split_y = int(h * 0.30)
         # Safety: never cut at extreme edge
-        split_y = max(30, min(h - 10, split_y))
+        split_y = max(10, min(h - 10, split_y))
     else:
         # Continuation pages have no header – the whole image is the table.
         split_y = 0
