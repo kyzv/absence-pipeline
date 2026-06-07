@@ -1,8 +1,68 @@
 {
-  "enseignant": "Elément Strucbues de données awancées I Séance3 Séance6 Séance5 Séance7 Séance2 Séance4 Séance1 Séance8 Séance9 Séance10 04/06/26 N.B: 08h30 Début A : Absence 10h30 Fin P : Présence crs Type(Crs,TP,TD,Cnt,Exm)",
-  "module": "Séance3 Séance6 Séance5 Séance7 Séance2 Séance4 Séance1 Séance8 Séance9 Séance10 04/06/26 N.B: 08h30 Début A : Absence 10h30 Fin P : Présence crs Type(Crs,TP,TD,Cnt,Exm)",
-  "element": "Strucbues de données awancées I Séance3 Séance6 Séance5 Séance7 Séance2 Séance4 Séance1 Séance8 Séance9 Séance10 04/06/26 N.B: 08h30 Début A : Absence 10h30 Fin P : Présence crs Type(Crs,TP,TD,Cnt,Exm)",
-  "date": "Elément",
-  "heure": "08h30",
-  "type": "TD"
+  "filiere": "Génie Informatique 1ère année",
+  "annee": "2024-2025",
+  "enseignant": "Elément",
+  "module": "",
+  "seances": {
+    "1": {
+      "date": "04/06/26",
+      "heure_debut": "10h30",
+      "heure_fin": "crs",
+      "type": ""
+    },
+    "2": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "3": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "4": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "5": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "6": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "7": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "8": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "9": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "10": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    }
+  }
 }

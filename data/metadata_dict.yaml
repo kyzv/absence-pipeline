@@ -1,0 +1,111 @@
+enseignant:
+- pattern: (?i)(pr\.?|prof\.?|dr\.?|m\.?|mr\.?)?\s*Rachid\s+AitDaoud
+  value: Pr. Rachid AitDaoud
+- pattern: (?i)(pr\.?|prof\.?|dr\.?|m\.?|mr\.?)?\s*AitDaoud
+  value: Pr. Rachid AitDaoud
+- pattern: (?i)(pr\.?|prof\.?|dr\.?|m\.?|mr\.?)?\s*Hamid\s+Sakhi
+  value: Pr. Hamid Sakhi
+- pattern: (?i)(pr\.?|prof\.?|dr\.?|m\.?|mr\.?)?\s*Sakhi
+  value: Pr. Hamid Sakhi
+module:
+- pattern: (?i)Structures\s+de\s+donn\[ée\[èeé\]\[êeé\]\]es\s+avanc\[ée\[èeé\]\[êeé\]\]es
+  value: Structures de données avancées
+- pattern: (?i)Structures\s+de\s+donn\[ée\[èeé\]\[êeé\]\]es
+  value: Structures de données avancées
+- pattern: (?i)Algorithmique
+  value: Algorithmique
+- pattern: (?i)Base\s+de\s+donn\[ée\[èeé\]\[êeé\]\]es
+  value: Base de données
+- pattern: (?i)Base\s+de
+  value: Base de données
+- pattern: (?i)R\[ée\[èeé\]\[êeé\]\]seaux
+  value: Réseaux
+filiere:
+- pattern: (?i)G\[ée\[èeé\]\[êeé\]\]nie\s+Informatique\s+1\[èeé\]re\s+ann\[ée\[èeé\]\[êeé\]\]e
+  value: Génie Informatique 1ère année
+- pattern: (?i)G\[ée\[èeé\]\[êeé\]\]nie\s+Informatique\s+1\[èeé\]re
+  value: Génie Informatique 1ère année
+annee:
+- pattern: 2018\s*[-/]\s*2019
+  value: 2018-2019
+- pattern: 2018\s+2019
+  value: 2018-2019
+- pattern: 18\s*[-/]\s*19
+  value: 2018-2019
+- pattern: 18\s+19
+  value: 2018-2019
+- pattern: 2019\s*[-/]\s*2020
+  value: 2019-2020
+- pattern: 2019\s+2020
+  value: 2019-2020
+- pattern: 19\s*[-/]\s*20
+  value: 2019-2020
+- pattern: 19\s+20
+  value: 2019-2020
+- pattern: 2020\s*[-/]\s*2021
+  value: 2020-2021
+- pattern: 2020\s+2021
+  value: 2020-2021
+- pattern: 20\s*[-/]\s*21
+  value: 2020-2021
+- pattern: 20\s+21
+  value: 2020-2021
+- pattern: 2021\s*[-/]\s*2022
+  value: 2021-2022
+- pattern: 2021\s+2022
+  value: 2021-2022
+- pattern: 21\s*[-/]\s*22
+  value: 2021-2022
+- pattern: 21\s+22
+  value: 2021-2022
+- pattern: 2022\s*[-/]\s*2023
+  value: 2022-2023
+- pattern: 2022\s+2023
+  value: 2022-2023
+- pattern: 22\s*[-/]\s*23
+  value: 2022-2023
+- pattern: 22\s+23
+  value: 2022-2023
+- pattern: 2023\s*[-/]\s*2024
+  value: 2023-2024
+- pattern: 2023\s+2024
+  value: 2023-2024
+- pattern: 23\s*[-/]\s*24
+  value: 2023-2024
+- pattern: 23\s+24
+  value: 2023-2024
+- pattern: 2024\s*[-/]\s*2025
+  value: 2024-2025
+- pattern: 2024\s+2025
+  value: 2024-2025
+- pattern: 24\s*[-/]\s*25
+  value: 2024-2025
+- pattern: 24\s+25
+  value: 2024-2025
+- pattern: 2025\s*[-/]\s*2026
+  value: 2025-2026
+- pattern: 2025\s+2026
+  value: 2025-2026
+- pattern: 25\s*[-/]\s*26
+  value: 2025-2026
+- pattern: 25\s+26
+  value: 2025-2026
+- pattern: 2026\s*[-/]\s*2027
+  value: 2026-2027
+- pattern: 2026\s+2027
+  value: 2026-2027
+- pattern: 26\s*[-/]\s*27
+  value: 2026-2027
+- pattern: 26\s+27
+  value: 2026-2027
+type:
+- pattern: (?i)c(ou)?rs?
+  value: Cours
+- pattern: (?i)td
+  value: TD
+- pattern: (?i)tp
+  value: TP
+- pattern: (?i)cnt|contr[ôo]le
+  value: Contrôle
+- pattern: (?i)ex(am|m)?
+  value: Examen

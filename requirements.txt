@@ -3,6 +3,7 @@ paddleocr
 paddlepaddle
 streamlit
 rapidfuzz
+pyyaml
 pandas
 numpy
 labelme

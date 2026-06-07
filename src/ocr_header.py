@@ -1,13 +1,23 @@
-import os, re, json
-from typing import Dict, Optional
+# src/ocr_header.py
+import os, json, re
+from typing import Dict, List
+import yaml
+import numpy as np
 from paddleocr import PaddleOCR
 
-# ----------------------------------------------------------------------
-# PUBLIC – process one document
-# ----------------------------------------------------------------------
+
 def extract_document_metadata(doc_id: str,
                               cropped_root: str = "data/cropped",
-                              metadata_root: str = "data/metadata") -> Dict[str, str]:
+                              metadata_root: str = "data/metadata",
+                              template_path: str = "data/expected_metadata.json",
+                              dict_path: str = "data/metadata_dict.yaml") -> Dict:
+    # ---- 1. Load template and dictionary ----
+    with open(template_path, 'r', encoding='utf-8') as f:
+        template = json.load(f)
+    with open(dict_path, 'r', encoding='utf-8') as f:
+        correction_dict = yaml.safe_load(f)
+
+    # ---- 2. Locate header image ----
     crop_dir = os.path.join(cropped_root, doc_id)
     header_path = os.path.join(crop_dir, "as1_header.jpg")
     if not os.path.exists(header_path):
@@ -17,40 +27,73 @@ def extract_document_metadata(doc_id: str,
         else:
             raise FileNotFoundError(f"No header image found in {crop_dir}")
 
+    # ---- 3. Run OCR ----
     ocr = PaddleOCR(lang='fr', use_textline_orientation=True)
     raw = ocr.predict(header_path)
     if not raw or not raw[0]:
-        return _empty_result()
+        return template   # return empty template
 
     page = raw[0]
     texts = page['rec_texts']
-    scores = page['rec_scores']
     boxes = page['rec_polys']
 
-    lines = []
-    for box, text, conf in zip(boxes, texts, scores):
-        y_top = box[0][1]
-        lines.append({'text': text.strip(), 'y': y_top, 'confidence': conf})
-    lines.sort(key=lambda d: d['y'])
+    entries = []
+    for box, text in zip(boxes, texts):
+        xs = [p[0] for p in box]
+        ys = [p[1] for p in box]
+        entries.append({
+            'text': text.strip(),
+            'x': sum(xs) / len(xs),
+            'y': sum(ys) / len(ys)
+        })
+    entries.sort(key=lambda e: (e['y'], e['x']))
 
-    full_text = ' '.join([l['text'] for l in lines])
+    # ---- 4. Extract top-level fields ----
+    filiere_raw, annee_raw = _extract_filiere_annee(entries)
+    enseignant_raw = _extract_simple_field(entries, 'enseignant')
+    module_raw     = _extract_simple_field(entries, 'module')
 
-    enseignant = _extract_field(lines, full_text, r'enseignant\s*[:\-]?\s*(.*)')
-    module     = _extract_field(lines, full_text, r'module\s*[:\-]?\s*(.*)')
-    element    = _extract_field(lines, full_text, r'[ée]l[ée]ment\s*[:\-]?\s*(.*)')
-    date       = _extract_field(lines, full_text, r'date\s*[:\-]?\s*(\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{2,4})')
-    heure      = _extract_heure(lines, full_text)
-    session_type = _detect_session_type(lines, full_text)
+    filiere    = _fuzzy_correct(filiere_raw, 'filiere', correction_dict)
+    annee      = _fuzzy_correct(annee_raw, 'annee', correction_dict)
+    enseignant = _fuzzy_correct(enseignant_raw, 'enseignant', correction_dict)
+    module     = _fuzzy_correct(module_raw, 'module', correction_dict)
+
+    # ---- 5. Build séance table ----
+    col_map = {}
+    for e in entries:
+        m = re.match(r'^séance(\d{1,2})$', e['text'].lower())
+        if m:
+            col_map[int(m.group(1))] = e['x']
+
+    row_bands = _build_row_bands(entries)
+    seances = template.get('seances', {
+        str(i): {"date": "", "heure_debut": "", "heure_fin": "", "type": ""}
+        for i in range(1, 11)
+    })
+
+    if col_map and row_bands:
+        value_entries = [e for e in entries if not _is_grid_label(e['text'])]
+        for e in value_entries:
+            col = _closest_column(e['x'], col_map)
+            row = _row_for_y(e['y'], row_bands)
+            if col and row:
+                key = _row_to_key(row)
+                col_str = str(col)
+                if col_str in seances and seances[col_str].get(key, '') == '':
+                    raw_val = e['text']
+                    if key == 'type':
+                        raw_val = _fuzzy_correct(raw_val, 'type', correction_dict)
+                    seances[col_str][key] = raw_val
 
     metadata = {
-        'enseignant': enseignant,
-        'module': module,
-        'element': element,
-        'date': date,
-        'heure': heure,
-        'type': session_type
+        "filiere": filiere,
+        "annee": annee,
+        "enseignant": enseignant,
+        "module": module,
+        "seances": seances
     }
 
+    # ---- 6. Save ----
     out_dir = os.path.join(metadata_root, doc_id)
     os.makedirs(out_dir, exist_ok=True)
     json_path = os.path.join(out_dir, "metadata.json")
@@ -60,50 +103,91 @@ def extract_document_metadata(doc_id: str,
     return metadata
 
 
-# ----------------------------------------------------------------------
-# HELPERS
-# ----------------------------------------------------------------------
-def _extract_field(lines, full_text, pattern, default=''):
-    m = re.search(pattern, full_text, re.IGNORECASE)
-    if m:
-        val = m.group(1).strip()
-        val = re.sub(r'(enseignant|module|élément|element|date|heure)\s*[:\-]?\s*', '', val, flags=re.IGNORECASE).strip()
-        if val:
-            return val
-    for i, line in enumerate(lines):
-        if re.search(r'enseignant|module|élément|element|date|heure', line['text'], re.IGNORECASE):
-            for j in range(i+1, min(i+3, len(lines))):
-                cand = lines[j]['text'].strip()
-                if cand and not re.search(r'enseignant|module|élément|element|date|heure', cand, re.IGNORECASE):
-                    return cand
-    return default
+# ── Helpers ────────────────────────────────────────────────────────────
 
-def _extract_heure(lines, full_text):
-    m = re.search(r'(\d{1,2}[h:]\d{2})', full_text, re.IGNORECASE)
-    if m:
-        return m.group(1)
-    for i, line in enumerate(lines):
-        if re.search(r'heure\s*d[ée]but', line['text'], re.IGNORECASE):
-            for j in range(i+1, min(i+3, len(lines))):
-                cand = lines[j]['text'].strip()
-                cand_clean = re.sub(r'\bCh\b', '08', cand)
-                if re.search(r'\d{1,2}[h:]\d{2}', cand_clean):
-                    return cand_clean
+def _extract_filiere_annee(entries):
+    for e in entries:
+        m = re.search(r'Filière\s+(.+?)\s*-\s*(\d{4}-\d{4})', e['text'], re.IGNORECASE)
+        if m:
+            return m.group(1).strip(), m.group(2).strip()
+    return '', ''
+
+def _extract_simple_field(entries, label):
+    for i, e in enumerate(entries):
+        if e['text'].lower().startswith(label.lower()):
+            for j in range(i+1, min(i+3, len(entries))):
+                txt = entries[j]['text']
+                if txt and not _is_ignored(txt) and not _is_grid_label(txt):
+                    return txt
     return ''
 
-def _detect_session_type(lines, full_text):
-    for t in ['Cours', 'TD', 'TP']:
-        if re.search(r'\b' + t + r'\b', full_text, re.IGNORECASE):
-            return t
-    if re.search(r'\bCrs\b', full_text):
-        return 'Cours'
-    return ''
+def _is_ignored(text):
+    low = text.lower()
+    phrases = [
+        "université sultan moulay slimane",
+        "l'ecole supérieure de technologie",
+        "l'école supérieure de technologie",
+        "fquih ben salah",
+        "liste de présence",
+        "n.b:",
+        "a : absence",
+        "p : présence",
+        "n apo",
+        "nom & prenom",
+    ]
+    return any(p in low for p in phrases)
 
-def _empty_result():
-    return {'enseignant': '', 'module': '', 'element': '', 'date': '', 'heure': '', 'type': ''}
+def _is_grid_label(text):
+    low = text.lower()
+    if re.match(r'^séance\d{1,2}$', low): return True
+    if low in ('date', 'heure début', 'heure fin'): return True
+    if low.startswith('type'): return True
+    return _is_ignored(text)
+
+def _build_row_bands(entries):
+    positions = {}
+    for e in entries:
+        low = e['text'].lower()
+        if low == 'date':           positions['date'] = e['y']
+        elif 'heure début' in low:  positions['heure_debut'] = e['y']
+        elif 'heure fin' in low:    positions['heure_fin'] = e['y']
+        elif low.startswith('type'): positions['type'] = e['y']
+    sorted_labels = sorted(positions.items(), key=lambda kv: kv[1])
+    bands = {}
+    for i, (name, y) in enumerate(sorted_labels):
+        next_y = sorted_labels[i+1][1] if i+1 < len(sorted_labels) else float('inf')
+        bands[name] = (y, next_y)
+    return bands
+
+def _closest_column(x, col_map):
+    best, best_dist = None, float('inf')
+    for num, cx in col_map.items():
+        dist = abs(x - cx)
+        if dist < best_dist:
+            best, best_dist = num, dist
+    return best
+
+def _row_for_y(y, bands):
+    for name, (low, high) in bands.items():
+        if low <= y <= high:
+            return name
+    return None
+
+def _row_to_key(row):
+    if row == 'date': return 'date'
+    if row in ('heure_debut', 'heure début'): return 'heure_debut'
+    if row in ('heure_fin', 'heure fin'): return 'heure_fin'
+    if row == 'type': return 'type'
+    return row
+
+def _fuzzy_correct(raw_text, field, dictionary):
+    patterns = dictionary.get(field, [])
+    for entry in patterns:
+        if re.search(entry['pattern'], raw_text):
+            return entry['value']
+    return raw_text
 
 
-# ----------------------------------------------------------------------
 if __name__ == "__main__":
     import sys
     if len(sys.argv) < 2:
