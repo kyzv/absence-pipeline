@@ -1,0 +1,2177 @@
+Project structure:
+absence-pipeline/
+    .gitignore
+    app.py
+    flatten_project.py
+    project_flat.txt
+    README.md
+    requirements.txt
+    temp_cell.jpg
+    data/
+        expected_metadata.json
+        metadata_dict.yaml
+        config/
+            filieres.json
+            modules.json
+            professors.json
+            years.json
+            groups/
+                genie informatique 1ere annee.csv
+        cropped/
+            doc_1/
+                as1_header.jpg
+                as1_table.jpg
+                as2_table.jpg
+                as3_table.jpg
+                as4_table.jpg
+        metadata/
+            doc_1/
+                metadata.json
+        preprocessed/
+            doc_1/
+                as1.jpeg
+                as1_binary.jpg
+                as2.jpeg
+                as2_binary.jpg
+                as3.jpeg
+                as3_binary.jpg
+                as4.jpeg
+                as4_binary.jpg
+        raw/
+            doc_1/
+                as1.jpeg
+                as2.jpeg
+                as3.jpeg
+                as4.jpeg
+    src/
+        build_metadata_dict.py
+        checkbox_detection.py
+        cropper.py
+        expand_dict.py
+        json2vocxml.py
+        name_matcher.py
+        ocr_header.py
+        pipeline.py
+        preprocessing.py
+        __init__.py
+
+
+============================================================
+File: .gitignore
+============================================================
+__pycache__/
+*.pyc
+src/__pycache__/
+src/*.pyc
+src/_pycache__/*.pyc
+
+============================================================
+File: app.py
+============================================================
+import streamlit as st
+import pandas as pd
+import json
+import tempfile
+import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+from pipeline import run
+
+st.set_page_config(
+    page_title="Gestion des Absences — PoC",
+    page_icon="",
+    layout="wide"
+)
+
+st.title("Automatisation de la Saisie des Absences")
+st.caption("Pipeline de reconnaissance de documents — Proof of Concept")
+
+# ── Sidebar: tunable parameters ──────────────────────────────────────────────
+st.sidebar.header("Paramètres du Pipeline")
+header_ratio = st.sidebar.slider(
+    "Ratio en-tête", min_value=0.10, max_value=0.40, value=0.22, step=0.01
+)
+col_ratio = st.sidebar.slider(
+    "Position colonne signature", min_value=0.60, max_value=0.95, value=0.85, step=0.01
+)
+density_threshold = st.sidebar.slider(
+    "Seuil densité pixels (présence/absence)",
+    min_value=0.005, max_value=0.10, value=0.02, step=0.005
+)
+
+# ── File upload ───────────────────────────────────────────────────────────────
+st.subheader("1. Uploader la feuille d'absence")
+uploaded_image = st.file_uploader("Feuille scannée (JPG, PNG)", type=["jpg", "jpeg", "png"])
+uploaded_db = st.file_uploader("Liste étudiants (CSV avec colonne 'name')", type=["csv"])
+
+# ── Run pipeline ──────────────────────────────────────────────────────────────
+if uploaded_image and uploaded_db:
+    st.subheader("2. Image uploadée")
+    st.image(uploaded_image, caption="Feuille scannée originale", width=600)
+
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as img_tmp:
+        img_tmp.write(uploaded_image.read())
+        img_path = img_tmp.name
+
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".csv") as db_tmp:
+        db_tmp.write(uploaded_db.read())
+        db_path = db_tmp.name
+
+    with st.spinner("Traitement en cours..."):
+        try:
+            result = run(
+                img_path, db_path,
+                header_ratio=header_ratio,
+                col_ratio=col_ratio,
+                density_threshold=density_threshold
+            )
+
+            # Header fields display
+            st.subheader("3. Informations extraites de l'en-tête")
+            header = result["header_fields"]
+            col1, col2, col3 = st.columns(3)
+            col1.metric("Module", header.get("module") or "Non détecté")
+            col1.metric("Enseignant", header.get("teacher") or "Non détecté")
+            col2.metric("Date", header.get("date") or "Non détecté")
+            col2.metric("Horaire", header.get("time") or "Non détecté")
+            col3.metric("Type de séance", header.get("session_type") or "Non détecté")
+
+            # Absences display
+            st.subheader("4. Étudiants absents détectés")
+            absent = result["absent_students"]
+            if absent:
+                df_absent = pd.DataFrame({
+                    "N° ligne": result["absent_indices"],
+                    "Étudiant absent": absent
+                })
+                st.dataframe(df_absent, use_container_width=True)
+            else:
+                st.success("Aucune absence détectée.")
+
+            # Export
+            st.subheader("5. Exporter les résultats")
+            c1, c2 = st.columns(2)
+
+            csv_data = pd.DataFrame({
+                "module": [header.get("module")],
+                "teacher": [header.get("teacher")],
+                "date": [header.get("date")],
+                "time": [header.get("time")],
+                "session_type": [header.get("session_type")],
+                "absent_students": [", ".join(absent)]
+            }).to_csv(index=False).encode("utf-8")
+
+            c1.download_button("Télécharger CSV", csv_data, "absences.csv", "text/csv")
+
+            json_data = json.dumps(result, ensure_ascii=False, indent=2).encode("utf-8")
+            c2.download_button("Télécharger JSON", json_data, "absences.json", "application/json")
+
+        except Exception as e:
+            st.error(f"Erreur lors du traitement: {str(e)}")
+
+        finally:
+            os.unlink(img_path)
+            os.unlink(db_path)
+
+else:
+    st.info("Veuillez uploader une feuille d'absence et le fichier étudiants pour continuer.")
+
+============================================================
+File: flatten_project.py
+============================================================
+# flatten_project.py
+import os
+import sys
+
+def flatten_project(root_dir: str, output_file: str):
+    with open(output_file, 'w', encoding='utf-8') as out:
+        # 1. Write a tree view
+        out.write("Project structure:\n")
+        for dirpath, dirnames, filenames in os.walk(root_dir):
+            # Exclude .git and __pycache__ directories
+            dirnames[:] = [d for d in dirnames if d not in ('.git', '__pycache__')]
+            level = dirpath.replace(root_dir, '').count(os.sep)
+            indent = ' ' * 4 * level
+            out.write(f"{indent}{os.path.basename(dirpath)}/\n")
+            subindent = ' ' * 4 * (level + 1)
+            for fname in filenames:
+                out.write(f"{subindent}{fname}\n")
+        out.write("\n\n")
+
+        # 2. Write file contents
+        for dirpath, dirnames, filenames in os.walk(root_dir):
+            dirnames[:] = [d for d in dirnames if d not in ('.git', '__pycache__')]
+            for fname in filenames:
+                full_path = os.path.join(dirpath, fname)
+                rel_path = os.path.relpath(full_path, root_dir)
+                out.write(f"{'='*60}\n")
+                out.write(f"File: {rel_path}\n")
+                out.write(f"{'='*60}\n")
+                try:
+                    with open(full_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    out.write(content)
+                except Exception as e:
+                    out.write(f"[Could not read file: {e}]\n")
+                out.write("\n\n")
+
+if __name__ == '__main__':
+    # Set root_dir to the project root (where this script is located)
+    root = os.path.dirname(os.path.abspath(__file__))
+    output = os.path.join(root, 'project_flat.txt')
+    flatten_project(root, output)
+    print(f"Flattened project saved to: {output}")
+
+============================================================
+File: project_flat.txt
+============================================================
+Project structure:
+absence-pipeline/
+    .gitignore
+    app.py
+    flatten_project.py
+    project_flat.txt
+    README.md
+    requirements.txt
+    temp_cell.jpg
+    data/
+        expected_metadata.json
+        metadata_dict.yaml
+        config/
+            filieres.json
+            modules.json
+            professors.json
+            years.json
+            groups/
+                genie informatique 1ere annee.csv
+        cropped/
+            doc_1/
+                as1_header.jpg
+                as1_table.jpg
+                as2_table.jpg
+                as3_table.jpg
+                as4_table.jpg
+        metadata/
+            doc_1/
+                metadata.json
+        preprocessed/
+            doc_1/
+                as1.jpeg
+                as1_binary.jpg
+                as2.jpeg
+                as2_binary.jpg
+                as3.jpeg
+                as3_binary.jpg
+                as4.jpeg
+                as4_binary.jpg
+        raw/
+            doc_1/
+                as1.jpeg
+                as2.jpeg
+                as3.jpeg
+                as4.jpeg
+    src/
+        build_metadata_dict.py
+        checkbox_detection.py
+        cropper.py
+        expand_dict.py
+        json2vocxml.py
+        name_matcher.py
+        ocr_header.py
+        pipeline.py
+        preprocessing.py
+        __init__.py
+
+
+============================================================
+File: .gitignore
+============================================================
+__pycache__/
+*.pyc
+src/__pycache__/
+src/*.pyc
+src/_pycache__/*.pyc
+
+============================================================
+File: app.py
+============================================================
+import streamlit as st
+import pandas as pd
+import json
+import tempfile
+import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+from pipeline import run
+
+st.set_page_config(
+    page_title="Gestion des Absences — PoC",
+    page_icon="",
+    layout="wide"
+)
+
+st.title("Automatisation de la Saisie des Absences")
+st.caption("Pipeline de reconnaissance de documents — Proof of Concept")
+
+# ── Sidebar: tunable parameters ──────────────────────────────────────────────
+st.sidebar.header("Paramètres du Pipeline")
+header_ratio = st.sidebar.slider(
+    "Ratio en-tête", min_value=0.10, max_value=0.40, value=0.22, step=0.01
+)
+col_ratio = st.sidebar.slider(
+    "Position colonne signature", min_value=0.60, max_value=0.95, value=0.85, step=0.01
+)
+density_threshold = st.sidebar.slider(
+    "Seuil densité pixels (présence/absence)",
+    min_value=0.005, max_value=0.10, value=0.02, step=0.005
+)
+
+# ── File upload ───────────────────────────────────────────────────────────────
+st.subheader("1. Uploader la feuille d'absence")
+uploaded_image = st.file_uploader("Feuille scannée (JPG, PNG)", type=["jpg", "jpeg", "png"])
+uploaded_db = st.file_uploader("Liste étudiants (CSV avec colonne 'name')", type=["csv"])
+
+# ── Run pipeline ──────────────────────────────────────────────────────────────
+if uploaded_image and uploaded_db:
+    st.subheader("2. Image uploadée")
+    st.image(uploaded_image, caption="Feuille scannée originale", width=600)
+
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as img_tmp:
+        img_tmp.write(uploaded_image.read())
+        img_path = img_tmp.name
+
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".csv") as db_tmp:
+        db_tmp.write(uploaded_db.read())
+        db_path = db_tmp.name
+
+    with st.spinner("Traitement en cours..."):
+        try:
+            result = run(
+                img_path, db_path,
+                header_ratio=header_ratio,
+                col_ratio=col_ratio,
+                density_threshold=density_threshold
+            )
+
+            # Header fields display
+            st.subheader("3. Informations extraites de l'en-tête")
+            header = result["header_fields"]
+            col1, col2, col3 = st.columns(3)
+            col1.metric("Module", header.get("module") or "Non détecté")
+            col1.metric("Enseignant", header.get("teacher") or "Non détecté")
+            col2.metric("Date", header.get("date") or "Non détecté")
+            col2.metric("Horaire", header.get("time") or "Non détecté")
+            col3.metric("Type de séance", header.get("session_type") or "Non détecté")
+
+            # Absences display
+            st.subheader("4. Étudiants absents détectés")
+            absent = result["absent_students"]
+            if absent:
+                df_absent = pd.DataFrame({
+                    "N° ligne": result["absent_indices"],
+                    "Étudiant absent": absent
+                })
+                st.dataframe(df_absent, use_container_width=True)
+            else:
+                st.success("Aucune absence détectée.")
+
+            # Export
+            st.subheader("5. Exporter les résultats")
+            c1, c2 = st.columns(2)
+
+            csv_data = pd.DataFrame({
+                "module": [header.get("module")],
+                "teacher": [header.get("teacher")],
+                "date": [header.get("date")],
+                "time": [header.get("time")],
+                "session_type": [header.get("session_type")],
+                "absent_students": [", ".join(absent)]
+            }).to_csv(index=False).encode("utf-8")
+
+            c1.download_button("Télécharger CSV", csv_data, "absences.csv", "text/csv")
+
+            json_data = json.dumps(result, ensure_ascii=False, indent=2).encode("utf-8")
+            c2.download_button("Télécharger JSON", json_data, "absences.json", "application/json")
+
+        except Exception as e:
+            st.error(f"Erreur lors du traitement: {str(e)}")
+
+        finally:
+            os.unlink(img_path)
+            os.unlink(db_path)
+
+else:
+    st.info("Veuillez uploader une feuille d'absence et le fichier étudiants pour continuer.")
+
+============================================================
+File: flatten_project.py
+============================================================
+# flatten_project.py
+import os
+import sys
+
+def flatten_project(root_dir: str, output_file: str):
+    with open(output_file, 'w', encoding='utf-8') as out:
+        # 1. Write a tree view
+        out.write("Project structure:\n")
+        for dirpath, dirnames, filenames in os.walk(root_dir):
+            # Exclude .git and __pycache__ directories
+            dirnames[:] = [d for d in dirnames if d not in ('.git', '__pycache__')]
+            level = dirpath.replace(root_dir, '').count(os.sep)
+            indent = ' ' * 4 * level
+            out.write(f"{indent}{os.path.basename(dirpath)}/\n")
+            subindent = ' ' * 4 * (level + 1)
+            for fname in filenames:
+                out.write(f"{subindent}{fname}\n")
+        out.write("\n\n")
+
+        # 2. Write file contents
+        for dirpath, dirnames, filenames in os.walk(root_dir):
+            dirnames[:] = [d for d in dirnames if d not in ('.git', '__pycache__')]
+            for fname in filenames:
+                full_path = os.path.join(dirpath, fname)
+                rel_path = os.path.relpath(full_path, root_dir)
+                out.write(f"{'='*60}\n")
+                out.write(f"File: {rel_path}\n")
+                out.write(f"{'='*60}\n")
+                try:
+                    with open(full_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    out.write(content)
+                except Exception as e:
+                    out.write(f"[Could not read file: {e}]\n")
+                out.write("\n\n")
+
+if __name__ == '__main__':
+    # Set root_dir to the project root (where this script is located)
+    root = os.path.dirname(os.path.abspath(__file__))
+    output = os.path.join(root, 'project_flat.txt')
+    flatten_project(root, output)
+    print(f"Flattened project saved to: {output}")
+
+============================================================
+File: README.md
+============================================================
+# Automatisation de la Saisie des Absences
+### Pipeline de Reconnaissance de Documents et Vision par Ordinateur
+
+---
+
+## Contexte
+
+Dans le cadre de la digitalisation des processus administratifs de l'école, la gestion manuelle des feuilles d'absence représente une tâche chronophage et sujette aux erreurs de saisie. Les feuilles de présence sont pré-imprimées avec la liste nominale des étudiants. L'enseignant remplit manuellement l'en-tête (module, nom, type de séance, date, horaire) et coche les cases des étudiants absents.
+
+Ce projet propose un pipeline intelligent capable de **scanner une feuille d'absence, d'en extraire automatiquement les métadonnées manuscrites, et d'identifier les étudiants absents** afin d'automatiser leur saisie dans le système d'information de l'école.
+
+---
+
+## Aperçu du Pipeline
+
+```
+Image brute
+    └─► preprocessing.py    → Image binaire nettoyée
+         └─► ocr_header.py  → Métadonnées de l'en-tête {module, enseignant, date, horaire,type séance}
+              └─► checkbox_detection.py → Indices des lignes absentes
+                   └─► name_matcher.py  → Noms des étudiants absents
+                        └─► pipeline.py → Résultat structuré 
+                             └─► app.py → Interface web Streamlit
+```
+
+---
+
+## Structure du Projet
+
+```
+absence-pipeline/
+├── data/
+│   ├── raw/              # Dataset feuilles d'absence scannées originales
+│   ├── annotated/        # Annotations LabelMe (zones en-tête / tableau)
+│   └── students.csv      # Liste officielle des étudiants (colonne : name)
+├── src/
+│   ├── preprocessing.py       # Étape 1 : Nettoyage de l'image (OpenCV)
+│   ├── ocr_header.py          # Étape 2 : Extraction de l'en-tête (PaddleOCR)
+│   ├── checkbox_detection.py  # Étape 3 : Détection des absences (densité pixels)
+│   ├── name_matcher.py        # Étape 4 : Correspondance des noms (Levenshtein)
+│   └── pipeline.py            # Orchestration des étapes 1 à 4
+├── app.py                # Interface web Streamlit
+├── requirements.txt      # Dépendances Python
+└── README.md             # Documentation du projet
+```
+
+---
+
+## Prérequis
+
+- Python **3.12** 
+- pip 25+
+
+---
+
+## Installation
+
+**1. Cloner le dépôt**
+```bash
+git clone https://github.com/kyzv/absence-pipeline.git
+cd absence-pipeline
+```
+
+**2. Installer les dépendances**
+```bash
+pip install -r requirements.txt
+```
+
+**3. Vérifier l'installation**
+```bash
+python -c "import cv2; from paddleocr import PaddleOCR; import streamlit; from rapidfuzz import fuzz; import pandas; import numpy; print('Toutes les dépendances sont installées correctement.')"
+```
+
+---
+
+## Utilisation
+
+### Lancer l'interface web
+```bash
+streamlit run app.py
+```
+L'application s'ouvre automatiquement dans le navigateur à `http://localhost:8501`.
+
+### Utiliser le pipeline en ligne de commande
+```python
+from src.pipeline import run
+
+result = run(
+    image_path="data/raw/sheet_001.jpg",
+    student_db_path="data/students.csv"
+)
+print(result)
+```
+
+### Format du fichier `students.csv`
+```csv
+name
+BENNANI Omar
+CHERKAOUI Fatima
+SAKHI Mehdi
+...
+```
+L'ordre des noms doit correspondre exactement à l'ordre d'impression sur la feuille d'absence.
+
+---
+
+## Description des Modules
+
+### `src/preprocessing.py`
+Nettoie l'image brute en quatre étapes séquentielles :
+- **Chargement** — lecture du fichier image en mémoire via OpenCV
+- **Conversion en niveaux de gris** — réduction de 3 canaux BGR à 1 canal luminance
+- **Normalisation du contraste** — égalisation d'histogramme pour corriger les variations d'éclairage
+- **Binarisation (Otsu)** — conversion en noir et blanc pur avec seuillage automatique
+- **Redressement (Deskewing)** — détection et correction de l'angle d'inclinaison
+
+**Fonction principale :**
+```python
+preprocess(image_path: str) -> np.ndarray
+```
+
+---
+
+### `src/ocr_header.py`
+Extrait les métadonnées manuscrites de l'en-tête de la feuille :
+- Découpage de la zone d'en-tête par ratio de hauteur
+- Reconnaissance de texte via **PaddleOCR** (modèle layout-aware, langue française)
+- Analyse par règles pour identifier les champs : module, enseignant, date, horaire, type de séance
+
+**Fonction principale :**
+```python
+extract_header(binary_image: np.ndarray, header_ratio: float = 0.22) -> dict
+```
+
+**Exemple de sortie :**
+```json
+{
+  "module": "Bases de Données",
+  "teacher": "Pr. Hamim Mohammed",
+  "date": "12/06/2025",
+  "time": "10h00",
+  "session_type": "TD"
+}
+```
+
+---
+
+### `src/checkbox_detection.py`
+Détecte les absences dans le tableau étudiant :
+- Découpage de la zone tableau (sous l'en-tête)
+- Détection des lignes horizontales par morphologie mathématique (OpenCV)
+- Segmentation du tableau en lignes individuelles
+- Analyse de la **densité de pixels noirs** dans la colonne de signature de chaque ligne
+- Classification : densité > seuil → présent ; densité ≤ seuil → absent
+
+**Fonction principale :**
+```python
+detect_absences(binary_image: np.ndarray, header_ratio: float = 0.22,
+                col_ratio: float = 0.85, density_threshold: float = 0.02) -> list[int]
+```
+
+---
+
+### `src/name_matcher.py`
+Fait la correspondance entre les indices de lignes absentes et les noms officiels des étudiants :
+- Chargement de la base de données étudiants depuis `students.csv`
+- Correspondance directe par index (feuille pré-imprimée = ordre fixe)
+- Correction des erreurs OCR éventuelles via **distance de Levenshtein** (rapidfuzz)
+
+**Fonction principale :**
+```python
+match_names(absent_indices: list[int], student_db_path: str) -> list[str]
+```
+
+---
+
+### `src/pipeline.py`
+Orchestre les quatre modules dans l'ordre et retourne le résultat final structuré.
+
+**Fonction principale :**
+```python
+run(image_path: str, student_db_path: str,
+    header_ratio: float = 0.22,
+    col_ratio: float = 0.85,
+    density_threshold: float = 0.02) -> dict
+```
+
+**Exemple de sortie :**
+```json
+{
+  "image_path": "data/raw/sheet_001.jpg",
+  "header_fields": {
+    "module": "Bases de Données",
+    "teacher": "Pr. Hamim Mohammed",
+    "date": "12/06/2025",
+    "time": "10h00",
+    "session_type": "TD"
+  },
+  "absent_students": ["CHERKAOUI Fatima", "KADIRI Youssef"],
+  "absent_indices": [1, 3]
+}
+```
+
+---
+
+### `app.py`
+Interface web de démonstration construite avec **Streamlit** :
+- Upload d'une feuille d'absence (JPG/PNG)
+- Upload de la liste étudiants (CSV)
+- Paramètres ajustables via la barre latérale (ratio en-tête, position colonne signature, seuil densité)
+- Affichage structuré des métadonnées extraites et des absences détectées
+- Export du résultat en **CSV** ou **JSON**
+
+---
+
+## Dépendances
+
+| Bibliothèque | Version | Rôle |
+|---|---|---|
+| opencv-python | 4.x | Traitement d'image, morphologie, transformations affines |
+| paddleocr | 3.x | OCR layout-aware, reconnaissance de l'écriture manuscrite |
+| paddlepaddle | 3.x | Backend moteur de PaddleOCR |
+| streamlit | 1.x | Interface web |
+| rapidfuzz | 3.x | Distance de Levenshtein, correspondance floue de chaînes |
+| pandas | 2.x | Manipulation de données, export CSV |
+| numpy | 1.x | Calcul numérique, manipulation des tableaux image |
+
+---
+
+## Choix Technologiques
+
+**PaddleOCR** a été retenu face à Tesseract pour sa gestion native de la mise en page (layout-aware OCR) : il détecte et segmente automatiquement les zones de texte avant reconnaissance, ce qui est déterminant pour un document structuré comme une feuille d'absence. Ses performances sur l'écriture manuscrite en français sont supérieures à Tesseract sans configuration avancée.
+
+**La détection par densité de pixels** a été privilégiée face à un modèle de détection d'objets pour sa simplicité d'implémentation, son absence de besoin en données d'entraînement, et ses performances suffisantes dans le cadre d'un Proof of Concept.
+
+**rapidfuzz** est utilisé à la place de python-Levenshtein pour ses performances (10 à 100 fois plus rapide) et son API `process.extractOne` qui gère la correspondance par lot en un seul appel.
+
+---
+
+
+============================================================
+File: requirements.txt
+============================================================
+opencv-python
+paddleocr
+paddlepaddle
+streamlit
+rapidfuzz
+pyyaml
+pandas
+numpy
+labelme
+
+============================================================
+File: temp_cell.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\expected_metadata.json
+============================================================
+{
+   "filiere":"",
+   "annee":"",
+   "enseignant":"",
+   "module":"",
+   "seances":{
+      "1": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+      "2": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+      "3": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+      "4": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+      "5": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+      "6": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+      "7": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+      "8": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+      "9": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+      "10": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" }
+   }
+}
+
+============================================================
+File: data\metadata_dict.yaml
+============================================================
+enseignant:
+- pattern: (?i)(pr\.?|prof\.?|dr\.?|m\.?|mr\.?)?\s*Rachid\s+AitDaoud
+  value: Pr. Rachid AitDaoud
+- pattern: (?i)(pr\.?|prof\.?|dr\.?|m\.?|mr\.?)?\s*AitDaoud
+  value: Pr. Rachid AitDaoud
+- pattern: (?i)(pr\.?|prof\.?|dr\.?|m\.?|mr\.?)?\s*Hamid\s+Sakhi
+  value: Pr. Hamid Sakhi
+- pattern: (?i)(pr\.?|prof\.?|dr\.?|m\.?|mr\.?)?\s*Sakhi
+  value: Pr. Hamid Sakhi
+module:
+- pattern: (?i)Structures\s+de\s+donn\[ée\[èeé\]\[êeé\]\]es\s+avanc\[ée\[èeé\]\[êeé\]\]es
+  value: Structures de données avancées
+- pattern: (?i)Structures\s+de\s+donn\[ée\[èeé\]\[êeé\]\]es
+  value: Structures de données avancées
+- pattern: (?i)Algorithmique
+  value: Algorithmique
+- pattern: (?i)Base\s+de\s+donn\[ée\[èeé\]\[êeé\]\]es
+  value: Base de données
+- pattern: (?i)Base\s+de
+  value: Base de données
+- pattern: (?i)R\[ée\[èeé\]\[êeé\]\]seaux
+  value: Réseaux
+filiere:
+- pattern: (?i)G\[ée\[èeé\]\[êeé\]\]nie\s+Informatique\s+1\[èeé\]re\s+ann\[ée\[èeé\]\[êeé\]\]e
+  value: Génie Informatique 1ère année
+- pattern: (?i)G\[ée\[èeé\]\[êeé\]\]nie\s+Informatique\s+1\[èeé\]re
+  value: Génie Informatique 1ère année
+annee:
+- pattern: 2018\s*[-/]\s*2019
+  value: 2018-2019
+- pattern: 2018\s+2019
+  value: 2018-2019
+- pattern: 18\s*[-/]\s*19
+  value: 2018-2019
+- pattern: 18\s+19
+  value: 2018-2019
+- pattern: 2019\s*[-/]\s*2020
+  value: 2019-2020
+- pattern: 2019\s+2020
+  value: 2019-2020
+- pattern: 19\s*[-/]\s*20
+  value: 2019-2020
+- pattern: 19\s+20
+  value: 2019-2020
+- pattern: 2020\s*[-/]\s*2021
+  value: 2020-2021
+- pattern: 2020\s+2021
+  value: 2020-2021
+- pattern: 20\s*[-/]\s*21
+  value: 2020-2021
+- pattern: 20\s+21
+  value: 2020-2021
+- pattern: 2021\s*[-/]\s*2022
+  value: 2021-2022
+- pattern: 2021\s+2022
+  value: 2021-2022
+- pattern: 21\s*[-/]\s*22
+  value: 2021-2022
+- pattern: 21\s+22
+  value: 2021-2022
+- pattern: 2022\s*[-/]\s*2023
+  value: 2022-2023
+- pattern: 2022\s+2023
+  value: 2022-2023
+- pattern: 22\s*[-/]\s*23
+  value: 2022-2023
+- pattern: 22\s+23
+  value: 2022-2023
+- pattern: 2023\s*[-/]\s*2024
+  value: 2023-2024
+- pattern: 2023\s+2024
+  value: 2023-2024
+- pattern: 23\s*[-/]\s*24
+  value: 2023-2024
+- pattern: 23\s+24
+  value: 2023-2024
+- pattern: 2024\s*[-/]\s*2025
+  value: 2024-2025
+- pattern: 2024\s+2025
+  value: 2024-2025
+- pattern: 24\s*[-/]\s*25
+  value: 2024-2025
+- pattern: 24\s+25
+  value: 2024-2025
+- pattern: 2025\s*[-/]\s*2026
+  value: 2025-2026
+- pattern: 2025\s+2026
+  value: 2025-2026
+- pattern: 25\s*[-/]\s*26
+  value: 2025-2026
+- pattern: 25\s+26
+  value: 2025-2026
+- pattern: 2026\s*[-/]\s*2027
+  value: 2026-2027
+- pattern: 2026\s+2027
+  value: 2026-2027
+- pattern: 26\s*[-/]\s*27
+  value: 2026-2027
+- pattern: 26\s+27
+  value: 2026-2027
+type:
+- pattern: (?i)c(ou)?rs?
+  value: Cours
+- pattern: (?i)td
+  value: TD
+- pattern: (?i)tp
+  value: TP
+- pattern: (?i)cnt|contr[ôo]le
+  value: Contrôle
+- pattern: (?i)ex(am|m)?
+  value: Examen
+
+
+============================================================
+File: data\config\filieres.json
+============================================================
+[
+   "Génie Informatique 1ère année"
+]
+
+============================================================
+File: data\config\modules.json
+============================================================
+[
+   "Structures de données avancées", 
+   "Algorithmique",
+   "Base de données",
+   "Réseaux"
+]
+
+============================================================
+File: data\config\professors.json
+============================================================
+[
+   "Pr. Rachid AitDaoud",
+   "Pr. Hamid Sakhi"
+]
+
+============================================================
+File: data\config\years.json
+============================================================
+[
+   "2018-2019",
+   "2019-2020",
+   "2020-2021",
+   "2021-2022",
+   "2022-2023",
+   "2023-2024",
+   "2024-2025",
+   "2025-2026",
+   "2026-2027"
+]
+
+============================================================
+File: data\config\groups\genie informatique 1ere annee.csv
+============================================================
+id,nom_prenom
+1,ACHMAOUI JIHANE
+2,AIT ALI HANANE
+3,AIT AOMAR MOHAMMED
+4,AIT LAMKADM AMAL
+5,AIT-SALAH ILIYAS
+6,akhkha nizar
+7,AMGHAR ZAKARIA
+8,AOUZAH ASMAA
+9,ARHRISS OUMAIMA
+10,ASSELGUI MOHAMED AMINE
+11,BAALI ASSIA
+12,BAHIRI SAIF-EDDINE
+13,BEL-OUARRAQ ABDERRAHMAN
+14,BEN HAWI AHLAME
+15,BLYBEL MAROUANE
+16,BNIKKOU ASMAE
+17,BORJA MOUAD
+18,CHAFI MAHMOUD
+19,CHAHBOUNE MARIA
+20,CHAKER MOHAMMED
+21,CHIHAB NOURA
+22,CHLAFET ZIYAD
+23,CHOUINAA WALID
+24,DAHNAOUI MOHSINE
+25,DRIOUCH REDA
+26,EL ABBASSI HIBA
+27,EL ABBASSI HAJAR
+28,EL AIDDOUDI IMAN
+29,EL AIDI YOUSSEF
+30,EL ALAMI ZIYAD
+31,EL ARNABI ABDELBASSIT
+32,EL BIKRI ANAS
+33,EL BIR ILYASS
+34,EL HALLAOUI YASSER
+35,EL HOR SAAD
+36,EL INANI OMAR
+37,EL KADIRI YASSINE
+38,EL KAMALI MAROUANE
+39,EL MANDOUR AHLAME
+40,EL MANFALOUTI DOAE
+41,EL MERDI AYA
+42,EL MORTAJI MEHDI
+43,ELADNANI YAHYA
+44,ELASMAI AYA
+45,EL-HAFARI MOHSSINE
+46,EL-MORNAN AYMEN
+47,ESSAKHARI ABDELKABIR
+48,ET-TAYEB HIBA
+49,EZZIDANI ADAM
+50,FADILI OUMAIMA
+51,FATOUHI HAJAR
+52,GASMI OUMAIMA
+53,HABTI HIBA
+54,HAFIDI AYMANE
+55,HALOUANE ACHRAF
+56,HMID OUMAYMA
+57,HOUNAINE HIBATALLAH
+58,ILHAMI ANAS
+59,IMOURIGUE AYOUB
+60,IMZIL SALMA
+61,JAMAI HIND
+62,KABORI OUSSAMA
+63,KADRI AYA
+64,KEBBASSI ADAM
+65,LAABAID ABDERRAHIM
+66,LACHGAR AYMEN
+67,LAGHBAR JAWAD
+68,LAHMAMI NABIL
+69,lassioui hatim
+70,MAAZOUZ SALMA
+71,MAHMOUR FATIMA-EZZAHRA
+72,MANBAL MOHAMMED AMINE
+73,MAQAL SALMA
+74,MECHROUHI OUMAIMA
+75,MESLAFI ZOHAIR
+76,MISSAOUI TAHA
+77,MOUTAHID MOHAMED
+78,MOUYANE AYOUB
+79,NAFIA HAMZA
+80,NAOURAK CHAYMA
+81,NAZIH YOUSSEF
+82,NIBENNAOUNE Rabab
+83,NOUHI ISHAK
+84,OUAHIB ABDELKADER
+85,OULAHCEN MERYEM
+86,OULD HIBA FIRDAOUSS
+87,OUTAILINE YACINE
+88,QABILI NADIA
+89,QIOUAMI ILIASSE
+90,RACHIQ MARWAN
+91,RHECHAQUI SOUHAIL
+92,SABER MAROUA
+93,SABIQ ANAS
+94,SABIR SARA
+95,SBAI FARID
+96,SEDKI DOUAA
+97,SEKTAOUI CHAIMA
+98,SHAMI YOUNES
+99,SIRAJI FATIMA-ZAHRA
+100,TAHA ZIAD
+101,TAMZOURIR MOURAD
+102,TARIK HOUSSAM
+103,TIHLAL YASMINE
+104,YASER YOUNES
+105,ZAIDI MOAD
+106,ZAINA MALAK
+107,ZOUKRI SAMIA
+108,RAMDANI AYMANE
+109,AMGHOUZ DOHA
+110,NAJILI NOUHAILA
+111,ELOIZGHITI MOHAMEDRIDA
+112,ROSSI MALAK
+113,BAHRI YAHYA
+114,BENSAHTOUT MOHAMED AMINE
+115,OUCHENI NOUSSAIBA
+116,EL MOUFADI AYA
+117,LEMOUDA ROKIA
+118,DIKRI OUISSAL
+119,BARKAMBIRI SARA
+120,EL HAIKI AMINE
+121,NADI FATIMA-ZAHRA
+122,ELALAMI SAMIR
+123,BENNAKI MOHAMED
+124,YOUSRI AHMED
+125,CHOUKI ACHRAF
+126,EMARGEMENT
+
+
+============================================================
+File: data\cropped\doc_1\as1_header.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\cropped\doc_1\as1_table.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\cropped\doc_1\as2_table.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\cropped\doc_1\as3_table.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\cropped\doc_1\as4_table.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\metadata\doc_1\metadata.json
+============================================================
+{
+  "filiere": "Génie Informatique 1ère année",
+  "annee": "2024-2025",
+  "enseignant": "Elément",
+  "module": "",
+  "seances": {
+    "1": {
+      "date": "04/06/26",
+      "heure_debut": "10h30",
+      "heure_fin": "crs",
+      "type": ""
+    },
+    "2": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "3": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "4": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "5": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "6": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "7": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "8": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "9": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "10": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    }
+  }
+}
+
+============================================================
+File: data\preprocessed\doc_1\as1.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_1\as1_binary.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_1\as2.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_1\as2_binary.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_1\as3.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_1\as3_binary.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_1\as4.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_1\as4_binary.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_1\as1.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_1\as2.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_1\as3.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_1\as4.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: src\build_metadata_dict.py
+============================================================
+# src/build_metadata_dict.py
+import sys
+import os
+
+# Add the project's src directory to the module search path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+import json, yaml
+from pathlib import Path
+from expand_dict import expand_name, expand_module, expand_filiere, expand_year
+
+CONFIG_DIR = "data/config"
+OUTPUT_PATH = "data/metadata_dict.yaml"
+
+def build():
+    # Professors
+    with open(Path(CONFIG_DIR) / "professors.json", "r", encoding="utf-8") as f:
+        professors = json.load(f)
+    teacher_patterns = []
+    for p in professors:
+        teacher_patterns.extend(expand_name(p))
+
+    # Modules
+    with open(Path(CONFIG_DIR) / "modules.json", "r", encoding="utf-8") as f:
+        modules = json.load(f)
+    mod_patterns = []
+    for m in modules:
+        mod_patterns.extend(expand_module(m))
+
+    # Filières
+    with open(Path(CONFIG_DIR) / "filieres.json", "r", encoding="utf-8") as f:
+        filieres = json.load(f)
+    fil_patterns = []
+    for f in filieres:
+        fil_patterns.extend(expand_filiere(f))
+
+    # Years
+    with open(Path(CONFIG_DIR) / "years.json", "r", encoding="utf-8") as f:
+        years = json.load(f)
+    year_patterns = []
+    for y in years:
+        year_patterns.extend(expand_year(y))
+
+    # Types (hardcoded)
+    type_patterns = [
+        {"pattern": "(?i)c(ou)?rs?",       "value": "Cours"},
+        {"pattern": "(?i)td",              "value": "TD"},
+        {"pattern": "(?i)tp",              "value": "TP"},
+        {"pattern": "(?i)cnt|contr[ôo]le", "value": "Contrôle"},
+        {"pattern": "(?i)ex(am|m)?",       "value": "Examen"}
+    ]
+
+    final = {
+        "enseignant": teacher_patterns,
+        "module":     mod_patterns,
+        "filiere":    fil_patterns,
+        "annee":      year_patterns,
+        "type":       type_patterns
+    }
+
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+        yaml.dump(final, f, allow_unicode=True, sort_keys=False)
+    print(f"✅ Dictionary built → {OUTPUT_PATH}")
+
+if __name__ == "__main__":
+    build()
+
+============================================================
+File: src\checkbox_detection.py
+============================================================
+# src/checkbox_detection.py
+import os, cv2, numpy as np
+from typing import List
+from paddleocr import PaddleOCR
+
+def detect_absences_one_page(table_image_path: str,
+                             seance_number: int,
+                             ocr_instance: PaddleOCR = None) -> List[str]:
+    img = cv2.imread(table_image_path)
+    if img is None:
+        raise FileNotFoundError(f"Table image not found: {table_image_path}")
+    h, w = img.shape[:2]
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    if ocr_instance is None:
+        ocr = PaddleOCR(lang='fr', use_textline_orientation=True)
+    else:
+        ocr = ocr_instance
+    result = ocr.predict(table_image_path)
+    if not result or not result[0]:
+        return []
+
+    detections = result[0]
+    texts = detections.get('rec_texts', [])
+    boxes = detections.get('rec_polys', [])
+
+    # --- Find name column width dynamically ---
+    name_right_x = 0
+    name_rows = []
+    for box, text in zip(boxes, texts):
+        xs = [p[0] for p in box]
+        ys = [p[1] for p in box]
+        xc = sum(xs) / len(xs)
+        yc = sum(ys) / len(ys)
+        # Assume name column is roughly left 50% of the image
+        if xc < w * 0.5:
+            right_edge = max(xs)
+            if right_edge > name_right_x:
+                name_right_x = right_edge
+            name_rows.append({'y': yc, 'name': text.strip()})
+
+    if not name_rows:
+        return []
+
+    # Add a small safety margin
+    name_right_x = min(name_right_x + 5, w)
+
+    # Split remaining width into 10 equal séance columns
+    seance_width = (w - name_right_x) / 10
+    seance_left = int(name_right_x + (seance_number - 1) * seance_width)
+    seance_right = int(name_right_x + seance_number * seance_width)
+
+    # --- Group name rows (same as before) ---
+    name_rows.sort(key=lambda r: r['y'])
+    merged = []
+    cur = name_rows[0]
+    for r in name_rows[1:]:
+        if r['y'] - cur['y'] < 20:
+            cur['name'] += ' ' + r['name']
+        else:
+            merged.append(cur)
+            cur = r
+    merged.append(cur)
+
+    # --- Decision per row ---
+    absent = []
+    for row in merged:
+        yc = int(row['y'])
+        y1 = max(0, yc - 15)
+        y2 = min(h, yc + 15)
+        cell_gray = gray[y1:y2, seance_left:seance_right]
+        if cell_gray.size == 0:
+            continue
+        _, cell_bin = cv2.threshold(cell_gray, 150, 255, cv2.THRESH_BINARY_INV)
+        ink_ratio = np.sum(cell_bin == 255) / cell_bin.size
+        # If visibly empty → run tiny OCR to catch a possible "A"
+        if ink_ratio < 0.02:
+            cell_img = img[y1:y2, seance_left:seance_right]
+            cv2.imwrite("temp_cell.jpg", cell_img)
+            cell_res = ocr.predict("temp_cell.jpg")
+            cell_text = ""
+            if cell_res and cell_res[0]:
+                ct = cell_res[0].get('rec_texts', [])
+                if ct:
+                    cell_text = ct[0].strip().upper()
+            if not cell_text or any(t in cell_text for t in ('A', 'ABS', 'ABSENT')):
+                absent.append(row['name'])
+        # else: signed → present, skip
+
+    return absent
+
+
+def detect_absences_document(doc_id: str,
+                             cropped_root: str = "data/cropped",
+                             seance_number: int = 1) -> List[str]:
+    crop_dir = os.path.join(cropped_root, doc_id)
+    table_files = sorted([f for f in os.listdir(crop_dir) if f.endswith("_table.jpg")])
+    ocr = PaddleOCR(lang='fr', use_textline_orientation=True)
+    all_names = []
+    for tf in table_files:
+        names = detect_absences_one_page(os.path.join(crop_dir, tf), seance_number, ocr)
+        all_names.extend(names)
+    return all_names
+
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) < 3:
+        print("Usage: python src/checkbox_detection.py <doc_id> <seance_number>")
+        sys.exit(1)
+    doc_id, seance = sys.argv[1], int(sys.argv[2])
+    names = detect_absences_document(doc_id, seance_number=seance)
+    print(f"\nAbsent count: {len(names)}")
+    for n in names:
+        print(n)
+
+============================================================
+File: src\cropper.py
+============================================================
+# src/cropper.py
+import os
+import cv2
+import numpy as np
+from typing import Dict, Optional, List
+
+
+def crop_document(doc_id: str,
+                  preprocessed_root: str = "data/preprocessed",
+                  cropped_root: str = "data/cropped") -> List[Dict]:
+    prep_dir = os.path.join(preprocessed_root, doc_id)
+    if not os.path.isdir(prep_dir):
+        raise FileNotFoundError(f"Preprocessed folder not found: {prep_dir}")
+
+    colour_files = _natural_sorted([
+        f for f in os.listdir(prep_dir)
+        if f.lower().endswith('.jpeg')
+    ])
+
+    results = []
+    for idx, cf in enumerate(colour_files):
+        base = os.path.splitext(cf)[0]
+        binary_file = base + "_binary.jpg"
+        colour_path = os.path.join(prep_dir, cf)
+        binary_path = os.path.join(prep_dir, binary_file)
+
+        if not os.path.exists(binary_path):
+            raise FileNotFoundError(f"Missing binary file for {cf}: {binary_path}")
+
+        is_first = (idx == 0)
+        res = _crop_one(binary_path, colour_path, doc_id, is_first, cropped_root)
+        results.append(res)
+
+    return results
+
+
+def _crop_one(binary_path: str, colour_path: str,
+              doc_id: str, is_first_page: bool,
+              output_root: str) -> Dict:
+    # Load binary as BGR (3 channels) so _detect_grey_row works.
+    binary = cv2.imread(binary_path)          # <-- this was the fix
+    colour = cv2.imread(colour_path)
+    if binary is None or colour is None:
+        raise FileNotFoundError(f"Cannot read: {binary_path} or {colour_path}")
+
+    if is_first_page:
+        split_y = _detect_grey_row(binary)
+        if split_y is None:
+            split_y = int(colour.shape[0] * 0.30)
+        split_y = max(10, min(colour.shape[0] - 10, split_y))
+    else:
+        split_y = 0
+
+    out_dir = os.path.join(output_root, doc_id)
+    os.makedirs(out_dir, exist_ok=True)
+    base = os.path.splitext(os.path.basename(colour_path))[0]
+
+    if split_y > 0:
+        header = colour[:split_y, :]
+        table  = colour[split_y:, :]
+        header_path = os.path.join(out_dir, f"{base}_header.jpg")
+        table_path  = os.path.join(out_dir, f"{base}_table.jpg")
+        cv2.imwrite(header_path, header)
+        cv2.imwrite(table_path, table)
+        return {'has_header': True, 'header_path': header_path, 'table_path': table_path}
+    else:
+        table_path = os.path.join(out_dir, f"{base}_table.jpg")
+        cv2.imwrite(table_path, colour)
+        return {'has_header': False, 'header_path': None, 'table_path': table_path}
+
+
+def _detect_grey_row(image: np.ndarray) -> Optional[int]:
+    bgr = image.astype(np.float32)
+    min_vals = np.min(bgr, axis=2)
+    max_vals = np.max(bgr, axis=2)
+    diff = max_vals - min_vals
+    mean_bright = np.mean(bgr, axis=2)
+
+    is_grey = (diff < 25) & (mean_bright > 100) & (mean_bright < 200)
+    grey_counts = np.sum(is_grey, axis=1)
+
+    width_threshold = image.shape[1] * 0.70
+    candidate_rows = np.where(grey_counts > width_threshold)[0]
+
+    if len(candidate_rows) == 0:
+        return None
+
+    best_row = candidate_rows[np.argmax(grey_counts[candidate_rows])]
+
+    top = best_row
+    while top > 0 and grey_counts[top - 1] > width_threshold:
+        top -= 1
+    bottom = best_row
+    while bottom < image.shape[0] - 1 and grey_counts[bottom + 1] > width_threshold:
+        bottom += 1
+
+    return bottom + 1
+
+
+def _natural_sorted(files: List[str]) -> List[str]:
+    import re
+    def key(f):
+        m = re.search(r'(\d+)', f)
+        return int(m.group(1)) if m else 0
+    return sorted(files, key=key)
+
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python src/cropper.py <doc_id>")
+        sys.exit(1)
+    doc_id = sys.argv[1]
+    results = crop_document(doc_id)
+    for r in results:
+        status = "header+table" if r['has_header'] else "table only"
+        print(f"Page: {status}, table: {r['table_path']}")
+
+============================================================
+File: src\expand_dict.py
+============================================================
+import re
+from typing import List, Dict
+
+# Common diacritic foldings
+_DIACRITIC_MAP = {
+    'é': '[éeèê]', 'è': '[èeé]', 'ê': '[êeé]',
+    'à': '[àaâ]', 'â': '[âa]',
+    'ô': '[ôo]', 'ù': '[ùu]',
+    'ç': '[çc]',
+    'ï': '[ïiî]', 'î': '[îi]',
+}
+
+# Optional title prefix for teachers
+_TITLE = r'(pr\.?|prof\.?|dr\.?|m\.?|mr\.?)?\s*'
+
+def expand_name(canonical: str) -> List[Dict[str, str]]:
+    """Generate fuzzy regex patterns for a teacher's name."""
+    canonical = canonical.strip()
+    patterns = []
+
+    # Separate title from core name
+    title = ''
+    for t in ['Pr.', 'Prof.', 'Dr.', 'M.', 'Mr.']:
+        if canonical.lower().startswith(t.lower()):
+            title = canonical[:len(t)].strip()
+            canonical = canonical[len(t):].strip()
+            break
+
+    parts = canonical.split()
+    # Apply diacritic folding to each word
+    flex_parts = []
+    for p in parts:
+        w = p
+        for k, v in _DIACRITIC_MAP.items():
+            w = w.replace(k, v)
+        flex_parts.append(re.escape(w))
+    base_regex = r'\s+'.join(flex_parts)
+
+    # Full name (title optional)
+    patterns.append({
+        "pattern": f"(?i){_TITLE}{base_regex}",
+        "value": (title + ' ' + canonical).strip()
+    })
+
+    # Last name only
+    if len(parts) > 1:
+        patterns.append({
+            "pattern": f"(?i){_TITLE}{flex_parts[-1]}",
+            "value": (title + ' ' + canonical).strip()
+        })
+
+    # Initial + last name (if first part looks like an initial)
+    if len(parts) > 1 and re.match(r'^[A-Za-z]\.?$', parts[0]):
+        init = re.escape(parts[0].rstrip('.')) + r'\.?'
+        patterns.append({
+            "pattern": f"(?i){_TITLE}{init}\\s+{flex_parts[-1]}",
+            "value": (title + ' ' + canonical).strip()
+        })
+
+    # Deduplicate
+    seen = set()
+    uniq = []
+    for p in patterns:
+        if p['pattern'] not in seen:
+            seen.add(p['pattern'])
+            uniq.append(p)
+    return uniq
+
+def expand_module(canonical: str) -> List[Dict[str, str]]:
+    """Fuzzy patterns for module names (handles diacritics and missing words)."""
+    canonical = canonical.strip()
+    patterns = []
+    words = canonical.split()
+
+    # Fold diacritics
+    flex_words = []
+    for w in words:
+        for k, v in _DIACRITIC_MAP.items():
+            w = w.replace(k, v)
+        flex_words.append(re.escape(w))
+    full_regex = r'\s+'.join(flex_words)
+    patterns.append({"pattern": f"(?i){full_regex}", "value": canonical})
+
+    # Without last word if it's a common descriptor (like "avancées")
+    if len(words) > 1:
+        without = r'\s+'.join(flex_words[:-1])
+        patterns.append({"pattern": f"(?i){without}", "value": canonical})
+
+    return patterns
+
+def expand_filiere(canonical: str) -> List[Dict[str, str]]:
+    """Patterns for filière, allowing omitted 'année'."""
+    canonical = canonical.strip()
+    patterns = []
+    words = canonical.split()
+    flex_words = []
+    for w in words:
+        for k, v in _DIACRITIC_MAP.items():
+            w = w.replace(k, v)
+        flex_words.append(re.escape(w))
+    full_regex = r'\s+'.join(flex_words)
+    patterns.append({"pattern": f"(?i){full_regex}", "value": canonical})
+
+    # Without the last word if it's 'année'
+    if words[-1].lower() == 'année':
+        without = r'\s+'.join(flex_words[:-1])
+        patterns.append({"pattern": f"(?i){without}", "value": canonical})
+    return patterns
+
+def expand_year(canonical: str) -> List[Dict[str, str]]:
+    """Academic year patterns: 2024-2025, 2024 2025, 24-25, 24 25."""
+    m = re.match(r'(\d{4})\s*[-/]\s*(\d{4})', canonical)
+    if not m:
+        return [{"pattern": re.escape(canonical), "value": canonical}]
+    s, e = m.groups()
+    s2, e2 = s[2:], e[2:]
+    patterns = [
+        {"pattern": f"{s}\\s*[-/]\\s*{e}", "value": canonical},
+        {"pattern": f"{s}\\s+{e}", "value": canonical},
+        {"pattern": f"{s2}\\s*[-/]\\s*{e2}", "value": canonical},
+        {"pattern": f"{s2}\\s+{e2}", "value": canonical},
+    ]
+    return patterns
+
+============================================================
+File: src\json2vocxml.py
+============================================================
+# ==========================================
+# PHASE 1: LOAD SYSTEM TOOLS
+# ==========================================
+
+# Import the 'os' tool to look at folders and files on your computer
+import os
+
+# Import the 'json' tool to read LabelMe files
+import json
+
+# Import the XML tool and give it the short nickname 'ET'
+import xml.etree.ElementTree as ET
+
+
+# ==========================================
+# PHASE 2: DEFINE WHERE YOUR FILES LIVE
+# ==========================================
+
+# Set the path to the folder where your LabelMe JSON files are saved
+json_dir = "data/annotated/test/"
+
+
+# ==========================================
+# PHASE 3: LOOP THROUGH EVERY FILE
+# ==========================================
+
+# Look inside the folder and read the files one by one
+for filename in os.listdir(json_dir):
+    
+    # Check if the current file ends with '.json'. If it does not, ignore it!
+    if filename.endswith(".json"):
+        
+        # Combine the folder path and filename together (e.g., "data/annotated/image1.json")
+        full_json_path = os.path.join(json_dir, filename)
+        
+        # Open the JSON file safely in read-only ("r") mode as a temporary object named 'f'
+        with open(full_json_path, "r") as f:
+            # Read the file data and convert it into a easy-to-use Python dictionary
+            json_data = json.load(f)
+            
+        # ==========================================
+        # PHASE 4: BUILD THE XML MASTER TEMPLATE
+        # ==========================================
+        
+        # Create the outermost XML container tag: <annotation>
+        xml_master = ET.Element("annotation")
+        
+        # Inside <annotation>, create a <filename> tag and fill it with the original image name
+        ET.SubElement(xml_master, "filename").text = json_data["imagePath"]
+        
+        # Inside <annotation>, create a <size> tag to hold dimensions
+        xml_size = ET.SubElement(xml_master, "size")
+        
+        # Put the image width, height, and color channels (3) inside the <size> tag
+        # Note: XML requires numbers to be turned into text strings using 'str()'
+        ET.SubElement(xml_size, "width").text = str(json_data["imageWidth"])
+        ET.SubElement(xml_size, "height").text = str(json_data["imageHeight"])
+        ET.SubElement(xml_size, "depth").text = "3"
+        
+        # ==========================================
+        # PHASE 5: PROCESS EACH BOX DRAWN ON THE IMAGE
+        # ==========================================
+        
+        # Loop through every single box shape you drew on this specific image
+        for shape in json_data["shapes"]:
+            
+            # Double check that the shape is actually a rectangle box
+            if shape["shape_type"] == "rectangle":
+                
+                # LabelMe saves rectangles using 2 points: Top-Left (p1) and Bottom-Right (p2)
+                p1 = shape["points"][0] # Contains [X-start, Y-start]
+                p2 = shape["points"][1] # Contains [X-end, Y-end]
+                
+                # Turn coordinates into whole integer numbers (no decimals)
+                xmin = int(p1[0]) # Top-Left X coordinate (left edge)
+                ymin = int(p1[1]) # Top-Left Y coordinate (top edge)
+                xmax = int(p2[0]) # Bottom-Right X coordinate (right edge)
+                ymax = int(p2[1]) # Bottom-Right Y coordinate (bottom edge)
+                
+                # Inside <annotation>, create an <object> tag for this specific label
+                xml_object = ET.SubElement(xml_master, "object")
+                
+                # Inside <object>, create a <name> tag containing your label ("header" or "table")
+                ET.SubElement(xml_object, "name").text = shape["label"]
+                
+                # Inside <object>, create a <bndbox> tag to hold the coordinate tags
+                xml_bndbox = ET.SubElement(xml_object, "bndbox")
+                
+                # Drop the 4 boundary edges inside the <bndbox> tag as text strings
+                ET.SubElement(xml_bndbox, "xmin").text = str(xmin)
+                ET.SubElement(xml_bndbox, "ymin").text = str(ymin)
+                ET.SubElement(xml_bndbox, "xmax").text = str(xmax)
+                ET.SubElement(xml_bndbox, "ymax").text = str(ymax)
+                
+        # ==========================================
+        # PHASE 6: WRITE THE NEW XML FILE TO HARD DRIVE
+        # ==========================================
+        
+        # Change the filename string from ".json" to ".xml" (e.g., "image1.xml")
+        xml_filename = filename.replace(".json", ".xml")
+        
+        # Combine the folder path and new XML filename together
+        full_xml_path = os.path.join(json_dir, xml_filename)
+        
+        # Compile all the built tags into a finalized document tree
+        xml_document = ET.ElementTree(xml_master)
+        
+        # Save the file permanently to your hard drive
+        xml_document.write(full_xml_path)
+        
+# The script completely finishes once all JSON files have been read and saved as XML.
+print("Conversion complete! All JSON files converted to Pascal VOC XML successfully.")
+
+
+============================================================
+File: src\name_matcher.py
+============================================================
+# src/name_matcher.py
+"""
+Map OCR‑extracted student names to official group roster using fuzzy matching.
+"""
+
+import csv
+from typing import Dict, List, Tuple, Optional
+from rapidfuzz import process, fuzz
+
+def load_group_roster(csv_path: str) -> List[Dict[str, str]]:
+    """
+    Read a group CSV (with columns N_Apo, Nom_Prenom) and return a list of dicts.
+    """
+    with open(csv_path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        roster = []
+        for row in reader:
+            napo = row['N_Apo'].strip()
+            name = row['Nom_Prenom'].strip()
+            if napo and name:
+                roster.append({'n_apo': napo, 'nom_prenom': name})
+    return roster
+
+def resolve_absences(ocr_names: List[str],
+                     group_csv_path: str,
+                     min_score: int = 75) -> List[Dict[str, str]]:
+    """
+    For each OCR‑raw name, find the best matching official name using fuzzy matching.
+    Returns a list of {n_apo, nom_prenom, ocr_raw, score}.
+    """
+    roster = load_group_roster(group_csv_path)
+    if not roster:
+        return []
+
+    official_names = [r['nom_prenom'] for r in roster]
+    results = []
+    for raw in ocr_names:
+        # fuzzy match against all official names
+        match = process.extractOne(raw, official_names, scorer=fuzz.token_sort_ratio)
+        if match and match[1] >= min_score:
+            best_name = match[0]
+            idx = official_names.index(best_name)
+            results.append({
+                'n_apo': roster[idx]['n_apo'],
+                'nom_prenom': roster[idx]['nom_prenom'],
+                'ocr_raw': raw,
+                'score': match[1]
+            })
+        else:
+            results.append({
+                'n_apo': '',
+                'nom_prenom': raw,
+                'ocr_raw': raw,
+                'score': 0
+            })
+    return results
+
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) < 3:
+        print("Usage: python src/name_matcher.py <group_csv> <ocr_name1> [ocr_name2 ...]")
+        sys.exit(1)
+    csv_path = sys.argv[1]
+    ocr_names = sys.argv[2:]
+    resolved = resolve_absences(ocr_names, csv_path)
+    for r in resolved:
+        print(f"{r['n_apo']:8s} {r['nom_prenom']:30s} (OCR: {r['ocr_raw']}, score: {r['score']})")
+
+============================================================
+File: src\ocr_header.py
+============================================================
+# src/ocr_header.py
+import os, json, re
+from typing import Dict, List
+import yaml
+import numpy as np
+from paddleocr import PaddleOCR
+
+
+def extract_document_metadata(doc_id: str,
+                              cropped_root: str = "data/cropped",
+                              metadata_root: str = "data/metadata",
+                              template_path: str = "data/expected_metadata.json",
+                              dict_path: str = "data/metadata_dict.yaml") -> Dict:
+    # ---- 1. Load template and dictionary ----
+    with open(template_path, 'r', encoding='utf-8') as f:
+        template = json.load(f)
+    with open(dict_path, 'r', encoding='utf-8') as f:
+        correction_dict = yaml.safe_load(f)
+
+    # ---- 2. Locate header image ----
+    crop_dir = os.path.join(cropped_root, doc_id)
+    header_path = os.path.join(crop_dir, "as1_header.jpg")
+    if not os.path.exists(header_path):
+        headers = [f for f in os.listdir(crop_dir) if "_header.jpg" in f]
+        if headers:
+            header_path = os.path.join(crop_dir, headers[0])
+        else:
+            raise FileNotFoundError(f"No header image found in {crop_dir}")
+
+    # ---- 3. Run OCR ----
+    ocr = PaddleOCR(lang='fr', use_textline_orientation=True)
+    raw = ocr.predict(header_path)
+    if not raw or not raw[0]:
+        return template   # return empty template
+
+    page = raw[0]
+    texts = page['rec_texts']
+    boxes = page['rec_polys']
+
+    entries = []
+    for box, text in zip(boxes, texts):
+        xs = [p[0] for p in box]
+        ys = [p[1] for p in box]
+        entries.append({
+            'text': text.strip(),
+            'x': sum(xs) / len(xs),
+            'y': sum(ys) / len(ys)
+        })
+    entries.sort(key=lambda e: (e['y'], e['x']))
+
+    # ---- 4. Extract top-level fields ----
+    filiere_raw, annee_raw = _extract_filiere_annee(entries)
+    enseignant_raw = _extract_simple_field(entries, 'enseignant')
+    module_raw     = _extract_simple_field(entries, 'module')
+
+    filiere    = _fuzzy_correct(filiere_raw, 'filiere', correction_dict)
+    annee      = _fuzzy_correct(annee_raw, 'annee', correction_dict)
+    enseignant = _fuzzy_correct(enseignant_raw, 'enseignant', correction_dict)
+    module     = _fuzzy_correct(module_raw, 'module', correction_dict)
+
+    # ---- 5. Build séance table ----
+    col_map = {}
+    for e in entries:
+        m = re.match(r'^séance(\d{1,2})$', e['text'].lower())
+        if m:
+            col_map[int(m.group(1))] = e['x']
+
+    row_bands = _build_row_bands(entries)
+    seances = template.get('seances', {
+        str(i): {"date": "", "heure_debut": "", "heure_fin": "", "type": ""}
+        for i in range(1, 11)
+    })
+
+    if col_map and row_bands:
+        value_entries = [e for e in entries if not _is_grid_label(e['text'])]
+        for e in value_entries:
+            col = _closest_column(e['x'], col_map)
+            row = _row_for_y(e['y'], row_bands)
+            if col and row:
+                key = _row_to_key(row)
+                col_str = str(col)
+                if col_str in seances and seances[col_str].get(key, '') == '':
+                    raw_val = e['text']
+                    if key == 'type':
+                        raw_val = _fuzzy_correct(raw_val, 'type', correction_dict)
+                    seances[col_str][key] = raw_val
+
+    metadata = {
+        "filiere": filiere,
+        "annee": annee,
+        "enseignant": enseignant,
+        "module": module,
+        "seances": seances
+    }
+
+    # ---- 6. Save ----
+    out_dir = os.path.join(metadata_root, doc_id)
+    os.makedirs(out_dir, exist_ok=True)
+    json_path = os.path.join(out_dir, "metadata.json")
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump(metadata, f, indent=2, ensure_ascii=False)
+
+    return metadata
+
+
+# ── Helpers ────────────────────────────────────────────────────────────
+
+def _extract_filiere_annee(entries):
+    for e in entries:
+        m = re.search(r'Filière\s+(.+?)\s*-\s*(\d{4}-\d{4})', e['text'], re.IGNORECASE)
+        if m:
+            return m.group(1).strip(), m.group(2).strip()
+    return '', ''
+
+def _extract_simple_field(entries, label):
+    for i, e in enumerate(entries):
+        if e['text'].lower().startswith(label.lower()):
+            for j in range(i+1, min(i+3, len(entries))):
+                txt = entries[j]['text']
+                if txt and not _is_ignored(txt) and not _is_grid_label(txt):
+                    return txt
+    return ''
+
+def _is_ignored(text):
+    low = text.lower()
+    phrases = [
+        "université sultan moulay slimane",
+        "l'ecole supérieure de technologie",
+        "l'école supérieure de technologie",
+        "fquih ben salah",
+        "liste de présence",
+        "n.b:",
+        "a : absence",
+        "p : présence",
+        "n apo",
+        "nom & prenom",
+    ]
+    return any(p in low for p in phrases)
+
+def _is_grid_label(text):
+    low = text.lower()
+    if re.match(r'^séance\d{1,2}$', low): return True
+    if low in ('date', 'heure début', 'heure fin'): return True
+    if low.startswith('type'): return True
+    return _is_ignored(text)
+
+def _build_row_bands(entries):
+    positions = {}
+    for e in entries:
+        low = e['text'].lower()
+        if low == 'date':           positions['date'] = e['y']
+        elif 'heure début' in low:  positions['heure_debut'] = e['y']
+        elif 'heure fin' in low:    positions['heure_fin'] = e['y']
+        elif low.startswith('type'): positions['type'] = e['y']
+    sorted_labels = sorted(positions.items(), key=lambda kv: kv[1])
+    bands = {}
+    for i, (name, y) in enumerate(sorted_labels):
+        next_y = sorted_labels[i+1][1] if i+1 < len(sorted_labels) else float('inf')
+        bands[name] = (y, next_y)
+    return bands
+
+def _closest_column(x, col_map):
+    best, best_dist = None, float('inf')
+    for num, cx in col_map.items():
+        dist = abs(x - cx)
+        if dist < best_dist:
+            best, best_dist = num, dist
+    return best
+
+def _row_for_y(y, bands):
+    for name, (low, high) in bands.items():
+        if low <= y <= high:
+            return name
+    return None
+
+def _row_to_key(row):
+    if row == 'date': return 'date'
+    if row in ('heure_debut', 'heure début'): return 'heure_debut'
+    if row in ('heure_fin', 'heure fin'): return 'heure_fin'
+    if row == 'type': return 'type'
+    return row
+
+def _fuzzy_correct(raw_text, field, dictionary):
+    patterns = dictionary.get(field, [])
+    for entry in patterns:
+        if re.search(entry['pattern'], raw_text):
+            return entry['value']
+    return raw_text
+
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python src/ocr_header.py <doc_id>")
+        sys.exit(1)
+    doc_id = sys.argv[1]
+    meta = extract_document_metadata(doc_id)
+    print(json.dumps(meta, indent=2, ensure_ascii=False))
+
+============================================================
+File: src\pipeline.py
+============================================================
+
+
+============================================================
+File: src\preprocessing.py
+============================================================
+# src/preprocessing.py
+import os
+import cv2
+import numpy as np
+from typing import Dict, List, Tuple
+
+
+def preprocess_document(doc_id: str,
+                        raw_root: str = "data/raw",
+                        preprocessed_root: str = "data/preprocessed") -> List[Dict]:
+    """
+    Clean and binarize every page of a document.
+
+    1. Reads all images from data/raw/<doc_id>/.
+    2. Sorts them naturally (as1, as2, …).
+    3. For each image: deskew, enhance contrast, binarize.
+    4. Saves the cleaned colour image and a binary version to
+       data/preprocessed/<doc_id>/.
+
+    Returns a list of dicts (one per page) with keys:
+        'original', 'cleaned', 'binary', 'output_path', 'binary_path'
+    """
+    raw_dir = os.path.join(raw_root, doc_id)
+    if not os.path.isdir(raw_dir):
+        raise FileNotFoundError(f"Raw document folder not found: {raw_dir}")
+
+    exts = ('.jpg', '.jpeg', '.png', '.bmp', '.tiff', '.tif')
+    image_files = _natural_sorted([
+        f for f in os.listdir(raw_dir)
+        if f.lower().endswith(exts)
+    ])
+
+    if not image_files:
+        raise FileNotFoundError(f"No image files found in {raw_dir}")
+
+    results = []
+    for img_file in image_files:
+        img_path = os.path.join(raw_dir, img_file)
+        res = _preprocess_one(img_path, doc_id, preprocessed_root)
+        results.append(res)
+
+    return results
+
+
+# ----------------------------------------------------------------------
+# SINGLE-PAGE LOGIC
+# ----------------------------------------------------------------------
+def _preprocess_one(image_path: str, doc_id: str, output_root: str) -> Dict:
+    image = _load(image_path)
+    gray = _to_grayscale(image)
+    deskewed = _deskew(image, gray)
+    enhanced = _enhance(deskewed)
+    binary = _binarize(enhanced)
+
+    out_dir = os.path.join(output_root, doc_id)
+    os.makedirs(out_dir, exist_ok=True)
+    base = os.path.splitext(os.path.basename(image_path))[0]
+    clean_path = os.path.join(out_dir, f"{base}.jpeg")
+    bin_path   = os.path.join(out_dir, f"{base}_binary.jpg")
+    cv2.imwrite(clean_path, enhanced)
+    cv2.imwrite(bin_path, binary)
+
+    return {
+        'original': image,
+        'cleaned': enhanced,
+        'binary': binary,
+        'output_path': clean_path,
+        'binary_path': bin_path,
+    }
+
+
+# ----------------------------------------------------------------------
+# HELPERS (page extraction removed)
+# ----------------------------------------------------------------------
+def _load(path: str) -> np.ndarray:
+    img = cv2.imread(path)
+    if img is None:
+        raise FileNotFoundError(f"Cannot load image: {path}")
+    return img
+
+def _to_grayscale(image: np.ndarray) -> np.ndarray:
+    return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+def _deskew(image: np.ndarray, gray: np.ndarray, max_skew_angle: float = 10.0) -> np.ndarray:
+    _, binary_inv = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+    h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (40, 1))
+    merged = cv2.morphologyEx(binary_inv, cv2.MORPH_CLOSE, h_kernel)
+    lines = cv2.HoughLinesP(merged, 1, np.pi / 180, threshold=150, minLineLength=80, maxLineGap=15)
+    if lines is None:
+        return image
+    angles = []
+    for line in lines:
+        x1, y1, x2, y2 = line[0]
+        angle = np.degrees(np.arctan2(y2 - y1, x2 - x1))
+        if abs(angle) < max_skew_angle:
+            angles.append(angle)
+    if not angles:
+        return image
+    skew_angle = float(np.median(angles))
+    h, w = image.shape[:2]
+    center = (w // 2, h // 2)
+    M = cv2.getRotationMatrix2D(center, skew_angle, 1.0)
+    return cv2.warpAffine(image, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
+
+def _enhance(image: np.ndarray, clip_limit: float = 2.0, tile_size: Tuple[int, int] = (8, 8)) -> np.ndarray:
+    lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
+    l, a, b = cv2.split(lab)
+    clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=tile_size)
+    l_enhanced = clahe.apply(l)
+    lab_enhanced = cv2.merge([l_enhanced, a, b])
+    return cv2.cvtColor(lab_enhanced, cv2.COLOR_LAB2BGR)
+
+def _binarize(image: np.ndarray, block_size: int = 31, C: int = 15) -> np.ndarray:
+    gray = _to_grayscale(image) if len(image.shape) == 3 else image
+    blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+    binary_inv = cv2.adaptiveThreshold(blurred, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, block_size, C)
+    return cv2.bitwise_not(binary_inv)
+
+def _natural_sorted(files: List[str]) -> List[str]:
+    import re
+    def key(f):
+        m = re.search(r'(\d+)', f)
+        return int(m.group(1)) if m else 0
+    return sorted(files, key=key)
+
+
+# ----------------------------------------------------------------------
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python src/preprocessing.py <doc_id>")
+        sys.exit(1)
+    doc_id = sys.argv[1]
+    results = preprocess_document(doc_id)
+    for r in results:
+        print(f"Preprocessed: {os.path.basename(r['output_path'])}")
+
+============================================================
+File: src\__init__.py
+============================================================
+
+
