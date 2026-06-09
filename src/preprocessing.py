@@ -144,6 +144,40 @@ def deskew(image: np.ndarray, max_skew_angle: float = 10.0) -> np.ndarray:
     deskewed = cv2.warpAffine(image, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_CONSTANT, borderValue=(255, 255, 255))
     return deskewed
 
+def crop_margins(image: np.ndarray, margin: int = 30) -> np.ndarray:
+    """Removes empty white space around the printed document content."""
+    gray = to_grayscale(image)
+    _, binary_inv = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+    
+    # Use morphology to connect all text into big blobs
+    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (20, 20))
+    closed = cv2.morphologyEx(binary_inv, cv2.MORPH_CLOSE, kernel)
+    
+    contours, _ = cv2.findContours(closed, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    if not contours:
+        return image
+        
+    x_min, y_min = image.shape[1], image.shape[0]
+    x_max, y_max = 0, 0
+    
+    for c in contours:
+        x, y, w, h = cv2.boundingRect(c)
+        if w > 50 and h > 20: # Ignore tiny noise
+            x_min = min(x_min, x)
+            y_min = min(y_min, y)
+            x_max = max(x_max, x + w)
+            y_max = max(y_max, y + h)
+            
+    if x_max <= x_min or y_max <= y_min:
+        return image
+        
+    x_min = max(0, x_min - margin)
+    y_min = max(0, y_min - margin)
+    x_max = min(image.shape[1], x_max + margin)
+    y_max = min(image.shape[0], y_max + margin)
+    
+    return image[y_min:y_max, x_min:x_max]
+
 def enhance(image: np.ndarray, clip_limit: float = 2.0, tile_size: tuple = (8, 8)) -> np.ndarray:
     """Improves contrast using CLAHE."""
     if len(image.shape) == 2:
@@ -156,10 +190,15 @@ def enhance(image: np.ndarray, clip_limit: float = 2.0, tile_size: tuple = (8, 8
     return cv2.cvtColor(lab_enhanced, cv2.COLOR_LAB2BGR)
 
 def binarize(image: np.ndarray, block_size: int = 31, C: int = 15) -> np.ndarray:
-    """Adaptive thresholding to return a clean black and white image."""
+    """
+    Adaptive thresholding to return a clean black and white image.
+    Ink will be BLACK (0) and background will be WHITE (255) because of bitwise_not.
+    """
     gray = to_grayscale(image)
     blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+    # THRESH_BINARY_INV makes ink 255 (white) and background 0 (black)
     binary_inv = cv2.adaptiveThreshold(blurred, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, block_size, C)
+    # bitwise_not makes ink 0 (black) and background 255 (white)
     return cv2.bitwise_not(binary_inv)
 
 def _natural_sorted(files: List[str]) -> List[str]:

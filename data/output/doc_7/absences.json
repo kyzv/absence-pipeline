@@ -1,0 +1,93 @@
+[
+  {
+    "n_apo": "33",
+    "nom": "Fatih Mohamed",
+    "ocr_raw": "Fatih Harmal Oussama Mohamed",
+    "sessions": [],
+    "row_y": 151.0
+  },
+  {
+    "n_apo": "35",
+    "nom": "HAROUAL YASSINE",
+    "ocr_raw": "IMAM HAROUAL YASSINE Fatima-Ezzahra",
+    "sessions": [],
+    "row_y": 186.4375
+  },
+  {
+    "n_apo": "38",
+    "nom": "Jaouhari Abdelouahed",
+    "ocr_raw": "jamri Jaouhari maryem Abdelwahed",
+    "sessions": [],
+    "row_y": 224.25
+  },
+  {
+    "n_apo": "39",
+    "nom": "JENNATI Abderrahman",
+    "ocr_raw": "amhaou JENNATI Abderrahman",
+    "sessions": [],
+    "row_y": 257.1666666666667
+  },
+  {
+    "n_apo": "41",
+    "nom": "KATIM ILIAS",
+    "ocr_raw": "KATIM karim ILIASS",
+    "sessions": [],
+    "row_y": 281.9166666666667
+  },
+  {
+    "n_apo": "42",
+    "nom": "Kerroum Ali",
+    "ocr_raw": "khali Kerroum Ali",
+    "sessions": [],
+    "row_y": 311.9166666666667
+  },
+  {
+    "n_apo": "44",
+    "nom": "KOUROUB OUSSAMA",
+    "ocr_raw": "KOUROUB zakaria OUSSAMA",
+    "sessions": [],
+    "row_y": 337.25
+  },
+  {
+    "n_apo": "45",
+    "nom": "Mlik Younes",
+    "ocr_raw": "Mlik MORABIT Younes",
+    "sessions": [],
+    "row_y": 368.25
+  },
+  {
+    "n_apo": "47",
+    "nom": "NAJI MOUSSAAB",
+    "ocr_raw": "NAJAH OMAR MOUSAAB",
+    "sessions": [],
+    "row_y": 393.8333333333333
+  },
+  {
+    "n_apo": "48",
+    "nom": "NEMRI NOUHAILA",
+    "ocr_raw": "NEJMI Ouhammou NOUHAILA",
+    "sessions": [],
+    "row_y": 424.75
+  },
+  {
+    "n_apo": "50",
+    "nom": "SABKI RYAD",
+    "ocr_raw": "SABKI RYAD Mustapha",
+    "sessions": [],
+    "row_y": 450.6666666666667
+  },
+  {
+    "n_apo": "51",
+    "nom": "tahin yasser",
+    "ocr_raw": "thili tahin yasser",
+    "sessions": [],
+    "row_y": 481.3333333333333
+  },
+  {
+    "n_apo": "53",
+    "nom": "ZARRA MOHAMED",
+    "ocr_raw": "ZARRA inas MOHAMED",
+    "sessions": [],
+    "row_y": 507.1666666666667
+  }
+]

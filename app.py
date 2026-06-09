@@ -24,17 +24,18 @@ def main():
     config_dir = "data/config/groups"
     csv_files = [f for f in os.listdir(config_dir) if f.endswith('.csv')] if os.path.exists(config_dir) else []
     
-    if f"{selected_doc}.csv" in csv_files:
-        st.sidebar.success(f"Liste d'étudiants trouvée : {selected_doc}.csv")
+    if csv_files:
+        selected_csv = st.sidebar.selectbox("Sélectionnez la base d'étudiants (Filière):", csv_files)
     else:
-        st.sidebar.warning(f"Aucune liste d'étudiants trouvée. Veuillez exécuter 'extract_students.py'.")
+        st.sidebar.warning("Aucune liste d'étudiants trouvée dans data/config/groups.")
+        return
 
     # Run Pipeline Button
     if st.sidebar.button("🚀 Lancer l'Analyse"):
         with st.spinner("Analyse en cours... (Cela peut prendre quelques minutes)"):
             try:
                 from src.pipeline import run_pipeline
-                meta, tbl = run_pipeline(selected_doc)
+                meta, tbl = run_pipeline(selected_doc, selected_csv)
                 st.session_state['meta'] = meta
                 st.session_state['tbl'] = tbl
                 st.success("Analyse terminée avec succès !")

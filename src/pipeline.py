@@ -2,11 +2,11 @@ import os
 import cv2
 import json
 from paddleocr import PaddleOCR
-from .preprocessing import load_image, deskew, enhance, binarize, _natural_sorted
+from .preprocessing import load_image, deskew, enhance, binarize, crop_margins, _natural_sorted
 from .ocr_header import extract_document_metadata
 from .table_analyzer import analyze_table
 
-def run_pipeline(doc_id: str, raw_root: str = "data/raw", config_root: str = "data/config/groups"):
+def run_pipeline(doc_id: str, csv_filename: str, raw_root: str = "data/raw", config_root: str = "data/config/groups"):
     """
     Main pipeline orchestrator.
     Returns (metadata, table_results)
@@ -15,9 +15,9 @@ def run_pipeline(doc_id: str, raw_root: str = "data/raw", config_root: str = "da
     if not os.path.isdir(raw_dir):
         raise FileNotFoundError(f"Directory not found: {raw_dir}")
         
-    csv_path = os.path.join(config_root, f"{doc_id}.csv")
+    csv_path = os.path.join(config_root, csv_filename)
     if not os.path.isfile(csv_path):
-        raise FileNotFoundError(f"Student CSV not found: {csv_path}. Please run extract_students.py first.")
+        raise FileNotFoundError(f"Student CSV not found: {csv_path}.")
 
     exts = ('.jpg', '.jpeg', '.png')
     image_files = _natural_sorted([f for f in os.listdir(raw_dir) if f.lower().endswith(exts)])
@@ -34,7 +34,8 @@ def run_pipeline(doc_id: str, raw_root: str = "data/raw", config_root: str = "da
         
         # 1. Preprocessing
         img = load_image(img_path)
-        img_deskewed = deskew(img)
+        img_cropped = crop_margins(img)
+        img_deskewed = deskew(img_cropped)
         img_enhanced = enhance(img_deskewed)
         img_binary = binarize(img_enhanced)
         

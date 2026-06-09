@@ -5,6 +5,36 @@ import numpy as np
 from typing import Dict, List, Tuple
 from thefuzz import process, fuzz
 
+def find_vertical_lines(binary: np.ndarray, header_y: int) -> List[int]:
+    """Finds exact X coordinates of physical vertical lines in the table."""
+    # binary has ink=0, bg=255. Invert it so ink=255.
+    binary_inv = cv2.bitwise_not(binary)
+    # Only look below header
+    table_area = binary_inv[int(header_y):, :]
+    
+    v_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, int(table_area.shape[0] * 0.15)))
+    v_lines_img = cv2.morphologyEx(table_area, cv2.MORPH_OPEN, v_kernel, iterations=1)
+    
+    v_sums = np.sum(v_lines_img, axis=0)
+    # Threshold for a line is e.g. 10% of the table height being solid black ink
+    threshold = 255 * table_area.shape[0] * 0.1
+    v_peaks = np.where(v_sums > threshold)[0]
+    
+    if len(v_peaks) == 0:
+        return []
+        
+    # Group consecutive pixels belonging to the same line
+    groups = []
+    current = [v_peaks[0]]
+    for p in v_peaks[1:]:
+        if p - current[-1] <= 15: # Line can be a few pixels wide
+            current.append(p)
+        else:
+            groups.append(int(np.mean(current)))
+            current = [p]
+    groups.append(int(np.mean(current)))
+    return groups
+
 def analyze_table(image: np.ndarray,
                   binary: np.ndarray,
                   ocr_blocks: List[Dict],
@@ -12,69 +42,71 @@ def analyze_table(image: np.ndarray,
                   header_y: int,
                   doc_id: str,
                   debug_dir: str = "data/debug") -> Dict:
-    """
-    Analyzes the table area, matches student names, and detects absences.
-    """
+    
     if not os.path.exists(student_csv_path):
         raise FileNotFoundError(f"Student CSV not found: {student_csv_path}")
         
-    # Load students
     students_db = []
     with open(student_csv_path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
-        for row in reader:
-            students_db.append(row)
+        headers = reader.fieldnames
+        if not headers:
+            return []
             
-    # Find columns (Nom, Seance 1..10)
-    nom_x_min, nom_x_max = 50, int(image.shape[1] * 0.3) # Defaults
-    seances_cols = {}
+        nom_col = next((h for h in headers if 'nom' in h.lower() or 'prénom' in h.lower()), headers[-1])
+        id_col = next((h for h in headers if 'apo' in h.lower() or 'id' in h.lower() or 'n°' in h.lower()), headers[0])
+        
+        for row in reader:
+            students_db.append({
+                'n_apo': row[id_col],
+                'nom': row[nom_col]
+            })
+            
+    # 1. Find physical columns
+    v_lines = find_vertical_lines(binary, header_y)
     
+    # Fallback to OCR bounds if lines not found
+    seances_cols = {}
+    nom_x_min, nom_x_max = 50, int(image.shape[1] * 0.3)
+    
+    # Use OCR to label the physical columns
     for block in ocr_blocks:
         text = block['text'].lower()
-        y_center = block['center'][1]
-        x_center = block['center'][0]
+        x, y = block['center']
         
-        if y_center > header_y:
-            continue # We only look at header rows for column bounds
+        if y > header_y:
+            continue
             
         if 'nom' in text or 'prénom' in text or 'prenom' in text:
-            xs = [p[0] for p in block['box']]
-            nom_x_min = min(xs) - 20
-            nom_x_max = max(xs) + 250 # Give enough space for full names
-            
+            # Find closest vertical lines enclosing this text
+            if len(v_lines) >= 2:
+                left_lines = [l for l in v_lines if l < x]
+                right_lines = [l for l in v_lines if l > x]
+                if left_lines: nom_x_min = max(left_lines)
+                if right_lines: nom_x_max = min(right_lines)
+                
         if 'séance' in text or 'seance' in text:
             import re
             m = re.search(r'seance\s*(\d+)|séance\s*(\d+)', text)
             if m:
                 s_num = m.group(1) or m.group(2)
-                xs = [p[0] for p in block['box']]
-                # Usually the column width is around the text width + some margin
-                w = max(xs) - min(xs)
-                seances_cols[s_num] = {
-                    'x_min': min(xs) - 10,
-                    'x_max': max(xs) + 10,
-                    'has_data': False # Track if this session has happened
-                }
-
-    # If we couldn't find seances from header, try to guess based on standard layout
-    if not seances_cols:
-        W = image.shape[1]
-        start_x = int(W * 0.35)
-        step_x = int(W * 0.06)
-        for i in range(1, 11):
-            seances_cols[str(i)] = {
-                'x_min': start_x + (i-1)*step_x,
-                'x_max': start_x + i*step_x,
-                'has_data': False
-            }
+                # Enclosing lines
+                if len(v_lines) >= 2:
+                    left_lines = [l for l in v_lines if l < x]
+                    right_lines = [l for l in v_lines if l > x]
+                    if left_lines and right_lines:
+                        seances_cols[s_num] = {
+                            'x_min': max(left_lines),
+                            'x_max': min(right_lines),
+                            'has_data': False
+                        }
 
     # Group OCR blocks into rows
-    # Only consider blocks in the Nom column that are below the header
     nom_blocks = []
     for block in ocr_blocks:
         x, y = block['center']
         if y > header_y and nom_x_min <= x <= nom_x_max:
-            if block['text'].lower() not in ['nom', 'prénom', 'prenom', 'absent', 'présent']:
+            if block['text'].lower() not in ['nom', 'prénom', 'prenom', 'absent', 'présent'] and len(block['text']) > 2:
                 nom_blocks.append(block)
                 
     nom_blocks.sort(key=lambda b: b['center'][1])
@@ -95,7 +127,6 @@ def analyze_table(image: np.ndarray,
         
     results = []
     
-    # Analyze each row
     for r_idx, row_blocks in enumerate(rows):
         row_y = sum(b['center'][1] for b in row_blocks) / len(row_blocks)
         raw_name = " ".join([b['text'] for b in sorted(row_blocks, key=lambda b: b['center'][0])])
@@ -103,11 +134,10 @@ def analyze_table(image: np.ndarray,
         # Levenshtein Matching
         best_match, score = process.extractOne(raw_name, [s['nom'] for s in students_db], scorer=fuzz.token_set_ratio)
         if score < 50:
-            continue # Probably noise
+            continue
             
         matched_student = next(s for s in students_db if s['nom'] == best_match)
         
-        # Check sessions
         y_min = int(row_y - 15)
         y_max = int(row_y + 15)
         
@@ -117,7 +147,7 @@ def analyze_table(image: np.ndarray,
             x_min = int(bounds['x_min'])
             x_max = int(bounds['x_max'])
             
-            # 1. Check OCR blocks in this cell for "A", "Abs", "Absent"
+            # 1. OCR fallback check
             cell_text = ""
             for b in ocr_blocks:
                 bx, by = b['center']
@@ -128,26 +158,22 @@ def analyze_table(image: np.ndarray,
                 status = "Absent"
                 bounds['has_data'] = True
             else:
-                # 2. Check pixel density
+                # 2. Pixel density
                 cell_img = binary[max(0, y_min):min(binary.shape[0], y_max), 
                                   max(0, x_min):min(binary.shape[1], x_max)]
                 
                 if cell_img.size == 0:
                     density = 0
                 else:
-                    black_pixels = np.sum(cell_img == 0) # Ink is 0 in standard binary, wait, our binarize uses bitwise_not so ink is 255.
-                    # Wait, let's verify preprocessing.py: cv2.bitwise_not(binary_inv)
-                    # ADAPTIVE_THRESH_GAUSSIAN_C with THRESH_BINARY_INV means ink is 255. bitwise_not makes ink 0.
-                    # So ink is 0 (black pixels).
-                    # Actually, if bitwise_not(binary_inv) -> background is white (255), ink is black (0).
-                    # But the previous checkbox_detection.py had: black_pixels = np.sum(cell < 128)
-                    density = np.sum(cell_img < 128) / cell_img.size
+                    # In our binary, ink is 0, background is 255
+                    black_pixels = np.sum(cell_img == 0)
+                    density = black_pixels / cell_img.size
                 
-                if density > 0.02: # Threshold
+                if density > 0.015: # Tuned threshold for signatures
                     status = "Present"
                     bounds['has_data'] = True
                 else:
-                    status = "Absent" # Empty cell
+                    status = "Absent"
                     
             student_absences.append({
                 "seance": s_num,
@@ -164,11 +190,9 @@ def analyze_table(image: np.ndarray,
             "row_y": row_y
         })
         
-    # Filter out future/empty sessions
-    # If a session column is "Absent" for EVERYONE, it hasn't happened.
+    # Filter active sessions
     active_sessions = []
     for s_num in seances_cols.keys():
-        # Check if anyone is present or has explicit "Abs" text
         is_active = False
         for r in results:
             for s in r['sessions']:
@@ -179,7 +203,6 @@ def analyze_table(image: np.ndarray,
         if is_active:
             active_sessions.append(s_num)
             
-    # Clean up results to only include active sessions
     final_results = []
     for r in results:
         active_s = [s for s in r['sessions'] if s['seance'] in active_sessions]
@@ -190,6 +213,10 @@ def analyze_table(image: np.ndarray,
     dbg = image.copy()
     cv2.line(dbg, (0, int(header_y)), (dbg.shape[1], int(header_y)), (0, 0, 255), 2)
     
+    # Draw physical lines detected
+    for vl in v_lines:
+        cv2.line(dbg, (vl, 0), (vl, dbg.shape[0]), (255, 0, 0), 1)
+        
     for r in final_results:
         for s in r['sessions']:
             x1, y1, x2, y2 = s['box']
