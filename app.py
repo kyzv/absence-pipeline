@@ -1,108 +1,118 @@
 import streamlit as st
-import pandas as pd
-import json
-import tempfile
 import os
-import sys
+import json
+import pandas as pd
+from PIL import Image
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
-from pipeline import run
+st.set_page_config(page_title="Absence Pipeline", layout="wide")
 
-st.set_page_config(
-    page_title="Gestion des Absences — PoC",
-    page_icon="",
-    layout="wide"
-)
+def main():
+    st.title("🎓 Système Intelligent de Gestion des Absences")
+    st.markdown("---")
 
-st.title("Automatisation de la Saisie des Absences")
-st.caption("Pipeline de reconnaissance de documents — Proof of Concept")
+    # Sidebar: Setup
+    st.sidebar.header("📁 Configuration")
+    
+    raw_dir = "data/raw"
+    if not os.path.exists(raw_dir):
+        st.error(f"Dossier {raw_dir} introuvable.")
+        return
+        
+    doc_ids = [d for d in os.listdir(raw_dir) if os.path.isdir(os.path.join(raw_dir, d))]
+    selected_doc = st.sidebar.selectbox("Sélectionnez le document à traiter:", doc_ids)
+    
+    config_dir = "data/config/groups"
+    csv_files = [f for f in os.listdir(config_dir) if f.endswith('.csv')] if os.path.exists(config_dir) else []
+    
+    if f"{selected_doc}.csv" in csv_files:
+        st.sidebar.success(f"Liste d'étudiants trouvée : {selected_doc}.csv")
+    else:
+        st.sidebar.warning(f"Aucune liste d'étudiants trouvée. Veuillez exécuter 'extract_students.py'.")
 
-# ── Sidebar: tunable parameters ──────────────────────────────────────────────
-st.sidebar.header("Paramètres du Pipeline")
-header_ratio = st.sidebar.slider(
-    "Ratio en-tête", min_value=0.10, max_value=0.40, value=0.22, step=0.01
-)
-col_ratio = st.sidebar.slider(
-    "Position colonne signature", min_value=0.60, max_value=0.95, value=0.85, step=0.01
-)
-density_threshold = st.sidebar.slider(
-    "Seuil densité pixels (présence/absence)",
-    min_value=0.005, max_value=0.10, value=0.02, step=0.005
-)
+    # Run Pipeline Button
+    if st.sidebar.button("🚀 Lancer l'Analyse"):
+        with st.spinner("Analyse en cours... (Cela peut prendre quelques minutes)"):
+            try:
+                from src.pipeline import run_pipeline
+                meta, tbl = run_pipeline(selected_doc)
+                st.session_state['meta'] = meta
+                st.session_state['tbl'] = tbl
+                st.success("Analyse terminée avec succès !")
+            except Exception as e:
+                import traceback
+                st.error(f"Erreur lors de l'exécution : {str(e)}\n{traceback.format_exc()}")
+                return
 
-# ── File upload ───────────────────────────────────────────────────────────────
-st.subheader("1. Uploader la feuille d'absence")
-uploaded_image = st.file_uploader("Feuille scannée (JPG, PNG)", type=["jpg", "jpeg", "png"])
-uploaded_db = st.file_uploader("Liste étudiants (CSV avec colonne 'name')", type=["csv"])
+    # Load from Output if available and not in session state
+    out_dir = os.path.join("data", "output", selected_doc)
+    if 'meta' not in st.session_state and os.path.exists(os.path.join(out_dir, "metadata.json")):
+        with open(os.path.join(out_dir, "metadata.json"), 'r', encoding='utf-8') as f:
+            st.session_state['meta'] = json.load(f)
+        with open(os.path.join(out_dir, "absences.json"), 'r', encoding='utf-8') as f:
+            st.session_state['tbl'] = json.load(f)
 
-# ── Run pipeline ──────────────────────────────────────────────────────────────
-if uploaded_image and uploaded_db:
-    st.subheader("2. Image uploadée")
-    st.image(uploaded_image, caption="Feuille scannée originale", width=600)
+    if 'meta' in st.session_state:
+        meta = st.session_state['meta']
+        tbl = st.session_state['tbl']
+        
+        # Display Metadata
+        st.subheader("📋 Métadonnées Extraites")
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Filière", meta.get("filiere", "-"))
+        col2.metric("Module", meta.get("module", "-"))
+        col3.metric("Enseignant", meta.get("enseignant", "-"))
+        col4.metric("Année", meta.get("annee", "-"))
+        
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Date", meta.get("date", "-"))
+        col2.metric("Heure Début", meta.get("heure_debut", "-"))
+        col3.metric("Heure Fin", meta.get("heure_fin", "-"))
+        col4.metric("Type", meta.get("type", "-").upper())
+        
+        st.markdown("---")
+        
+        # Determine available sessions
+        available_sessions = set()
+        for r in tbl:
+            for s in r['sessions']:
+                available_sessions.add(s['seance'])
+        
+        available_sessions = sorted(list(available_sessions), key=lambda x: int(x) if x.isdigit() else x)
+        
+        if not available_sessions:
+            st.info("Aucune séance n'a été détectée (soit la feuille est vide, soit l'OCR a échoué).")
+            return
+            
+        st.subheader("👥 Liste des Présences / Absences")
+        selected_sessions = st.multiselect("Séances à afficher :", available_sessions, default=available_sessions)
+        
+        # Build DataFrame
+        df_data = []
+        for r in tbl:
+            row = {"N° Apo": r['n_apo'], "Nom": r['nom']}
+            for s in r['sessions']:
+                if s['seance'] in selected_sessions:
+                    row[f"Séance {s['seance']}"] = "✅ Présent" if s['status'] == "Present" else "❌ Absent"
+            df_data.append(row)
+            
+        df = pd.DataFrame(df_data)
+        st.dataframe(df, use_container_width=True)
+        
+        # Debug Images
+        st.markdown("---")
+        st.subheader("🔍 Vérification (Vision par Ordinateur)")
+        debug_dir = os.path.join("data", "debug")
+        
+        # The debug images are saved as "table_debug.jpg" inside data/debug/doc_X_page_Y/
+        debug_pages = [d for d in os.listdir(debug_dir) if d.startswith(selected_doc)] if os.path.exists(debug_dir) else []
+        
+        if debug_pages:
+            for d_page in sorted(debug_pages):
+                img_path = os.path.join(debug_dir, d_page, "table_debug.jpg")
+                if os.path.exists(img_path):
+                    st.write(f"**{d_page}**")
+                    img = Image.open(img_path)
+                    st.image(img, use_container_width=True)
 
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as img_tmp:
-        img_tmp.write(uploaded_image.read())
-        img_path = img_tmp.name
-
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".csv") as db_tmp:
-        db_tmp.write(uploaded_db.read())
-        db_path = db_tmp.name
-
-    with st.spinner("Traitement en cours..."):
-        try:
-            result = run(
-                img_path, db_path,
-                header_ratio=header_ratio,
-                col_ratio=col_ratio,
-                density_threshold=density_threshold
-            )
-
-            # Header fields display
-            st.subheader("3. Informations extraites de l'en-tête")
-            header = result["header_fields"]
-            col1, col2, col3 = st.columns(3)
-            col1.metric("Module", header.get("module") or "Non détecté")
-            col1.metric("Enseignant", header.get("teacher") or "Non détecté")
-            col2.metric("Date", header.get("date") or "Non détecté")
-            col2.metric("Horaire", header.get("time") or "Non détecté")
-            col3.metric("Type de séance", header.get("session_type") or "Non détecté")
-
-            # Absences display
-            st.subheader("4. Étudiants absents détectés")
-            absent = result["absent_students"]
-            if absent:
-                df_absent = pd.DataFrame({
-                    "N° ligne": result["absent_indices"],
-                    "Étudiant absent": absent
-                })
-                st.dataframe(df_absent, use_container_width=True)
-            else:
-                st.success("Aucune absence détectée.")
-
-            # Export
-            st.subheader("5. Exporter les résultats")
-            c1, c2 = st.columns(2)
-
-            csv_data = pd.DataFrame({
-                "module": [header.get("module")],
-                "teacher": [header.get("teacher")],
-                "date": [header.get("date")],
-                "time": [header.get("time")],
-                "session_type": [header.get("session_type")],
-                "absent_students": [", ".join(absent)]
-            }).to_csv(index=False).encode("utf-8")
-
-            c1.download_button("Télécharger CSV", csv_data, "absences.csv", "text/csv")
-
-            json_data = json.dumps(result, ensure_ascii=False, indent=2).encode("utf-8")
-            c2.download_button("Télécharger JSON", json_data, "absences.json", "application/json")
-
-        except Exception as e:
-            st.error(f"Erreur lors du traitement: {str(e)}")
-
-        finally:
-            os.unlink(img_path)
-            os.unlink(db_path)
-
-else:
-    st.info("Veuillez uploader une feuille d'absence et le fichier étudiants pour continuer.")
+if __name__ == "__main__":
+    main()

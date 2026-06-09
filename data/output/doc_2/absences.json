@@ -1,0 +1,2060 @@
+[
+  {
+    "n_apo": "24009178",
+    "nom": "MOHAMED-ANOUAR",
+    "ocr_raw": "MOHAMED-ANOUAR 44 ",
+    "sessions": [
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.28755020080321286,
+        "box": [
+          540,
+          217,
+          623,
+          247
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.3397590361445783,
+        "box": [
+          613,
+          217,
+          696,
+          247
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.25447154471544714,
+        "box": [
+          690,
+          217,
+          772,
+          247
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.21910569105691058,
+        "box": [
+          763,
+          217,
+          845,
+          247
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.18424908424908426,
+        "box": [
+          838,
+          217,
+          929,
+          247
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.21222222222222223,
+        "box": [
+          919,
+          217,
+          1009,
+          247
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.21746031746031746,
+        "box": [
+          999,
+          217,
+          1083,
+          247
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Present",
+        "density": 0.09259259259259259,
+        "box": [
+          1076,
+          217,
+          1157,
+          247
+        ]
+      }
+    ],
+    "row_y": 232.66666666666666
+  },
+  {
+    "n_apo": "24008282",
+    "nom": "ILYASSE AMINE RANIA MAROUA ELMEHDI Pald MOHAMMED AMINE MOHAMMED HAJAR",
+    "ocr_raw": "Pald >",
+    "sessions": [
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.25301204819277107,
+        "box": [
+          540,
+          419,
+          623,
+          449
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.3108433734939759,
+        "box": [
+          613,
+          419,
+          696,
+          449
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.2329268292682927,
+        "box": [
+          690,
+          419,
+          772,
+          449
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.2483739837398374,
+        "box": [
+          763,
+          419,
+          845,
+          449
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.18827838827838828,
+        "box": [
+          838,
+          419,
+          929,
+          449
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.2048148148148148,
+        "box": [
+          919,
+          419,
+          1009,
+          449
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.18611111111111112,
+        "box": [
+          999,
+          419,
+          1083,
+          449
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Present",
+        "density": 0.09465020576131687,
+        "box": [
+          1076,
+          419,
+          1157,
+          449
+        ]
+      }
+    ],
+    "row_y": 403.0
+  },
+  {
+    "n_apo": "24016818",
+    "nom": "MOHAMED-AMINE",
+    "ocr_raw": "MOHAMED-AMINE S0 A",
+    "sessions": [
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.2389558232931727,
+        "box": [
+          540,
+          583,
+          623,
+          613
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.3257028112449799,
+        "box": [
+          613,
+          583,
+          696,
+          613
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Absent",
+        "density": 0.3257028112449799,
+        "box": [
+          690,
+          583,
+          772,
+          613
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.25040650406504067,
+        "box": [
+          763,
+          583,
+          845,
+          613
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.20549450549450549,
+        "box": [
+          838,
+          583,
+          929,
+          613
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.22925925925925925,
+        "box": [
+          919,
+          583,
+          1009,
+          613
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.23452380952380952,
+        "box": [
+          999,
+          583,
+          1083,
+          613
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Present",
+        "density": 0.14444444444444443,
+        "box": [
+          1076,
+          583,
+          1157,
+          613
+        ]
+      }
+    ],
+    "row_y": 598.8333333333334
+  },
+  {
+    "n_apo": "16",
+    "nom": "16778 imrane ait ouaouch",
+    "ocr_raw": "240 240 16816 16778 ait ouaouch ALAOUI MHAMDI imrane ABDELLAH",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.22951388888888888,
+        "box": [
+          560,
+          176,
+          656,
+          206
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.30659722222222224,
+        "box": [
+          656,
+          176,
+          752,
+          206
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.2548611111111111,
+        "box": [
+          752,
+          176,
+          848,
+          206
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.20902777777777778,
+        "box": [
+          848,
+          176,
+          944,
+          206
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.22152777777777777,
+        "box": [
+          944,
+          176,
+          1040,
+          206
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.23368055555555556,
+        "box": [
+          1040,
+          176,
+          1136,
+          206
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.128125,
+        "box": [
+          1136,
+          176,
+          1232,
+          206
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.06875,
+        "box": [
+          1232,
+          176,
+          1328,
+          206
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Absent",
+        "density": 0.019444444444444445,
+        "box": [
+          1328,
+          176,
+          1424,
+          206
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Present",
+        "density": 0.030555555555555555,
+        "box": [
+          1424,
+          176,
+          1520,
+          206
+        ]
+      }
+    ],
+    "row_y": 191.96875
+  },
+  {
+    "n_apo": "18",
+    "nom": "AMINA 24016753 ANTAR",
+    "ocr_raw": "24016761 24016753 ANTAR AMINA ABDELMAJID",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.240625,
+        "box": [
+          560,
+          210,
+          656,
+          240
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.3263888888888889,
+        "box": [
+          656,
+          210,
+          752,
+          240
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.25277777777777777,
+        "box": [
+          752,
+          210,
+          848,
+          240
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.2204861111111111,
+        "box": [
+          848,
+          210,
+          944,
+          240
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.2423611111111111,
+        "box": [
+          944,
+          210,
+          1040,
+          240
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.21597222222222223,
+        "box": [
+          1040,
+          210,
+          1136,
+          240
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.10833333333333334,
+        "box": [
+          1136,
+          210,
+          1232,
+          240
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.08958333333333333,
+        "box": [
+          1232,
+          210,
+          1328,
+          240
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Present",
+        "density": 0.059722222222222225,
+        "box": [
+          1328,
+          210,
+          1424,
+          240
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Present",
+        "density": 0.04131944444444444,
+        "box": [
+          1424,
+          210,
+          1520,
+          240
+        ]
+      }
+    ],
+    "row_y": 225.4
+  },
+  {
+    "n_apo": "20",
+    "nom": "24016777 KAOUTAR AZALMAD",
+    "ocr_raw": "24016777 AZALMAD ASSOUKA KAOUTAR",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.23229166666666667,
+        "box": [
+          560,
+          234,
+          656,
+          264
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.2878472222222222,
+        "box": [
+          656,
+          234,
+          752,
+          264
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.26284722222222223,
+        "box": [
+          752,
+          234,
+          848,
+          264
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.2107638888888889,
+        "box": [
+          848,
+          234,
+          944,
+          264
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.23125,
+        "box": [
+          944,
+          234,
+          1040,
+          264
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.24375,
+        "box": [
+          1040,
+          234,
+          1136,
+          264
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.12743055555555555,
+        "box": [
+          1136,
+          234,
+          1232,
+          264
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.07743055555555556,
+        "box": [
+          1232,
+          234,
+          1328,
+          264
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Present",
+        "density": 0.034722222222222224,
+        "box": [
+          1328,
+          234,
+          1424,
+          264
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Present",
+        "density": 0.050694444444444445,
+        "box": [
+          1424,
+          234,
+          1520,
+          264
+        ]
+      }
+    ],
+    "row_y": 249.75
+  },
+  {
+    "n_apo": "21",
+    "nom": "KAOUTAR 24016782 BAALLA",
+    "ocr_raw": "24016782 24016776 BAALLA BARROU ILIASS KAOUTAR",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.22152777777777777,
+        "box": [
+          560,
+          265,
+          656,
+          295
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.28888888888888886,
+        "box": [
+          656,
+          265,
+          752,
+          295
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.2625,
+        "box": [
+          752,
+          265,
+          848,
+          295
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.2076388888888889,
+        "box": [
+          848,
+          265,
+          944,
+          295
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.23402777777777778,
+        "box": [
+          944,
+          265,
+          1040,
+          295
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.2388888888888889,
+        "box": [
+          1040,
+          265,
+          1136,
+          295
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.13020833333333334,
+        "box": [
+          1136,
+          265,
+          1232,
+          295
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.07222222222222222,
+        "box": [
+          1232,
+          265,
+          1328,
+          295
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Present",
+        "density": 0.07743055555555556,
+        "box": [
+          1328,
+          265,
+          1424,
+          295
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Present",
+        "density": 0.07152777777777777,
+        "box": [
+          1424,
+          265,
+          1520,
+          295
+        ]
+      }
+    ],
+    "row_y": 280.1666666666667
+  },
+  {
+    "n_apo": "23",
+    "nom": "IKRAM 24016789 BENDAMI",
+    "ocr_raw": "24016789 24016794 BENDAMI BOUBKER IKRAM",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.2833333333333333,
+        "box": [
+          560,
+          299,
+          656,
+          329
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.30833333333333335,
+        "box": [
+          656,
+          299,
+          752,
+          329
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.26631944444444444,
+        "box": [
+          752,
+          299,
+          848,
+          329
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.2298611111111111,
+        "box": [
+          848,
+          299,
+          944,
+          329
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.2465277777777778,
+        "box": [
+          944,
+          299,
+          1040,
+          329
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.22916666666666666,
+        "box": [
+          1040,
+          299,
+          1136,
+          329
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.13472222222222222,
+        "box": [
+          1136,
+          299,
+          1232,
+          329
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.08055555555555556,
+        "box": [
+          1232,
+          299,
+          1328,
+          329
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Present",
+        "density": 0.03576388888888889,
+        "box": [
+          1328,
+          299,
+          1424,
+          329
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Present",
+        "density": 0.020833333333333332,
+        "box": [
+          1424,
+          299,
+          1520,
+          329
+        ]
+      }
+    ],
+    "row_y": 314.7
+  },
+  {
+    "n_apo": "25",
+    "nom": "24004651 ISHAQ BOURHIM",
+    "ocr_raw": "24004651 23000279 BOURHIM CHEMMAM ISHAQ AYOUB",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.2263888888888889,
+        "box": [
+          560,
+          339,
+          656,
+          369
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.2826388888888889,
+        "box": [
+          656,
+          339,
+          752,
+          369
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.271875,
+        "box": [
+          752,
+          339,
+          848,
+          369
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.20590277777777777,
+        "box": [
+          848,
+          339,
+          944,
+          369
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.23506944444444444,
+        "box": [
+          944,
+          339,
+          1040,
+          369
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.22743055555555555,
+        "box": [
+          1040,
+          339,
+          1136,
+          369
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.11840277777777777,
+        "box": [
+          1136,
+          339,
+          1232,
+          369
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.096875,
+        "box": [
+          1232,
+          339,
+          1328,
+          369
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Present",
+        "density": 0.08784722222222222,
+        "box": [
+          1328,
+          339,
+          1424,
+          369
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Present",
+        "density": 0.10069444444444445,
+        "box": [
+          1424,
+          339,
+          1520,
+          369
+        ]
+      }
+    ],
+    "row_y": 354.0
+  },
+  {
+    "n_apo": "27",
+    "nom": "24001784 NOUHAILA DAMRANE",
+    "ocr_raw": "24001784 24016766 DAOUARI DAMRANE ZIAD NOUHAILA",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.21354166666666666,
+        "box": [
+          560,
+          375,
+          656,
+          405
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.27743055555555557,
+        "box": [
+          656,
+          375,
+          752,
+          405
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.23854166666666668,
+        "box": [
+          752,
+          375,
+          848,
+          405
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.18472222222222223,
+        "box": [
+          848,
+          375,
+          944,
+          405
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.20347222222222222,
+        "box": [
+          944,
+          375,
+          1040,
+          405
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.20451388888888888,
+        "box": [
+          1040,
+          375,
+          1136,
+          405
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.10798611111111112,
+        "box": [
+          1136,
+          375,
+          1232,
+          405
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.08715277777777777,
+        "box": [
+          1232,
+          375,
+          1328,
+          405
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Present",
+        "density": 0.07118055555555555,
+        "box": [
+          1328,
+          375,
+          1424,
+          405
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Present",
+        "density": 0.05520833333333333,
+        "box": [
+          1424,
+          375,
+          1520,
+          405
+        ]
+      }
+    ],
+    "row_y": 390.5416666666667
+  },
+  {
+    "n_apo": "29",
+    "nom": "24016819 ED.DARDOURI NAJIA",
+    "ocr_raw": "24016819 24005445 EL ALI ED.DARDOURI NAJIA",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.18125,
+        "box": [
+          560,
+          409,
+          656,
+          439
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.26319444444444445,
+        "box": [
+          656,
+          409,
+          752,
+          439
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.20694444444444443,
+        "box": [
+          752,
+          409,
+          848,
+          439
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.15625,
+        "box": [
+          848,
+          409,
+          944,
+          439
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.17152777777777778,
+        "box": [
+          944,
+          409,
+          1040,
+          439
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.17430555555555555,
+        "box": [
+          1040,
+          409,
+          1136,
+          439
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.09236111111111112,
+        "box": [
+          1136,
+          409,
+          1232,
+          439
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.07604166666666666,
+        "box": [
+          1232,
+          409,
+          1328,
+          439
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Present",
+        "density": 0.06215277777777778,
+        "box": [
+          1328,
+          409,
+          1424,
+          439
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Present",
+        "density": 0.08020833333333334,
+        "box": [
+          1424,
+          409,
+          1520,
+          439
+        ]
+      }
+    ],
+    "row_y": 424.35
+  },
+  {
+    "n_apo": "31",
+    "nom": "23003670 EL BADIA ABDELLAH",
+    "ocr_raw": "23003670 EL BADIA OUMAIMA ABDELLAH",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.21805555555555556,
+        "box": [
+          560,
+          434,
+          656,
+          464
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.30694444444444446,
+        "box": [
+          656,
+          434,
+          752,
+          464
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.24305555555555555,
+        "box": [
+          752,
+          434,
+          848,
+          464
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.21180555555555555,
+        "box": [
+          848,
+          434,
+          944,
+          464
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.21736111111111112,
+        "box": [
+          944,
+          434,
+          1040,
+          464
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.21215277777777777,
+        "box": [
+          1040,
+          434,
+          1136,
+          464
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.14201388888888888,
+        "box": [
+          1136,
+          434,
+          1232,
+          464
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.06284722222222222,
+        "box": [
+          1232,
+          434,
+          1328,
+          464
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Absent",
+        "density": 0.01875,
+        "box": [
+          1328,
+          434,
+          1424,
+          464
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Present",
+        "density": 0.07916666666666666,
+        "box": [
+          1424,
+          434,
+          1520,
+          464
+        ]
+      }
+    ],
+    "row_y": 449.5
+  },
+  {
+    "n_apo": "32",
+    "nom": "24016814 EL BOUDALI ZAKARIA",
+    "ocr_raw": "24016814 23000409 EL BOUDALI EL HADDAD YAHYA ZAKARIA",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.23020833333333332,
+        "box": [
+          560,
+          466,
+          656,
+          496
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.3107638888888889,
+        "box": [
+          656,
+          466,
+          752,
+          496
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.2625,
+        "box": [
+          752,
+          466,
+          848,
+          496
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.21631944444444445,
+        "box": [
+          848,
+          466,
+          944,
+          496
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.2309027777777778,
+        "box": [
+          944,
+          466,
+          1040,
+          496
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.22951388888888888,
+        "box": [
+          1040,
+          466,
+          1136,
+          496
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.125,
+        "box": [
+          1136,
+          466,
+          1232,
+          496
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.06805555555555555,
+        "box": [
+          1232,
+          466,
+          1328,
+          496
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Absent",
+        "density": 0.0006944444444444445,
+        "box": [
+          1328,
+          466,
+          1424,
+          496
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Absent",
+        "density": 0.015625,
+        "box": [
+          1424,
+          466,
+          1520,
+          496
+        ]
+      }
+    ],
+    "row_y": 481.4166666666667
+  },
+  {
+    "n_apo": "35",
+    "nom": "IKRAM EL MAHMOUDI 24016765",
+    "ocr_raw": "24016773 24016765 EL HAJLY EL MAHMOUDI IKRAM",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.21736111111111112,
+        "box": [
+          560,
+          503,
+          656,
+          533
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.30694444444444446,
+        "box": [
+          656,
+          503,
+          752,
+          533
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.2642361111111111,
+        "box": [
+          752,
+          503,
+          848,
+          533
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.22152777777777777,
+        "box": [
+          848,
+          503,
+          944,
+          533
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.23541666666666666,
+        "box": [
+          944,
+          503,
+          1040,
+          533
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.2107638888888889,
+        "box": [
+          1040,
+          503,
+          1136,
+          533
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.13680555555555557,
+        "box": [
+          1136,
+          503,
+          1232,
+          533
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.06180555555555556,
+        "box": [
+          1232,
+          503,
+          1328,
+          533
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Absent",
+        "density": 0.015277777777777777,
+        "box": [
+          1328,
+          503,
+          1424,
+          533
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Absent",
+        "density": 0.01840277777777778,
+        "box": [
+          1424,
+          503,
+          1520,
+          533
+        ]
+      }
+    ],
+    "row_y": 518.2
+  },
+  {
+    "n_apo": "37",
+    "nom": "ESSADDIKI DOHA 24016787",
+    "ocr_raw": "24016769 24016787 ELAOUANI ESSADDIKI DOHA",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.23854166666666668,
+        "box": [
+          560,
+          537,
+          656,
+          567
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.28715277777777776,
+        "box": [
+          656,
+          537,
+          752,
+          567
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.2520833333333333,
+        "box": [
+          752,
+          537,
+          848,
+          567
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.2170138888888889,
+        "box": [
+          848,
+          537,
+          944,
+          567
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.23055555555555557,
+        "box": [
+          944,
+          537,
+          1040,
+          567
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.21979166666666666,
+        "box": [
+          1040,
+          537,
+          1136,
+          567
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.171875,
+        "box": [
+          1136,
+          537,
+          1232,
+          567
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.06631944444444444,
+        "box": [
+          1232,
+          537,
+          1328,
+          567
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Absent",
+        "density": 0.002777777777777778,
+        "box": [
+          1328,
+          537,
+          1424,
+          567
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Absent",
+        "density": 0.0,
+        "box": [
+          1424,
+          537,
+          1520,
+          567
+        ]
+      }
+    ],
+    "row_y": 552.8
+  },
+  {
+    "n_apo": "39",
+    "nom": "FARTAS HAMZA 24016797",
+    "ocr_raw": "24016817 24016797 FARTAS FALFLAOUI",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.22916666666666666,
+        "box": [
+          560,
+          571,
+          656,
+          601
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.2923611111111111,
+        "box": [
+          656,
+          571,
+          752,
+          601
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.2621527777777778,
+        "box": [
+          752,
+          571,
+          848,
+          601
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.21840277777777778,
+        "box": [
+          848,
+          571,
+          944,
+          601
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.23923611111111112,
+        "box": [
+          944,
+          571,
+          1040,
+          601
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.2125,
+        "box": [
+          1040,
+          571,
+          1136,
+          601
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.16319444444444445,
+        "box": [
+          1136,
+          571,
+          1232,
+          601
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.06076388888888889,
+        "box": [
+          1232,
+          571,
+          1328,
+          601
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Absent",
+        "density": 0.0,
+        "box": [
+          1328,
+          571,
+          1424,
+          601
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Absent",
+        "density": 0.0,
+        "box": [
+          1424,
+          571,
+          1520,
+          601
+        ]
+      }
+    ],
+    "row_y": 586.0
+  },
+  {
+    "n_apo": "40",
+    "nom": "FIKRI EL MEHDI 24016813",
+    "ocr_raw": "24016813 24016806 FIKRI GHANIMI",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.23541666666666666,
+        "box": [
+          560,
+          605,
+          656,
+          635
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.296875,
+        "box": [
+          656,
+          605,
+          752,
+          635
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.25833333333333336,
+        "box": [
+          752,
+          605,
+          848,
+          635
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.21597222222222223,
+        "box": [
+          848,
+          605,
+          944,
+          635
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.2298611111111111,
+        "box": [
+          944,
+          605,
+          1040,
+          635
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.22118055555555555,
+        "box": [
+          1040,
+          605,
+          1136,
+          635
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.171875,
+        "box": [
+          1136,
+          605,
+          1232,
+          635
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.06076388888888889,
+        "box": [
+          1232,
+          605,
+          1328,
+          635
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Absent",
+        "density": 0.0038194444444444443,
+        "box": [
+          1328,
+          605,
+          1424,
+          635
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Present",
+        "density": 0.024305555555555556,
+        "box": [
+          1424,
+          605,
+          1520,
+          635
+        ]
+      }
+    ],
+    "row_y": 620.5
+  },
+  {
+    "n_apo": "42",
+    "nom": "24016781 GUERNAOUI FATIMA-EZZAHRAE Hafidi 24016756 Mohamed",
+    "ocr_raw": "24016783 24016781 GOUHMID GUERNAOUI",
+    "sessions": [
+      {
+        "seance": "1",
+        "status": "Present",
+        "density": 0.10277777777777777,
+        "box": [
+          560,
+          663,
+          656,
+          693
+        ]
+      },
+      {
+        "seance": "2",
+        "status": "Present",
+        "density": 0.10138888888888889,
+        "box": [
+          656,
+          663,
+          752,
+          693
+        ]
+      },
+      {
+        "seance": "3",
+        "status": "Present",
+        "density": 0.08263888888888889,
+        "box": [
+          752,
+          663,
+          848,
+          693
+        ]
+      },
+      {
+        "seance": "4",
+        "status": "Present",
+        "density": 0.14375,
+        "box": [
+          848,
+          663,
+          944,
+          693
+        ]
+      },
+      {
+        "seance": "5",
+        "status": "Present",
+        "density": 0.21979166666666666,
+        "box": [
+          944,
+          663,
+          1040,
+          693
+        ]
+      },
+      {
+        "seance": "6",
+        "status": "Present",
+        "density": 0.25277777777777777,
+        "box": [
+          1040,
+          663,
+          1136,
+          693
+        ]
+      },
+      {
+        "seance": "7",
+        "status": "Present",
+        "density": 0.2107638888888889,
+        "box": [
+          1136,
+          663,
+          1232,
+          693
+        ]
+      },
+      {
+        "seance": "8",
+        "status": "Present",
+        "density": 0.2309027777777778,
+        "box": [
+          1232,
+          663,
+          1328,
+          693
+        ]
+      },
+      {
+        "seance": "9",
+        "status": "Present",
+        "density": 0.23958333333333334,
+        "box": [
+          1328,
+          663,
+          1424,
+          693
+        ]
+      },
+      {
+        "seance": "10",
+        "status": "Present",
+        "density": 0.20590277777777777,
+        "box": [
+          1424,
+          663,
+          1520,
+          693
+        ]
+      }
+    ],
+    "row_y": 653.5
+  }
+]

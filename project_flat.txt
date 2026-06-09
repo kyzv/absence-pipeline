@@ -6,7 +6,6 @@ absence-pipeline/
     project_flat.txt
     README.md
     requirements.txt
-    temp_cell.jpg
     data/
         expected_metadata.json
         metadata_dict.yaml
@@ -16,7 +15,8 @@ absence-pipeline/
             professors.json
             years.json
             groups/
-                genie informatique 1ere annee.csv
+                big_data.csv
+                genie_informatique_1ere_annee.csv
         cropped/
             doc_1/
                 as1_header.jpg
@@ -24,8 +24,18 @@ absence-pipeline/
                 as2_table.jpg
                 as3_table.jpg
                 as4_table.jpg
+            doc_7/
+                as1_header.jpg
+                as1_table.jpg
+                as2_table.jpg
+            doc_8/
+                as1_header.jpg
+                as1_table.jpg
+                as2_table.jpg
         metadata/
             doc_1/
+                metadata.json
+            doc_7/
                 metadata.json
         preprocessed/
             doc_1/
@@ -37,12 +47,51 @@ absence-pipeline/
                 as3_binary.jpg
                 as4.jpeg
                 as4_binary.jpg
+            doc_7/
+                as1.jpeg
+                as1_binary.jpg
+                as2.jpeg
+                as2_binary.jpg
+            doc_8/
+                as1.jpeg
+                as1_binary.jpg
+                as2.jpeg
+                as2_binary.jpg
         raw/
             doc_1/
                 as1.jpeg
                 as2.jpeg
                 as3.jpeg
                 as4.jpeg
+            doc_2/
+                as1.jpeg
+                as2.jpeg
+            doc_3/
+                as1.jpeg
+                as2.jpeg
+                as3.jpeg
+            doc_4/
+                as1.jpeg
+                as2.jpeg
+                as3.jpeg
+            doc_5/
+                as1.jpeg
+                as2.jpeg
+                as3.jpeg
+            doc_6/
+                as1.jpeg
+                as2.jpeg
+                as3.jpeg
+            doc_7/
+                as1.jpeg
+                as2.jpeg
+            doc_8/
+                as1.jpeg
+                as2.jpeg
+            doc_9/
+                as1.jpeg
+                as2.jpeg
+                as3.jpeg
     src/
         build_metadata_dict.py
         checkbox_detection.py
@@ -234,7 +283,6 @@ absence-pipeline/
     project_flat.txt
     README.md
     requirements.txt
-    temp_cell.jpg
     data/
         expected_metadata.json
         metadata_dict.yaml
@@ -244,7 +292,8 @@ absence-pipeline/
             professors.json
             years.json
             groups/
-                genie informatique 1ere annee.csv
+                big_data.csv
+                genie_informatique_1ere_annee.csv
         cropped/
             doc_1/
                 as1_header.jpg
@@ -252,8 +301,18 @@ absence-pipeline/
                 as2_table.jpg
                 as3_table.jpg
                 as4_table.jpg
+            doc_7/
+                as1_header.jpg
+                as1_table.jpg
+                as2_table.jpg
+            doc_8/
+                as1_header.jpg
+                as1_table.jpg
+                as2_table.jpg
         metadata/
             doc_1/
+                metadata.json
+            doc_7/
                 metadata.json
         preprocessed/
             doc_1/
@@ -265,12 +324,51 @@ absence-pipeline/
                 as3_binary.jpg
                 as4.jpeg
                 as4_binary.jpg
+            doc_7/
+                as1.jpeg
+                as1_binary.jpg
+                as2.jpeg
+                as2_binary.jpg
+            doc_8/
+                as1.jpeg
+                as1_binary.jpg
+                as2.jpeg
+                as2_binary.jpg
         raw/
             doc_1/
                 as1.jpeg
                 as2.jpeg
                 as3.jpeg
                 as4.jpeg
+            doc_2/
+                as1.jpeg
+                as2.jpeg
+            doc_3/
+                as1.jpeg
+                as2.jpeg
+                as3.jpeg
+            doc_4/
+                as1.jpeg
+                as2.jpeg
+                as3.jpeg
+            doc_5/
+                as1.jpeg
+                as2.jpeg
+                as3.jpeg
+            doc_6/
+                as1.jpeg
+                as2.jpeg
+                as3.jpeg
+            doc_7/
+                as1.jpeg
+                as2.jpeg
+            doc_8/
+                as1.jpeg
+                as2.jpeg
+            doc_9/
+                as1.jpeg
+                as2.jpeg
+                as3.jpeg
     src/
         build_metadata_dict.py
         checkbox_detection.py
@@ -708,12 +806,6 @@ numpy
 labelme
 
 ============================================================
-File: temp_cell.jpg
-============================================================
-[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
-
-
-============================================================
 File: data\expected_metadata.json
 ============================================================
 {
@@ -855,7 +947,12 @@ type:
 File: data\config\filieres.json
 ============================================================
 [
-   "Génie Informatique 1ère année"
+   "Génie Informatique 1ère année",
+   "Big Data", 
+   "Informatique décisionnelle et statistiques 2ème année",
+   "Bachelor en Technologie Filière Infrastructures, Traitement et Analyse de données Massives (Big Data)",
+   
+   ""
 ]
 
 ============================================================
@@ -865,7 +962,13 @@ File: data\config\modules.json
    "Structures de données avancées", 
    "Algorithmique",
    "Base de données",
-   "Réseaux"
+   "Réseaux",
+   "Exploration et viz données",
+   "Exploration et Utilisation Données avec Python",
+   "Deploiment d' Application Datas",
+   "Deploiment d' Application Data sous linux", 
+   "Python pour le data science", 
+   ""
 ]
 
 ============================================================
@@ -873,7 +976,10 @@ File: data\config\professors.json
 ============================================================
 [
    "Pr. Rachid AitDaoud",
-   "Pr. Hamid Sakhi"
+   "Pr. R. AIT DAOUD",
+   "Pr. Hamid Sakhi",
+   
+   ""
 ]
 
 ============================================================
@@ -892,7 +998,65 @@ File: data\config\years.json
 ]
 
 ============================================================
-File: data\config\groups\genie informatique 1ere annee.csv
+File: data\config\groups\big_data.csv
+============================================================
+id,Nom & Prénom
+1,Aouali Salma
+2,ACHERAB AYAANE
+3,Akenrez Rayane
+4,Alouane Mohamed Amine
+5,Babous Ilyas
+6,Bendadab Ayoub
+7,BENGANA MOHAMMED
+8,Bensabou Mohamed Amine
+9,Benzaid FATIMA
+10,benzarab abderahim
+11,biguene rachid
+12,BLOKAJ Achraf
+13,Boukhlane Mohamed
+14,Boundia samah
+15,chbana MERIEME
+16,CHOUKI Walid
+17,Damati Elmehdi
+18,EL ATMANE BILAL
+19,El Baz Moad
+20,EL FAIZ Tajeddine
+21,El fati Nouhaila
+22,EL GRAFEL FATIMA
+23,El hadi Amine
+24,EL HAMRAOUI YASSMINE
+25,EL JABARI HIBA
+26,EL OUKAILI Yassine
+27,ELATOUKY NAWAL
+28,ELHAFIANE NISRINE
+29,ELHILALI HAJAR
+30,ELJABALI YASSINE
+31,Etahaa Youssef
+32,farah fatima zahrae
+33,Fatih Mohamed
+34,Hamid Oussama
+35,HAROUAL YASSINE
+36,IMAM Fatima-Ezzahra
+37,jamti maryem
+38,Jaouhari Abdelouahed
+39,JENNATI Abderrahman
+40,ambroun karim
+41,KATIM ILIAS
+42,Kerroum Ali
+43,khalil zohra
+44,KOUROUB OUSSAMA
+45,Mlik Younes
+46,MOKABIT OMAR
+47,NAJI MOUSSAAB
+48,NEMRI NOUHAILA
+49,Oubammou Mustapha
+50,SABKI RYAD
+51,tahin yasser
+52,thiti inas
+53,ZARRA MOHAMED
+
+============================================================
+File: data\config\groups\genie_informatique_1ere_annee.csv
 ============================================================
 id,nom_prenom
 1,ACHMAOUI JIHANE
@@ -1054,6 +1218,42 @@ File: data\cropped\doc_1\as4_table.jpg
 
 
 ============================================================
+File: data\cropped\doc_7\as1_header.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\cropped\doc_7\as1_table.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\cropped\doc_7\as2_table.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\cropped\doc_8\as1_header.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\cropped\doc_8\as1_table.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\cropped\doc_8\as2_table.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
 File: data\metadata\doc_1\metadata.json
 ============================================================
 {
@@ -1126,6 +1326,78 @@ File: data\metadata\doc_1\metadata.json
 }
 
 ============================================================
+File: data\metadata\doc_7\metadata.json
+============================================================
+{
+  "filiere": "",
+  "annee": "",
+  "enseignant": "",
+  "module": "",
+  "seances": {
+    "1": {
+      "date": "0130",
+      "heure_debut": "10h30",
+      "heure_fin": "P: Présence",
+      "type": "C<s"
+    },
+    "2": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "3": {
+      "date": "00h30",
+      "heure_debut": "10440",
+      "heure_fin": "12h40",
+      "type": "Cs"
+    },
+    "4": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "5": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "6": {
+      "date": "09h30",
+      "heure_debut": "A0hy0",
+      "heure_fin": "12h410",
+      "type": "CS"
+    },
+    "7": {
+      "date": "Blwse",
+      "heure_debut": "20430",
+      "heure_fin": "12440",
+      "type": "T"
+    },
+    "8": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    },
+    "9": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "TAS",
+      "type": ""
+    },
+    "10": {
+      "date": "",
+      "heure_debut": "",
+      "heure_fin": "",
+      "type": ""
+    }
+  }
+}
+
+============================================================
 File: data\preprocessed\doc_1\as1.jpeg
 ============================================================
 [Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
@@ -1174,6 +1446,54 @@ File: data\preprocessed\doc_1\as4_binary.jpg
 
 
 ============================================================
+File: data\preprocessed\doc_7\as1.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_7\as1_binary.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_7\as2.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_7\as2_binary.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_8\as1.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_8\as1_binary.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_8\as2.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\preprocessed\doc_8\as2_binary.jpg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
 File: data\raw\doc_1\as1.jpeg
 ============================================================
 [Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
@@ -1193,6 +1513,132 @@ File: data\raw\doc_1\as3.jpeg
 
 ============================================================
 File: data\raw\doc_1\as4.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_2\as1.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_2\as2.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_3\as1.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_3\as2.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_3\as3.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_4\as1.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_4\as2.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_4\as3.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_5\as1.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_5\as2.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_5\as3.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_6\as1.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_6\as2.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_6\as3.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_7\as1.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_7\as2.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_8\as1.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_8\as2.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_9\as1.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_9\as2.jpeg
+============================================================
+[Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
+
+
+============================================================
+File: data\raw\doc_9\as3.jpeg
 ============================================================
 [Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte]
 
@@ -1271,120 +1717,642 @@ if __name__ == "__main__":
 File: src\checkbox_detection.py
 ============================================================
 # src/checkbox_detection.py
-import os, cv2, numpy as np
-from typing import List
-from paddleocr import PaddleOCR
+"""
+Stage 4 of the absence pipeline — presence/absence detection.
 
-def detect_absences_one_page(table_image_path: str,
-                             seance_number: int,
-                             ocr_instance: PaddleOCR = None) -> List[str]:
-    img = cv2.imread(table_image_path)
-    if img is None:
-        raise FileNotFoundError(f"Table image not found: {table_image_path}")
-    h, w = img.shape[:2]
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+═══════════════════════════════════════════════════════════════════════════════
+INPUTS
+═══════════════════════════════════════════════════════════════════════════════
+    data/cropped/<doc_id>/as1_table.jpg   ← page 1: starts with column header row
+    data/cropped/<doc_id>/as2_table.jpg   ← page 2: starts directly with students
+    data/cropped/<doc_id>/as3_table.jpg   ← page 3: starts directly with students
+    data/cropped/<doc_id>/as4_table.jpg   ← page 4: starts directly with students
+    data/metadata/<doc_id>/metadata.json  ← tells us which séance is active
 
-    if ocr_instance is None:
-        ocr = PaddleOCR(lang='fr', use_textline_orientation=True)
-    else:
-        ocr = ocr_instance
-    result = ocr.predict(table_image_path)
-    if not result or not result[0]:
-        return []
+═══════════════════════════════════════════════════════════════════════════════
+TABLE COLUMN LAYOUT (0-based physical column index)
+═══════════════════════════════════════════════════════════════════════════════
+    Index 0 : N° Apo          ≈ 4% of table width
+    Index 1 : Nom & Prénom    ≈ 18% of table width
+    Index 2 : Séance 1        ≈ 7.8% of table width
+    Index 3 : Séance 2        ≈ 7.8%
+    ...
+    Index 11: Séance 10       ≈ 7.8%
 
-    detections = result[0]
-    texts = detections.get('rec_texts', [])
-    boxes = detections.get('rec_polys', [])
+    active_seance=1 → physical column index = 1 + 1 = 2
 
-    # --- Find name column width dynamically ---
-    name_right_x = 0
-    name_rows = []
-    for box, text in zip(boxes, texts):
-        xs = [p[0] for p in box]
-        ys = [p[1] for p in box]
-        xc = sum(xs) / len(xs)
-        yc = sum(ys) / len(ys)
-        # Assume name column is roughly left 50% of the image
-        if xc < w * 0.5:
-            right_edge = max(xs)
-            if right_edge > name_right_x:
-                name_right_x = right_edge
-            name_rows.append({'y': yc, 'name': text.strip()})
+═══════════════════════════════════════════════════════════════════════════════
+DETECTION METHOD
+═══════════════════════════════════════════════════════════════════════════════
+    For each student row in the active séance column:
+        1. Extract the cell interior (with a small margin to exclude grid lines)
+        2. Binarize: text/ink = 0 (black), background = 255 (white)
+        3. density = (number of black pixels) / (total pixels in cell)
+        4. present if density > density_threshold
+           absent  if density ≤ density_threshold
 
-    if not name_rows:
-        return []
+═══════════════════════════════════════════════════════════════════════════════
+OUTPUT
+═══════════════════════════════════════════════════════════════════════════════
+    List of dicts, one per detected student row:
+    {
+        'global_row'  : int   0-based index across ALL pages of the document
+        'page'        : str   filename stem, e.g. 'as1_table'
+        'row_in_page' : int   0-based index within that page only
+        'present'     : bool  True = signature found, False = cell empty
+        'density'     : float measured ink density (use for threshold tuning)
+    }
+"""
 
-    # Add a small safety margin
-    name_right_x = min(name_right_x + 5, w)
-
-    # Split remaining width into 10 equal séance columns
-    seance_width = (w - name_right_x) / 10
-    seance_left = int(name_right_x + (seance_number - 1) * seance_width)
-    seance_right = int(name_right_x + seance_number * seance_width)
-
-    # --- Group name rows (same as before) ---
-    name_rows.sort(key=lambda r: r['y'])
-    merged = []
-    cur = name_rows[0]
-    for r in name_rows[1:]:
-        if r['y'] - cur['y'] < 20:
-            cur['name'] += ' ' + r['name']
-        else:
-            merged.append(cur)
-            cur = r
-    merged.append(cur)
-
-    # --- Decision per row ---
-    absent = []
-    for row in merged:
-        yc = int(row['y'])
-        y1 = max(0, yc - 15)
-        y2 = min(h, yc + 15)
-        cell_gray = gray[y1:y2, seance_left:seance_right]
-        if cell_gray.size == 0:
-            continue
-        _, cell_bin = cv2.threshold(cell_gray, 150, 255, cv2.THRESH_BINARY_INV)
-        ink_ratio = np.sum(cell_bin == 255) / cell_bin.size
-        # If visibly empty → run tiny OCR to catch a possible "A"
-        if ink_ratio < 0.02:
-            cell_img = img[y1:y2, seance_left:seance_right]
-            cv2.imwrite("temp_cell.jpg", cell_img)
-            cell_res = ocr.predict("temp_cell.jpg")
-            cell_text = ""
-            if cell_res and cell_res[0]:
-                ct = cell_res[0].get('rec_texts', [])
-                if ct:
-                    cell_text = ct[0].strip().upper()
-            if not cell_text or any(t in cell_text for t in ('A', 'ABS', 'ABSENT')):
-                absent.append(row['name'])
-        # else: signed → present, skip
-
-    return absent
+import os
+import json
+import re
+import cv2
+import numpy as np
+from typing import Dict, List, Optional, Tuple
 
 
-def detect_absences_document(doc_id: str,
-                             cropped_root: str = "data/cropped",
-                             seance_number: int = 1) -> List[str]:
+# ─────────────────────────────────────────────────────────────────────────────
+# PUBLIC API
+# ─────────────────────────────────────────────────────────────────────────────
+
+def detect_absences(doc_id: str,
+                    active_seance: Optional[int] = None,
+                    cropped_root: str = "data/cropped",
+                    metadata_root: str = "data/metadata",
+                    density_threshold: float = 0.04,
+                    skip_header_row: bool = True,
+                    debug: bool = False,
+                    debug_root: str = "data/debug") -> List[Dict]:
+    """
+    Detect presence/absence for every student row across all table pages.
+
+    Args:
+        doc_id            : document folder name (e.g. 'doc_1')
+        active_seance     : 1-based séance column to check.
+                            If None, auto-detected from metadata.json.
+        cropped_root      : root folder containing doc subfolders with table images
+        metadata_root     : root folder containing doc subfolders with metadata.json
+        density_threshold : black pixel fraction above which a cell = present.
+                            Start at 0.04, adjust based on debug output.
+        skip_header_row   : if True, skip the first row of the first table page.
+                            Page 1's table image starts with the column header row
+                            ("N° Apo | Nom & Prénom | Séance1...") which is not
+                            a student row. Set False if your cropper already
+                            excludes it.
+        debug             : if True, save annotated images to debug_root.
+        debug_root        : folder to write debug images.
+
+    Returns:
+        List of dicts — one entry per detected student row in document order.
+        Use result['global_row'] to index into the group roster.
+
+    Raises:
+        FileNotFoundError if cropped folder or table images are missing.
+    """
+    # ── 1. Determine which séance column to analyse ───────────────────────
+    if active_seance is None:
+        active_seance = _get_active_seance(doc_id, metadata_root)
+    print(f"[checkbox] doc_id={doc_id}  active_seance={active_seance}  "
+          f"threshold={density_threshold}")
+
+    # ── 2. Collect table images in page order ─────────────────────────────
     crop_dir = os.path.join(cropped_root, doc_id)
-    table_files = sorted([f for f in os.listdir(crop_dir) if f.endswith("_table.jpg")])
-    ocr = PaddleOCR(lang='fr', use_textline_orientation=True)
-    all_names = []
-    for tf in table_files:
-        names = detect_absences_one_page(os.path.join(crop_dir, tf), seance_number, ocr)
-        all_names.extend(names)
-    return all_names
+    if not os.path.isdir(crop_dir):
+        raise FileNotFoundError(f"Cropped folder not found: {crop_dir}")
 
+    table_files = _get_sorted_table_files(crop_dir)
+    if not table_files:
+        raise FileNotFoundError(f"No *_table.jpg images found in: {crop_dir}")
+
+    print(f"[checkbox] Found {len(table_files)} table page(s): "
+          f"{[s for s, _ in table_files]}")
+
+    # ── 3. Process each page and accumulate results ───────────────────────
+    all_results: List[Dict] = []
+    global_offset = 0
+
+    for idx, (page_stem, img_path) in enumerate(table_files):
+        is_first = (idx == 0)
+        should_skip_header = is_first and skip_header_row
+
+        page_results = _process_one_table(
+            img_path        = img_path,
+            page_stem       = page_stem,
+            active_seance   = active_seance,
+            density_threshold = density_threshold,
+            global_offset   = global_offset,
+            skip_header_row = should_skip_header,
+            debug           = debug,
+            debug_root      = debug_root,
+        )
+
+        all_results.extend(page_results)
+        global_offset += len(page_results)
+        print(f"[checkbox]   {page_stem}: {len(page_results)} rows detected")
+
+    present_count = sum(1 for r in all_results if r['present'])
+    absent_count  = len(all_results) - present_count
+    print(f"[checkbox] Total: {len(all_results)} rows — "
+          f"{present_count} present, {absent_count} absent")
+
+    return all_results
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ACTIVE SÉANCE DETECTION
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _get_active_seance(doc_id: str, metadata_root: str) -> int:
+    """
+    Read metadata.json and return the 1-based index of the first séance
+    that has at least one non-empty metadata field (date, heure_debut, etc.).
+    Falls back to 1 if the file is missing or all séances are empty.
+
+    IN  : doc_id, path to metadata root
+    OUT : int — 1-based séance number
+
+    The metadata.json structure:
+        {
+          "seances": {
+            "1": {"date": "04/06/26", "heure_debut": "08h30", ...},
+            "2": {"date": "", ...},
+            ...
+          }
+        }
+    The first séance with a non-empty value is the active one.
+    """
+    meta_path = os.path.join(metadata_root, doc_id, "metadata.json")
+    if not os.path.exists(meta_path):
+        print(f"[checkbox] metadata.json not found, defaulting to séance 1")
+        return 1
+
+    with open(meta_path, 'r', encoding='utf-8') as f:
+        meta = json.load(f)
+
+    # sorted() on string keys "1".."10": sort by integer value
+    for num_str, info in sorted(meta.get('seances', {}).items(),
+                                 key=lambda kv: int(kv[0])):
+        # info is a dict like {"date": "04/06/26", "heure_debut": "08h30", ...}
+        # any() returns True if at least one value is a non-empty string
+        if any(str(v).strip() for v in info.values() if v):
+            return int(num_str)
+
+    print(f"[checkbox] All séances empty in metadata, defaulting to 1")
+    return 1
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FILE DISCOVERY
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _get_sorted_table_files(crop_dir: str) -> List[Tuple[str, str]]:
+    """
+    Return [(stem, full_path), ...] for table images, sorted by page number.
+
+    IN  : crop_dir — path to data/cropped/<doc_id>/
+    OUT : sorted list of (stem, path) tuples
+          stem example: "as1_table"
+          path example: "data/cropped/doc_1/as1_table.jpg"
+
+    Sort key: the integer N extracted from "asN_table.*".
+    Non-matching files are assigned sort key 0 and sorted first.
+    """
+    def _page_num(fname: str) -> int:
+        m = re.search(r'as(\d+)', fname, re.IGNORECASE)
+        return int(m.group(1)) if m else 0
+
+    files = [
+        f for f in os.listdir(crop_dir)
+        if re.search(r'_table\.(jpg|jpeg|png)$', f, re.IGNORECASE)
+    ]
+    files.sort(key=_page_num)
+
+    return [
+        (os.path.splitext(f)[0], os.path.join(crop_dir, f))
+        for f in files
+    ]
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PER-PAGE PROCESSING
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _process_one_table(img_path: str,
+                        page_stem: str,
+                        active_seance: int,
+                        density_threshold: float,
+                        global_offset: int,
+                        skip_header_row: bool,
+                        debug: bool,
+                        debug_root: str) -> List[Dict]:
+    """
+    Process a single table image page and return per-row presence results.
+
+    IN  : img_path        — path to the cropped table JPEG
+          page_stem       — filename stem for labelling output
+          active_seance   — 1-based séance number to check
+          density_threshold — ink fraction threshold for presence
+          global_offset   — number of student rows already processed
+          skip_header_row — if True, skip the first detected row
+          debug/debug_root — optional debug image output
+
+    OUT : list of row result dicts
+    """
+    # ── Load ──────────────────────────────────────────────────────────────
+    image = cv2.imread(img_path)
+    if image is None:
+        raise FileNotFoundError(f"Cannot read image: {img_path}")
+
+    binary = _binarize(image)
+    h, w   = binary.shape
+
+    # ── Detect grid structure ─────────────────────────────────────────────
+    row_bounds = _find_row_boundaries(binary)
+    col_bounds = _find_col_boundaries(binary)
+
+    # ── Identify the target séance column ─────────────────────────────────
+    # Physical column index: 0=N°Apo, 1=Nom&Prénom, 2=Séance1, 3=Séance2...
+    # active_seance=1 → index 2, active_seance=2 → index 3, etc.
+    target_col_idx = active_seance + 1
+    seance_x1, seance_x2 = _get_col_bounds(col_bounds, target_col_idx, w)
+
+    # ── Build row strip list ───────────────────────────────────────────────
+    # A "row strip" is the vertical span (y1, y2) of one table row.
+    # Consecutive boundary pairs define the strips.
+    row_strips = []
+    for i in range(len(row_bounds) - 1):
+        y1 = row_bounds[i]
+        y2 = row_bounds[i + 1]
+        row_h = y2 - y1
+        # Valid student rows have a height in a plausible range.
+        # Very thin strips (< 8px) are noise between adjacent detected lines.
+        # Very tall strips (> 150px) are likely image artifacts.
+        if 8 <= row_h <= 150:
+            row_strips.append((y1, y2))
+
+    # ── Skip column header row if needed ─────────────────────────────────
+    # Page 1's table starts with a printed column header row:
+    # "N° Apo | Nom & Prénom | Séance1 | Séance2 | ..."
+    # This is NOT a student row. Skip it.
+    if skip_header_row and row_strips:
+        row_strips = row_strips[1:]
+
+    # ── Compute ink density for each row's séance cell ───────────────────
+    MARGIN = 4          # pixels to trim from each edge to exclude grid lines
+    results: List[Dict] = []
+
+    for strip_idx, (y1, y2) in enumerate(row_strips):
+        # Clip to image bounds then apply margin
+        cy1 = max(0, y1 + MARGIN)
+        cy2 = max(0, y2 - MARGIN)
+        cx1 = max(0, seance_x1 + MARGIN)
+        cx2 = max(0, seance_x2 - MARGIN)
+
+        cell = binary[cy1:cy2, cx1:cx2]
+
+        if cell.size == 0:
+            density = 0.0
+        else:
+            # binary convention: ink = 0 (black), background = 255 (white)
+            # np.sum(cell < 128) counts every black/near-black pixel
+            black_pixels = int(np.sum(cell < 128))
+            density = black_pixels / cell.size
+
+        results.append({
+            'global_row':  global_offset + len(results),
+            'page':        page_stem,
+            'row_in_page': strip_idx,
+            'present':     density > density_threshold,
+            'density':     round(float(density), 5),
+        })
+
+    # ── Debug output ──────────────────────────────────────────────────────
+    if debug:
+        _save_debug_image(image, row_strips, seance_x1, seance_x2,
+                          results, debug_root, page_stem)
+
+    return results
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# IMAGE PROCESSING
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _binarize(image: np.ndarray) -> np.ndarray:
+    """
+    Convert a BGR or grayscale image to a binary image.
+
+    IN  : (h, w, 3) uint8  BGR
+          OR (h, w) uint8  grayscale
+    OUT : (h, w) uint8  — ink/text = 0 (black), background = 255 (white)
+
+    Uses adaptive Gaussian thresholding which computes a different threshold
+    per pixel based on a local neighborhood. This handles uneven lighting
+    better than a global threshold (Otsu).
+
+    block_size=31 — neighborhood size (must be odd). 31×31 pixels per tile.
+    C=15          — constant subtracted from local mean. Higher = sparser.
+    """
+    gray    = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
+    blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+    # THRESH_BINARY_INV: below threshold → 255 (text=white), above → 0 (bg=black)
+    binary_inv = cv2.adaptiveThreshold(
+        blurred, 255,
+        cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+        cv2.THRESH_BINARY_INV,
+        31, 15
+    )
+    # bitwise_not: 0 ↔ 255  →  text = 0 (black), background = 255 (white)
+    return cv2.bitwise_not(binary_inv)
+
+
+def _find_row_boundaries(binary: np.ndarray,
+                          min_span_ratio: float = 0.35) -> List[int]:
+    """
+    Detect y-coordinates of horizontal table lines.
+
+    IN  : binary (h, w) uint8 — text=0, background=255
+          min_span_ratio      — line must span at least this fraction of width
+    OUT : sorted list of y-coordinate integers including 0 and h as endpoints
+
+    ── HOW IT WORKS ─────────────────────────────────────────────────────────
+    1. Invert the binary image so grid lines become white (255) on black (0).
+       Morphological operations treat white pixels as "foreground".
+    2. Apply MORPH_OPEN with a wide horizontal kernel.
+       The kernel is (min_span * width) pixels wide and 1 pixel tall.
+       Opening = erosion then dilation:
+         - Erosion removes everything that doesn't extend at least kernel_w pixels
+         - Dilation restores what remains
+       Net effect: only long horizontal structures survive.
+       Short marks, text, noise are eliminated.
+    3. Count surviving white pixels per row.
+    4. Find rows exceeding the threshold (= line locations).
+    5. Group consecutive detected rows into single boundary positions.
+       Multiple adjacent rows may light up for one actual line due to
+       the line's finite thickness (2-3px). _group_consecutive merges them.
+    6. Add 0 and h as first/last boundaries so all rows are enclosed.
+    """
+    h, w = binary.shape
+    inv  = cv2.bitwise_not(binary)
+
+    # Kernel: wide enough to reject noise, narrow enough to catch real lines
+    kernel_w = max(10, int(w * min_span_ratio))
+    kernel   = cv2.getStructuringElement(cv2.MORPH_RECT, (kernel_w, 1))
+    h_lines  = cv2.morphologyEx(inv, cv2.MORPH_OPEN, kernel)
+
+    # Count white pixels per row (axis=1 sums across columns for each row)
+    row_sums  = np.sum(h_lines > 0, axis=1)
+    # A real line should illuminate most of the min_span region
+    threshold = w * min_span_ratio * 0.7
+    detected  = np.where(row_sums > threshold)[0]
+
+    if len(detected) == 0:
+        return [0, h]
+
+    boundaries = _group_consecutive(detected, gap=6)
+
+    # Ensure the list starts at 0 and ends at h
+    if boundaries[0] > 5:
+        boundaries = [0] + boundaries
+    if boundaries[-1] < h - 5:
+        boundaries = boundaries + [h]
+
+    return boundaries
+
+
+def _find_col_boundaries(binary: np.ndarray,
+                          min_span_ratio: float = 0.20) -> List[int]:
+    """
+    Detect x-coordinates of vertical table lines.
+
+    IN  : binary (h, w) uint8 — text=0, background=255
+          min_span_ratio      — line must span at least this fraction of height
+    OUT : sorted list of x-coordinate integers including 0 and w as endpoints
+
+    Identical logic to _find_row_boundaries but transposed:
+    uses a tall vertical kernel (1 × kernel_h) to isolate vertical lines.
+    """
+    h, w = binary.shape
+    inv  = cv2.bitwise_not(binary)
+
+    kernel_h = max(10, int(h * min_span_ratio))
+    kernel   = cv2.getStructuringElement(cv2.MORPH_RECT, (1, kernel_h))
+    v_lines  = cv2.morphologyEx(inv, cv2.MORPH_OPEN, kernel)
+
+    col_sums  = np.sum(v_lines > 0, axis=0)   # sum along rows for each column
+    threshold = h * min_span_ratio * 0.7
+    detected  = np.where(col_sums > threshold)[0]
+
+    if len(detected) == 0:
+        return [0, w]
+
+    boundaries = _group_consecutive(detected, gap=6)
+
+    if boundaries[0] > 5:
+        boundaries = [0] + boundaries
+    if boundaries[-1] < w - 5:
+        boundaries = boundaries + [w]
+
+    return boundaries
+
+
+def _group_consecutive(positions: np.ndarray, gap: int = 5) -> List[int]:
+    """
+    Merge runs of close integer positions into single representative values.
+
+    IN  : positions — sorted array of pixel indices (e.g. row/col numbers)
+          gap       — max separation to still be considered the same line
+    OUT : list of ints — one centroid per detected line
+
+    Example:
+        positions = [100, 101, 102, 108, 109, 200]  gap=5
+        groups    = [[100,101,102], [108,109], [200]]
+        centroids = [101,           108,        200]
+    """
+    if len(positions) == 0:
+        return []
+
+    groups  = []
+    current = [int(positions[0])]
+
+    for pos in positions[1:]:
+        if int(pos) - current[-1] <= gap:
+            current.append(int(pos))
+        else:
+            groups.append(int(np.mean(current)))
+            current = [int(pos)]
+
+    groups.append(int(np.mean(current)))
+    return groups
+
+
+def _get_col_bounds(col_boundaries: List[int],
+                    target_col_idx: int,
+                    image_width: int) -> Tuple[int, int]:
+    """
+    Return (x_start, x_end) for the column at target_col_idx.
+
+    Tries to use detected col_boundaries first.
+    Falls back to known document template ratios if detection is incomplete.
+
+    IN  : col_boundaries  — list of detected x-positions (from _find_col_boundaries)
+          target_col_idx  — 0-based physical column index
+          image_width     — full image width in pixels
+    OUT : (x1, x2) pixel coordinates of the column's left and right edges
+
+    ── COLUMN LAYOUT (document template) ────────────────────────────────────
+    These ratios are measured from the real absence sheets:
+        Index 0 : N° Apo           0%  –  5%  of width
+        Index 1 : Nom & Prénom     5%  – 23%  of width
+        Index 2 : Séance 1        23%  – 30.8%
+        Index 3 : Séance 2        30.8%– 38.5%
+        Index k : Séance (k-1)    (5% + 18%) + (k-2) × 7.7%  to  same + 7.7%
+
+    These ratios assume a fully visible table with no perspective distortion.
+    They are used only as fallback when vertical line detection is unreliable.
+    """
+    # ── Primary: use detected boundaries ─────────────────────────────────
+    if len(col_boundaries) >= target_col_idx + 2:
+        x1 = col_boundaries[target_col_idx]
+        x2 = col_boundaries[target_col_idx + 1]
+        if x2 - x1 >= 15:   # sanity check: column must be at least 15px wide
+            return x1, x2
+
+    # ── Fallback: template ratios ─────────────────────────────────────────
+    W = image_width
+
+    # Fixed columns
+    COL_NAPO_END  = 0.05
+    COL_NOM_END   = 0.23
+    COL_SEANCE_W  = 0.077        # width of each séance column
+
+    if target_col_idx == 0:
+        return 0, int(W * COL_NAPO_END)
+
+    if target_col_idx == 1:
+        return int(W * COL_NAPO_END), int(W * COL_NOM_END)
+
+    # target_col_idx >= 2 → séance column
+    seance_num = target_col_idx - 1        # 1-based séance number
+    x1 = int(W * (COL_NOM_END + (seance_num - 1) * COL_SEANCE_W))
+    x2 = int(W * (COL_NOM_END +  seance_num      * COL_SEANCE_W))
+    return x1, x2
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEBUG OUTPUT
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _save_debug_image(image: np.ndarray,
+                      row_strips: List[Tuple[int, int]],
+                      seance_x1: int,
+                      seance_x2: int,
+                      results: List[Dict],
+                      debug_root: str,
+                      page_stem: str) -> None:
+    """
+    Save an annotated version of the table image for visual verification.
+
+    Annotations:
+        Blue  horizontal lines  — detected row boundaries
+        Orange vertical lines   — boundaries of the analysed séance column
+        Green  cell overlay     — present (signed)
+        Red    cell overlay     — absent (unsigned)
+        Density value           — printed inside each cell
+
+    IN  : image       — original BGR table image
+          row_strips  — list of (y1, y2) tuples for each student row
+          seance_x1/2 — left/right pixel bounds of the séance column
+          results     — list of row result dicts
+          debug_root  — folder to save the output image
+          page_stem   — used as the output filename
+    """
+    os.makedirs(debug_root, exist_ok=True)
+    dbg = image.copy()
+    h_img = dbg.shape[0]
+
+    # Draw séance column boundaries
+    # (0, 165, 255) = orange in BGR
+    cv2.line(dbg, (seance_x1, 0), (seance_x1, h_img), (0, 165, 255), 2)
+    cv2.line(dbg, (seance_x2, 0), (seance_x2, h_img), (0, 165, 255), 2)
+
+    for i, (y1, y2) in enumerate(row_strips):
+        # Row boundary line (blue)
+        cv2.line(dbg, (0, y1), (dbg.shape[1], y1), (255, 0, 0), 1)
+
+        if i >= len(results):
+            continue
+
+        # Cell highlight (green = present, red = absent)
+        color = (0, 200, 0) if results[i]['present'] else (0, 0, 200)
+        overlay = dbg.copy()
+        cv2.rectangle(overlay, (seance_x1, y1), (seance_x2, y2), color, cv2.FILLED)
+        # alpha = 0.35: 35% overlay color, 65% original image
+        cv2.addWeighted(overlay, 0.35, dbg, 0.65, 0, dbg)
+        cv2.rectangle(dbg, (seance_x1, y1), (seance_x2, y2), color, 1)
+
+        # Density label inside cell
+        label = f"{results[i]['density']:.3f}"
+        cv2.putText(dbg, label,
+                    (seance_x1 + 2, y1 + (y2 - y1) // 2),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 0, 0), 1,
+                    cv2.LINE_AA)
+
+    out_path = os.path.join(debug_root, f"{page_stem}_debug.jpg")
+    cv2.imwrite(out_path, dbg)
+    print(f"[checkbox]   Debug image saved → {out_path}")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# COMMAND-LINE TEST
+#
+# Usage:
+#   python src/checkbox_detection.py doc_1
+#   python src/checkbox_detection.py doc_1 1 0.04
+#   python src/checkbox_detection.py doc_1 1 0.04 debug
+#
+# This prints all detected rows with their density values.
+# Run this first with debug=True to visually verify:
+#   1. Row boundaries are detected correctly (blue lines in debug image)
+#   2. The séance column is in the right place (orange lines)
+#   3. Density values are clearly separated (present >> threshold > absent)
+# Then adjust density_threshold accordingly.
+# ─────────────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) < 3:
-        print("Usage: python src/checkbox_detection.py <doc_id> <seance_number>")
+
+    if len(sys.argv) < 2:
+        print("Usage: python src/checkbox_detection.py <doc_id> "
+              "[seance] [threshold] [debug]")
         sys.exit(1)
-    doc_id, seance = sys.argv[1], int(sys.argv[2])
-    names = detect_absences_document(doc_id, seance_number=seance)
-    print(f"\nAbsent count: {len(names)}")
-    for n in names:
-        print(n)
+
+    _doc_id    = sys.argv[1]
+    _seance    = int(sys.argv[2])   if len(sys.argv) > 2 else None
+    _threshold = float(sys.argv[3]) if len(sys.argv) > 3 else 0.04
+    _debug     = (sys.argv[4].lower() == "debug") if len(sys.argv) > 4 else False
+
+    _results = detect_absences(
+        doc_id            = _doc_id,
+        active_seance     = _seance,
+        density_threshold = _threshold,
+        debug             = _debug,
+    )
+
+    # Print summary
+    print()
+    print(f"{'Row':>4}  {'Page':<14}  {'PgRow':>5}  {'Status':<8}  {'Density':>8}")
+    print("-" * 52)
+    for r in _results:
+        status = "PRESENT" if r['present'] else "absent "
+        print(f"{r['global_row']:>4}  {r['page']:<14}  "
+              f"{r['row_in_page']:>5}  {status}  {r['density']:>8.5f}")
+
+    print()
+    present = sum(1 for r in _results if r['present'])
+    absent  = len(_results) - present
+    print(f"Total: {len(_results)}   Present: {present}   Absent: {absent}")
 
 ============================================================
 File: src\cropper.py
@@ -1754,74 +2722,643 @@ print("Conversion complete! All JSON files converted to Pascal VOC XML successfu
 ============================================================
 File: src\name_matcher.py
 ============================================================
-# src/name_matcher.py
+# src/checkbox_detection.py
 """
-Map OCR‑extracted student names to official group roster using fuzzy matching.
+Stage 4 of the absence pipeline — presence/absence detection.
+
+═══════════════════════════════════════════════════════════════════════════════
+INPUTS
+═══════════════════════════════════════════════════════════════════════════════
+    data/cropped/<doc_id>/as1_table.jpg   ← page 1: starts with column header row
+    data/cropped/<doc_id>/as2_table.jpg   ← page 2: starts directly with students
+    data/cropped/<doc_id>/as3_table.jpg   ← page 3: starts directly with students
+    data/cropped/<doc_id>/as4_table.jpg   ← page 4: starts directly with students
+    data/metadata/<doc_id>/metadata.json  ← tells us which séance is active
+
+═══════════════════════════════════════════════════════════════════════════════
+TABLE COLUMN LAYOUT (0-based physical column index)
+═══════════════════════════════════════════════════════════════════════════════
+    Index 0 : N° Apo          ≈ 4% of table width
+    Index 1 : Nom & Prénom    ≈ 18% of table width
+    Index 2 : Séance 1        ≈ 7.8% of table width
+    Index 3 : Séance 2        ≈ 7.8%
+    ...
+    Index 11: Séance 10       ≈ 7.8%
+
+    active_seance=1 → physical column index = 1 + 1 = 2
+
+═══════════════════════════════════════════════════════════════════════════════
+DETECTION METHOD
+═══════════════════════════════════════════════════════════════════════════════
+    For each student row in the active séance column:
+        1. Extract the cell interior (with a small margin to exclude grid lines)
+        2. Binarize: text/ink = 0 (black), background = 255 (white)
+        3. density = (number of black pixels) / (total pixels in cell)
+        4. present if density > density_threshold
+           absent  if density ≤ density_threshold
+
+═══════════════════════════════════════════════════════════════════════════════
+OUTPUT
+═══════════════════════════════════════════════════════════════════════════════
+    List of dicts, one per detected student row:
+    {
+        'global_row'  : int   0-based index across ALL pages of the document
+        'page'        : str   filename stem, e.g. 'as1_table'
+        'row_in_page' : int   0-based index within that page only
+        'present'     : bool  True = signature found, False = cell empty
+        'density'     : float measured ink density (use for threshold tuning)
+    }
 """
 
-import csv
-from typing import Dict, List, Tuple, Optional
-from rapidfuzz import process, fuzz
+import os
+import json
+import re
+import cv2
+import numpy as np
+from typing import Dict, List, Optional, Tuple
 
-def load_group_roster(csv_path: str) -> List[Dict[str, str]]:
-    """
-    Read a group CSV (with columns N_Apo, Nom_Prenom) and return a list of dicts.
-    """
-    with open(csv_path, 'r', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        roster = []
-        for row in reader:
-            napo = row['N_Apo'].strip()
-            name = row['Nom_Prenom'].strip()
-            if napo and name:
-                roster.append({'n_apo': napo, 'nom_prenom': name})
-    return roster
 
-def resolve_absences(ocr_names: List[str],
-                     group_csv_path: str,
-                     min_score: int = 75) -> List[Dict[str, str]]:
-    """
-    For each OCR‑raw name, find the best matching official name using fuzzy matching.
-    Returns a list of {n_apo, nom_prenom, ocr_raw, score}.
-    """
-    roster = load_group_roster(group_csv_path)
-    if not roster:
-        return []
+# ─────────────────────────────────────────────────────────────────────────────
+# PUBLIC API
+# ─────────────────────────────────────────────────────────────────────────────
 
-    official_names = [r['nom_prenom'] for r in roster]
-    results = []
-    for raw in ocr_names:
-        # fuzzy match against all official names
-        match = process.extractOne(raw, official_names, scorer=fuzz.token_sort_ratio)
-        if match and match[1] >= min_score:
-            best_name = match[0]
-            idx = official_names.index(best_name)
-            results.append({
-                'n_apo': roster[idx]['n_apo'],
-                'nom_prenom': roster[idx]['nom_prenom'],
-                'ocr_raw': raw,
-                'score': match[1]
-            })
+def detect_absences(doc_id: str,
+                    active_seance: Optional[int] = None,
+                    cropped_root: str = "data/cropped",
+                    metadata_root: str = "data/metadata",
+                    density_threshold: float = 0.04,
+                    skip_header_row: bool = True,
+                    debug: bool = False,
+                    debug_root: str = "data/debug") -> List[Dict]:
+    """
+    Detect presence/absence for every student row across all table pages.
+
+    Args:
+        doc_id            : document folder name (e.g. 'doc_1')
+        active_seance     : 1-based séance column to check.
+                            If None, auto-detected from metadata.json.
+        cropped_root      : root folder containing doc subfolders with table images
+        metadata_root     : root folder containing doc subfolders with metadata.json
+        density_threshold : black pixel fraction above which a cell = present.
+                            Start at 0.04, adjust based on debug output.
+        skip_header_row   : if True, skip the first row of the first table page.
+                            Page 1's table image starts with the column header row
+                            ("N° Apo | Nom & Prénom | Séance1...") which is not
+                            a student row. Set False if your cropper already
+                            excludes it.
+        debug             : if True, save annotated images to debug_root.
+        debug_root        : folder to write debug images.
+
+    Returns:
+        List of dicts — one entry per detected student row in document order.
+        Use result['global_row'] to index into the group roster.
+
+    Raises:
+        FileNotFoundError if cropped folder or table images are missing.
+    """
+    # ── 1. Determine which séance column to analyse ───────────────────────
+    if active_seance is None:
+        active_seance = _get_active_seance(doc_id, metadata_root)
+    print(f"[checkbox] doc_id={doc_id}  active_seance={active_seance}  "
+          f"threshold={density_threshold}")
+
+    # ── 2. Collect table images in page order ─────────────────────────────
+    crop_dir = os.path.join(cropped_root, doc_id)
+    if not os.path.isdir(crop_dir):
+        raise FileNotFoundError(f"Cropped folder not found: {crop_dir}")
+
+    table_files = _get_sorted_table_files(crop_dir)
+    if not table_files:
+        raise FileNotFoundError(f"No *_table.jpg images found in: {crop_dir}")
+
+    print(f"[checkbox] Found {len(table_files)} table page(s): "
+          f"{[s for s, _ in table_files]}")
+
+    # ── 3. Process each page and accumulate results ───────────────────────
+    all_results: List[Dict] = []
+    global_offset = 0
+
+    for idx, (page_stem, img_path) in enumerate(table_files):
+        is_first = (idx == 0)
+        should_skip_header = is_first and skip_header_row
+
+        page_results = _process_one_table(
+            img_path        = img_path,
+            page_stem       = page_stem,
+            active_seance   = active_seance,
+            density_threshold = density_threshold,
+            global_offset   = global_offset,
+            skip_header_row = should_skip_header,
+            debug           = debug,
+            debug_root      = debug_root,
+        )
+
+        all_results.extend(page_results)
+        global_offset += len(page_results)
+        print(f"[checkbox]   {page_stem}: {len(page_results)} rows detected")
+
+    present_count = sum(1 for r in all_results if r['present'])
+    absent_count  = len(all_results) - present_count
+    print(f"[checkbox] Total: {len(all_results)} rows — "
+          f"{present_count} present, {absent_count} absent")
+
+    return all_results
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ACTIVE SÉANCE DETECTION
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _get_active_seance(doc_id: str, metadata_root: str) -> int:
+    """
+    Read metadata.json and return the 1-based index of the first séance
+    that has at least one non-empty metadata field (date, heure_debut, etc.).
+    Falls back to 1 if the file is missing or all séances are empty.
+
+    IN  : doc_id, path to metadata root
+    OUT : int — 1-based séance number
+
+    The metadata.json structure:
+        {
+          "seances": {
+            "1": {"date": "04/06/26", "heure_debut": "08h30", ...},
+            "2": {"date": "", ...},
+            ...
+          }
+        }
+    The first séance with a non-empty value is the active one.
+    """
+    meta_path = os.path.join(metadata_root, doc_id, "metadata.json")
+    if not os.path.exists(meta_path):
+        print(f"[checkbox] metadata.json not found, defaulting to séance 1")
+        return 1
+
+    with open(meta_path, 'r', encoding='utf-8') as f:
+        meta = json.load(f)
+
+    # sorted() on string keys "1".."10": sort by integer value
+    for num_str, info in sorted(meta.get('seances', {}).items(),
+                                 key=lambda kv: int(kv[0])):
+        # info is a dict like {"date": "04/06/26", "heure_debut": "08h30", ...}
+        # any() returns True if at least one value is a non-empty string
+        if any(str(v).strip() for v in info.values() if v):
+            return int(num_str)
+
+    print(f"[checkbox] All séances empty in metadata, defaulting to 1")
+    return 1
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FILE DISCOVERY
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _get_sorted_table_files(crop_dir: str) -> List[Tuple[str, str]]:
+    """
+    Return [(stem, full_path), ...] for table images, sorted by page number.
+
+    IN  : crop_dir — path to data/cropped/<doc_id>/
+    OUT : sorted list of (stem, path) tuples
+          stem example: "as1_table"
+          path example: "data/cropped/doc_1/as1_table.jpg"
+
+    Sort key: the integer N extracted from "asN_table.*".
+    Non-matching files are assigned sort key 0 and sorted first.
+    """
+    def _page_num(fname: str) -> int:
+        m = re.search(r'as(\d+)', fname, re.IGNORECASE)
+        return int(m.group(1)) if m else 0
+
+    files = [
+        f for f in os.listdir(crop_dir)
+        if re.search(r'_table\.(jpg|jpeg|png)$', f, re.IGNORECASE)
+    ]
+    files.sort(key=_page_num)
+
+    return [
+        (os.path.splitext(f)[0], os.path.join(crop_dir, f))
+        for f in files
+    ]
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PER-PAGE PROCESSING
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _process_one_table(img_path: str,
+                        page_stem: str,
+                        active_seance: int,
+                        density_threshold: float,
+                        global_offset: int,
+                        skip_header_row: bool,
+                        debug: bool,
+                        debug_root: str) -> List[Dict]:
+    """
+    Process a single table image page and return per-row presence results.
+
+    IN  : img_path        — path to the cropped table JPEG
+          page_stem       — filename stem for labelling output
+          active_seance   — 1-based séance number to check
+          density_threshold — ink fraction threshold for presence
+          global_offset   — number of student rows already processed
+          skip_header_row — if True, skip the first detected row
+          debug/debug_root — optional debug image output
+
+    OUT : list of row result dicts
+    """
+    # ── Load ──────────────────────────────────────────────────────────────
+    image = cv2.imread(img_path)
+    if image is None:
+        raise FileNotFoundError(f"Cannot read image: {img_path}")
+
+    binary = _binarize(image)
+    h, w   = binary.shape
+
+    # ── Detect grid structure ─────────────────────────────────────────────
+    row_bounds = _find_row_boundaries(binary)
+    col_bounds = _find_col_boundaries(binary)
+
+    # ── Identify the target séance column ─────────────────────────────────
+    # Physical column index: 0=N°Apo, 1=Nom&Prénom, 2=Séance1, 3=Séance2...
+    # active_seance=1 → index 2, active_seance=2 → index 3, etc.
+    target_col_idx = active_seance + 1
+    seance_x1, seance_x2 = _get_col_bounds(col_bounds, target_col_idx, w)
+
+    # ── Build row strip list ───────────────────────────────────────────────
+    # A "row strip" is the vertical span (y1, y2) of one table row.
+    # Consecutive boundary pairs define the strips.
+    row_strips = []
+    for i in range(len(row_bounds) - 1):
+        y1 = row_bounds[i]
+        y2 = row_bounds[i + 1]
+        row_h = y2 - y1
+        # Valid student rows have a height in a plausible range.
+        # Very thin strips (< 8px) are noise between adjacent detected lines.
+        # Very tall strips (> 150px) are likely image artifacts.
+        if 8 <= row_h <= 150:
+            row_strips.append((y1, y2))
+
+    # ── Skip column header row if needed ─────────────────────────────────
+    # Page 1's table starts with a printed column header row:
+    # "N° Apo | Nom & Prénom | Séance1 | Séance2 | ..."
+    # This is NOT a student row. Skip it.
+    if skip_header_row and row_strips:
+        row_strips = row_strips[1:]
+
+    # ── Compute ink density for each row's séance cell ───────────────────
+    MARGIN = 4          # pixels to trim from each edge to exclude grid lines
+    results: List[Dict] = []
+
+    for strip_idx, (y1, y2) in enumerate(row_strips):
+        # Clip to image bounds then apply margin
+        cy1 = max(0, y1 + MARGIN)
+        cy2 = max(0, y2 - MARGIN)
+        cx1 = max(0, seance_x1 + MARGIN)
+        cx2 = max(0, seance_x2 - MARGIN)
+
+        cell = binary[cy1:cy2, cx1:cx2]
+
+        if cell.size == 0:
+            density = 0.0
         else:
-            results.append({
-                'n_apo': '',
-                'nom_prenom': raw,
-                'ocr_raw': raw,
-                'score': 0
-            })
+            # binary convention: ink = 0 (black), background = 255 (white)
+            # np.sum(cell < 128) counts every black/near-black pixel
+            black_pixels = int(np.sum(cell < 128))
+            density = black_pixels / cell.size
+
+        results.append({
+            'global_row':  global_offset + len(results),
+            'page':        page_stem,
+            'row_in_page': strip_idx,
+            'present':     density > density_threshold,
+            'density':     round(float(density), 5),
+        })
+
+    # ── Debug output ──────────────────────────────────────────────────────
+    if debug:
+        _save_debug_image(image, row_strips, seance_x1, seance_x2,
+                          results, debug_root, page_stem)
+
     return results
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# IMAGE PROCESSING
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _binarize(image: np.ndarray) -> np.ndarray:
+    """
+    Convert a BGR or grayscale image to a binary image.
+
+    IN  : (h, w, 3) uint8  BGR
+          OR (h, w) uint8  grayscale
+    OUT : (h, w) uint8  — ink/text = 0 (black), background = 255 (white)
+
+    Uses adaptive Gaussian thresholding which computes a different threshold
+    per pixel based on a local neighborhood. This handles uneven lighting
+    better than a global threshold (Otsu).
+
+    block_size=31 — neighborhood size (must be odd). 31×31 pixels per tile.
+    C=15          — constant subtracted from local mean. Higher = sparser.
+    """
+    gray    = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
+    blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+    # THRESH_BINARY_INV: below threshold → 255 (text=white), above → 0 (bg=black)
+    binary_inv = cv2.adaptiveThreshold(
+        blurred, 255,
+        cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+        cv2.THRESH_BINARY_INV,
+        31, 15
+    )
+    # bitwise_not: 0 ↔ 255  →  text = 0 (black), background = 255 (white)
+    return cv2.bitwise_not(binary_inv)
+
+
+def _find_row_boundaries(binary: np.ndarray,
+                          min_span_ratio: float = 0.35) -> List[int]:
+    """
+    Detect y-coordinates of horizontal table lines.
+
+    IN  : binary (h, w) uint8 — text=0, background=255
+          min_span_ratio      — line must span at least this fraction of width
+    OUT : sorted list of y-coordinate integers including 0 and h as endpoints
+
+    ── HOW IT WORKS ─────────────────────────────────────────────────────────
+    1. Invert the binary image so grid lines become white (255) on black (0).
+       Morphological operations treat white pixels as "foreground".
+    2. Apply MORPH_OPEN with a wide horizontal kernel.
+       The kernel is (min_span * width) pixels wide and 1 pixel tall.
+       Opening = erosion then dilation:
+         - Erosion removes everything that doesn't extend at least kernel_w pixels
+         - Dilation restores what remains
+       Net effect: only long horizontal structures survive.
+       Short marks, text, noise are eliminated.
+    3. Count surviving white pixels per row.
+    4. Find rows exceeding the threshold (= line locations).
+    5. Group consecutive detected rows into single boundary positions.
+       Multiple adjacent rows may light up for one actual line due to
+       the line's finite thickness (2-3px). _group_consecutive merges them.
+    6. Add 0 and h as first/last boundaries so all rows are enclosed.
+    """
+    h, w = binary.shape
+    inv  = cv2.bitwise_not(binary)
+
+    # Kernel: wide enough to reject noise, narrow enough to catch real lines
+    kernel_w = max(10, int(w * min_span_ratio))
+    kernel   = cv2.getStructuringElement(cv2.MORPH_RECT, (kernel_w, 1))
+    h_lines  = cv2.morphologyEx(inv, cv2.MORPH_OPEN, kernel)
+
+    # Count white pixels per row (axis=1 sums across columns for each row)
+    row_sums  = np.sum(h_lines > 0, axis=1)
+    # A real line should illuminate most of the min_span region
+    threshold = w * min_span_ratio * 0.7
+    detected  = np.where(row_sums > threshold)[0]
+
+    if len(detected) == 0:
+        return [0, h]
+
+    boundaries = _group_consecutive(detected, gap=6)
+
+    # Ensure the list starts at 0 and ends at h
+    if boundaries[0] > 5:
+        boundaries = [0] + boundaries
+    if boundaries[-1] < h - 5:
+        boundaries = boundaries + [h]
+
+    return boundaries
+
+
+def _find_col_boundaries(binary: np.ndarray,
+                          min_span_ratio: float = 0.20) -> List[int]:
+    """
+    Detect x-coordinates of vertical table lines.
+
+    IN  : binary (h, w) uint8 — text=0, background=255
+          min_span_ratio      — line must span at least this fraction of height
+    OUT : sorted list of x-coordinate integers including 0 and w as endpoints
+
+    Identical logic to _find_row_boundaries but transposed:
+    uses a tall vertical kernel (1 × kernel_h) to isolate vertical lines.
+    """
+    h, w = binary.shape
+    inv  = cv2.bitwise_not(binary)
+
+    kernel_h = max(10, int(h * min_span_ratio))
+    kernel   = cv2.getStructuringElement(cv2.MORPH_RECT, (1, kernel_h))
+    v_lines  = cv2.morphologyEx(inv, cv2.MORPH_OPEN, kernel)
+
+    col_sums  = np.sum(v_lines > 0, axis=0)   # sum along rows for each column
+    threshold = h * min_span_ratio * 0.7
+    detected  = np.where(col_sums > threshold)[0]
+
+    if len(detected) == 0:
+        return [0, w]
+
+    boundaries = _group_consecutive(detected, gap=6)
+
+    if boundaries[0] > 5:
+        boundaries = [0] + boundaries
+    if boundaries[-1] < w - 5:
+        boundaries = boundaries + [w]
+
+    return boundaries
+
+
+def _group_consecutive(positions: np.ndarray, gap: int = 5) -> List[int]:
+    """
+    Merge runs of close integer positions into single representative values.
+
+    IN  : positions — sorted array of pixel indices (e.g. row/col numbers)
+          gap       — max separation to still be considered the same line
+    OUT : list of ints — one centroid per detected line
+
+    Example:
+        positions = [100, 101, 102, 108, 109, 200]  gap=5
+        groups    = [[100,101,102], [108,109], [200]]
+        centroids = [101,           108,        200]
+    """
+    if len(positions) == 0:
+        return []
+
+    groups  = []
+    current = [int(positions[0])]
+
+    for pos in positions[1:]:
+        if int(pos) - current[-1] <= gap:
+            current.append(int(pos))
+        else:
+            groups.append(int(np.mean(current)))
+            current = [int(pos)]
+
+    groups.append(int(np.mean(current)))
+    return groups
+
+
+def _get_col_bounds(col_boundaries: List[int],
+                    target_col_idx: int,
+                    image_width: int) -> Tuple[int, int]:
+    """
+    Return (x_start, x_end) for the column at target_col_idx.
+
+    Tries to use detected col_boundaries first.
+    Falls back to known document template ratios if detection is incomplete.
+
+    IN  : col_boundaries  — list of detected x-positions (from _find_col_boundaries)
+          target_col_idx  — 0-based physical column index
+          image_width     — full image width in pixels
+    OUT : (x1, x2) pixel coordinates of the column's left and right edges
+
+    ── COLUMN LAYOUT (document template) ────────────────────────────────────
+    These ratios are measured from the real absence sheets:
+        Index 0 : N° Apo           0%  –  5%  of width
+        Index 1 : Nom & Prénom     5%  – 23%  of width
+        Index 2 : Séance 1        23%  – 30.8%
+        Index 3 : Séance 2        30.8%– 38.5%
+        Index k : Séance (k-1)    (5% + 18%) + (k-2) × 7.7%  to  same + 7.7%
+
+    These ratios assume a fully visible table with no perspective distortion.
+    They are used only as fallback when vertical line detection is unreliable.
+    """
+    # ── Primary: use detected boundaries ─────────────────────────────────
+    if len(col_boundaries) >= target_col_idx + 2:
+        x1 = col_boundaries[target_col_idx]
+        x2 = col_boundaries[target_col_idx + 1]
+        if x2 - x1 >= 15:   # sanity check: column must be at least 15px wide
+            return x1, x2
+
+    # ── Fallback: template ratios ─────────────────────────────────────────
+    W = image_width
+
+    # Fixed columns
+    COL_NAPO_END  = 0.05
+    COL_NOM_END   = 0.23
+    COL_SEANCE_W  = 0.077        # width of each séance column
+
+    if target_col_idx == 0:
+        return 0, int(W * COL_NAPO_END)
+
+    if target_col_idx == 1:
+        return int(W * COL_NAPO_END), int(W * COL_NOM_END)
+
+    # target_col_idx >= 2 → séance column
+    seance_num = target_col_idx - 1        # 1-based séance number
+    x1 = int(W * (COL_NOM_END + (seance_num - 1) * COL_SEANCE_W))
+    x2 = int(W * (COL_NOM_END +  seance_num      * COL_SEANCE_W))
+    return x1, x2
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEBUG OUTPUT
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _save_debug_image(image: np.ndarray,
+                      row_strips: List[Tuple[int, int]],
+                      seance_x1: int,
+                      seance_x2: int,
+                      results: List[Dict],
+                      debug_root: str,
+                      page_stem: str) -> None:
+    """
+    Save an annotated version of the table image for visual verification.
+
+    Annotations:
+        Blue  horizontal lines  — detected row boundaries
+        Orange vertical lines   — boundaries of the analysed séance column
+        Green  cell overlay     — present (signed)
+        Red    cell overlay     — absent (unsigned)
+        Density value           — printed inside each cell
+
+    IN  : image       — original BGR table image
+          row_strips  — list of (y1, y2) tuples for each student row
+          seance_x1/2 — left/right pixel bounds of the séance column
+          results     — list of row result dicts
+          debug_root  — folder to save the output image
+          page_stem   — used as the output filename
+    """
+    os.makedirs(debug_root, exist_ok=True)
+    dbg = image.copy()
+    h_img = dbg.shape[0]
+
+    # Draw séance column boundaries
+    # (0, 165, 255) = orange in BGR
+    cv2.line(dbg, (seance_x1, 0), (seance_x1, h_img), (0, 165, 255), 2)
+    cv2.line(dbg, (seance_x2, 0), (seance_x2, h_img), (0, 165, 255), 2)
+
+    for i, (y1, y2) in enumerate(row_strips):
+        # Row boundary line (blue)
+        cv2.line(dbg, (0, y1), (dbg.shape[1], y1), (255, 0, 0), 1)
+
+        if i >= len(results):
+            continue
+
+        # Cell highlight (green = present, red = absent)
+        color = (0, 200, 0) if results[i]['present'] else (0, 0, 200)
+        overlay = dbg.copy()
+        cv2.rectangle(overlay, (seance_x1, y1), (seance_x2, y2), color, cv2.FILLED)
+        # alpha = 0.35: 35% overlay color, 65% original image
+        cv2.addWeighted(overlay, 0.35, dbg, 0.65, 0, dbg)
+        cv2.rectangle(dbg, (seance_x1, y1), (seance_x2, y2), color, 1)
+
+        # Density label inside cell
+        label = f"{results[i]['density']:.3f}"
+        cv2.putText(dbg, label,
+                    (seance_x1 + 2, y1 + (y2 - y1) // 2),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 0, 0), 1,
+                    cv2.LINE_AA)
+
+    out_path = os.path.join(debug_root, f"{page_stem}_debug.jpg")
+    cv2.imwrite(out_path, dbg)
+    print(f"[checkbox]   Debug image saved → {out_path}")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# COMMAND-LINE TEST
+#
+# Usage:
+#   python src/checkbox_detection.py doc_1
+#   python src/checkbox_detection.py doc_1 1 0.04
+#   python src/checkbox_detection.py doc_1 1 0.04 debug
+#
+# This prints all detected rows with their density values.
+# Run this first with debug=True to visually verify:
+#   1. Row boundaries are detected correctly (blue lines in debug image)
+#   2. The séance column is in the right place (orange lines)
+#   3. Density values are clearly separated (present >> threshold > absent)
+# Then adjust density_threshold accordingly.
+# ─────────────────────────────────────────────────────────────────────────────
+
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) < 3:
-        print("Usage: python src/name_matcher.py <group_csv> <ocr_name1> [ocr_name2 ...]")
+
+    if len(sys.argv) < 2:
+        print("Usage: python src/checkbox_detection.py <doc_id> "
+              "[seance] [threshold] [debug]")
         sys.exit(1)
-    csv_path = sys.argv[1]
-    ocr_names = sys.argv[2:]
-    resolved = resolve_absences(ocr_names, csv_path)
-    for r in resolved:
-        print(f"{r['n_apo']:8s} {r['nom_prenom']:30s} (OCR: {r['ocr_raw']}, score: {r['score']})")
+
+    _doc_id    = sys.argv[1]
+    _seance    = int(sys.argv[2])   if len(sys.argv) > 2 else None
+    _threshold = float(sys.argv[3]) if len(sys.argv) > 3 else 0.04
+    _debug     = (sys.argv[4].lower() == "debug") if len(sys.argv) > 4 else False
+
+    _results = detect_absences(
+        doc_id            = _doc_id,
+        active_seance     = _seance,
+        density_threshold = _threshold,
+        debug             = _debug,
+    )
+
+    # Print summary
+    print()
+    print(f"{'Row':>4}  {'Page':<14}  {'PgRow':>5}  {'Status':<8}  {'Density':>8}")
+    print("-" * 52)
+    for r in _results:
+        status = "PRESENT" if r['present'] else "absent "
+        print(f"{r['global_row']:>4}  {r['page']:<14}  "
+              f"{r['row_in_page']:>5}  {status}  {r['density']:>8.5f}")
+
+    print()
+    present = sum(1 for r in _results if r['present'])
+    absent  = len(_results) - present
+    print(f"Total: {len(_results)}   Present: {present}   Absent: {absent}")
 
 ============================================================
 File: src\ocr_header.py
