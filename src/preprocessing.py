@@ -1,233 +1,279 @@
 """
 src/preprocessing.py
+--------------------
+Step 1 of the pipeline: prepare a raw scanned absence sheet image for analysis.
 
-This file contains all the "Computer Vision" tools used to clean up the scanned image 
-before the program tries to read text or detect checkboxes.
+What this module does, in order:
+  1. Load the image from disk.
+  2. Fix orientation  – if the scan is portrait (h > w), rotate it to landscape.
+  3. Enhance contrast – CLAHE so ink (red/blue handwriting) pops against the background.
+  4. Detect the table grid lines using morphological operations (long horizontal/vertical kernels).
+  5. Deskew – measure the tilt of those lines via HoughLinesP and correct it.
+  6. Tight-crop – project the grid-line pixels onto each axis and cut exactly to where lines exist.
+
+Output: a clean, straight, margin-free image ready for OCR and grid analysis.
 """
 
-import os
-import cv2          # OpenCV: The main library for image processing
-import numpy as np  # Numpy: A library for doing fast math on large grids of numbers (like images)
-from typing import Dict, List, Tuple
+import cv2
+import numpy as np
+import re
 
 
-def preprocess_document(doc_id: str,
-                        raw_root: str = "data/raw",
-                        preprocessed_root: str = "data/preprocessed") -> List[Dict]:
+# ---------------------------------------------------------------------------
+# Public API
+# ---------------------------------------------------------------------------
+
+def prepare(image_path: str) -> np.ndarray:
     """
-    Clean and binarize every page of a document.
+    Full preprocessing pipeline for one page image.
 
-    1. Reads all images from data/raw/<doc_id>/.
-    2. Sorts them naturally (as1, as2, ...).
-    3. For each image: deskew, enhance contrast, binarize.
-    4. Saves the cleaned colour image and a binary version to
-       data/preprocessed/<doc_id>/.
+    Parameters
+    ----------
+    image_path : str
+        Absolute or relative path to the raw scanned image (.jpg / .png).
 
-    Returns a list of dicts (one per page) with keys:
-        'original', 'cleaned', 'binary', 'output_path', 'binary_path'
+    Returns
+    -------
+    np.ndarray
+        A BGR image that is landscape-oriented, contrast-enhanced,
+        deskewed, and cropped to the table boundary.
     """
-    
-    # Create the full path to the raw images folder
-    raw_dir = os.path.join(raw_root, doc_id)
-    
-    # Check if the folder actually exists on the hard drive
-    if not os.path.isdir(raw_dir):
-        raise FileNotFoundError(f"Raw document folder not found: {raw_dir}")
-
-    exts = ('.jpg', '.jpeg', '.png', '.bmp', '.tiff', '.tif')
-    
-    # List Comprehension: "Find all files 'f' in the raw_dir IF their name ends with one of the allowed extensions"
-    # We then wrap it in _natural_sorted so "page2" comes before "page10".
-    image_files = _natural_sorted([
-        f for f in os.listdir(raw_dir)
-        if f.lower().endswith(exts)
-    ])
-
-    if not image_files:
-        raise FileNotFoundError(f"No image files found in {raw_dir}")
-
-    results = []
-    # Loop through each found image file one by one
-    for img_file in image_files:
-        img_path = os.path.join(raw_dir, img_file)
-        
-        # Call our helper function to do the actual cleaning work for this single image
-        res = _preprocess_one(img_path, doc_id, preprocessed_root)
-        
-        # Add the result to our list
-        results.append(res)
-
-    return results
-
-
-# ----------------------------------------------------------------------
-# SINGLE-PAGE LOGIC
-# ----------------------------------------------------------------------
-def _preprocess_one(image_path: str, doc_id: str, output_root: str) -> Dict:
-    """
-    This function takes a single image, applies a sequence of cleaning steps,
-    saves the cleaned versions, and returns a dictionary with the results.
-    """
-    image = load_image(image_path)
-    deskewed = deskew(image)
-    enhanced = enhance(deskewed)
-    binary = binarize(enhanced)
-
-    # Prepare to save the results
-    out_dir = os.path.join(output_root, doc_id)
-    os.makedirs(out_dir, exist_ok=True) # Create output folder if it doesn't exist
-    
-    # Get just the file name without the extension (e.g., "scan1.jpg" -> "scan1")
-    base = os.path.splitext(os.path.basename(image_path))[0]
-    
-    # Create the new file names
-    clean_path = os.path.join(out_dir, f"{base}.jpeg")
-    bin_path   = os.path.join(out_dir, f"{base}_binary.jpg")
-    
-    # Save (write) the images to the hard drive
-    cv2.imwrite(clean_path, enhanced)
-    cv2.imwrite(bin_path, binary)
-
-    # Return the images and paths as a dictionary
-    return {
-        'original': image,
-        'cleaned': enhanced,
-        'binary': binary,
-        'output_path': clean_path,
-        'binary_path': bin_path,
-    }
-
-
-# ----------------------------------------------------------------------
-# HELPERS
-# ----------------------------------------------------------------------
-def load_image(image_path: str) -> np.ndarray:
-    img = cv2.imread(image_path)
-    if img is None:
-        raise FileNotFoundError(f"Cannot load image: {image_path}")
+    img = _load(image_path)
+    img = _fix_orientation(img)
+    img = _enhance_contrast(img)
+    img = _deskew(img)
+    img = _crop_to_grid(img)
     return img
 
-def to_grayscale(image: np.ndarray) -> np.ndarray:
-    return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
 
-def deskew(image: np.ndarray, max_skew_angle: float = 10.0) -> np.ndarray:
-    """Straightens the image based on text line angles."""
-    gray = to_grayscale(image)
-    _, binary_inv = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-    
-    # Dilate horizontally to merge text into lines
-    h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (40, 1))
-    merged = cv2.morphologyEx(binary_inv, cv2.MORPH_CLOSE, h_kernel)
-    
-    lines = cv2.HoughLinesP(merged, 1, np.pi / 180, threshold=150, minLineLength=80, maxLineGap=15)
-    
-    if lines is None:
-        return image
-        
-    angles = []
-    for line in lines:
-        x1, y1, x2, y2 = line[0]
-        angle = np.degrees(np.arctan2(y2 - y1, x2 - x1))
-        if abs(angle) < max_skew_angle and abs(angle) > 0.1:
-            angles.append(angle)
-            
-    if not angles:
-        return image
-        
-    skew_angle = float(np.median(angles))
-    
-    h, w = image.shape[:2]
-    center = (w // 2, h // 2)
-    M = cv2.getRotationMatrix2D(center, skew_angle, 1.0)
-    
-    # Use white background for borders (255, 255, 255)
-    deskewed = cv2.warpAffine(image, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_CONSTANT, borderValue=(255, 255, 255))
-    return deskewed
+def save_debug(image: np.ndarray, path: str) -> None:
+    """Save an intermediate image to disk for visual inspection."""
+    import os
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    cv2.imwrite(path, image)
 
-def crop_margins(image: np.ndarray, margin: int = 30) -> np.ndarray:
-    """Removes empty white space around the printed document content."""
-    gray = to_grayscale(image)
-    _, binary_inv = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-    
-    # Use morphology to connect all text into big blobs
-    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (20, 20))
-    closed = cv2.morphologyEx(binary_inv, cv2.MORPH_CLOSE, kernel)
-    
-    contours, _ = cv2.findContours(closed, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    if not contours:
-        return image
-        
-    x_min, y_min = image.shape[1], image.shape[0]
-    x_max, y_max = 0, 0
-    
-    for c in contours:
-        x, y, w, h = cv2.boundingRect(c)
-        if w > 50 and h > 20: # Ignore tiny noise
-            x_min = min(x_min, x)
-            y_min = min(y_min, y)
-            x_max = max(x_max, x + w)
-            y_max = max(y_max, y + h)
-            
-    if x_max <= x_min or y_max <= y_min:
-        return image
-        
-    x_min = max(0, x_min - margin)
-    y_min = max(0, y_min - margin)
-    x_max = min(image.shape[1], x_max + margin)
-    y_max = min(image.shape[0], y_max + margin)
-    
-    return image[y_min:y_max, x_min:x_max]
 
-def enhance(image: np.ndarray, clip_limit: float = 2.0, tile_size: tuple = (8, 8)) -> np.ndarray:
-    """Improves contrast using CLAHE."""
-    if len(image.shape) == 2:
-        image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
-    lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
+def natural_sort_key(filename: str):
+    """Sort key that orders 'as2.jpg' before 'as10.jpg'."""
+    return [int(t) if t.isdigit() else t.lower() for t in re.split(r'(\d+)', filename)]
+
+
+# ---------------------------------------------------------------------------
+# Private helpers
+# ---------------------------------------------------------------------------
+
+def _load(path: str) -> np.ndarray:
+    """Load image from disk and raise a clear error if it fails."""
+    img = cv2.imread(path)
+    if img is None:
+        raise FileNotFoundError(f"Could not read image: {path}")
+    return img
+
+
+def _fix_orientation(img: np.ndarray) -> np.ndarray:
+    """
+    Absence sheets are landscape.  If the scanner saved them as portrait
+    (height > width), rotate 90° counter-clockwise to restore landscape layout.
+    """
+    h, w = img.shape[:2]
+    if h > w:
+        img = cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE)
+    return img
+
+
+def _enhance_contrast(img: np.ndarray) -> np.ndarray:
+    """
+    CLAHE (Contrast Limited Adaptive Histogram Equalization) improves local
+    contrast.  Working in LAB color space lets us enhance only the luminance
+    channel (L) without shifting colors, so red/blue handwriting stays vivid.
+    """
+    lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
     l, a, b = cv2.split(lab)
-    clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=tile_size)
-    l_enhanced = clahe.apply(l)
-    lab_enhanced = cv2.merge([l_enhanced, a, b])
-    return cv2.cvtColor(lab_enhanced, cv2.COLOR_LAB2BGR)
-
-def binarize(image: np.ndarray, block_size: int = 31, C: int = 15) -> np.ndarray:
-    """
-    Adaptive thresholding to return a clean black and white image.
-    Ink will be BLACK (0) and background will be WHITE (255) because of bitwise_not.
-    """
-    gray = to_grayscale(image)
-    blurred = cv2.GaussianBlur(gray, (5, 5), 0)
-    # THRESH_BINARY_INV makes ink 255 (white) and background 0 (black)
-    binary_inv = cv2.adaptiveThreshold(blurred, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, block_size, C)
-    # bitwise_not makes ink 0 (black) and background 255 (white)
-    return cv2.bitwise_not(binary_inv)
-
-def _natural_sorted(files: List[str]) -> List[str]:
-    """
-    A small helper that sorts numbers inside text correctly.
-    Standard sorting: image1.jpg, image10.jpg, image2.jpg
-    Natural sorting: image1.jpg, image2.jpg, image10.jpg
-    """
-    import re
-    def key(f):
-        # Look for digits (\d+) in the filename
-        m = re.search(r'(\d+)', f)
-        return int(m.group(1)) if m else 0
-    return sorted(files, key=key)
+    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    lab = cv2.merge((clahe.apply(l), a, b))
+    return cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
 
 
-# ----------------------------------------------------------------------
-# This part only runs if you execute this specific file from the terminal
-# e.g., "python src/preprocessing.py my_doc"
+def _build_line_kernels(img: np.ndarray):
+    """
+    Return (h_kernel, v_kernel) sized to detect the full-width table lines
+    while ignoring shorter strokes like individual letters.
+
+    The horizontal kernel is 150 px wide — only a line spanning at least 150 px
+    survives MORPH_OPEN.  The vertical kernel is 100 px tall for the same reason.
+    We use slightly smaller kernels here so that grid lines broken by signatures
+    are not completely erased.
+    """
+    h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (150, 1))
+    v_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, 100))
+    return h_kernel, v_kernel
+
+
+def _extract_lines(gray: np.ndarray, h_kernel, v_kernel):
+    """
+    Binarize and apply morphological OPEN with the two kernels to isolate
+    long horizontal lines and long vertical lines separately, then combine them.
+    """
+    # THRESH_BINARY_INV + OTSU: ink becomes white (255), background becomes black (0)
+    _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+
+    h_lines = cv2.morphologyEx(binary, cv2.MORPH_OPEN, h_kernel)
+    v_lines = cv2.morphologyEx(binary, cv2.MORPH_OPEN, v_kernel)
+
+    # Small dilation closes tiny gaps so lines are continuous
+    dilate_k = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
+    h_lines = cv2.dilate(h_lines, dilate_k)
+    v_lines = cv2.dilate(v_lines, dilate_k)
+
+    return h_lines, v_lines, cv2.add(h_lines, v_lines)
+
+
+def _deskew(img: np.ndarray) -> np.ndarray:
+    """
+    Measure the median angle of the detected horizontal table lines and rotate
+    the image so they become perfectly horizontal.
+
+    Uses Canny edge detection instead of morphological lines to find the true
+    skew angle, because morphological kernels force pixels to be horizontal
+    and destroy sub-degree skew information.
+    """
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
+    edges = cv2.Canny(gray, 50, 150, apertureSize=3)
+    lines = cv2.HoughLinesP(edges, 1, np.pi / 180, 200,
+                            minLineLength=300, maxLineGap=50)
+    angle = 0.0
+    if lines is not None:
+        angles = []
+        for line in lines:
+            x1, y1, x2, y2 = line[0]
+            a = np.degrees(np.arctan2(y2 - y1, x2 - x1))
+            # We only care about lines that are roughly horizontal
+            if -15 < a < 15 and abs(a) > 0.1:
+                angles.append(a)
+        if angles:
+            angle = float(np.median(angles))
+
+    if abs(angle) < 0.05:   # Already straight — skip warp
+        return img
+
+    h, w = img.shape[:2]
+    M = cv2.getRotationMatrix2D((w // 2, h // 2), angle, 1.0)
+    return cv2.warpAffine(img, M, (w, h),
+                          flags=cv2.INTER_CUBIC,
+                          borderMode=cv2.BORDER_CONSTANT,
+                          borderValue=(255, 255, 255))
+
+
+def _crop_to_grid(img: np.ndarray) -> np.ndarray:
+    """
+    Crop the image tightly to the table content using a hybrid strategy:
+
+    - LEFT / RIGHT  : use detected vertical grid lines.
+                      These are always present across every page (including
+                      continuation pages) so they give reliable column boundaries.
+
+    - TOP / BOTTOM  : use content detection (first/last non-white pixel row).
+                      Continuation pages have no top horizontal border above the
+                      first student row.  Relying on grid lines here would cut
+                      that first row off.  Scanning for actual ink is safer.
+
+    A small outward margin (15 px) is kept on each side.
+    """
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    h_kernel, v_kernel = _build_line_kernels(img)
+    _, v_lines, _ = _extract_lines(gray, h_kernel, v_kernel)
+
+    # ---- LEFT / RIGHT from vertical lines -----------------------------------
+    col_proj = np.sum(v_lines, axis=0)          # sum each column
+    col_idx  = np.where(col_proj > 0)[0]
+
+    if len(col_idx) == 0:
+        return img                              # no lines found — give up
+
+    margin = 15
+    x0 = max(0,             col_idx[0]  - margin)
+    x1 = min(img.shape[1],  col_idx[-1] + margin)
+
+    # ---- TOP / BOTTOM -------------------------------------------------------
+    # TOP  → first content row (catches pages with no top border line)
+    # BOTTOM → last detected horizontal grid line + small padding
+    #          (ignores blank white space below the table that may contain
+    #           a stray teacher name / signature written outside the grid)
+
+    h_lines_only, _, _ = _extract_lines(gray, h_kernel, v_kernel)
+
+    # Top: first non-white row within the column strip
+    strip = gray[:, x0:x1]
+    content_mask = strip < 240
+    row_has_content = content_mask.any(axis=1)
+    content_rows = np.where(row_has_content)[0]
+
+    if len(content_rows) == 0:
+        return img
+
+    y_top = content_rows[0]
+
+    # Bottom: last row that has a long horizontal line
+    h_row_proj = np.sum(h_lines_only, axis=1)
+    h_row_idx  = np.where(h_row_proj > 0)[0]
+
+    if len(h_row_idx) > 0:
+        y_bottom = h_row_idx[-1]
+        # Allow up to 80 px of content below the last grid line
+        # (e.g. EMARGEMENT row, teacher name written just below the border)
+        extra_content = content_rows[content_rows > y_bottom]
+        if len(extra_content) > 0 and extra_content[-1] - y_bottom < 80:
+            y_bottom = extra_content[-1]
+    else:
+        # Fallback if no h-lines found: use last content row
+        y_bottom = content_rows[-1]
+
+    y0 = max(0,             y_top    - margin)
+    y1 = min(img.shape[0],  y_bottom + margin)
+
+    return img[y0:y1, x0:x1]
+
+
+# ---------------------------------------------------------------------------
+# CLI entry point
+# ---------------------------------------------------------------------------
+
 if __name__ == "__main__":
     import sys
-    # Check if the user provided an argument (the document ID)
+    import os
+
     if len(sys.argv) < 2:
         print("Usage: python src/preprocessing.py <doc_id>")
-        sys.exit(1) # Stop the program
-        
-    doc_id = sys.argv[1]
-    results = preprocess_document(doc_id)
-    
-    for r in results:
-        # Print a success message for each file processed
-        print(f"Preprocessed: {os.path.basename(r['output_path'])}")
+        print("Example: python src/preprocessing.py doc_2")
+        sys.exit(1)
+
+    doc_id   = sys.argv[1]
+    raw_dir  = os.path.join("data", "raw", doc_id)
+    out_dir  = os.path.join("data", "preprocessed", doc_id)
+
+    if not os.path.isdir(raw_dir):
+        print(f"ERROR: Directory not found: {raw_dir}")
+        sys.exit(1)
+
+    exts = ('.jpg', '.jpeg', '.png')
+    pages = sorted(
+        [f for f in os.listdir(raw_dir) if f.lower().endswith(exts)],
+        key=natural_sort_key
+    )
+
+    if not pages:
+        print(f"No images found in {raw_dir}")
+        sys.exit(1)
+
+    os.makedirs(out_dir, exist_ok=True)
+
+    for fname in pages:
+        src_path = os.path.join(raw_dir, fname)
+        dst_path = os.path.join(out_dir, fname)
+        print(f"  Processing {fname} ...", end=" ", flush=True)
+        result = prepare(src_path)
+        cv2.imwrite(dst_path, result)
+        print(f"saved -> {dst_path}  (shape {result.shape[1]}x{result.shape[0]})")
+
+    print(f"\nDone. {len(pages)} page(s) saved to {out_dir}")
