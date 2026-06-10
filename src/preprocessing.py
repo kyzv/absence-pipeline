@@ -130,31 +130,36 @@ def _extract_lines(gray: np.ndarray, h_kernel, v_kernel):
 
 def _deskew(img: np.ndarray) -> np.ndarray:
     """
-    Measure the median angle of the detected horizontal table lines and rotate
+    Measure the median angle of the horizontal table lines and rotate
     the image so they become perfectly horizontal.
 
-    Uses Canny edge detection instead of morphological lines to find the true
-    skew angle, because morphological kernels force pixels to be horizontal
-    and destroy sub-degree skew information.
+    Uses cv2.fitLine on the contours of horizontally morphed grid lines.
+    This provides sub-pixel accuracy and ignores slanted handwriting which
+    would otherwise bias Canny edge detection.
     """
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     
-    edges = cv2.Canny(gray, 50, 150, apertureSize=3)
-    lines = cv2.HoughLinesP(edges, 1, np.pi / 180, 200,
-                            minLineLength=300, maxLineGap=50)
-    angle = 0.0
-    if lines is not None:
-        angles = []
-        for line in lines:
-            x1, y1, x2, y2 = line[0]
-            a = np.degrees(np.arctan2(y2 - y1, x2 - x1))
-            # We only care about lines that are roughly horizontal
-            if -15 < a < 15 and abs(a) > 0.1:
-                angles.append(a)
-        if angles:
-            angle = float(np.median(angles))
+    # Isolate horizontal grid lines using morphology
+    _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+    h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (150, 1))
+    h_lines = cv2.morphologyEx(binary, cv2.MORPH_OPEN, h_kernel)
 
-    if abs(angle) < 0.05:   # Already straight — skip warp
+    # Find contours of these horizontal lines
+    contours, _ = cv2.findContours(h_lines, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    
+    angles = []
+    for cnt in contours:
+        x, y, w, h = cv2.boundingRect(cnt)
+        if w > 300:  # Only consider long horizontal lines
+            [vx, vy, x0, y0] = cv2.fitLine(cnt, cv2.DIST_L2, 0, 0.01, 0.01)
+            a = np.degrees(np.arctan2(vy, vx))
+            # We only care about lines that are roughly horizontal
+            if -15 < a < 15:
+                angles.append(a[0])
+                
+    angle = float(np.median(angles)) if angles else 0.0
+
+    if abs(angle) < 0.05:
         return img
 
     h, w = img.shape[:2]
