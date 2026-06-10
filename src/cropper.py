@@ -1,117 +1,112 @@
-# src/cropper.py
 import os
 import cv2
+import glob
 import numpy as np
-from typing import Dict, Optional, List
+import argparse
+import pytesseract
+import re
 
+# Configure Tesseract path for Windows
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-def crop_document(doc_id: str,
-                  preprocessed_root: str = "data/preprocessed",
-                  cropped_root: str = "data/cropped") -> List[Dict]:
-    prep_dir = os.path.join(preprocessed_root, doc_id)
-    if not os.path.isdir(prep_dir):
-        raise FileNotFoundError(f"Preprocessed folder not found: {prep_dir}")
+def get_horizontal_lines(img):
+    """Find the y-coordinates of horizontal grid lines."""
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+    
+    # Use a large kernel (400px wide) to ignore text and only catch true table lines
+    h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (400, 1))
+    h_morphed = cv2.morphologyEx(binary, cv2.MORPH_OPEN, h_kernel)
+    h_proj = np.sum(h_morphed, axis=1)
+    
+    h_lines = []
+    in_line = False; start_y = 0
+    for y, val in enumerate(h_proj):
+        if val > 255 * 400:
+            if not in_line: start_y = y; in_line = True
+        else:
+            if in_line: h_lines.append(int((start_y + y - 1) / 2)); in_line = False
+    if in_line: h_lines.append(int((start_y + len(h_proj) - 1) / 2))
+    
+    return h_lines
 
-    colour_files = _natural_sorted([
-        f for f in os.listdir(prep_dir)
-        if f.lower().endswith('.jpeg')
-    ])
+def find_anchor_line_y(img, h_lines):
+    """
+    Finds the y-coordinate of the bottom line of the 'N° Apo' row.
+    This marks the exact split point between Header and Table.
+    """
+    # Look through the first 15 rows
+    for i in range(min(15, len(h_lines) - 1)):
+        # Crop the first 800 pixels of the row (which should contain the Apo/Nom text)
+        row_crop = img[h_lines[i]:h_lines[i+1], :800]
+        row_resized = cv2.resize(row_crop, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
+        
+        text = pytesseract.image_to_string(row_resized, config='--psm 7').strip().lower()
+        if 'apo' in text or 'ap0' in text or 'n°' in text or 'n*' in text:
+            # Found the anchor row! The table starts below this row.
+            return h_lines[i+1]
+            
+    return -1
 
-    results = []
-    for idx, cf in enumerate(colour_files):
-        base = os.path.splitext(cf)[0]
-        binary_file = base + "_binary.jpg"
-        colour_path = os.path.join(prep_dir, cf)
-        binary_path = os.path.join(prep_dir, binary_file)
-
-        if not os.path.exists(binary_path):
-            raise FileNotFoundError(f"Missing binary file for {cf}: {binary_path}")
-
-        is_first = (idx == 0)
-        res = _crop_one(binary_path, colour_path, doc_id, is_first, cropped_root)
-        results.append(res)
-
-    return results
-
-
-def _crop_one(binary_path: str, colour_path: str,
-              doc_id: str, is_first_page: bool,
-              output_root: str) -> Dict:
-    # Load binary as BGR (3 channels) so _detect_grey_row works.
-    binary = cv2.imread(binary_path)          # <-- this was the fix
-    colour = cv2.imread(colour_path)
-    if binary is None or colour is None:
-        raise FileNotFoundError(f"Cannot read: {binary_path} or {colour_path}")
-
-    if is_first_page:
-        split_y = _detect_grey_row(binary)
-        if split_y is None:
-            split_y = int(colour.shape[0] * 0.30)
-        split_y = max(10, min(colour.shape[0] - 10, split_y))
-    else:
-        split_y = 0
-
-    out_dir = os.path.join(output_root, doc_id)
-    os.makedirs(out_dir, exist_ok=True)
-    base = os.path.splitext(os.path.basename(colour_path))[0]
-
-    if split_y > 0:
-        header = colour[:split_y, :]
-        table  = colour[split_y:, :]
-        header_path = os.path.join(out_dir, f"{base}_header.jpg")
-        table_path  = os.path.join(out_dir, f"{base}_table.jpg")
-        cv2.imwrite(header_path, header)
-        cv2.imwrite(table_path, table)
-        return {'has_header': True, 'header_path': header_path, 'table_path': table_path}
-    else:
-        table_path = os.path.join(out_dir, f"{base}_table.jpg")
-        cv2.imwrite(table_path, colour)
-        return {'has_header': False, 'header_path': None, 'table_path': table_path}
-
-
-def _detect_grey_row(image: np.ndarray) -> Optional[int]:
-    bgr = image.astype(np.float32)
-    min_vals = np.min(bgr, axis=2)
-    max_vals = np.max(bgr, axis=2)
-    diff = max_vals - min_vals
-    mean_bright = np.mean(bgr, axis=2)
-
-    is_grey = (diff < 25) & (mean_bright > 100) & (mean_bright < 200)
-    grey_counts = np.sum(is_grey, axis=1)
-
-    width_threshold = image.shape[1] * 0.70
-    candidate_rows = np.where(grey_counts > width_threshold)[0]
-
-    if len(candidate_rows) == 0:
-        return None
-
-    best_row = candidate_rows[np.argmax(grey_counts[candidate_rows])]
-
-    top = best_row
-    while top > 0 and grey_counts[top - 1] > width_threshold:
-        top -= 1
-    bottom = best_row
-    while bottom < image.shape[0] - 1 and grey_counts[bottom + 1] > width_threshold:
-        bottom += 1
-
-    return bottom + 1
-
-
-def _natural_sorted(files: List[str]) -> List[str]:
-    import re
+def natural_sorted(files):
     def key(f):
         m = re.search(r'(\d+)', f)
         return int(m.group(1)) if m else 0
     return sorted(files, key=key)
 
+def process_document(doc_id):
+    prep_dir = f"data/preprocessed/{doc_id}"
+    out_dir = f"data/cropped/{doc_id}"
+    
+    if not os.path.exists(prep_dir):
+        print(f"ERROR: Directory not found: {prep_dir}")
+        return
+        
+    os.makedirs(out_dir, exist_ok=True)
+    
+    img_files = natural_sorted([f for f in glob.glob(f"{prep_dir}/*.jpg") if not f.endswith('_binary.jpg')])
+    if not img_files:
+        print(f"ERROR: No images found in {prep_dir}")
+        return
 
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) < 2:
-        print("Usage: python src/cropper.py <doc_id>")
-        sys.exit(1)
-    doc_id = sys.argv[1]
-    results = crop_document(doc_id)
-    for r in results:
-        status = "header+table" if r['has_header'] else "table only"
-        print(f"Page: {status}, table: {r['table_path']}")
+    for file_idx, img_path in enumerate(img_files):
+        filename = os.path.basename(img_path)
+        base = os.path.splitext(filename)[0]
+        print(f"Processing {filename}...")
+        
+        img = cv2.imread(img_path)
+        h_lines = get_horizontal_lines(img)
+        
+        if len(h_lines) < 2:
+            print(f"  Warning: Could not detect valid horizontal lines in {filename}")
+            # Fallback
+            cv2.imwrite(f"{out_dir}/{base}_table.jpg", img)
+            continue
+
+        if file_idx == 0:
+            # First page: Separate header from table
+            split_y = find_anchor_line_y(img, h_lines)
+            
+            if split_y == -1:
+                print("  Warning: Could not find 'N° Apo' anchor via OCR. Assuming row 7.")
+                # Fallback to row 7 (index 8)
+                split_y = h_lines[min(8, len(h_lines)-1)]
+            
+            header = img[:split_y, :]
+            table = img[split_y:, :]
+            
+            cv2.imwrite(f"{out_dir}/{base}_header.jpg", header)
+            cv2.imwrite(f"{out_dir}/{base}_table.jpg", table)
+            print(f"  Split at Y={split_y}")
+        else:
+            # Continuation pages are entirely tables
+            cv2.imwrite(f"{out_dir}/{base}_table.jpg", img)
+            print(f"  Saved as table.")
+
+    print(f"Done. Files saved to {out_dir}/")
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="Split documents into header and table.")
+    parser.add_argument('doc_id', help="Document ID to process (e.g., doc_4)")
+    args = parser.parse_args()
+    process_document(args.doc_id)
