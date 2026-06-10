@@ -7,3 +7,7 @@ pyyaml
 pandas
 numpy
 labelme
+transformers
+torch
+pillow
+openpyxl

@@ -41,7 +41,7 @@ modules:
   - "Réseaux"
   - "Exploration et viz données"
   - "Exploration et Utilisation Données avec Python"
-  - "Deploiment d' Application Datas"s
+  - "Deploiment d' Application Datas"
   - "Deploiment d' Application Data sous linux"
   - "Python pour le data science"
   - ""
@@ -59,9 +59,13 @@ seance:
   - "seance10"
 
 date:
-  - jour:
-  - mois:
-  - annee:
+  patterns:
+    - "\\d{1,2}/\\d{1,2}/\\d{2,4}"    # 21/02/26 or 21/02/2026
+    - "\\d{1,2}-\\d{1,2}-\\d{2,4}"    # 21-02-26
+    - "\\d{1,2}\\|\\d{1,2}\\|\\d{2,4}" # 21|02|26 (OCR misread)
+  year_century_prefix: "20"
+  field_order: "dmy"
+  normalized_format: "dd/mm/yyyy"
 
 heure_debut:
   - "8h"
