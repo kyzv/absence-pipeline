@@ -1,0 +1,27 @@
+{
+   "filiere":"",
+   "annee":"",
+   "enseignant":"",
+   "module":"",
+   "seances":{
+      "seance1": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+
+      "seance2": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+
+      "seance3": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+
+      "seance4": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+
+      "seance5": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+
+      "seance6": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+
+      "seance7": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+
+      "seance8": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+
+      "seance9": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" },
+      
+      "seance10": { "date": "", "heure_debut": "", "heure_fin": "", "type": "" }
+   }
+}

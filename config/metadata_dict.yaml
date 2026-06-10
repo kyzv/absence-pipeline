@@ -1,0 +1,123 @@
+filieres:
+  - "Genie Informatique 1ere annee"
+  - "Genie Informatique 2eme annee"
+  - "Techniques de Management 1ere annee"
+  - "Génie Informatique 1ère année"
+  - "Big Data"
+  - "Informatique décisionnelle et statistiques 2ème année"
+  - "Bachelor en Technologie Filière Infrastructures, Traitement et Analyse de données Massives (Big Data)"
+  - ""
+
+annee:
+  - "2019-2020"
+  - "2020-2021"
+  - "2021-2022"
+  - "2022-2023"
+  - "2023-2024"
+  - "2024-2025"
+  - "2025-2026"
+  - ""
+
+
+enseignants:
+  - "Pr. R. Aitdaoud"
+  - "Pr. Rachid Aitdaoud"
+  - "Pr. Ahmed Alami"
+  - "Pr. Fatima Zahra"
+  - "Pr. Rachid AitDaoud"
+  - "Pr. R. AIT DAOUD"
+  - "Pr. Hamid Sakhi" 
+  - ""
+
+modules:
+  - "Structure de donnees avancee"
+  - "Programmation Orientee Objet"
+  - "Bases de donnees"
+  - "Systemes d'exploitation"
+  - "Mathematiques Appliquees"
+  - "Structures de données avancées"
+  - "Algorithmique"
+  - "Base de données"
+  - "Réseaux"
+  - "Exploration et viz données"
+  - "Exploration et Utilisation Données avec Python"
+  - "Deploiment d' Application Datas"s
+  - "Deploiment d' Application Data sous linux"
+  - "Python pour le data science"
+  - ""
+
+seance:
+  - "seance1"
+  - "seance2"
+  - "seance3"
+  - "seance4"
+  - "seance5"
+  - "seance6"
+  - "seance7"
+  - "seance8"
+  - "seance9"
+  - "seance10"
+
+date:
+  - jour:
+  - mois:
+  - annee:
+
+heure_debut:
+  - "8h"
+  - "8h30"
+  - "9h"
+  - "9h00"
+  - "9h30"
+  - "10h00"
+  - "10h30"
+  - "10h40"
+  - "13h30"
+  - "1h30"
+  - "14h00"
+  - "2h00" 
+  - "14h30"
+  - "2h30"
+  - "15h00"
+  - "3h00"
+  - "15h30"
+  - "3h30"
+  - "4h00"
+  - ""
+
+
+
+
+heure_fin:
+  - "10h00"
+  - "10h30"
+  - "10h40"
+  - "12h00"
+  - "12h40"
+  - "1h00"
+  - "13h00"
+  - "17h40"
+  - "18h00"
+  - "15h00"
+  - "15h30"
+  - "16h00"
+  - "1h00"
+  - "5h40"
+  - "6h00"
+  - "3h00"
+  - "3h30"
+  - "4h00"
+  - ""
+
+types:
+  - "crs"
+  - "cours"
+  - "tp"
+  - "TP"
+  - "td"
+  - "TD"
+  - "cnt"
+  - "control"
+  - "exm"
+  - "examen"
+  - ""
