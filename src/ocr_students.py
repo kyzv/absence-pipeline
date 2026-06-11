@@ -6,7 +6,9 @@ import argparse
 import re
 import json
 import pytesseract
+from pytesseract import Output
 import pandas as pd
+from rapidfuzz import fuzz
 from name_matcher import map_filiere_to_csv, match_student
 
 def natural_sorted(files):
@@ -20,7 +22,6 @@ def get_vertical_lines(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
     
-    # Use a kernel almost as tall as the row to catch vertical lines
     v_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, max(1, img.shape[0] - 10)))
     v_morphed = cv2.morphologyEx(binary, cv2.MORPH_OPEN, v_kernel)
     v_proj = np.sum(v_morphed, axis=0)
@@ -28,7 +29,7 @@ def get_vertical_lines(img):
     v_lines = []
     in_line = False
     start_x = 0
-    threshold = 255 * (img.shape[0] - 15) # threshold to consider a column as a line
+    threshold = 255 * (img.shape[0] - 15)
     
     for x, val in enumerate(v_proj):
         if val > threshold:
@@ -53,20 +54,58 @@ def is_blank(cell_img, dark_pixel_threshold=50):
     dark_pixels = cv2.countNonZero(binary)
     return dark_pixels < dark_pixel_threshold
 
+def is_dense_signature(cell_img):
+    """Return True if cell has very high density of dark pixels (likely a signature)."""
+    if cell_img.size == 0:
+        return False
+    gray = cv2.cvtColor(cell_img, cv2.COLOR_BGR2GRAY)
+    _, binary = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY_INV)
+    dark_pixels = cv2.countNonZero(binary)
+    # If more than 15% of the cell is dark pixels, it's likely a dense signature
+    return (dark_pixels / cell_img.size) > 0.15
+
 def clean_ocr_text(text):
     return re.sub(r'[^a-zA-Z0-9\s]', '', text).strip()
+
+def extract_ocr_with_confidence(cell_img):
+    """Extract text and confidence score from a cell using image_to_data."""
+    d = pytesseract.image_to_data(cell_img, config='--psm 7', output_type=Output.DICT)
+    
+    texts = []
+    confs = []
+    for i in range(len(d['text'])):
+        t = d['text'][i].strip()
+        c = float(d['conf'][i])
+        if t and c >= 0:
+            texts.append(t)
+            confs.append(c)
+            
+    if not texts:
+        return "", 0.0
+        
+    full_text = " ".join(texts)
+    avg_conf = sum(confs) / len(confs)
+    return full_text, avg_conf
 
 def process_document(doc_id, debug=False):
     rows_dir = f"data/rows/{doc_id}"
     json_path = f"data/output/{doc_id}.json"
+    debug_dir = f"debug/{doc_id}"
+    
+    if debug:
+        os.makedirs(debug_dir, exist_ok=True)
     
     if not os.path.exists(rows_dir):
         print(f"ERROR: Row directory not found: {rows_dir}")
         return
         
     if not os.path.exists(json_path):
-        print(f"ERROR: JSON output not found: {json_path}. Run ocr_header.py first.")
-        return
+        alt_path = f"data/output/{doc_id}/metadata.json"
+        if os.path.exists(alt_path):
+            json_path = alt_path
+        else:
+            print(f"ERROR: JSON output not found: {json_path}. Run ocr_header.py first.")
+            return
 
     with open(json_path, 'r', encoding='utf-8') as f:
         doc_data = json.load(f)
@@ -77,7 +116,6 @@ def process_document(doc_id, debug=False):
     
     if not mapped_csv_file:
         print(f"WARNING: Could not map filiere '{filiere_name}' to any CSV file in config/groups.")
-        # Fallback empty dataframe
         student_df = pd.DataFrame(columns=["n_apo", "nom", "prenom"])
     else:
         csv_path = os.path.join("config", "groups", mapped_csv_file)
@@ -94,128 +132,173 @@ def process_document(doc_id, debug=False):
         print(f"ERROR: No row images found in {rows_dir}")
         return
 
-    print(f"[{doc_id}] Processing {len(row_files)} student rows...")
-    
-    absences = []
+    print(f"[{doc_id}] Processing {len(row_files)} physical student rows...")
     
     # Check how many seances are expected based on the JSON
     seances = doc_data.get("seances", {})
     expected_seance_count = len(seances)
     
-    for row_path in row_files:
+    physical_data = []
+    
+    # 1. Parse all physical rows
+    for row_idx, row_path in enumerate(row_files):
         filename = os.path.basename(row_path)
         img = cv2.imread(row_path)
-        if img is None:
-            continue
+        if img is None: continue
             
         h, w = img.shape[:2]
-        
-        # We need vertical lines to define columns
         v_lines = get_vertical_lines(img)
         
-        # If we didn't find enough vertical lines, we might need a fallback or to skip
-        # Expecting at least: left edge, ID edge, Name edge, Surname edge, ... seance edges, right edge
-        # Minimum 4 lines for just ID, Nom, Prenom
         if len(v_lines) < 4:
-            if debug:
-                print(f"  Warning: Not enough vertical lines found in {filename} ({len(v_lines)}). Skipping.")
             continue
             
-        # Ensure 0 and W are in the lines list if they are missing
-        if v_lines[0] > 10:
-            v_lines.insert(0, 0)
-        if w - v_lines[-1] > 10:
-            v_lines.append(w)
+        if v_lines[0] > 10: v_lines.insert(0, 0)
+        if w - v_lines[-1] > 10: v_lines.append(w)
             
-        # Extract the first 3 columns (assuming ID, Nom, Prénom)
         student_parts = []
         for i in range(min(3, len(v_lines) - 1)):
             x1, x2 = v_lines[i], v_lines[i+1]
-            cell = img[2:h-2, x1+2:x2-2] # crop inwards slightly
+            cell = img[2:h-2, x1+2:x2-2]
             if cell.shape[1] > 0 and cell.shape[0] > 0 and not is_blank(cell, 20):
-                text = pytesseract.image_to_string(cell, config='--psm 7').strip()
+                text, _ = extract_ocr_with_confidence(cell)
                 cleaned = clean_ocr_text(text)
                 if cleaned:
                     student_parts.append(cleaned)
                     
         student_name_ocr = " ".join(student_parts)
         
-        # Stop condition: if this is the EMARGEMENT row for teachers
-        from rapidfuzz import fuzz
-        # Check if the OCR text itself strongly matches "EMARGEMENT" or "signature"
+        # Stop condition
         if "emargement" in student_name_ocr.lower() or fuzz.partial_ratio("emargement", student_name_ocr.lower()) > 80:
             print(f"  Stopping at {filename}: Found EMARGEMENT row.")
             break
             
-        # If student name is empty, it might be a blank row or noise
         if not student_name_ocr:
             continue
             
-        # Use Levenshtein distance to match with official student list
-        matched_student, confidence = match_student(student_name_ocr, student_df)
+        physical_data.append({
+            "img": img,
+            "filename": filename,
+            "v_lines": v_lines,
+            "ocr_raw": student_name_ocr,
+            "h": h,
+            "row_idx": row_idx + 1
+        })
+
+    # 2. Match physical rows to official DB list
+    # Initialize the output array exactly sized to the DB
+    absences_output = [None] * len(student_df)
+    used_physical = set()
+    
+    for idx, row in student_df.iterrows():
+        official_n_apo = str(row.get("n_apo", ""))
+        official_nom = str(row.get("nom", ""))
+        official_prenom = str(row.get("prenom", ""))
+        official_full = f"{official_n_apo} {official_nom} {official_prenom}".strip()
         
-        if matched_student and confidence > 0.4:
-            row_data = {
-                "n_apo": matched_student["n_apo"],
-                "nom": matched_student["nom"],
-                "prenom": matched_student["prenom"],
-                "ocr_raw": student_name_ocr,
-                "confidence": confidence,
+        best_match_idx = -1
+        best_conf = 0.0
+        
+        # Greedy search for the best physical row
+        for p_idx, p_data in enumerate(physical_data):
+            if p_idx in used_physical:
+                continue
+            
+            # Use fuzz.token_set_ratio which is good for names in different orders
+            conf = fuzz.token_set_ratio(official_full.lower(), p_data["ocr_raw"].lower()) / 100.0
+            if conf > best_conf:
+                best_conf = conf
+                best_match_idx = p_idx
+                
+        # If we found a good match
+        if best_match_idx != -1 and best_conf > 0.4:
+            used_physical.add(best_match_idx)
+            p_data = physical_data[best_match_idx]
+            
+            # Build sessions data
+            sessions_obj = {}
+            seance_idx = 1
+            v_lines = p_data["v_lines"]
+            img = p_data["img"]
+            h = p_data["h"]
+            
+            for i in range(3, len(v_lines) - 1):
+                if seance_idx > expected_seance_count:
+                    break
+                    
+                x1, x2 = v_lines[i], v_lines[i+1]
+                cell = img[2:h-2, x1+2:x2-2]
+                
+                is_present = True
+                detected_by = "unknown"
+                ocr_conf = 0.0
+                
+                if cell.shape[1] > 5 and cell.shape[0] > 5:
+                    if debug:
+                        debug_cell_path = os.path.join(debug_dir, f"row{p_data['row_idx']}_seance{seance_idx}.jpg")
+                        cv2.imwrite(debug_cell_path, cell)
+                        
+                    if is_blank(cell, dark_pixel_threshold=30):
+                        is_present = False
+                        detected_by = "empty_cell"
+                        ocr_conf = 100.0
+                    elif is_dense_signature(cell):
+                        is_present = True
+                        detected_by = "signature_density"
+                        ocr_conf = 100.0
+                    else:
+                        text, conf = extract_ocr_with_confidence(cell)
+                        text_lower = text.lower()
+                        if text_lower in ['a', 'abs', 'absent']:
+                            is_present = False
+                            detected_by = "text_abs"
+                            ocr_conf = conf
+                        elif text_lower in ['p', 'pr', 'present']:
+                            is_present = True
+                            detected_by = "text_present"
+                            ocr_conf = conf
+                        else:
+                            is_present = True
+                            detected_by = "noise_or_signature"
+                            ocr_conf = conf
+
+                sessions_obj[f"seance{seance_idx}"] = {
+                    "is_present": is_present,
+                    "detected_by": detected_by,
+                    "ocr_confidence": ocr_conf
+                }
+                seance_idx += 1
+                
+            absences_output[idx] = {
+                "row_index": p_data["row_idx"],
+                "n_apo": official_n_apo,
+                "nom": official_nom,
+                "prenom": official_prenom,
+                "match_confidence": round(best_conf * 100, 2),
+                "ocr_raw_name": p_data["ocr_raw"],
+                "sessions": sessions_obj
             }
         else:
-            row_data = {
-                "n_apo": "",
-                "nom": student_name_ocr, # Fallback to raw OCR text
-                "prenom": "",
-                "ocr_raw": student_name_ocr,
-                "confidence": confidence,
+            # Not found on physical sheet
+            absences_output[idx] = {
+                "row_index": None,
+                "n_apo": official_n_apo,
+                "nom": official_nom,
+                "prenom": official_prenom,
+                "match_confidence": 0.0,
+                "ocr_raw_name": "",
+                "sessions": {}
             }
 
-        # Extract remaining columns as seances
-        # We map col[3] to seance1, col[4] to seance2, etc.
-        seance_idx = 1
-        row_sessions = []
-        for i in range(3, len(v_lines) - 1):
-            if seance_idx > expected_seance_count:
-                break # Don't parse more seances than defined in header
-                
-            x1, x2 = v_lines[i], v_lines[i+1]
-            cell = img[2:h-2, x1+2:x2-2]
-            
-            # The absence logic
-            status = "Present"
-            
-            if cell.shape[1] > 5 and cell.shape[0] > 5: # ensure it's not a tiny sliver
-                if is_blank(cell, dark_pixel_threshold=30):
-                    status = "Absent"
-                else:
-                    text = pytesseract.image_to_string(cell, config='--psm 7').strip().lower()
-                    if text in ['a', 'abs', 'absent']:
-                        status = "Absent"
-                    # Everything else is Present (e.g. signatures, checkmarks, 'P')
-                    
-            row_data[f"seance{seance_idx}"] = status
-            row_sessions.append({
-                "seance": str(seance_idx),
-                "status": status
-            })
-            seance_idx += 1
-            
-        row_data["sessions"] = row_sessions
-        absences.append(row_data)
-        
-    # Remove sessions key from absences array before saving to doc_data to keep compatibility with old format
-    # But wait, pipeline.py needs sessions key in absences.json, so we will generate both!
-    doc_data["absences"] = absences
+    doc_data["absences"] = absences_output
     
-    # 1. Save single unified JSON
+    # Save single unified JSON
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(doc_data, f, indent=4, ensure_ascii=False)
         
-    print(f"  [OK] Processed {len(absences)} student rows for {doc_id}")
+    print(f"  [OK] Matched {len(used_physical)} rows out of {len(student_df)} official students for {doc_id}")
     print(f"  Written to {json_path}")
     
-    # 2. Save pipeline-compatible metadata.json and absences.json
+    # Save pipeline-compatible metadata.json and absences.json
     out_dir = os.path.join("data", "output", doc_id)
     os.makedirs(out_dir, exist_ok=True)
     
@@ -224,9 +307,11 @@ def process_document(doc_id, debug=False):
         json.dump(metadata_compatible, f, indent=4, ensure_ascii=False)
         
     with open(os.path.join(out_dir, "absences.json"), 'w', encoding='utf-8') as f:
-        json.dump(absences, f, indent=4, ensure_ascii=False)
+        json.dump(absences_output, f, indent=4, ensure_ascii=False)
         
     print(f"  Written compatible splits to {out_dir}/metadata.json and absences.json")
+    if debug:
+        print(f"  Debug images saved to {debug_dir}/")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Extract student absences from row images.")

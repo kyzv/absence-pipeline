@@ -1,0 +1,30 @@
+{
+    "document_id": "doc_8",
+    "absences": [
+        {
+            "row_index": 1,
+            "n_apo": "12345678",
+            "nom": "DOE",
+            "prenom": "JOHN",
+            "match_confidence": 95.5,
+            "ocr_raw_name": "12345678 DOE JOHN",
+            "sessions": {
+                "seance1": {
+                    "is_present": true,
+                    "detected_by": "signature_density",
+                    "ocr_confidence": 0
+                },
+                "seance2": {
+                    "is_present": false,
+                    "detected_by": "empty_cell",
+                    "ocr_confidence": 0
+                },
+                "seance3": {
+                    "is_present": false,
+                    "detected_by": "text_abs",
+                    "ocr_confidence": 88.5
+                }
+            }
+        }
+    ]
+}
