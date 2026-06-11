@@ -1,0 +1,5076 @@
+[
+    {
+        "n_apo": "24004986",
+        "nom": "ANAHKAM",
+        "prenom": "SANA",
+        "ocr_raw": "24004986 ANAHKAM",
+        "confidence": 0.959,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24009178",
+        "nom": "JAWHARI",
+        "prenom": "MOHAMED-ANOUAR",
+        "ocr_raw": "24009178 JAWHARI",
+        "confidence": 0.904,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Absent",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Absent"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016791",
+        "nom": "BASSIR",
+        "prenom": "SALMA",
+        "ocr_raw": "24016791 BASSIR",
+        "confidence": 0.95,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Absent",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Absent"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016801",
+        "nom": "ELHARUSH",
+        "prenom": "IMANE",
+        "ocr_raw": "24016801 ELHARUSH",
+        "confidence": 0.955,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Absent",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Absent"
+            }
+        ]
+    },
+    {
+        "n_apo": "24004074",
+        "nom": "ABIDATE",
+        "prenom": "BADR",
+        "ocr_raw": "24004074 ABIDATE",
+        "confidence": 0.959,
+        "seance1": "Present",
+        "seance2": "Absent",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Absent"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "23009461",
+        "nom": "CHAKNINE",
+        "prenom": "IHSSANE",
+        "ocr_raw": "123009461 CHAKNINE JIHSSANE",
+        "confidence": 0.911,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Absent",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Absent"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016799",
+        "nom": "EL HADNAOUI",
+        "prenom": "ILYASSE",
+        "ocr_raw": "24016799 EL HADNAOUI",
+        "confidence": 0.95,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Absent",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Absent"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016772",
+        "nom": "BELKACEM",
+        "prenom": "AYA",
+        "ocr_raw": "24016772 BELKACEM",
+        "confidence": 0.968,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016807",
+        "nom": "BOUHOUT",
+        "prenom": "AMINE",
+        "ocr_raw": "124016807 BOUHOUT AMINE",
+        "confidence": 0.916,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Absent",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Absent"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016815",
+        "nom": "ABBASSI SABER",
+        "prenom": "RANIA",
+        "ocr_raw": "24016815 ABBASSI SABER",
+        "confidence": 0.964,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Absent",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Absent"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016823",
+        "nom": "MAAIZI",
+        "prenom": "MAROUA",
+        "ocr_raw": "24016823 MAAIZI",
+        "confidence": 0.943,
+        "seance1": "Present",
+        "seance2": "Absent",
+        "seance3": "Absent",
+        "seance4": "Present",
+        "seance5": "Absent",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Absent",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Absent"
+            },
+            {
+                "seance": "3",
+                "status": "Absent"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Absent"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Absent"
+            }
+        ]
+    },
+    {
+        "n_apo": "23002599",
+        "nom": "ARJILA",
+        "prenom": "ELMEHDI",
+        "ocr_raw": "23002599 ARJILA",
+        "confidence": 0.937,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Absent",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Absent"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016820",
+        "nom": "BEN ZAHOUM",
+        "prenom": "MOHAMMED AMINE",
+        "ocr_raw": "24016820 BEN ZAHOUM",
+        "confidence": 0.915,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016775",
+        "nom": "AIT ECHCHEIKH",
+        "prenom": "MOHAMMED",
+        "ocr_raw": "24016775 AIT ECHCHEIKH",
+        "confidence": 0.949,
+        "seance1": "Present",
+        "seance2": "Absent",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Absent"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24008282",
+        "nom": "LOUZ",
+        "prenom": "HAJAR",
+        "ocr_raw": "24008282 LOUZ",
+        "confidence": 0.944,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016795",
+        "nom": "EL HASBI",
+        "prenom": "YASMINE",
+        "ocr_raw": "24016795 EL HASBI",
+        "confidence": 0.943,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "23010280",
+        "nom": "LAGHYATI",
+        "prenom": "ZAID",
+        "ocr_raw": "23010280 LAGHYATI",
+        "confidence": 0.962,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24007575",
+        "nom": "FETTAH",
+        "prenom": "HIBA",
+        "ocr_raw": "24007575 FETTAH",
+        "confidence": 0.957,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Absent",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Absent"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "23001847",
+        "nom": "KAMALI",
+        "prenom": "IBTISSAM",
+        "ocr_raw": "23001847 KAMALI",
+        "confidence": 0.931,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016800",
+        "nom": "KHAIDOUNE",
+        "prenom": "SAIF EDDINE",
+        "ocr_raw": "24016800 KHAIDOUNE",
+        "confidence": 0.925,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016769",
+        "nom": "AMWAHB",
+        "prenom": "WIAM",
+        "ocr_raw": "24016763 LAMWAHB",
+        "confidence": 0.846,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016798",
+        "nom": "BOUCHTA",
+        "prenom": "ADAM",
+        "ocr_raw": "24016798 BOUCHTA",
+        "confidence": 0.959,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016818",
+        "nom": "GTAIB",
+        "prenom": "MOHAMED-AMINE",
+        "ocr_raw": "24016818 GTAIB",
+        "confidence": 0.9,
+        "seance1": "Present",
+        "seance2": "Absent",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Absent"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016824",
+        "nom": "RMITI",
+        "prenom": "KHADIJA",
+        "ocr_raw": "24016824 RMITI",
+        "confidence": 0.933,
+        "seance1": "Present",
+        "seance2": "Absent",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Absent"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016770",
+        "nom": "INANE",
+        "prenom": "OUSSAMA",
+        "ocr_raw": "24016770 INANE",
+        "confidence": 0.933,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016771",
+        "nom": "EL BOUSSAKNI",
+        "prenom": "MOHSINE",
+        "ocr_raw": "24016771 EL BOUSSAKNI",
+        "confidence": 0.952,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016810",
+        "nom": "BENKHALOUK",
+        "prenom": "AHLAM",
+        "ocr_raw": "24016810 BENKHALOUK",
+        "confidence": 0.959,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016764",
+        "nom": "OUFELLA",
+        "prenom": "MOHAMED",
+        "ocr_raw": "24016764 OUFELLA",
+        "confidence": 0.94,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "23014644",
+        "nom": "MACHTALAY",
+        "prenom": "YOUSSEF",
+        "ocr_raw": "23014644 MACHTALAY",
+        "confidence": 0.945,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "23014638",
+        "nom": "KHALFI",
+        "prenom": "NAJWA",
+        "ocr_raw": "23014638 KHALFI",
+        "confidence": 0.95,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "23014518",
+        "nom": "ACHIB",
+        "prenom": "HANANE",
+        "ocr_raw": "23014518 ACHIB",
+        "confidence": 0.94,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24006238",
+        "nom": "AGOUGIL",
+        "prenom": "ADAM",
+        "ocr_raw": "24006238 AGOUGIL 4",
+        "confidence": 0.884,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016767",
+        "nom": "AHNICH",
+        "prenom": "IMAD",
+        "ocr_raw": "24016767 AHNICH",
+        "confidence": 0.957,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "23008479",
+        "nom": "AIDI",
+        "prenom": "FATIMA-EZZAHRA",
+        "ocr_raw": "23008479 AIDI 4",
+        "confidence": 0.804,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016788",
+        "nom": "AIT BOUSSALEM",
+        "prenom": "SALMAN",
+        "ocr_raw": "24016788 AIT BOUSSALEM",
+        "confidence": 0.959,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Absent",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Absent"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016780",
+        "nom": "AIT DAMI",
+        "prenom": "HAMZA",
+        "ocr_raw": "24016780 AIT DAMI",
+        "confidence": 0.955,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016778",
+        "nom": "AIT OUAOUCH",
+        "prenom": "IMRANE",
+        "ocr_raw": "24016778 ait ouaouch",
+        "confidence": 0.955,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016816",
+        "nom": "ALAOUI MHAMDI",
+        "prenom": "ABDELLAH",
+        "ocr_raw": "24016816 ALAOUI MHAMDI",
+        "confidence": 0.949,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016753",
+        "nom": "ANTAR",
+        "prenom": "AMINA",
+        "ocr_raw": "24016753 ANTAR AMINA",
+        "confidence": 1.0,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016761",
+        "nom": "ASSOUKA",
+        "prenom": "ABDELMAJID",
+        "ocr_raw": "24016761 ASSOUKA",
+        "confidence": 0.923,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Absent",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Absent"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016777",
+        "nom": "AZALMAD",
+        "prenom": "KAOUTAR",
+        "ocr_raw": "24016777 AZALMAD ey",
+        "confidence": 0.937,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016782",
+        "nom": "BAALLA",
+        "prenom": "KAOUTAR",
+        "ocr_raw": "24016782 BAALLA  ad",
+        "confidence": 0.92,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016776",
+        "nom": "BARROU",
+        "prenom": "ILIASS",
+        "ocr_raw": "24016776 BARROU",
+        "confidence": 0.943,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016789",
+        "nom": "BENDAMI",
+        "prenom": "IKRAM",
+        "ocr_raw": "24016789 BENDAMI",
+        "confidence": 0.953,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Absent",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Absent"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016794",
+        "nom": "BOUBKER",
+        "prenom": "ABDERRAHMANE",
+        "ocr_raw": "24016794 BOUBKER",
+        "confidence": 0.913,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24004651",
+        "nom": "BOURHIM",
+        "prenom": "ISHAQ",
+        "ocr_raw": "24004651 BOURHIM",
+        "confidence": 0.953,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "23000279",
+        "nom": "CHEMMAM",
+        "prenom": "AYOUB",
+        "ocr_raw": "23000279 CHEMMAM",
+        "confidence": 0.953,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24001784",
+        "nom": "DAMRANE",
+        "prenom": "NOUHAILA",
+        "ocr_raw": "24001784 DAMRANE",
+        "confidence": 0.934,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016766",
+        "nom": "DAOUARI",
+        "prenom": "ZIAD",
+        "ocr_raw": "24016766 IDAOUARI",
+        "confidence": 0.953,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016819",
+        "nom": "ED.DARDOURI",
+        "prenom": "NAJIA",
+        "ocr_raw": "24016819 EDDARDOURI",
+        "confidence": 0.927,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24005445",
+        "nom": "EL ALI",
+        "prenom": "OUMAIMA",
+        "ocr_raw": "24005445 ELALL",
+        "confidence": 0.895,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Absent",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Absent"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "23003670",
+        "nom": "EL BADIA",
+        "prenom": "ABDELLAH",
+        "ocr_raw": "23003670 ELBADIA sy",
+        "confidence": 0.927,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Absent",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Absent"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016814",
+        "nom": "EL BOUDALI",
+        "prenom": "ZAKARIA",
+        "ocr_raw": "24016814 ELBOUDALI",
+        "confidence": 0.913,
+        "seance1": "Present",
+        "seance2": "Absent",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Absent",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Absent"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Absent"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "23000409",
+        "nom": "EL HADDAD",
+        "prenom": "YAHYA",
+        "ocr_raw": "23000409 ELHADDAD",
+        "confidence": 0.949,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016773",
+        "nom": "EL HAJLY",
+        "prenom": "BAHAADDINE",
+        "ocr_raw": "24016773 EL HAJLY",
+        "confidence": 0.927,
+        "seance1": "Present",
+        "seance2": "Absent",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Absent"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016765",
+        "nom": "EL MAHMOUDI",
+        "prenom": "IKRAM",
+        "ocr_raw": "24016765 EL MAHMOUDI",
+        "confidence": 0.961,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016769",
+        "nom": "ELAOUANI",
+        "prenom": "NOUHAILA",
+        "ocr_raw": "24016769 ELAOUAN",
+        "confidence": 0.929,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016787",
+        "nom": "ESSADDIKI",
+        "prenom": "DOHA",
+        "ocr_raw": "24016787 ESSADDIKI",
+        "confidence": 0.963,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Absent",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Absent"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016817",
+        "nom": "FALFLAOUI",
+        "prenom": "ILYASSE",
+        "ocr_raw": "24016817 FALFLAOUI",
+        "confidence": 0.945,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016796",
+        "nom": "FARTAS",
+        "prenom": "HAMZA",
+        "ocr_raw": "24016797 FARTAS",
+        "confidence": 0.846,
+        "seance1": "Present",
+        "seance2": "Absent",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Absent",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Absent"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Absent"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016813",
+        "nom": "FIKRI",
+        "prenom": "EL MEHDI",
+        "ocr_raw": "24016813 FIKRI",
+        "confidence": 0.927,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016806",
+        "nom": "GHANIMI",
+        "prenom": "IBRAHIM",
+        "ocr_raw": "24016806 GHANIMI",
+        "confidence": 0.94,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Absent",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Absent"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016783",
+        "nom": "GOUHMID",
+        "prenom": "AYMANE",
+        "ocr_raw": "24016783 GOUHMID",
+        "confidence": 0.946,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Absent",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Absent"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016781",
+        "nom": "GUERNAOUI",
+        "prenom": "FATIMA-EZZAHRAE",
+        "ocr_raw": "24016781 GUERNAOUI",
+        "confidence": 0.908,
+        "seance1": "Present",
+        "seance2": "Absent",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Absent"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016756",
+        "nom": "HAFIDI",
+        "prenom": "MOHAMED",
+        "ocr_raw": "24016756 Hafidi",
+        "confidence": 0.937,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Absent",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Absent"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016760",
+        "nom": "HAJJI",
+        "prenom": "ACHRAF",
+        "ocr_raw": "24016760 HAJ",
+        "confidence": 0.918,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016785",
+        "nom": "HAYBOUL",
+        "prenom": "MARIAM",
+        "ocr_raw": "24016785 HAYBOUL",
+        "confidence": 0.946,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016812",
+        "nom": "IGOURRAMEN",
+        "prenom": "SALAH EDDINE",
+        "ocr_raw": "24016812 IGOURRAMEN",
+        "confidence": 0.924,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Absent",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Absent"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24001227",
+        "nom": "KHAYATI",
+        "prenom": "MOHAMED AMINE",
+        "ocr_raw": "24001227 KHAYATI",
+        "confidence": 0.909,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016784",
+        "nom": "LAHYANI",
+        "prenom": "FATIMA ZAHRA",
+        "ocr_raw": "24016784 LAHYANI",
+        "confidence": 0.913,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016803",
+        "nom": "LAKHAL",
+        "prenom": "AYMEN",
+        "ocr_raw": "24016803 LAKHAL",
+        "confidence": 0.95,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Absent",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Absent",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Absent"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Absent"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24002578",
+        "nom": "LEKHDAR",
+        "prenom": "INSAF",
+        "ocr_raw": "24002578 LEKHDAR",
+        "confidence": 0.953,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Absent",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Absent"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016755",
+        "nom": "MAHDAM",
+        "prenom": "MOHAMED AMINE",
+        "ocr_raw": "24016755 MAHDAM",
+        "confidence": 0.905,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Absent",
+        "seance4": "Present",
+        "seance5": "Absent",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Absent",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Absent"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Absent"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Absent"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016804",
+        "nom": "MAZGAR",
+        "prenom": "IMANE",
+        "ocr_raw": "24016804 MAZGAR",
+        "confidence": 0.95,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016793",
+        "nom": "MIRI",
+        "prenom": "OUSSAMA",
+        "ocr_raw": "24016793 MIRE",
+        "confidence": 0.912,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016774",
+        "nom": "OUIAZANE",
+        "prenom": "NIAMA",
+        "ocr_raw": "24016774 OUIAZANE",
+        "confidence": 0.955,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24001708",
+        "nom": "OULAAROUSSI",
+        "prenom": "HIBA",
+        "ocr_raw": "24001708 OULAAROUSSI",
+        "confidence": 0.967,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016805",
+        "nom": "SALHI",
+        "prenom": "GHITA",
+        "ocr_raw": "24016805 SALHI a",
+        "confidence": 0.967,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24002951",
+        "nom": "SAMIA",
+        "prenom": "MAROUA",
+        "ocr_raw": "24002951 SAMIA",
+        "confidence": 0.94,
+        "seance1": "Present",
+        "seance2": "Absent",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Absent"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24008307",
+        "nom": "TAOUFIQ",
+        "prenom": "AYMEN",
+        "ocr_raw": "24008307 TAOUFIQ",
+        "confidence": 0.953,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016809",
+        "nom": "TARCHIHI",
+        "prenom": "IBTISSAM",
+        "ocr_raw": "24016809 TARCHIHI",
+        "confidence": 0.937,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016790",
+        "nom": "TMOUH",
+        "prenom": "YOUSSEF",
+        "ocr_raw": "24016790 TMOUH",
+        "confidence": 0.933,
+        "seance1": "Present",
+        "seance2": "Absent",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Absent"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24003681",
+        "nom": "ZAIR",
+        "prenom": "MOHAMED",
+        "ocr_raw": "24003681 ZAIR",
+        "confidence": 0.929,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016768",
+        "nom": "ZEMZEM",
+        "prenom": "RIDA",
+        "ocr_raw": "24016768 ZEMZEM",
+        "confidence": 0.957,
+        "seance1": "Present",
+        "seance2": "Absent",
+        "seance3": "Present",
+        "seance4": "Absent",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Absent"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Absent"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24016821",
+        "nom": "ZOUNI",
+        "prenom": "DOUNIA",
+        "ocr_raw": "24016821 ZOUIN",
+        "confidence": 0.923,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    },
+    {
+        "n_apo": "24005158",
+        "nom": "ZRAIBI",
+        "prenom": "AYMEN",
+        "ocr_raw": "24005158 ZRAIBL",
+        "confidence": 0.933,
+        "seance1": "Present",
+        "seance2": "Present",
+        "seance3": "Present",
+        "seance4": "Present",
+        "seance5": "Present",
+        "seance6": "Present",
+        "seance7": "Present",
+        "seance8": "Present",
+        "seance9": "Present",
+        "seance10": "Present",
+        "sessions": [
+            {
+                "seance": "1",
+                "status": "Present"
+            },
+            {
+                "seance": "2",
+                "status": "Present"
+            },
+            {
+                "seance": "3",
+                "status": "Present"
+            },
+            {
+                "seance": "4",
+                "status": "Present"
+            },
+            {
+                "seance": "5",
+                "status": "Present"
+            },
+            {
+                "seance": "6",
+                "status": "Present"
+            },
+            {
+                "seance": "7",
+                "status": "Present"
+            },
+            {
+                "seance": "8",
+                "status": "Present"
+            },
+            {
+                "seance": "9",
+                "status": "Present"
+            },
+            {
+                "seance": "10",
+                "status": "Present"
+            }
+        ]
+    }
+]

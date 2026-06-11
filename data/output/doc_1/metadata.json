@@ -1,0 +1,202 @@
+{
+    "doc_id": "doc_1",
+    "filiere": {
+        "value": "Bachelor en Technologie Filière Infrastructures, Traitement et Analyse de données Massives (Big Data)",
+        "confidence": 0.87
+    },
+    "annee": {
+        "value": "2025-2026",
+        "confidence": 1.0
+    },
+    "enseignant": {
+        "value": "",
+        "confidence": 0.0
+    },
+    "module": {
+        "value": "Python pour le data science",
+        "confidence": 0.59
+    },
+    "seances": {
+        "seance1": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "10h30",
+                "confidence": 0.91
+            },
+            "type": {
+                "value": "CYS",
+                "confidence": 0.0
+            }
+        },
+        "seance2": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "12h00",
+                "confidence": 0.72
+            },
+            "type": {
+                "value": "crs",
+                "confidence": 0.8
+            }
+        },
+        "seance3": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "8h30",
+                "confidence": 0.78
+            },
+            "heure_fin": {
+                "value": "14h30",
+                "confidence": 0.52
+            },
+            "type": {
+                "value": "cnt",
+                "confidence": 0.51
+            }
+        },
+        "seance4": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "12h40",
+                "confidence": 0.71
+            },
+            "type": {
+                "value": "crs",
+                "confidence": 0.42
+            }
+        },
+        "seance5": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "8h00",
+                "confidence": 0.76
+            },
+            "heure_fin": {
+                "value": "10h30",
+                "confidence": 0.93
+            },
+            "type": {
+                "value": "cigs .",
+                "confidence": 0.29
+            }
+        },
+        "seance6": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "12h00",
+                "confidence": 0.69
+            },
+            "type": {
+                "value": "crs",
+                "confidence": 0.46
+            }
+        },
+        "seance7": {
+            "date": {
+                "value": "13/12/2025",
+                "confidence": 0.5
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "tp",
+                "confidence": 0.3
+            }
+        },
+        "seance8": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "tp",
+                "confidence": 0.53
+            }
+        },
+        "seance9": {
+            "date": {
+                "value": "12/02/?",
+                "confidence": 0.23
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "p.",
+                "confidence": 0.41
+            }
+        },
+        "seance10": {
+            "date": {
+                "value": "29/02/2025",
+                "confidence": 0.54
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "crs",
+                "confidence": 0.1
+            }
+        }
+    },
+    "student_list_csv": "big_data.csv"
+}
