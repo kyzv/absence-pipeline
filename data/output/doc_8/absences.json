@@ -9,53 +9,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 19.5
+                "confidence": 19.5
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 12.5
+                "confidence": 12.5
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 89.0
+                "confidence": 89.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 38.0
+                "confidence": 38.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 26.0
+                "confidence": 26.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 35.0
+                "confidence": 35.0
             }
         }
     },
@@ -69,53 +59,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 3.0
+                "confidence": 3.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 63.0
+                "confidence": 63.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 20.0
+                "confidence": 20.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 40.0
+                "confidence": 40.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 25.0
+                "confidence": 25.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.5
+                "confidence": 0.5
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 14.0
+                "confidence": 14.0
             }
         }
     },
@@ -129,53 +109,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 96.0
+                "confidence": 96.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 27.0
+                "confidence": 27.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 9.0
+                "confidence": 9.0
             },
             "seance9": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 24.0
+                "confidence": 24.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -189,53 +159,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 85.0
+                "confidence": 85.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 34.5
+                "confidence": 34.5
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 45.0
+                "confidence": 45.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 45.0
+                "confidence": 45.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.0
+                "confidence": 29.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 33.0
+                "confidence": 33.0
             },
             "seance10": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 25.0
+                "confidence": 25.0
             }
         }
     },
@@ -249,53 +209,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 96.0
+                "confidence": 96.0
             },
             "seance2": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 33.0
+                "confidence": 33.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 39.5
+                "confidence": 39.5
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 49.5
+                "confidence": 49.5
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 23.0
+                "confidence": 23.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 34.0
+                "confidence": 34.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 22.0
+                "confidence": 22.0
             }
         }
     },
@@ -309,53 +259,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 38.0
+                "confidence": 38.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 24.0
+                "confidence": 24.0
             },
             "seance3": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 88.0
+                "confidence": 88.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 74.0
+                "confidence": 74.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 13.0
+                "confidence": 13.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 18.5
+                "confidence": 18.5
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 43.0
+                "confidence": 43.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -369,53 +309,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 89.0
+                "confidence": 89.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 57.0
+                "confidence": 57.0
             },
             "seance5": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 88.0
+                "confidence": 88.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 67.0
+                "confidence": 67.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 34.0
+                "confidence": 34.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -429,53 +359,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 96.0
+                "confidence": 96.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "signature_density",
-                "ocr_confidence": 100.0
+                "confidence": 100.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.5
+                "confidence": 29.5
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 17.0
+                "confidence": 17.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 24.0
+                "confidence": 24.0
             }
         }
     },
@@ -489,53 +409,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 54.0
+                "confidence": 54.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 34.0
+                "confidence": 34.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 36.5
+                "confidence": 36.5
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 19.0
+                "confidence": 19.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 86.0
+                "confidence": 86.0
             },
             "seance8": {
                 "is_present": false,
-                "detected_by": "empty_cell",
-                "ocr_confidence": 100.0
+                "confidence": 100.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 49.0
+                "confidence": 49.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 36.0
+                "confidence": 36.0
             }
         }
     },
@@ -549,53 +459,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 33.0
+                "confidence": 33.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 39.0
+                "confidence": 39.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 36.0
+                "confidence": 36.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 23.0
+                "confidence": 23.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 30.0
+                "confidence": 30.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 89.0
+                "confidence": 89.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 20.0
+                "confidence": 20.0
             },
             "seance10": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 33.0
+                "confidence": 33.0
             }
         }
     },
@@ -609,53 +509,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 74.0
+                "confidence": 74.0
             },
             "seance3": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 23.0
+                "confidence": 23.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 58.5
+                "confidence": 58.5
             },
             "seance5": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 23.0
+                "confidence": 23.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 56.0
+                "confidence": 56.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 37.0
+                "confidence": 37.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 50.0
+                "confidence": 50.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 30.0
+                "confidence": 30.0
             }
         }
     },
@@ -669,53 +559,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 57.0
+                "confidence": 57.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 6.0
+                "confidence": 6.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 93.0
+                "confidence": 93.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 16.0
+                "confidence": 16.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 35.0
+                "confidence": 35.0
             }
         }
     },
@@ -729,53 +609,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 71.33333333333333
+                "confidence": 71.33333333333333
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 38.0
+                "confidence": 38.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 57.0
+                "confidence": 57.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "unknown",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 34.0
+                "confidence": 34.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 31.25
+                "confidence": 31.25
             }
         }
     },
@@ -789,53 +659,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 96.0
+                "confidence": 96.0
             },
             "seance2": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 59.0
+                "confidence": 59.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 26.0
+                "confidence": 26.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 23.0
+                "confidence": 23.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 22.0
+                "confidence": 22.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 15.0
+                "confidence": 15.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.666666666666668
+                "confidence": 29.666666666666668
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 28.0
+                "confidence": 28.0
             }
         }
     },
@@ -849,53 +709,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 59.0
+                "confidence": 59.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 61.0
+                "confidence": 61.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 82.0
+                "confidence": 82.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 18.666666666666668
+                "confidence": 18.666666666666668
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 47.5
+                "confidence": 47.5
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.0
+                "confidence": 32.0
             }
         }
     },
@@ -909,53 +759,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 93.0
+                "confidence": 93.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 81.0
+                "confidence": 81.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.0
+                "confidence": 32.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 90.0
+                "confidence": 90.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.5
+                "confidence": 29.5
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 10.0
+                "confidence": 10.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 27.0
+                "confidence": 27.0
             }
         }
     },
@@ -969,53 +809,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 37.0
+                "confidence": 37.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 25.0
+                "confidence": 25.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 14.5
+                "confidence": 14.5
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 45.0
+                "confidence": 45.0
             }
         }
     },
@@ -1029,53 +859,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 20.0
+                "confidence": 20.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 69.5
+                "confidence": 69.5
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 33.0
+                "confidence": 33.0
             },
             "seance5": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 40.0
+                "confidence": 40.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 95.0
+                "confidence": 95.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 25.0
+                "confidence": 25.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 12.0
+                "confidence": 12.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -1089,53 +909,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 88.0
+                "confidence": 88.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 20.0
+                "confidence": 20.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 60.0
+                "confidence": 60.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 42.0
+                "confidence": 42.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 74.0
+                "confidence": 74.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 18.0
+                "confidence": 18.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.0
+                "confidence": 32.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 19.333333333333332
+                "confidence": 19.333333333333332
             }
         }
     },
@@ -1149,53 +959,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 18.5
+                "confidence": 18.5
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 64.0
+                "confidence": 64.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 49.0
+                "confidence": 49.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 30.0
+                "confidence": 30.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 56.0
+                "confidence": 56.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 30.0
+                "confidence": 30.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 28.5
+                "confidence": 28.5
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 13.0
+                "confidence": 13.0
             }
         }
     },
@@ -1209,53 +1009,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 70.0
+                "confidence": 70.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 40.5
+                "confidence": 40.5
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 72.0
+                "confidence": 72.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 16.5
+                "confidence": 16.5
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 15.666666666666666
+                "confidence": 15.666666666666666
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 7.25
+                "confidence": 7.25
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 36.0
+                "confidence": 36.0
             }
         }
     },
@@ -1269,53 +1059,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 96.0
+                "confidence": 96.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 54.0
+                "confidence": 54.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 42.5
+                "confidence": 42.5
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 25.5
+                "confidence": 25.5
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 17.75
+                "confidence": 17.75
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 22.0
+                "confidence": 22.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 8.333333333333334
+                "confidence": 8.333333333333334
             }
         }
     },
@@ -1329,53 +1109,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 45.0
+                "confidence": 45.0
             },
             "seance2": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 21.0
+                "confidence": 21.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 5.0
+                "confidence": 5.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.666666666666664
+                "confidence": 32.666666666666664
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 28.0
+                "confidence": 28.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 38.5
+                "confidence": 38.5
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -1389,53 +1159,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 7.0
+                "confidence": 7.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 64.0
+                "confidence": 64.0
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 30.5
+                "confidence": 30.5
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 53.0
+                "confidence": 53.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 17.0
+                "confidence": 17.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 47.0
+                "confidence": 47.0
             }
         }
     },
@@ -1449,53 +1209,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 46.0
+                "confidence": 46.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 41.0
+                "confidence": 41.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 72.0
+                "confidence": 72.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 30.5
+                "confidence": 30.5
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 31.0
+                "confidence": 31.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 39.5
+                "confidence": 39.5
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 7.0
+                "confidence": 7.0
             }
         }
     },
@@ -1509,53 +1259,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 47.5
+                "confidence": 47.5
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.5
+                "confidence": 29.5
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 59.5
+                "confidence": 59.5
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 68.0
+                "confidence": 68.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 33.333333333333336
+                "confidence": 33.333333333333336
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 43.5
+                "confidence": 43.5
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 88.0
+                "confidence": 88.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 35.0
+                "confidence": 35.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 4.0
+                "confidence": 4.0
             }
         }
     },
@@ -1569,53 +1309,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 50.5
+                "confidence": 50.5
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 46.5
+                "confidence": 46.5
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 24.5
+                "confidence": 24.5
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 43.666666666666664
+                "confidence": 43.666666666666664
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 21.0
+                "confidence": 21.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 49.0
+                "confidence": 49.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 42.0
+                "confidence": 42.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 25.0
+                "confidence": 25.0
             }
         }
     },
@@ -1629,53 +1359,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 69.0
+                "confidence": 69.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.0
+                "confidence": 29.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 38.0
+                "confidence": 38.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 18.5
+                "confidence": 18.5
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 11.0
+                "confidence": 11.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 33.0
+                "confidence": 33.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 26.0
+                "confidence": 26.0
             }
         }
     },
@@ -1689,53 +1409,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 95.0
+                "confidence": 95.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 16.0
+                "confidence": 16.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 24.0
+                "confidence": 24.0
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 48.0
+                "confidence": 48.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 7.0
+                "confidence": 7.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 33.0
+                "confidence": 33.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "unknown",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "signature_density",
-                "ocr_confidence": 100.0
+                "confidence": 100.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 65.0
+                "confidence": 65.0
             }
         }
     },
@@ -1749,53 +1459,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 70.0
+                "confidence": 70.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 33.0
+                "confidence": 33.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 17.0
+                "confidence": 17.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 6.0
+                "confidence": 6.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 39.0
+                "confidence": 39.0
             }
         }
     },
@@ -1809,53 +1509,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 35.0
+                "confidence": 35.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 33.0
+                "confidence": 33.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 33.0
+                "confidence": 33.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 55.0
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 10.0
+                "confidence": 10.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 22.0
+                "confidence": 22.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 11.0
+                "confidence": 11.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 49.333333333333336
+                "confidence": 49.333333333333336
             }
         }
     },
@@ -1869,53 +1559,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 48.0
+                "confidence": 48.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 36.0
+                "confidence": 36.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 14.0
+                "confidence": 14.0
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 34.0
+                "confidence": 34.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 55.0
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 46.0
+                "confidence": 46.0
             }
         }
     },
@@ -1929,53 +1609,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 64.0
+                "confidence": 64.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 4.0
+                "confidence": 4.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 9.0
+                "confidence": 9.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 84.0
+                "confidence": 84.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 43.0
+                "confidence": 43.0
             }
         }
     },
@@ -1989,53 +1659,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 58.0
+                "confidence": 58.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 47.0
+                "confidence": 47.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 47.0
+                "confidence": 47.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 44.0
+                "confidence": 44.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 58.0
+                "confidence": 58.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -2049,53 +1709,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 96.0
+                "confidence": 96.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 26.0
+                "confidence": 26.0
             },
             "seance3": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 96.0
+                "confidence": 96.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 72.0
+                "confidence": 72.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 44.0
+                "confidence": 44.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 1.0
+                "confidence": 1.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 18.5
+                "confidence": 18.5
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 58.0
+                "confidence": 58.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 31.666666666666668
+                "confidence": 31.666666666666668
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -2109,53 +1759,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 47.5
+                "confidence": 47.5
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 38.0
+                "confidence": 38.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 57.0
+                "confidence": 57.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.0
+                "confidence": 29.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 18.75
+                "confidence": 18.75
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 28.666666666666668
+                "confidence": 28.666666666666668
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 59.5
+                "confidence": 59.5
             }
         }
     },
@@ -2169,53 +1809,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 66.0
+                "confidence": 66.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 45.0
+                "confidence": 45.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 16.0
+                "confidence": 16.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 36.0
+                "confidence": 36.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 27.444444444444443
+                "confidence": 27.444444444444443
             }
         }
     },
@@ -2229,53 +1859,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 45.5
+                "confidence": 45.5
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 67.0
+                "confidence": 67.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 9.0
+                "confidence": 9.0
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 18.0
+                "confidence": 18.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 45.0
+                "confidence": 45.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 41.0
+                "confidence": 41.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 23.0
+                "confidence": 23.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 14.0
+                "confidence": 14.0
             }
         }
     },
@@ -2289,53 +1909,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 28.0
+                "confidence": 28.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 44.0
+                "confidence": 44.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.5
+                "confidence": 29.5
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 30.666666666666668
+                "confidence": 30.666666666666668
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -2349,53 +1959,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 55.0
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 39.0
+                "confidence": 39.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 49.0
+                "confidence": 49.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 46.0
+                "confidence": 46.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 5.0
+                "confidence": 5.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 83.0
+                "confidence": 83.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -2409,53 +2009,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 69.0
+                "confidence": 69.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 42.0
+                "confidence": 42.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 16.5
+                "confidence": 16.5
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.5
+                "confidence": 32.5
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 88.0
+                "confidence": 88.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 69.0
+                "confidence": 69.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 28.5
+                "confidence": 28.5
             }
         }
     },
@@ -2469,53 +2059,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 69.5
+                "confidence": 69.5
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 44.0
+                "confidence": 44.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 31.0
+                "confidence": 31.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 57.0
+                "confidence": 57.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 82.0
+                "confidence": 82.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 88.0
+                "confidence": 88.0
             }
         }
     },
@@ -2529,53 +2109,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 65.0
+                "confidence": 65.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 20.0
+                "confidence": 20.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 21.0
+                "confidence": 21.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 27.0
+                "confidence": 27.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 87.0
+                "confidence": 87.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -2589,53 +2159,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 62.5
+                "confidence": 62.5
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 41.0
+                "confidence": 41.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 5.0
+                "confidence": 5.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 51.0
+                "confidence": 51.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 21.0
+                "confidence": 21.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 24.7
+                "confidence": 24.7
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -2649,53 +2209,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 43.0
+                "confidence": 43.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 20.0
+                "confidence": 20.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 25.555555555555557
+                "confidence": 25.555555555555557
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 26.0
+                "confidence": 26.0
             }
         }
     },
@@ -2709,53 +2259,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 7.0
+                "confidence": 7.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 19.75
+                "confidence": 19.75
             }
         }
     },
@@ -2769,53 +2309,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 96.0
+                "confidence": 96.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.0
+                "confidence": 29.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 40.0
+                "confidence": 40.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 14.0
+                "confidence": 14.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "text_present",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 33.0
+                "confidence": 33.0
             }
         }
     },
@@ -2829,53 +2359,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 89.0
+                "confidence": 89.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 44.0
+                "confidence": 44.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 37.0
+                "confidence": 37.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 46.0
+                "confidence": 46.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 26.333333333333332
+                "confidence": 26.333333333333332
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 15.0
+                "confidence": 15.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -2889,53 +2409,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 65.0
+                "confidence": 65.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 25.5
+                "confidence": 25.5
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 19.5
+                "confidence": 19.5
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.5
+                "confidence": 32.5
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 88.0
+                "confidence": 88.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 86.0
+                "confidence": 86.0
             }
         }
     },
@@ -2949,53 +2459,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 88.0
+                "confidence": 88.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 26.0
+                "confidence": 26.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 11.0
+                "confidence": 11.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 22.0
+                "confidence": 22.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 25.5
+                "confidence": 25.5
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 73.0
+                "confidence": 73.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 16.0
+                "confidence": 16.0
             }
         }
     },
@@ -3009,53 +2509,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 45.0
+                "confidence": 45.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 46.0
+                "confidence": 46.0
             },
             "seance3": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 78.0
+                "confidence": 78.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 34.0
+                "confidence": 34.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 37.333333333333336
+                "confidence": 37.333333333333336
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 18.1
+                "confidence": 18.1
             }
         }
     },
@@ -3069,53 +2559,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 10.0
+                "confidence": 10.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 14.0
+                "confidence": 14.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 24.0
+                "confidence": 24.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 10.0
+                "confidence": 10.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 58.0
+                "confidence": 58.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 35.5
+                "confidence": 35.5
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 86.0
+                "confidence": 86.0
             }
         }
     },
@@ -3129,53 +2609,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 56.0
+                "confidence": 56.0
             },
             "seance2": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 53.0
+                "confidence": 53.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 52.0
+                "confidence": 52.0
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 46.0
+                "confidence": 46.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 58.0
+                "confidence": 58.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 21.625
+                "confidence": 21.625
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 25.5
+                "confidence": 25.5
             }
         }
     },
@@ -3189,53 +2659,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.0
+                "confidence": 32.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 58.0
+                "confidence": 58.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 28.0
+                "confidence": 28.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 44.0
+                "confidence": 44.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.666666666666664
+                "confidence": 32.666666666666664
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 90.0
+                "confidence": 90.0
             }
         }
     },
@@ -3249,53 +2709,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 61.0
+                "confidence": 61.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 25.0
+                "confidence": 25.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 33.0
+                "confidence": 33.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 40.0
+                "confidence": 40.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 11.0
+                "confidence": 11.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 19.5
+                "confidence": 19.5
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 2.0
+                "confidence": 2.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 19.0
+                "confidence": 19.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 43.5
+                "confidence": 43.5
             }
         }
     },
@@ -3309,53 +2759,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 90.0
+                "confidence": 90.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 56.0
+                "confidence": 56.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 36.0
+                "confidence": 36.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 24.0
+                "confidence": 24.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 82.0
+                "confidence": 82.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 9.0
+                "confidence": 9.0
             }
         }
     },
@@ -3369,53 +2809,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 66.0
+                "confidence": 66.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 16.0
+                "confidence": 16.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 53.0
+                "confidence": 53.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 46.0
+                "confidence": 46.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 37.0
+                "confidence": 37.0
             }
         }
     },
@@ -3429,53 +2859,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 96.0
+                "confidence": 96.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 40.0
+                "confidence": 40.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 30.0
+                "confidence": 30.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 63.0
+                "confidence": 63.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 52.0
+                "confidence": 52.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 8.0
+                "confidence": 8.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 13.166666666666666
+                "confidence": 13.166666666666666
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 49.0
+                "confidence": 49.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -3489,53 +2909,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 28.5
+                "confidence": 28.5
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 3.0
+                "confidence": 3.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 28.0
+                "confidence": 28.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 43.0
+                "confidence": 43.0
             }
         }
     },
@@ -3549,53 +2959,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 62.0
+                "confidence": 62.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.0
+                "confidence": 32.0
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 73.0
+                "confidence": 73.0
             },
             "seance5": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 30.0
+                "confidence": 30.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 82.0
+                "confidence": 82.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 36.0
+                "confidence": 36.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -3609,53 +3009,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 88.5
+                "confidence": 88.5
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 63.0
+                "confidence": 63.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 25.0
+                "confidence": 25.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 49.0
+                "confidence": 49.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -3669,53 +3059,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 95.0
+                "confidence": 95.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 35.0
+                "confidence": 35.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 13.0
+                "confidence": 13.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 41.0
+                "confidence": 41.0
             },
             "seance5": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 4.0
+                "confidence": 4.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.2
+                "confidence": 29.2
             }
         }
     },
@@ -3729,53 +3109,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 38.0
+                "confidence": 38.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.0
+                "confidence": 29.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 15.5
+                "confidence": 15.5
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 40.0
+                "confidence": 40.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 38.5
+                "confidence": 38.5
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 17.5
+                "confidence": 17.5
             }
         }
     },
@@ -3789,53 +3159,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 90.0
+                "confidence": 90.0
             },
             "seance2": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 16.0
+                "confidence": 16.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 22.0
+                "confidence": 22.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 74.0
+                "confidence": 74.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 1.5
+                "confidence": 1.5
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 38.0
+                "confidence": 38.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 2.0
+                "confidence": 2.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 15.0
+                "confidence": 15.0
             }
         }
     },
@@ -3849,53 +3209,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 45.0
+                "confidence": 45.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 18.0
+                "confidence": 18.0
             },
             "seance3": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 56.0
+                "confidence": 56.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 10.0
+                "confidence": 10.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 21.5
+                "confidence": 21.5
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.0
+                "confidence": 32.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 15.0
+                "confidence": 15.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 8.0
+                "confidence": 8.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -3909,53 +3259,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 26.333333333333332
+                "confidence": 26.333333333333332
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 24.0
+                "confidence": 24.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 23.0
+                "confidence": 23.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 69.0
+                "confidence": 69.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 76.0
+                "confidence": 76.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 17.77777777777778
+                "confidence": 17.77777777777778
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             }
         }
     },
@@ -3969,53 +3309,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 64.0
+                "confidence": 64.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 15.0
+                "confidence": 15.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.0
+                "confidence": 29.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 45.0
+                "confidence": 45.0
             }
         }
     },
@@ -4029,53 +3359,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.5
+                "confidence": 91.5
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 61.0
+                "confidence": 61.0
             },
             "seance3": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 52.0
+                "confidence": 52.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 53.0
+                "confidence": 53.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 21.0
+                "confidence": 21.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 18.75
+                "confidence": 18.75
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 60.0
+                "confidence": 60.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 82.0
+                "confidence": 82.0
             }
         }
     },
@@ -4089,53 +3409,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 71.66666666666667
+                "confidence": 71.66666666666667
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 30.0
+                "confidence": 30.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 51.0
+                "confidence": 51.0
             }
         }
     },
@@ -4149,53 +3459,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 96.0
+                "confidence": 96.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 16.0
+                "confidence": 16.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 36.0
+                "confidence": 36.0
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 53.0
+                "confidence": 53.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 14.5
+                "confidence": 14.5
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 30.0
+                "confidence": 30.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 20.5
+                "confidence": 20.5
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 16.6
+                "confidence": 16.6
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 44.0
+                "confidence": 44.0
             }
         }
     },
@@ -4209,53 +3509,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 20.5
+                "confidence": 20.5
             },
             "seance3": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 20.0
+                "confidence": 20.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 42.0
+                "confidence": 42.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 13.0
+                "confidence": 13.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 24.0
+                "confidence": 24.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 56.666666666666664
+                "confidence": 56.666666666666664
             }
         }
     },
@@ -4269,53 +3559,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 27.0
+                "confidence": 27.0
             },
             "seance3": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 51.0
+                "confidence": 51.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 16.0
+                "confidence": 16.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 21.9
+                "confidence": 21.9
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 9.0
+                "confidence": 9.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 88.0
+                "confidence": 88.0
             }
         }
     },
@@ -4329,53 +3609,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 95.0
+                "confidence": 95.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 23.0
+                "confidence": 23.0
             },
             "seance3": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 66.0
+                "confidence": 66.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 4.0
+                "confidence": 4.0
             },
             "seance5": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 46.0
+                "confidence": 46.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 19.5
+                "confidence": 19.5
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.0
+                "confidence": 32.0
             },
             "seance9": {
                 "is_present": false,
-                "detected_by": "empty_cell",
-                "ocr_confidence": 100.0
+                "confidence": 100.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -4389,53 +3659,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 9.5
+                "confidence": 9.5
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.0
+                "confidence": 32.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 25.0
+                "confidence": 25.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 30.0
+                "confidence": 30.0
             }
         }
     },
@@ -4449,53 +3709,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 10.0
+                "confidence": 10.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 35.0
+                "confidence": 35.0
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 88.0
+                "confidence": 88.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 53.0
+                "confidence": 53.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 10.666666666666666
+                "confidence": 10.666666666666666
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 44.0
+                "confidence": 44.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 85.0
+                "confidence": 85.0
             }
         }
     },
@@ -4509,53 +3759,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 35.0
+                "confidence": 35.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 25.0
+                "confidence": 25.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 15.571428571428571
+                "confidence": 15.571428571428571
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -4569,53 +3809,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 30.0
+                "confidence": 30.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 69.0
+                "confidence": 69.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 30.0
+                "confidence": 30.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 14.666666666666666
+                "confidence": 14.666666666666666
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 46.0
+                "confidence": 46.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 53.0
+                "confidence": 53.0
             }
         }
     },
@@ -4629,53 +3859,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 3.0
+                "confidence": 3.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 29.0
+                "confidence": 29.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "text_present",
-                "ocr_confidence": 67.0
+                "confidence": 67.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 17.333333333333332
+                "confidence": 17.333333333333332
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 31.0
+                "confidence": 31.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.666666666666664
+                "confidence": 32.666666666666664
             }
         }
     },
@@ -4689,53 +3909,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 46.0
+                "confidence": 46.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 21.0
+                "confidence": 21.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 78.0
+                "confidence": 78.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 23.0
+                "confidence": 23.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 62.0
+                "confidence": 62.0
             }
         }
     },
@@ -4749,53 +3959,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 21.0
+                "confidence": 21.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 89.0
+                "confidence": 89.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 41.0
+                "confidence": 41.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -4809,53 +4009,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 91.0
+                "confidence": 91.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 31.0
+                "confidence": 31.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 35.0
+                "confidence": 35.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 20.0
+                "confidence": 20.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 47.0
+                "confidence": 47.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 37.0
+                "confidence": 37.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 23.333333333333332
+                "confidence": 23.333333333333332
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 52.0
+                "confidence": 52.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 35.0
+                "confidence": 35.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 28.5
+                "confidence": 28.5
             }
         }
     },
@@ -4869,53 +4059,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 96.0
+                "confidence": 96.0
             },
             "seance2": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 17.0
+                "confidence": 17.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 28.0
+                "confidence": 28.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 34.0
+                "confidence": 34.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 27.0
+                "confidence": 27.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 35.5
+                "confidence": 35.5
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 17.0
+                "confidence": 17.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -4929,53 +4109,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 36.0
+                "confidence": 36.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 11.0
+                "confidence": 11.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 39.0
+                "confidence": 39.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 44.0
+                "confidence": 44.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 36.25
+                "confidence": 36.25
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.0
+                "confidence": 32.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -4989,53 +4159,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 96.0
+                "confidence": 96.0
             },
             "seance2": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 35.0
+                "confidence": 35.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 40.0
+                "confidence": 40.0
             },
             "seance4": {
                 "is_present": false,
-                "detected_by": "text_abs",
-                "ocr_confidence": 27.0
+                "confidence": 27.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 23.0
+                "confidence": 23.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -5049,53 +4209,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 90.0
+                "confidence": 90.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 51.0
+                "confidence": 51.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 23.0
+                "confidence": 23.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 36.0
+                "confidence": 36.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 47.0
+                "confidence": 47.0
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             }
         }
     },
@@ -5109,53 +4259,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 92.0
+                "confidence": 92.0
             },
             "seance2": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance3": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance4": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 32.0
+                "confidence": 32.0
             },
             "seance5": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance6": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance7": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 26.4
+                "confidence": 26.4
             },
             "seance8": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance9": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 0.0
+                "confidence": 0.0
             },
             "seance10": {
                 "is_present": true,
-                "detected_by": "noise_or_signature",
-                "ocr_confidence": 48.666666666666664
+                "confidence": 48.666666666666664
             }
         }
     }

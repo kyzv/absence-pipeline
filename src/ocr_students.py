@@ -45,24 +45,13 @@ def get_vertical_lines(img):
         
     return v_lines
 
-def is_blank(cell_img, dark_pixel_threshold=50):
-    """Return True if the cell is virtually empty."""
+def pixel_density(cell_img, threshold=200):
+    """Fraction of pixels darker than threshold (fixed)."""
     if cell_img.size == 0:
-        return True
+        return 0.0
     gray = cv2.cvtColor(cell_img, cv2.COLOR_BGR2GRAY)
-    _, binary = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY_INV)
-    dark_pixels = cv2.countNonZero(binary)
-    return dark_pixels < dark_pixel_threshold
-
-def is_dense_signature(cell_img):
-    """Return True if cell has very high density of dark pixels (likely a signature)."""
-    if cell_img.size == 0:
-        return False
-    gray = cv2.cvtColor(cell_img, cv2.COLOR_BGR2GRAY)
-    _, binary = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY_INV)
-    dark_pixels = cv2.countNonZero(binary)
-    # If more than 15% of the cell is dark pixels, it's likely a dense signature
-    return (dark_pixels / cell_img.size) > 0.15
+    _, binary = cv2.threshold(gray, threshold, 255, cv2.THRESH_BINARY_INV)
+    return cv2.countNonZero(binary) / (cell_img.shape[0] * cell_img.shape[1])
 
 def clean_ocr_text(text):
     return re.sub(r'[^a-zA-Z0-9\s]', '', text).strip()
@@ -86,6 +75,94 @@ def extract_ocr_with_confidence(cell_img):
     full_text = " ".join(texts)
     avg_conf = sum(confs) / len(confs)
     return full_text, avg_conf
+
+# ---- Absence-word patterns to detect from OCR ----
+_ABSENCE_WORDS = {'a', 'ab', 'abs', 'abst', 'absent', 'as', 'b', 'aa'}
+
+def _ocr_for_absence(gray_upscaled):
+    """
+    Try to read absence markers ('A', 'ABS', etc.) from a preprocessed gray image.
+    Returns (found_absence: bool, confidence: float).
+    """
+    # PSM 10 = single character  (best for lone 'A' mark)
+    cfg10 = r'--psm 10 --oem 1 -c tessedit_char_whitelist=AaBbSs'
+    # PSM 7  = single line       (best for 'ABS', 'Abs')
+    cfg7  = r'--psm 7  --oem 1 -c tessedit_char_whitelist=AaBbSs'
+
+    results = []
+    for cfg in (cfg10, cfg7):
+        try:
+            d = pytesseract.image_to_data(gray_upscaled, config=cfg, output_type=Output.DICT)
+            words = [(d['text'][i].strip().lower(), float(d['conf'][i]))
+                     for i in range(len(d['text']))
+                     if d['text'][i].strip() and float(d['conf'][i]) >= 0]
+            if words:
+                text = " ".join(w for w, _ in words)
+                conf = sum(c for _, c in words) / len(words)
+                results.append((text, conf))
+        except Exception:
+            pass
+
+    for text, conf in results:
+        for token in text.split():
+            if token in _ABSENCE_WORDS:
+                return True, max(conf, 55.0)
+    return False, 0.0
+
+def classify_seance_cell(cell_img):
+    """
+    Classify a seance cell as present or absent.
+
+    Returns (is_present: bool, confidence: float [0-100])
+
+    Decision logic:
+      1. Truly blank  (density < 0.012)  → ABSENT  95%
+      2. OCR detects 'A'/'ABS'/etc.      → ABSENT  max(ocr_conf, 60)
+      3. Dense content (density > 0.10)  → PRESENT  min(85, density*400)
+      4. Ambiguous (mid density, no OCR) → PRESENT  ~45% (needs admin review)
+    """
+    if cell_img is None or cell_img.size == 0:
+        return False, 50.0
+    
+    h, w = cell_img.shape[:2]
+    if h < 4 or w < 4:
+        return False, 50.0
+
+    # --- Step 1: pixel density (fixed threshold 200) ---
+    density = pixel_density(cell_img, threshold=200)
+
+    BLANK_DENSITY      = 0.012   # truly empty cell
+    SIGNATURE_DENSITY  = 0.10    # definite signature / heavy mark
+
+    if density < BLANK_DENSITY:
+        return False, 95.0   # clearly empty → absent
+
+    # --- Step 2: prep image for OCR ---
+    gray = cv2.cvtColor(cell_img, cv2.COLOR_BGR2GRAY)
+    # 3x upscale with bicubic (Tesseract performs better on larger images)
+    up = cv2.resize(gray, (w * 3, h * 3), interpolation=cv2.INTER_CUBIC)
+    # CLAHE: normalise contrast (helps with red/faded ink)
+    clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(4, 4))
+    up = clahe.apply(up)
+    # Otsu binarise (invert so text is white on black for Tesseract)
+    _, thresh = cv2.threshold(up, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+    # Slight dilation to reconnect broken strokes
+    kern = np.ones((2, 2), np.uint8)
+    thresh = cv2.dilate(thresh, kern, iterations=1)
+
+    found_absence, abs_conf = _ocr_for_absence(thresh)
+    if found_absence:
+        return False, round(abs_conf, 1)   # absence marker detected
+
+    # --- Step 3: density-based fallback ---
+    if density > SIGNATURE_DENSITY:
+        conf = min(85.0, round(density * 400, 1))
+        return True, conf
+
+    # --- Step 4: ambiguous zone ---
+    # Small mark but OCR found nothing; could be faint signature or unread 'A'
+    # Default PRESENT with low confidence so admin can review
+    return True, round(density * 300, 1)
 
 def process_document(doc_id, debug=False):
     rows_dir = f"data/rows/{doc_id}"
@@ -121,6 +198,7 @@ def process_document(doc_id, debug=False):
         csv_path = os.path.join("config", "groups", mapped_csv_file)
         if os.path.exists(csv_path):
             student_df = pd.read_csv(csv_path)
+            student_df.columns = student_df.columns.str.strip().str.lower()
             doc_data["student_list_csv"] = mapped_csv_file
             print(f"Mapped filiere '{filiere_name}' to CSV: {mapped_csv_file}")
         else:
@@ -134,7 +212,6 @@ def process_document(doc_id, debug=False):
 
     print(f"[{doc_id}] Processing {len(row_files)} physical student rows...")
     
-    # Check how many seances are expected based on the JSON
     seances = doc_data.get("seances", {})
     expected_seance_count = len(seances)
     
@@ -159,7 +236,7 @@ def process_document(doc_id, debug=False):
         for i in range(min(3, len(v_lines) - 1)):
             x1, x2 = v_lines[i], v_lines[i+1]
             cell = img[2:h-2, x1+2:x2-2]
-            if cell.shape[1] > 0 and cell.shape[0] > 0 and not is_blank(cell, 20):
+            if cell.shape[1] > 0 and cell.shape[0] > 0 and pixel_density(cell) > 0.01:
                 text, _ = extract_ocr_with_confidence(cell)
                 cleaned = clean_ocr_text(text)
                 if cleaned:
@@ -167,7 +244,7 @@ def process_document(doc_id, debug=False):
                     
         student_name_ocr = " ".join(student_parts)
         
-        # Stop condition
+        # Stop condition: only if "EMARGEMENT" is the name text in the row
         if "emargement" in student_name_ocr.lower() or fuzz.partial_ratio("emargement", student_name_ocr.lower()) > 80:
             print(f"  Stopping at {filename}: Found EMARGEMENT row.")
             break
@@ -184,8 +261,7 @@ def process_document(doc_id, debug=False):
             "row_idx": row_idx + 1
         })
 
-    # 2. Match physical rows to official DB list
-    # Initialize the output array exactly sized to the DB
+    # 2. Match physical rows to official DB list (DB order enforced)
     absences_output = [None] * len(student_df)
     used_physical = set()
     
@@ -198,23 +274,18 @@ def process_document(doc_id, debug=False):
         best_match_idx = -1
         best_conf = 0.0
         
-        # Greedy search for the best physical row
         for p_idx, p_data in enumerate(physical_data):
             if p_idx in used_physical:
                 continue
-            
-            # Use fuzz.token_set_ratio which is good for names in different orders
             conf = fuzz.token_set_ratio(official_full.lower(), p_data["ocr_raw"].lower()) / 100.0
             if conf > best_conf:
                 best_conf = conf
                 best_match_idx = p_idx
                 
-        # If we found a good match
         if best_match_idx != -1 and best_conf > 0.4:
             used_physical.add(best_match_idx)
             p_data = physical_data[best_match_idx]
             
-            # Build sessions data
             sessions_obj = {}
             seance_idx = 1
             v_lines = p_data["v_lines"]
@@ -228,43 +299,17 @@ def process_document(doc_id, debug=False):
                 x1, x2 = v_lines[i], v_lines[i+1]
                 cell = img[2:h-2, x1+2:x2-2]
                 
-                is_present = True
-                detected_by = "unknown"
-                ocr_conf = 0.0
-                
                 if cell.shape[1] > 5 and cell.shape[0] > 5:
                     if debug:
                         debug_cell_path = os.path.join(debug_dir, f"row{p_data['row_idx']}_seance{seance_idx}.jpg")
                         cv2.imwrite(debug_cell_path, cell)
-                        
-                    if is_blank(cell, dark_pixel_threshold=30):
-                        is_present = False
-                        detected_by = "empty_cell"
-                        ocr_conf = 100.0
-                    elif is_dense_signature(cell):
-                        is_present = True
-                        detected_by = "signature_density"
-                        ocr_conf = 100.0
-                    else:
-                        text, conf = extract_ocr_with_confidence(cell)
-                        text_lower = text.lower()
-                        if text_lower in ['a', 'abs', 'absent']:
-                            is_present = False
-                            detected_by = "text_abs"
-                            ocr_conf = conf
-                        elif text_lower in ['p', 'pr', 'present']:
-                            is_present = True
-                            detected_by = "text_present"
-                            ocr_conf = conf
-                        else:
-                            is_present = True
-                            detected_by = "noise_or_signature"
-                            ocr_conf = conf
+                    is_present, ocr_conf = classify_seance_cell(cell)
+                else:
+                    is_present, ocr_conf = False, 50.0
 
                 sessions_obj[f"seance{seance_idx}"] = {
                     "is_present": is_present,
-                    "detected_by": detected_by,
-                    "ocr_confidence": ocr_conf
+                    "confidence": round(ocr_conf, 1)
                 }
                 seance_idx += 1
                 
@@ -278,7 +323,7 @@ def process_document(doc_id, debug=False):
                 "sessions": sessions_obj
             }
         else:
-            # Not found on physical sheet
+            # Not found on physical sheet — include from DB with empty sessions
             absences_output[idx] = {
                 "row_index": None,
                 "n_apo": official_n_apo,
@@ -291,14 +336,14 @@ def process_document(doc_id, debug=False):
 
     doc_data["absences"] = absences_output
     
-    # Save single unified JSON
+    # Save unified JSON
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(doc_data, f, indent=4, ensure_ascii=False)
         
     print(f"  [OK] Matched {len(used_physical)} rows out of {len(student_df)} official students for {doc_id}")
     print(f"  Written to {json_path}")
     
-    # Save pipeline-compatible metadata.json and absences.json
+    # Save pipeline-compatible metadata.json + absences.json
     out_dir = os.path.join("data", "output", doc_id)
     os.makedirs(out_dir, exist_ok=True)
     
