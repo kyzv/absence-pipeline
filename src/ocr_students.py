@@ -236,7 +236,7 @@ def process_document(doc_id, debug=False):
         for i in range(min(3, len(v_lines) - 1)):
             x1, x2 = v_lines[i], v_lines[i+1]
             cell = img[2:h-2, x1+2:x2-2]
-            if cell.shape[1] > 0 and cell.shape[0] > 0 and pixel_density(cell) > 0.01:
+            if cell.shape[1] > 5 and cell.shape[0] > 5:
                 text, _ = extract_ocr_with_confidence(cell)
                 cleaned = clean_ocr_text(text)
                 if cleaned:

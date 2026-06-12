@@ -8,44 +8,44 @@
         "ocr_raw_name": "24004986 ANAHKAM",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 19.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 54.8
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 12.5
+                "confidence": 28.0
             },
             "seance4": {
                 "is_present": false,
-                "confidence": 89.0
+                "confidence": 94.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 51.7
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 38.0
+                "confidence": 76.4
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 26.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 35.0
+                "confidence": 13.1
             }
         }
     },
@@ -59,43 +59,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 91.0
+                "confidence": 85.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 3.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 63.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 20.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 40.0
+                "confidence": 25.9
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 8.6
             },
             "seance7": {
                 "is_present": false,
-                "confidence": 25.0
+                "confidence": 55.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 14.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -109,43 +109,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 96.0
+                "confidence": 45.5
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 27.0
+                "confidence": 46.5
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 60.5
             },
             "seance4": {
                 "is_present": false,
-                "confidence": 0.0
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 75.7
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 9.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": false,
-                "confidence": 24.0
+                "is_present": true,
+                "confidence": 11.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -158,44 +158,44 @@
         "ocr_raw_name": "24016801 ELHARUSH",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 85.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 34.5
+                "confidence": 44.9
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 45.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 28.9
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 45.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 29.0
+                "confidence": 7.8
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 33.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": false,
-                "confidence": 25.0
+                "confidence": 55.0
             }
         }
     },
@@ -209,43 +209,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 96.0
+                "confidence": 42.1
             },
             "seance2": {
                 "is_present": false,
-                "confidence": 0.0
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 33.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 39.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 49.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 23.0
+                "confidence": 85.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 6.1
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 34.0
+                "confidence": 10.3
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 22.0
+                "confidence": 12.5
             }
         }
     },
@@ -259,43 +259,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 38.0
+                "confidence": 51.2
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 24.0
+                "confidence": 61.6
             },
             "seance3": {
                 "is_present": false,
-                "confidence": 88.0
+                "confidence": 90.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 74.0
+                "confidence": 80.4
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 13.0
+                "confidence": 75.4
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 14.3
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 18.5
+                "confidence": 10.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 43.0
+                "confidence": 14.2
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -309,43 +309,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 89.0
+                "confidence": 51.2
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 57.0
+                "confidence": 85.0
             },
             "seance5": {
                 "is_present": false,
-                "confidence": 88.0
+                "confidence": 85.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 67.0
+                "confidence": 70.4
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 34.0
+                "confidence": 85.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             }
         }
     },
@@ -359,43 +359,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 96.0
+                "confidence": 22.4
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 100.0
+                "confidence": 85.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 29.5
+                "confidence": 15.2
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 15.5
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 17.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 13.2
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 24.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -408,44 +408,44 @@
         "ocr_raw_name": "124016807 BOUHOUT AMINE",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 54.0
+                "is_present": false,
+                "confidence": 69.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 34.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 36.5
+                "confidence": 40.8
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 53.8
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 19.0
+                "confidence": 65.3
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 86.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance8": {
                 "is_present": false,
-                "confidence": 100.0
+                "confidence": 95.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 49.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 36.0
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -458,44 +458,44 @@
         "ocr_raw_name": "24016815 ABBASSI SABER",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 92.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 33.0
+                "confidence": 24.4
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 39.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 36.0
+                "confidence": 84.2
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 23.0
+                "confidence": 82.6
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 30.0
+                "confidence": 63.5
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 56.7
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 89.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 20.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": false,
-                "confidence": 33.0
+                "confidence": 55.0
             }
         }
     },
@@ -508,44 +508,44 @@
         "ocr_raw_name": "24016823 MAAIZI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 92.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": false,
-                "confidence": 74.0
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": false,
-                "confidence": 23.0
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 58.5
+                "confidence": 85.0
             },
             "seance5": {
-                "is_present": false,
-                "confidence": 23.0
+                "is_present": true,
+                "confidence": 24.9
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 56.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 37.0
+                "confidence": 11.5
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 50.0
+                "confidence": 65.8
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": false,
-                "confidence": 30.0
+                "is_present": true,
+                "confidence": 18.6
             }
         }
     },
@@ -559,43 +559,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 91.0
+                "confidence": 52.2
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 57.0
+                "confidence": 53.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 6.0
+                "confidence": 18.5
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": false,
-                "confidence": 93.0
+                "confidence": 92.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 82.1
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 16.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 35.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -608,44 +608,44 @@
         "ocr_raw_name": "24016820 BEN ZAHOUM",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 71.33333333333333
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 38.0
+                "confidence": 85.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 57.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 50.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 34.0
+                "confidence": 85.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 31.25
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -658,44 +658,44 @@
         "ocr_raw_name": "24016775 AIT ECHCHEIKH",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 96.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": false,
-                "confidence": 59.0
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 26.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 23.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 22.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 75.2
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 84.1
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 15.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 29.666666666666668
+                "confidence": 14.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 28.0
+                "confidence": 17.0
             }
         }
     },
@@ -709,43 +709,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 92.0
+                "confidence": 44.9
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 59.0
+                "confidence": 42.9
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 61.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 82.0
+                "confidence": 80.6
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 72.3
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 18.666666666666668
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 47.5
+                "confidence": 5.1
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 32.0
+                "confidence": 17.5
             }
         }
     },
@@ -758,44 +758,44 @@
         "ocr_raw_name": "24016795 EL HASBI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 93.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 81.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 32.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 90.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 52.3
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 29.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 10.4
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 10.0
+                "confidence": 14.2
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 27.0
+                "confidence": 18.5
             }
         }
     },
@@ -808,44 +808,44 @@
         "ocr_raw_name": "23010280 LAGHYATI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 91.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 37.0
+                "confidence": 43.1
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 58.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 25.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 5.5
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 14.5
+                "confidence": 5.3
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 45.0
+                "confidence": 15.7
             }
         }
     },
@@ -859,43 +859,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 92.0
+                "confidence": 44.5
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 20.0
+                "confidence": 49.3
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 69.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 33.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": false,
-                "confidence": 40.0
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 95.0
+                "confidence": 8.7
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 25.0
+                "confidence": 67.1
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 12.0
+                "confidence": 51.8
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 13.5
             }
         }
     },
@@ -909,43 +909,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 88.0
+                "confidence": 62.9
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 46.8
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 20.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 60.0
+                "confidence": 85.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 42.0
+                "confidence": 85.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 40.1
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 74.0
+                "confidence": 8.8
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 18.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 32.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 19.333333333333332
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -959,43 +959,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 91.0
+                "confidence": 71.7
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 18.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 64.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 49.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 30.0
+                "confidence": 7.6
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 56.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 30.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 28.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 13.0
+                "confidence": 85.0
             }
         }
     },
@@ -1008,44 +1008,44 @@
         "ocr_raw_name": "24016763 LAMWAHB",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 91.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 70.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 40.5
+                "confidence": 67.8
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 72.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 75.6
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 16.5
+                "confidence": 9.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 15.666666666666666
+                "confidence": 6.2
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 7.25
+                "confidence": 11.5
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 36.0
+                "confidence": 17.3
             }
         }
     },
@@ -1059,43 +1059,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 96.0
+                "confidence": 44.7
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 54.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 42.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 25.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 17.75
+                "confidence": 6.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 22.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 8.333333333333334
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -1108,44 +1108,44 @@
         "ocr_raw_name": "24016818 GTAIB",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 45.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": false,
-                "confidence": 21.0
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 12.1
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 5.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 32.666666666666664
+                "confidence": 76.8
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 28.0
+                "confidence": 7.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 38.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -1158,44 +1158,44 @@
         "ocr_raw_name": "24016824 RMITI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 92.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": false,
-                "confidence": 7.0
+                "is_present": true,
+                "confidence": 28.4
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 64.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": false,
-                "confidence": 91.0
+                "is_present": true,
+                "confidence": 75.2
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 30.5
+                "confidence": 25.2
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 53.0
+                "confidence": 6.8
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 17.0
+                "confidence": 9.5
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 47.0
+                "confidence": 11.3
             }
         }
     },
@@ -1209,39 +1209,39 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 46.0
+                "confidence": 47.5
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 41.0
+                "confidence": 27.8
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 72.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 30.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 8.3
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 31.0
+                "confidence": 7.8
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 39.5
+                "confidence": 60.1
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 47.3
             },
             "seance10": {
                 "is_present": true,
@@ -1258,44 +1258,44 @@
         "ocr_raw_name": "24016771 EL BOUSSAKNI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 47.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 29.5
+                "confidence": 24.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 59.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 68.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 33.333333333333336
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 43.5
+                "confidence": 85.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 88.0
+                "confidence": 3.8
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 35.0
+                "confidence": 6.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 4.0
+                "confidence": 8.0
             }
         }
     },
@@ -1308,44 +1308,44 @@
         "ocr_raw_name": "24016810 BENKHALOUK",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 50.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 46.5
+                "confidence": 61.3
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 84.8
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 24.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 43.666666666666664
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 21.0
+                "confidence": 50.3
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 49.0
+                "confidence": 11.3
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 42.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 25.0
+                "confidence": 6.9
             }
         }
     },
@@ -1358,44 +1358,44 @@
         "ocr_raw_name": "24016764 OUFELLA",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 69.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 29.0
+                "confidence": 22.9
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": false,
-                "confidence": 38.0
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 77.7
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 18.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 11.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 33.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 26.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -1409,43 +1409,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 95.0
+                "confidence": 48.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 16.0
+                "confidence": 26.3
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 24.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": false,
-                "confidence": 48.0
+                "confidence": 79.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 7.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 33.0
+                "confidence": 85.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 50.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 100.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 65.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -1458,44 +1458,44 @@
         "ocr_raw_name": "23014638 KHALFI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 92.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 70.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 33.0
+                "confidence": 41.5
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 76.2
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 9.8
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 17.0
+                "confidence": 12.9
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 6.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 39.0
+                "confidence": 12.2
             }
         }
     },
@@ -1508,44 +1508,44 @@
         "ocr_raw_name": "23014518 ACHIB",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 35.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 33.0
+                "confidence": 23.4
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 33.0
+                "is_present": false,
+                "confidence": 59.0
             },
             "seance4": {
-                "is_present": true,
+                "is_present": false,
                 "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 51.4
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 10.0
+                "confidence": 29.4
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 22.0
+                "confidence": 46.9
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 11.0
+                "confidence": 5.2
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 49.333333333333336
+                "confidence": 8.2
             }
         }
     },
@@ -1558,44 +1558,44 @@
         "ocr_raw_name": "24006238 AGOUGIL 4",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 48.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 36.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 14.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": false,
-                "confidence": 34.0
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 24.4
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 55.0
+                "confidence": 4.7
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 46.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -1608,44 +1608,44 @@
         "ocr_raw_name": "24016767 AHNICH",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 92.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 64.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 4.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 9.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 84.0
+                "confidence": 7.7
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 43.0
+                "confidence": 11.2
             }
         }
     },
@@ -1659,43 +1659,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 58.0
+                "confidence": 71.7
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 47.0
+                "confidence": 85.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 47.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 79.6
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 44.0
+                "confidence": 85.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 58.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 51.1
             }
         }
     },
@@ -1709,43 +1709,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 96.0
+                "confidence": 41.4
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 26.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": false,
-                "confidence": 96.0
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 72.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 44.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 1.0
+                "confidence": 85.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 18.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 58.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 31.666666666666668
+                "confidence": 8.4
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 10.4
             }
         }
     },
@@ -1758,44 +1758,44 @@
         "ocr_raw_name": "24016780 AIT DAMI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 47.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 38.0
+                "confidence": 23.7
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 57.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 61.8
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 29.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 74.7
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 18.75
+                "confidence": 3.8
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 28.666666666666668
+                "confidence": 5.8
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 59.5
+                "confidence": 7.5
             }
         }
     },
@@ -1808,44 +1808,44 @@
         "ocr_raw_name": "24016778 ait ouaouch",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 66.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 45.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 16.0
+                "confidence": 12.2
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 36.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 4.7
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 27.444444444444443
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -1859,43 +1859,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 45.5
+                "confidence": 46.2
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 67.0
+                "confidence": 22.6
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 9.0
+                "confidence": 29.7
             },
             "seance4": {
                 "is_present": false,
-                "confidence": 18.0
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 45.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 41.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 23.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 14.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -1908,44 +1908,44 @@
         "ocr_raw_name": "24016753 ANTAR AMINA",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 28.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 27.5
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 44.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 29.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 30.666666666666668
+                "confidence": 6.3
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 6.3
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 10.3
             }
         }
     },
@@ -1959,43 +1959,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 55.0
+                "confidence": 55.5
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": false,
-                "confidence": 39.0
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 49.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 46.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 5.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 83.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -2008,44 +2008,44 @@
         "ocr_raw_name": "24016777 AZALMAD ey",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 69.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 42.0
+                "confidence": 23.5
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 16.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 32.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 40.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 88.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 69.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 28.5
+                "confidence": 72.6
             }
         }
     },
@@ -2059,43 +2059,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 69.5
+                "confidence": 41.6
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 44.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 31.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 57.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 49.1
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 53.3
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 82.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 88.0
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -2109,43 +2109,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 65.0
+                "confidence": 21.3
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 20.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 21.0
+                "confidence": 30.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 77.7
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 27.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 61.7
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 72.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 87.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 4.8
             }
         }
     },
@@ -2158,44 +2158,44 @@
         "ocr_raw_name": "24016789 BENDAMI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 62.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 68.6
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 41.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 5.0
+                "confidence": 65.9
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 18.5
             },
             "seance6": {
-                "is_present": false,
-                "confidence": 0.0
+                "is_present": true,
+                "confidence": 76.3
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 51.0
+                "confidence": 58.9
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 21.0
+                "confidence": 4.1
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 24.7
+                "confidence": 5.4
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -2209,43 +2209,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 91.0
+                "confidence": 77.3
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 43.0
+                "is_present": false,
+                "confidence": 71.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 20.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 5.4
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 25.555555555555557
+                "confidence": 5.9
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 26.0
+                "confidence": 7.1
             }
         }
     },
@@ -2259,43 +2259,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 23.1
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 7.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 19.75
+                "confidence": 6.0
             }
         }
     },
@@ -2308,44 +2308,44 @@
         "ocr_raw_name": "23000279 CHEMMAM",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 96.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 29.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 40.0
+                "confidence": 61.6
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 12.6
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 14.0
+                "confidence": 71.1
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 28.5
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 33.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -2358,44 +2358,44 @@
         "ocr_raw_name": "24001784 DAMRANE",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 89.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 44.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 26.4
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 37.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 46.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 26.333333333333332
+                "confidence": 69.4
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 7.7
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 15.0
+                "confidence": 10.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 7.2
             }
         }
     },
@@ -2409,43 +2409,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 65.0
+                "confidence": 16.5
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 25.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 19.5
+                "confidence": 24.3
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 76.3
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 32.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 61.4
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 63.4
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 88.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 86.0
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -2458,44 +2458,44 @@
         "ocr_raw_name": "24016819 EDDARDOURI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 88.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 26.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 11.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 22.0
+                "confidence": 29.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 25.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 47.3
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 6.3
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 73.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 16.0
+                "confidence": 6.7
             }
         }
     },
@@ -2508,44 +2508,44 @@
         "ocr_raw_name": "24005445 ELALL",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 45.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 46.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": false,
-                "confidence": 78.0
+                "confidence": 82.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 34.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 37.333333333333336
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 66.2
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 18.1
+                "confidence": 6.8
             }
         }
     },
@@ -2559,43 +2559,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 10.0
+                "confidence": 46.3
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 14.0
+                "confidence": 23.4
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 24.0
+                "confidence": 26.2
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 52.7
             },
             "seance5": {
-                "is_present": false,
-                "confidence": 10.0
+                "is_present": true,
+                "confidence": 27.7
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 55.5
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 58.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 35.5
+                "confidence": 7.7
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 86.0
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -2609,43 +2609,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 56.0
+                "confidence": 41.4
             },
             "seance2": {
                 "is_present": false,
-                "confidence": 53.0
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 52.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": false,
-                "confidence": 46.0
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 58.0
+                "is_present": false,
+                "confidence": 64.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 84.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance8": {
                 "is_present": false,
-                "confidence": 0.0
+                "confidence": 95.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 21.625
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 25.5
+                "confidence": 5.8
             }
         }
     },
@@ -2658,44 +2658,44 @@
         "ocr_raw_name": "23000409 ELHADDAD",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 91.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 57.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 32.0
+                "confidence": 24.3
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 58.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 28.0
+                "confidence": 85.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 44.0
+                "confidence": 73.3
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 32.666666666666664
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 4.9
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 90.0
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -2709,43 +2709,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 92.0
+                "confidence": 59.0
             },
             "seance2": {
-                "is_present": false,
-                "confidence": 61.0
+                "is_present": true,
+                "confidence": 26.1
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 25.0
+                "confidence": 26.3
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 33.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 40.0
+                "confidence": 15.6
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 11.0
+                "confidence": 25.7
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 19.5
+                "confidence": 85.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 2.0
+                "confidence": 82.5
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 19.0
+                "confidence": 6.2
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 43.5
+                "confidence": 6.5
             }
         }
     },
@@ -2758,44 +2758,44 @@
         "ocr_raw_name": "24016765 EL MAHMOUDI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 90.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 56.0
+                "confidence": 44.6
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 36.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 24.0
+                "confidence": 85.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 4.7
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 82.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 9.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -2808,44 +2808,44 @@
         "ocr_raw_name": "24016769 ELAOUAN",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 92.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 66.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 16.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 53.0
+                "confidence": 20.5
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 3.8
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 46.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 37.0
+                "confidence": 71.7
             }
         }
     },
@@ -2858,44 +2858,44 @@
         "ocr_raw_name": "24016787 ESSADDIKI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 96.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 40.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 30.0
+                "confidence": 54.3
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 11.8
             },
             "seance5": {
                 "is_present": false,
-                "confidence": 63.0
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 52.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 8.0
+                "confidence": 7.9
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 13.166666666666666
+                "confidence": 5.9
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 49.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -2909,43 +2909,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 91.0
+                "confidence": 29.5
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 28.5
+                "confidence": 42.8
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 3.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 28.0
+                "confidence": 8.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 7.2
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 55.4
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 43.0
+                "confidence": 3.8
             }
         }
     },
@@ -2958,44 +2958,44 @@
         "ocr_raw_name": "24016797 FARTAS",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 91.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": false,
-                "confidence": 62.0
+                "confidence": 77.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 32.0
+                "confidence": 25.2
             },
             "seance4": {
                 "is_present": false,
-                "confidence": 73.0
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": false,
-                "confidence": 30.0
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 82.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 36.0
+                "confidence": 85.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             }
         }
     },
@@ -3008,44 +3008,44 @@
         "ocr_raw_name": "24016813 FIKRI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 88.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 26.9
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 63.0
+                "confidence": 29.4
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 92.0
+                "confidence": 81.8
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 25.0
+                "confidence": 7.7
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 49.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -3059,43 +3059,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 95.0
+                "confidence": 40.6
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 35.0
+                "confidence": 21.4
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 13.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 41.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": false,
-                "confidence": 4.0
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 6.7
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 6.7
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 52.4
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 27.3
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 29.2
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -3108,44 +3108,44 @@
         "ocr_raw_name": "24016783 GOUHMID",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 92.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 24.3
             },
             "seance3": {
                 "is_present": false,
-                "confidence": 38.0
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 29.0
+                "confidence": 85.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 15.5
+                "confidence": 21.9
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 40.0
+                "confidence": 6.7
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 6.8
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 38.5
+                "confidence": 85.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 17.5
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -3159,43 +3159,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 90.0
+                "confidence": 78.1
             },
             "seance2": {
-                "is_present": false,
-                "confidence": 16.0
+                "is_present": true,
+                "confidence": 80.6
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 29.3
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 22.0
+                "confidence": 77.2
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 74.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 1.5
+                "confidence": 6.8
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 38.0
+                "confidence": 16.2
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 2.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 15.0
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -3208,44 +3208,44 @@
         "ocr_raw_name": "24016756 Hafidi",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 45.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 18.0
+                "confidence": 22.6
             },
             "seance3": {
                 "is_present": false,
-                "confidence": 56.0
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 10.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 21.5
+                "confidence": 84.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 4.7
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 32.0
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 15.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 8.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 5.4
             }
         }
     },
@@ -3258,44 +3258,44 @@
         "ocr_raw_name": "24016760 HAJ",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 26.333333333333332
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 61.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 24.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 23.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 69.0
+                "confidence": 22.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 76.0
+                "confidence": 6.4
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 17.77777777777778
+                "confidence": 5.8
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 91.0
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -3308,44 +3308,44 @@
         "ocr_raw_name": "24016785 HAYBOUL",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 64.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 15.0
+                "confidence": 40.2
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 29.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 45.0
+                "confidence": 9.3
             }
         }
     },
@@ -3359,43 +3359,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 91.5
+                "confidence": 62.4
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 61.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": false,
-                "confidence": 52.0
+                "is_present": true,
+                "confidence": 23.3
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 53.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 21.0
+                "confidence": 21.6
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 18.75
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 73.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 60.0
+                "confidence": 75.6
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 82.0
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -3408,44 +3408,44 @@
         "ocr_raw_name": "24001227 KHAYATI",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 71.66666666666667
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 29.2
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 61.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 25.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 7.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 30.0
+                "confidence": 7.1
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 51.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -3459,43 +3459,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 96.0
+                "confidence": 63.8
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 16.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 36.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": false,
-                "confidence": 53.0
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 14.5
+                "confidence": 85.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 6.6
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 30.0
+                "confidence": 7.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 20.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 16.6
+                "confidence": 3.6
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 44.0
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -3508,44 +3508,44 @@
         "ocr_raw_name": "24016803 LAKHAL",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 92.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 20.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": false,
-                "confidence": 20.0
+                "is_present": true,
+                "confidence": 29.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 42.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 40.7
             },
             "seance6": {
-                "is_present": false,
-                "confidence": 13.0
+                "is_present": true,
+                "confidence": 8.5
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 24.0
+                "confidence": 9.8
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 56.666666666666664
+                "confidence": 4.3
             }
         }
     },
@@ -3559,43 +3559,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 91.0
+                "confidence": 26.2
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 27.0
+                "confidence": 42.5
             },
             "seance3": {
                 "is_present": false,
-                "confidence": 51.0
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 28.4
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 16.0
+                "confidence": 8.5
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 21.9
+                "confidence": 6.7
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 9.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 55.4
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 88.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -3608,44 +3608,44 @@
         "ocr_raw_name": "24016755 MAHDAM",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 95.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 23.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": false,
-                "confidence": 66.0
+                "confidence": 85.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 4.0
+                "confidence": 71.9
             },
             "seance5": {
                 "is_present": false,
-                "confidence": 0.0
+                "confidence": 71.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 46.0
+                "confidence": 6.7
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 19.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 32.0
+                "confidence": 9.1
             },
             "seance9": {
                 "is_present": false,
-                "confidence": 100.0
+                "confidence": 95.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -3658,44 +3658,44 @@
         "ocr_raw_name": "24016804 MAZGAR",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 92.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 9.5
+                "confidence": 25.3
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 32.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 25.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 29.2
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 6.7
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 78.5
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 30.0
+                "confidence": 85.0
             }
         }
     },
@@ -3709,43 +3709,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 10.0
+                "confidence": 49.4
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 35.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": false,
-                "confidence": 88.0
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 53.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 10.666666666666666
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 6.6
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 44.0
+                "confidence": 85.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 85.0
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -3758,44 +3758,44 @@
         "ocr_raw_name": "24016774 OUIAZANE",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 91.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 35.0
+                "confidence": 85.0
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 25.0
+                "confidence": 26.4
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 8.9
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 15.571428571428571
+                "confidence": 10.7
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -3809,43 +3809,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 91.0
+                "confidence": 22.3
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 30.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 28.6
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 69.0
+                "confidence": 85.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 30.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 8.3
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 14.666666666666666
+                "confidence": 5.7
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 84.1
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 46.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 53.0
+                "confidence": 64.0
             }
         }
     },
@@ -3858,44 +3858,44 @@
         "ocr_raw_name": "24016805 SALHI a",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 92.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 3.0
+                "confidence": 40.9
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 29.0
+                "confidence": 27.6
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 76.2
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 67.0
+                "confidence": 25.6
             },
             "seance6": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 17.333333333333332
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 31.0
+                "confidence": 44.6
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 32.666666666666664
+                "confidence": 85.0
             }
         }
     },
@@ -3909,43 +3909,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 91.0
+                "confidence": 43.1
             },
             "seance2": {
-                "is_present": false,
-                "confidence": 0.0
+                "is_present": true,
+                "confidence": 29.1
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 46.0
+                "is_present": false,
+                "confidence": 58.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 21.0
+                "confidence": 41.4
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 78.0
+                "confidence": 7.0
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 23.0
+                "confidence": 6.9
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 62.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -3958,44 +3958,44 @@
         "ocr_raw_name": "24008307 TAOUFIQ",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 91.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 21.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 41.4
             },
             "seance4": {
                 "is_present": false,
-                "confidence": 89.0
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 41.0
+                "confidence": 80.4
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 10.9
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 9.2
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             }
         }
     },
@@ -4009,43 +4009,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 91.0
+                "confidence": 50.0
             },
             "seance2": {
-                "is_present": true,
-                "confidence": 31.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 35.0
+                "confidence": 43.4
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 20.0
+                "confidence": 85.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 47.0
+                "confidence": 85.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 37.0
+                "confidence": 11.2
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 23.333333333333332
+                "confidence": 8.4
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 52.0
+                "confidence": 7.3
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 35.0
+                "confidence": 6.1
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 28.5
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -4059,43 +4059,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 96.0
+                "confidence": 45.0
             },
             "seance2": {
                 "is_present": false,
-                "confidence": 17.0
+                "confidence": 55.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 28.0
+                "confidence": 49.2
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 34.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 27.0
+                "confidence": 24.0
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 35.5
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 17.0
+                "confidence": 75.9
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 10.2
             }
         }
     },
@@ -4109,43 +4109,43 @@
         "sessions": {
             "seance1": {
                 "is_present": true,
-                "confidence": 36.0
+                "confidence": 51.8
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 11.0
+                "confidence": 29.1
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 39.0
+                "confidence": 25.6
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 44.0
+                "confidence": 85.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 5.3
             },
             "seance7": {
-                "is_present": true,
-                "confidence": 36.25
+                "is_present": false,
+                "confidence": 95.0
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 32.0
+                "confidence": 85.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 76.1
             }
         }
     },
@@ -4158,44 +4158,44 @@
         "ocr_raw_name": "24016768 ZEMZEM",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 96.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
-                "is_present": false,
-                "confidence": 35.0
+                "is_present": true,
+                "confidence": 29.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 40.0
+                "confidence": 43.0
             },
             "seance4": {
                 "is_present": false,
-                "confidence": 27.0
+                "confidence": 55.0
             },
             "seance5": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 5.8
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 23.0
+                "confidence": 6.8
             },
             "seance8": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 65.4
             },
             "seance10": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 95.0
             }
         }
     },
@@ -4208,44 +4208,44 @@
         "ocr_raw_name": "24016821 ZOUIN",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 90.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance3": {
                 "is_present": true,
-                "confidence": 51.0
+                "confidence": 29.7
             },
             "seance4": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 23.0
+                "confidence": 22.6
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 36.0
+                "confidence": 6.8
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 47.0
+                "confidence": 6.7
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance9": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 85.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 9.1
             }
         }
     },
@@ -4258,44 +4258,44 @@
         "ocr_raw_name": "24005158 ZRAIBL",
         "sessions": {
             "seance1": {
-                "is_present": true,
-                "confidence": 92.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance2": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 40.4
             },
             "seance3": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance4": {
                 "is_present": true,
-                "confidence": 32.0
+                "confidence": 85.0
             },
             "seance5": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 40.3
             },
             "seance6": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 7.4
             },
             "seance7": {
                 "is_present": true,
-                "confidence": 26.4
+                "confidence": 6.2
             },
             "seance8": {
                 "is_present": true,
-                "confidence": 0.0
+                "confidence": 77.8
             },
             "seance9": {
-                "is_present": true,
-                "confidence": 0.0
+                "is_present": false,
+                "confidence": 55.0
             },
             "seance10": {
                 "is_present": true,
-                "confidence": 48.666666666666664
+                "confidence": 73.4
             }
         }
     }
