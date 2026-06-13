@@ -1,0 +1,2990 @@
+[
+    {
+        "row_index": 5,
+        "n_apo": "24004986",
+        "nom": "ANAHKAM",
+        "prenom": "SANA",
+        "match_confidence": 75.68,
+        "ocr_raw_name": "24004900 ANAHKAM",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 49.9
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 5.1
+            }
+        }
+    },
+    {
+        "row_index": 6,
+        "n_apo": "24009178",
+        "nom": "JAWHARI",
+        "prenom": "MOHAMED-ANOUAR",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24009178 JAWHARI",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 9.2
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 8.2
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 52.7
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 23.3
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 23.7
+            }
+        }
+    },
+    {
+        "row_index": 7,
+        "n_apo": "24016791",
+        "nom": "BASSIR",
+        "prenom": "SALMA",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016791 BASSIR",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 23.8
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 45.9
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 50.0
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 8,
+        "n_apo": "24016801",
+        "nom": "ELHARUSH",
+        "prenom": "IMANE",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016801 ELHARUSH",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 25.7
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 24.6
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 9,
+        "n_apo": "24004074",
+        "nom": "ABIDATE",
+        "prenom": "BADR",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24004074 ABIDATE",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 22.7
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 5.7
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 79.9
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 52.7
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 64.3
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 23.8
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 23.1
+            }
+        }
+    },
+    {
+        "row_index": 51,
+        "n_apo": "23009461",
+        "nom": "CHAKNINE",
+        "prenom": "IHSSANE",
+        "match_confidence": 50.0,
+        "ocr_raw_name": "23000279 CHEMMAM sy",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 9.8
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 10.4
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 4.1
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 7.4
+            }
+        }
+    },
+    {
+        "row_index": 20,
+        "n_apo": "24016799",
+        "nom": "EL HADNAOUI",
+        "prenom": "ILYASSE",
+        "match_confidence": 62.22,
+        "ocr_raw_name": "24016795 EL HASBI",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 7.3
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 62.4
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 50.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 22.8
+            }
+        }
+    },
+    {
+        "row_index": 12,
+        "n_apo": "24016772",
+        "nom": "BELKACEM",
+        "prenom": "AYA",
+        "match_confidence": 68.42,
+        "ocr_raw_name": "Z4a010 2 BELKACEM",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 85.0
+            }
+        }
+    },
+    {
+        "row_index": 13,
+        "n_apo": "24016807",
+        "nom": "BOUHOUT",
+        "prenom": "AMINE",
+        "match_confidence": 94.12,
+        "ocr_raw_name": "4 24016807 BOUHOUT",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 71.7
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 80.9
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 14,
+        "n_apo": "24016815",
+        "nom": "ABBASSI SABER",
+        "prenom": "RANIA",
+        "match_confidence": 73.47,
+        "ocr_raw_name": "24010019 ABBASS SABER",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 26.3
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 15,
+        "n_apo": "24016823",
+        "nom": "MAAIZI",
+        "prenom": "MAROUA",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016823 MAAIZI",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 10.3
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 57.7
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 18.2
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 25.2
+            }
+        }
+    },
+    {
+        "row_index": 16,
+        "n_apo": "23002599",
+        "nom": "ARJILA",
+        "prenom": "ELMEHDI",
+        "match_confidence": 93.75,
+        "ocr_raw_name": "i 23002599 ARJILA",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 41.1
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 71.4
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 75.7
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 26.4
+            }
+        }
+    },
+    {
+        "row_index": 17,
+        "n_apo": "24016820",
+        "nom": "BEN ZAHOUM",
+        "prenom": "MOHAMMED AMINE",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016820 BEN ZAHOUM",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 27.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 27.3
+            }
+        }
+    },
+    {
+        "row_index": 18,
+        "n_apo": "24016775",
+        "nom": "AIT ECHCHEIKH",
+        "prenom": "MOHAMMED",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016775 AIT ECHCHEIKH",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 63.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 24.4
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 75.1
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 25.6
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 22.6
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 27.9
+            }
+        }
+    },
+    {
+        "row_index": 19,
+        "n_apo": "24008282",
+        "nom": "LOUZ",
+        "prenom": "HAJAR",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24008282 LOUZ",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 56.3
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 44.3
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 65.9
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 25.5
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 28.0
+            }
+        }
+    },
+    {
+        "row_index": 40,
+        "n_apo": "24016795",
+        "nom": "EL HASBI",
+        "prenom": "YASMINE",
+        "match_confidence": 61.9,
+        "ocr_raw_name": "24016780 AIT DAMI",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 81.5
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 79.6
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 56.5
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 62.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 73.9
+            }
+        }
+    },
+    {
+        "row_index": 21,
+        "n_apo": "23010280",
+        "nom": "LAGHYATI",
+        "prenom": "ZAID",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "23010280 LAGHYATI",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 10.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 45.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 24.2
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 23.6
+            }
+        }
+    },
+    {
+        "row_index": 22,
+        "n_apo": "24007575",
+        "nom": "FETTAH",
+        "prenom": "HIBA",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24007575 FETTAH",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 7.2
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 12.3
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 82.6
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 62.8
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 23.4
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 23,
+        "n_apo": "23001847",
+        "nom": "KAMALI",
+        "prenom": "IBTISSAM",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "23001847 KAMALI",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 57.5
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 7.8
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 11.8
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 83.3
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 50.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 57.5
+            }
+        }
+    },
+    {
+        "row_index": 24,
+        "n_apo": "24016800",
+        "nom": "KHAIDOUNE",
+        "prenom": "SAIF EDDINE",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016800 KHAIDOUNE",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 52.5
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 6.7
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 13.8
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 51.1
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 84.6
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 69.2
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 25.0
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 48,
+        "n_apo": "24016769",
+        "nom": "AMWAHB",
+        "prenom": "WIAM",
+        "match_confidence": 61.11,
+        "ocr_raw_name": "24016789 BENDAMI",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 5.7
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 6.2
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 5.9
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 47.1
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 69.0
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 95.0
+            }
+        }
+    },
+    {
+        "row_index": 26,
+        "n_apo": "24016798",
+        "nom": "BOUCHTA",
+        "prenom": "ADAM",
+        "match_confidence": 75.68,
+        "ocr_raw_name": "24016096 BOUCHTA",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 21.6
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 54.4
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 53.7
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 12.9
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 15.4
+            }
+        }
+    },
+    {
+        "row_index": 27,
+        "n_apo": "24016818",
+        "nom": "GTAIB",
+        "prenom": "MOHAMED-AMINE",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016818 GTAIB",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 6.4
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 50.0
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 5.0
+            }
+        }
+    },
+    {
+        "row_index": 28,
+        "n_apo": "24016824",
+        "nom": "RMITI",
+        "prenom": "KHADIJA",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016824 RMITI",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 6.4
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 6.1
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 25.4
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 54.5
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 82.5
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 65.9
+            }
+        }
+    },
+    {
+        "row_index": 29,
+        "n_apo": "24016770",
+        "nom": "INANE",
+        "prenom": "OUSSAMA",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016770 INANE",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 52.6
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 10.8
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 7.4
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 52.8
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 19.0
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 13.7
+            }
+        }
+    },
+    {
+        "row_index": 30,
+        "n_apo": "24016771",
+        "nom": "EL BOUSSAKNI",
+        "prenom": "MOHSINE",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016771 EL BOUSSAKNI",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 7.5
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 6.7
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 6.9
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 54.8
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 16.9
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 6.6
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 11.9
+            }
+        }
+    },
+    {
+        "row_index": 31,
+        "n_apo": "24016810",
+        "nom": "BENKHALOUK",
+        "prenom": "AHLAM",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016810 BENKHALOUK",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 6.7
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 6.5
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 6.7
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 17.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 6.4
+            }
+        }
+    },
+    {
+        "row_index": 32,
+        "n_apo": "24016764",
+        "nom": "OUFELLA",
+        "prenom": "MOHAMED",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016764 OUFELLA",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 8.4
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 8.6
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 71.2
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 15.1
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 6.7
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 12.6
+            }
+        }
+    },
+    {
+        "row_index": 33,
+        "n_apo": "23014644",
+        "nom": "MACHTALAY",
+        "prenom": "YOUSSEF",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "23014644 MACHTALAY",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 7.6
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 6.6
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 6.7
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 76.4
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 40.6
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 60.5
+            }
+        }
+    },
+    {
+        "row_index": 34,
+        "n_apo": "23014638",
+        "nom": "KHALFI",
+        "prenom": "NAJWA",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "23014638 KHALFI",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 6.9
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 5.7
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 7.9
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 63.2
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 29.6
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 35,
+        "n_apo": "23014518",
+        "nom": "ACHIB",
+        "prenom": "HANANE",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "23014518 ACHIB",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 7.5
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 5.9
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 7.8
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 52.6
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 69.5
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 17.9
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 7.3
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 12.8
+            }
+        }
+    },
+    {
+        "row_index": 36,
+        "n_apo": "24006238",
+        "nom": "AGOUGIL",
+        "prenom": "ADAM",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24006238 AGOUGIL",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 8.3
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 8.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 28.9
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 7.0
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 37,
+        "n_apo": "24016767",
+        "nom": "AHNICH",
+        "prenom": "IMAD",
+        "match_confidence": 93.75,
+        "ocr_raw_name": "24016767 AHNICH 4",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 5.6
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 6.5
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 49.4
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 50.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 43.6
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 38,
+        "n_apo": "23008479",
+        "nom": "AIDI",
+        "prenom": "FATIMA-EZZAHRA",
+        "match_confidence": 92.86,
+        "ocr_raw_name": "23008479 AIDI a",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 71.4
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 6.7
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 17.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 65.7
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 82.6
+            }
+        }
+    },
+    {
+        "row_index": 39,
+        "n_apo": "24016788",
+        "nom": "AIT BOUSSALEM",
+        "prenom": "SALMAN",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016788 AIT BOUSSALEM",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 15.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 6.8
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 25.1
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 27.9
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 42.2
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 41,
+        "n_apo": "24016780",
+        "nom": "AIT DAMI",
+        "prenom": "HAMZA",
+        "match_confidence": 65.12,
+        "ocr_raw_name": "24016778 ait ouaouch",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 17.8
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 5.2
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 4.1
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 7.4
+            }
+        }
+    },
+    {
+        "row_index": 52,
+        "n_apo": "24016778",
+        "nom": "AIT OUAOUCH",
+        "prenom": "IMRANE",
+        "match_confidence": 60.47,
+        "ocr_raw_name": "24001784 DAMRANE",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 45.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 7.7
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 7.1
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 71.5
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 7.6
+            }
+        }
+    },
+    {
+        "row_index": 42,
+        "n_apo": "24016816",
+        "nom": "ALAOUI MHAMDI",
+        "prenom": "ABDELLAH",
+        "match_confidence": 83.33,
+        "ocr_raw_name": "24016816 ALAOU MHAMDI",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 42.5
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 5.8
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 4.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 25.6
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 95.0
+            }
+        }
+    },
+    {
+        "row_index": 43,
+        "n_apo": "24016753",
+        "nom": "ANTAR",
+        "prenom": "AMINA",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016753 ANTAR",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 4.4
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 5.3
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 59.3
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 62.5
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 80.5
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 95.0
+            }
+        }
+    },
+    {
+        "row_index": 44,
+        "n_apo": "24016761",
+        "nom": "ASSOUKA",
+        "prenom": "ABDELMAJID",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016761 ASSOUKA",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 57.5
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 7.7
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 52.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 7.4
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 45,
+        "n_apo": "24016777",
+        "nom": "AZALMAD",
+        "prenom": "KAOUTAR",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016777 AZALMAD",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 9.5
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 6.5
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 54.2
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 59.1
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 7.4
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 9.4
+            }
+        }
+    },
+    {
+        "row_index": 46,
+        "n_apo": "24016782",
+        "nom": "BAALLA",
+        "prenom": "KAOUTAR",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016782 BAALLA",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 6.7
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 9.6
+            }
+        }
+    },
+    {
+        "row_index": 47,
+        "n_apo": "24016776",
+        "nom": "BARROU",
+        "prenom": "ILIASS",
+        "match_confidence": 90.91,
+        "ocr_raw_name": "24016776 BARROU ey",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 21.9
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 7.1
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 7.1
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 69.5
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 10.7
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 6.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 8.4
+            }
+        }
+    },
+    {
+        "row_index": 54,
+        "n_apo": "24016789",
+        "nom": "BENDAMI",
+        "prenom": "IKRAM",
+        "match_confidence": 58.54,
+        "ocr_raw_name": "24016819 EDDARDOURI",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 6.6
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 80.7
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 85.0
+            }
+        }
+    },
+    {
+        "row_index": 49,
+        "n_apo": "24016794",
+        "nom": "BOUBKER",
+        "prenom": "ABDERRAHMANE",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24016794 BOUBKER",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 77.1
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 11.4
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 12.0
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 6.8
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 50,
+        "n_apo": "24004651",
+        "nom": "BOURHIM",
+        "prenom": "ISHAQ",
+        "match_confidence": 100.0,
+        "ocr_raw_name": "24004651 BOURHIM",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 26.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 9.9
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 9.9
+            }
+        }
+    },
+    {
+        "row_index": 56,
+        "n_apo": "23000279",
+        "nom": "CHEMMAM",
+        "prenom": "AYOUB",
+        "match_confidence": 46.15,
+        "ocr_raw_name": "23003670 EL BADIA",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 50.6
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 10.8
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 76.4
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 18.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 64.5
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 78.7
+            }
+        }
+    },
+    {
+        "row_index": 53,
+        "n_apo": "24001784",
+        "nom": "DAMRANE",
+        "prenom": "NOUHAILA",
+        "match_confidence": 55.81,
+        "ocr_raw_name": "24016766 DAOUARI 7",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 6.7
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 5.5
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 11.5
+            },
+            "seance6": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 21.7
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 57,
+        "n_apo": "24016766",
+        "nom": "DAOUARI",
+        "prenom": "ZIAD",
+        "match_confidence": 55.0,
+        "ocr_raw_name": "24016814 EL BOUDALI",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 41.6
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 10.6
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 10.1
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 9.9
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 84.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 6.7
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 8.2
+            }
+        }
+    },
+    {
+        "row_index": 58,
+        "n_apo": "24016819",
+        "nom": "ED.DARDOURI",
+        "prenom": "NAJIA",
+        "match_confidence": 46.51,
+        "ocr_raw_name": "23000409 ELHADDAD",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 11.3
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 9.0
+            },
+            "seance4": {
+                "is_present": true,
+                "confidence": 10.5
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 69.8
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 55.6
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 68.2
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 22.8
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 6.7
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 8.2
+            }
+        }
+    },
+    {
+        "row_index": 55,
+        "n_apo": "24005445",
+        "nom": "EL ALI",
+        "prenom": "OUMAIMA",
+        "match_confidence": 72.73,
+        "ocr_raw_name": "24005445 ELALL",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 29.3
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": true,
+                "confidence": 29.5
+            },
+            "seance9": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance10": {
+                "is_present": true,
+                "confidence": 16.3
+            }
+        }
+    },
+    {
+        "row_index": 59,
+        "n_apo": "23003670",
+        "nom": "EL BADIA",
+        "prenom": "ABDELLAH",
+        "match_confidence": 47.62,
+        "ocr_raw_name": "24016773 ELHAJLY",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 55.7
+            },
+            "seance2": {
+                "is_present": true,
+                "confidence": 6.8
+            },
+            "seance3": {
+                "is_present": true,
+                "confidence": 6.8
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 47.6
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 50.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 85.0
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 95.0
+            }
+        }
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016814",
+        "nom": "EL BOUDALI",
+        "prenom": "ZAKARIA",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": 25,
+        "n_apo": "23000409",
+        "nom": "EL HADDAD",
+        "prenom": "YAHYA",
+        "match_confidence": 45.0,
+        "ocr_raw_name": "2401005 LAMVVAHB",
+        "sessions": {
+            "seance1": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance5": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 27.0
+            },
+            "seance7": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 55.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 6.8
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 55.0
+            }
+        }
+    },
+    {
+        "row_index": 11,
+        "n_apo": "24016773",
+        "nom": "EL HAJLY",
+        "prenom": "BAHAADDINE",
+        "match_confidence": 41.67,
+        "ocr_raw_name": "7 Z4U1099 EL AADNAOU",
+        "sessions": {
+            "seance1": {
+                "is_present": true,
+                "confidence": 29.1
+            },
+            "seance2": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance3": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance4": {
+                "is_present": false,
+                "confidence": 95.0
+            },
+            "seance5": {
+                "is_present": true,
+                "confidence": 40.0
+            },
+            "seance6": {
+                "is_present": true,
+                "confidence": 57.4
+            },
+            "seance7": {
+                "is_present": true,
+                "confidence": 26.7
+            },
+            "seance8": {
+                "is_present": false,
+                "confidence": 50.0
+            },
+            "seance9": {
+                "is_present": true,
+                "confidence": 53.1
+            },
+            "seance10": {
+                "is_present": false,
+                "confidence": 50.0
+            }
+        }
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016765",
+        "nom": "EL MAHMOUDI",
+        "prenom": "IKRAM",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016769",
+        "nom": "ELAOUANI",
+        "prenom": "NOUHAILA",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016787",
+        "nom": "ESSADDIKI",
+        "prenom": "DOHA",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016817",
+        "nom": "FALFLAOUI",
+        "prenom": "ILYASSE",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016796",
+        "nom": "FARTAS",
+        "prenom": "HAMZA",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016813",
+        "nom": "FIKRI",
+        "prenom": "EL MEHDI",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016806",
+        "nom": "GHANIMI",
+        "prenom": "IBRAHIM",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016783",
+        "nom": "GOUHMID",
+        "prenom": "AYMANE",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016781",
+        "nom": "GUERNAOUI",
+        "prenom": "FATIMA-EZZAHRAE",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016756",
+        "nom": "HAFIDI",
+        "prenom": "MOHAMED",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016760",
+        "nom": "HAJJI",
+        "prenom": "ACHRAF",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016785",
+        "nom": "HAYBOUL",
+        "prenom": "MARIAM",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016812",
+        "nom": "IGOURRAMEN",
+        "prenom": "SALAH EDDINE",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24001227",
+        "nom": "KHAYATI",
+        "prenom": "MOHAMED AMINE",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016784",
+        "nom": "LAHYANI",
+        "prenom": "FATIMA ZAHRA",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016803",
+        "nom": "LAKHAL",
+        "prenom": "AYMEN",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24002578",
+        "nom": "LEKHDAR",
+        "prenom": "INSAF",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016755",
+        "nom": "MAHDAM",
+        "prenom": "MOHAMED AMINE",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016804",
+        "nom": "MAZGAR",
+        "prenom": "IMANE",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016793",
+        "nom": "MIRI",
+        "prenom": "OUSSAMA",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016774",
+        "nom": "OUIAZANE",
+        "prenom": "NIAMA",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24001708",
+        "nom": "OULAAROUSSI",
+        "prenom": "HIBA",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016805",
+        "nom": "SALHI",
+        "prenom": "GHITA",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24002951",
+        "nom": "SAMIA",
+        "prenom": "MAROUA",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24008307",
+        "nom": "TAOUFIQ",
+        "prenom": "AYMEN",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016809",
+        "nom": "TARCHIHI",
+        "prenom": "IBTISSAM",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016790",
+        "nom": "TMOUH",
+        "prenom": "YOUSSEF",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24003681",
+        "nom": "ZAIR",
+        "prenom": "MOHAMED",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016768",
+        "nom": "ZEMZEM",
+        "prenom": "RIDA",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24016821",
+        "nom": "ZOUNI",
+        "prenom": "DOUNIA",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    },
+    {
+        "row_index": null,
+        "n_apo": "24005158",
+        "nom": "ZRAIBI",
+        "prenom": "AYMEN",
+        "match_confidence": 0.0,
+        "ocr_raw_name": "",
+        "sessions": {}
+    }
+]

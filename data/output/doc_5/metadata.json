@@ -1,0 +1,184 @@
+{
+    "doc_id": "doc_5",
+    "filiere": {
+        "value": "Informatique décisionnelle et statistiques 2ème année",
+        "confidence": 1.0
+    },
+    "annee": {
+        "value": "2025-2026",
+        "confidence": 1.0
+    },
+    "enseignant": {
+        "value": "Print export",
+        "confidence": 0.46
+    },
+    "module": {
+        "value": "# Ex ADVAIN ONV.",
+        "confidence": 0.43
+    },
+    "seances": {
+        "seance1": {
+            "date": {
+                "value": "10/04/2026",
+                "confidence": 0.59
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "exm",
+                "confidence": 0.69
+            }
+        },
+        "seance2": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "Form.",
+                "confidence": 0.21
+            }
+        },
+        "seance3": {
+            "date": {
+                "value": "14/04/2020",
+                "confidence": 0.37
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "TP",
+                "confidence": 0.54
+            }
+        },
+        "seance4": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "0 0",
+                "confidence": 0.0
+            }
+        },
+        "seance5": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "tp",
+                "confidence": 0.02
+            }
+        },
+        "seance6": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "1961 62m.",
+                "confidence": 0.11
+            }
+        },
+        "seance7": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "cnt",
+                "confidence": 0.14
+            }
+        },
+        "seance8": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "1934 1957",
+                "confidence": 0.0
+            }
+        },
+        "seance9": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "0 0",
+                "confidence": 0.0
+            }
+        }
+    },
+    "student_list_csv": "Informatique_decisionnelle_et_statistiques_2eme_annee.csv"
+}

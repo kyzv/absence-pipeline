@@ -1,0 +1,202 @@
+{
+    "doc_id": "doc_9",
+    "filiere": {
+        "value": "Génie Informatique 1ère année",
+        "confidence": 1.0
+    },
+    "annee": {
+        "value": "2024-2025",
+        "confidence": 1.0
+    },
+    "enseignant": {
+        "value": "Burdo'Atsmanndale",
+        "confidence": 0.29
+    },
+    "module": {
+        "value": "Structures de données avancées",
+        "confidence": 0.84
+    },
+    "seances": {
+        "seance1": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "8h00",
+                "confidence": 0.64
+            },
+            "heure_fin": {
+                "value": "10h30",
+                "confidence": 0.88
+            },
+            "type": {
+                "value": "crs",
+                "confidence": 0.69
+            }
+        },
+        "seance2": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "0 0",
+                "confidence": 0.0
+            }
+        },
+        "seance3": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "cnt",
+                "confidence": 0.13
+            }
+        },
+        "seance4": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "0 0",
+                "confidence": 0.0
+            }
+        },
+        "seance5": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "1961 62m.",
+                "confidence": 0.1
+            }
+        },
+        "seance6": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "1961 62m.",
+                "confidence": 0.11
+            }
+        },
+        "seance7": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "0 0",
+                "confidence": 0.0
+            }
+        },
+        "seance8": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "1940somann",
+                "confidence": 0.1
+            }
+        },
+        "seance9": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "LORYARDS",
+                "confidence": 0.11
+            }
+        },
+        "seance10": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "crs",
+                "confidence": 0.2
+            }
+        }
+    },
+    "student_list_csv": "Genie_Informatique_1ere_annee.csv"
+}

@@ -504,8 +504,8 @@
         "n_apo": "24016823",
         "nom": "MAAIZI",
         "prenom": "MAROUA",
-        "match_confidence": 100.0,
-        "ocr_raw_name": "24016823 MAAIZI",
+        "match_confidence": 93.75,
+        "ocr_raw_name": "1 24016823 MAAIZI",
         "sessions": {
             "seance1": {
                 "is_present": false,
@@ -654,8 +654,8 @@
         "n_apo": "24016775",
         "nom": "AIT ECHCHEIKH",
         "prenom": "MOHAMMED",
-        "match_confidence": 100.0,
-        "ocr_raw_name": "24016775 AIT ECHCHEIKH",
+        "match_confidence": 95.65,
+        "ocr_raw_name": "z 24016775 AIT ECHCHEIKH",
         "sessions": {
             "seance1": {
                 "is_present": false,
@@ -1704,8 +1704,8 @@
         "n_apo": "24016788",
         "nom": "AIT BOUSSALEM",
         "prenom": "SALMAN",
-        "match_confidence": 100.0,
-        "ocr_raw_name": "24016788 AIT BOUSSALEM",
+        "match_confidence": 95.65,
+        "ocr_raw_name": "7 24016788 AIT BOUSSALEM",
         "sessions": {
             "seance1": {
                 "is_present": true,
@@ -1854,8 +1854,8 @@
         "n_apo": "24016816",
         "nom": "ALAOUI MHAMDI",
         "prenom": "ABDELLAH",
-        "match_confidence": 100.0,
-        "ocr_raw_name": "24016816 ALAOUI MHAMDI",
+        "match_confidence": 95.65,
+        "ocr_raw_name": "4 24016816 ALAOUI MHAMDI",
         "sessions": {
             "seance1": {
                 "is_present": true,

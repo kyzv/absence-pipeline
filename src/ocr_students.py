@@ -76,18 +76,19 @@ def extract_ocr_with_confidence(cell_img):
     avg_conf = sum(confs) / len(confs)
     return full_text, avg_conf
 
-# ---- Absence-word patterns to detect from OCR ----
+# ---- Status-word patterns to detect from OCR ----
 _ABSENCE_WORDS = {'a', 'ab', 'abs', 'abst', 'absent', 'as', 'b', 'aa'}
+_PRESENT_WORDS = {'p', 'pr', 'pre', 'pres', 'present'}
 
-def _ocr_for_absence(gray_upscaled):
+def _ocr_for_status(gray_upscaled):
     """
-    Try to read absence markers ('A', 'ABS', etc.) from a preprocessed gray image.
-    Returns (found_absence: bool, confidence: float).
+    Try to read status markers ('A', 'ABS', 'P', 'PR') from a preprocessed gray image.
+    Returns (status: str ['ABSENT', 'PRESENT', None], confidence: float).
     """
-    # PSM 10 = single character  (best for lone 'A' mark)
-    cfg10 = r'--psm 10 --oem 1 -c tessedit_char_whitelist=AaBbSs'
-    # PSM 7  = single line       (best for 'ABS', 'Abs')
-    cfg7  = r'--psm 7  --oem 1 -c tessedit_char_whitelist=AaBbSs'
+    # PSM 10 = single character  (best for lone 'A' or 'P')
+    cfg10 = r'--psm 10 --oem 1 -c tessedit_char_whitelist=AaBbSsPpRrEeNnTt'
+    # PSM 7  = single line       (best for 'ABS', 'Abs', 'PR')
+    cfg7  = r'--psm 7  --oem 1 -c tessedit_char_whitelist=AaBbSsPpRrEeNnTt'
 
     results = []
     for cfg in (cfg10, cfg7):
@@ -106,8 +107,10 @@ def _ocr_for_absence(gray_upscaled):
     for text, conf in results:
         for token in text.split():
             if token in _ABSENCE_WORDS:
-                return True, max(conf, 55.0)
-    return False, 0.0
+                return 'ABSENT', max(conf, 55.0)
+            if token in _PRESENT_WORDS:
+                return 'PRESENT', max(conf, 55.0)
+    return None, 0.0
 
 def classify_seance_cell(cell_img):
     """
@@ -117,9 +120,10 @@ def classify_seance_cell(cell_img):
 
     Decision logic:
       1. Truly blank  (density < 0.012)  → ABSENT  95%
-      2. OCR detects 'A'/'ABS'/etc.      → ABSENT  max(ocr_conf, 60)
-      3. Dense content (density > 0.10)  → PRESENT  min(85, density*400)
-      4. Ambiguous (mid density, no OCR) → PRESENT  ~45% (needs admin review)
+      2. OCR detects 'A'/'ABS'           → ABSENT  max(ocr_conf, 60)
+      3. OCR detects 'P'/'PR'            → PRESENT max(ocr_conf, 60)
+      4. Contour/Density                 → PRESENT (if max contour > 150 or density > 0.08)
+      5. Ambiguous (mid density, no OCR) → PRESENT ~45% (needs admin review)
     """
     if cell_img is None or cell_img.size == 0:
         return False, 50.0
@@ -129,34 +133,45 @@ def classify_seance_cell(cell_img):
         return False, 50.0
 
     # --- Step 1: pixel density (fixed threshold 200) ---
-    density = pixel_density(cell_img, threshold=200)
+    gray = cv2.cvtColor(cell_img, cv2.COLOR_BGR2GRAY)
+    _, binary = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY_INV)
+    dark_pixels = cv2.countNonZero(binary)
+    density = dark_pixels / (h * w)
 
-    BLANK_DENSITY      = 0.012   # truly empty cell
-    SIGNATURE_DENSITY  = 0.10    # definite signature / heavy mark
+    BLANK_DENSITY = 0.012
 
     if density < BLANK_DENSITY:
         return False, 95.0   # clearly empty → absent
 
     # --- Step 2: prep image for OCR ---
-    gray = cv2.cvtColor(cell_img, cv2.COLOR_BGR2GRAY)
     # 3x upscale with bicubic (Tesseract performs better on larger images)
     up = cv2.resize(gray, (w * 3, h * 3), interpolation=cv2.INTER_CUBIC)
     # CLAHE: normalise contrast (helps with red/faded ink)
     clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(4, 4))
     up = clahe.apply(up)
     # Otsu binarise (invert so text is white on black for Tesseract)
-    _, thresh = cv2.threshold(up, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+    _, thresh_up = cv2.threshold(up, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
     # Slight dilation to reconnect broken strokes
     kern = np.ones((2, 2), np.uint8)
-    thresh = cv2.dilate(thresh, kern, iterations=1)
+    thresh_up = cv2.dilate(thresh_up, kern, iterations=1)
 
-    found_absence, abs_conf = _ocr_for_absence(thresh)
-    if found_absence:
-        return False, round(abs_conf, 1)   # absence marker detected
+    status, ocr_conf = _ocr_for_status(thresh_up)
+    if status == 'ABSENT':
+        return False, round(ocr_conf, 1)
+    elif status == 'PRESENT':
+        return True, round(ocr_conf, 1)
 
-    # --- Step 3: density-based fallback ---
-    if density > SIGNATURE_DENSITY:
-        conf = min(85.0, round(density * 400, 1))
+    # --- Step 3: Explicit wet signature detection ---
+    # We use OpenCV contours to find large sprawling structures typical of signatures
+    contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    max_contour_area = max([cv2.contourArea(c) for c in contours]) if contours else 0
+    
+    SIGNATURE_DENSITY_THRESH = 0.08
+    SIGNATURE_AREA_THRESH = 150.0  # Pixels squared. A single "P" or "A" is usually smaller
+
+    if density > SIGNATURE_DENSITY_THRESH or max_contour_area > SIGNATURE_AREA_THRESH:
+        # It's a signature!
+        conf = min(85.0, round(density * 400 + max_contour_area * 0.1, 1))
         return True, conf
 
     # --- Step 4: ambiguous zone ---
@@ -266,10 +281,11 @@ def process_document(doc_id, debug=False):
     used_physical = set()
     
     for idx, row in student_df.iterrows():
-        official_n_apo = str(row.get("n_apo", ""))
-        official_nom = str(row.get("nom", ""))
-        official_prenom = str(row.get("prenom", ""))
-        official_full = f"{official_n_apo} {official_nom} {official_prenom}".strip()
+        official_n_apo = str(row.get("n_apo", "")).strip()
+        official_nom = str(row.get("nom", "")).strip()
+        official_prenom = str(row.get("prenom", "")).strip()
+        
+        official_alpha = f"{official_nom} {official_prenom}".strip().lower()
         
         best_match_idx = -1
         best_conf = 0.0
@@ -277,7 +293,26 @@ def process_document(doc_id, debug=False):
         for p_idx, p_data in enumerate(physical_data):
             if p_idx in used_physical:
                 continue
-            conf = fuzz.token_set_ratio(official_full.lower(), p_data["ocr_raw"].lower()) / 100.0
+                
+            ocr_raw = p_data["ocr_raw"].lower()
+            ocr_digits = "".join(c for c in ocr_raw if c.isdigit())
+            ocr_alpha = " ".join(w for w in ocr_raw.split() if not w.isdigit())
+            
+            id_score = 0.0
+            if ocr_digits and official_n_apo:
+                # If they have digits, check similarity
+                from rapidfuzz import distance
+                lev = distance.Levenshtein.distance(ocr_digits, official_n_apo)
+                m_len = max(len(ocr_digits), len(official_n_apo))
+                id_score = (1.0 - lev / m_len) * 100.0 if m_len > 0 else 0.0
+                
+            name_score = fuzz.token_sort_ratio(official_alpha, ocr_alpha)
+            
+            if id_score >= 80:
+                conf = (0.7 * id_score + 0.3 * name_score) / 100.0
+            else:
+                conf = name_score / 100.0
+                
             if conf > best_conf:
                 best_conf = conf
                 best_match_idx = p_idx
