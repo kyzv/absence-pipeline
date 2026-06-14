@@ -179,7 +179,7 @@ def classify_seance_cell(cell_img):
     # Default PRESENT with low confidence so admin can review
     return True, round(density * 300, 1)
 
-def process_document(doc_id, debug=False):
+def process_document(doc_id, debug=False, csv_override=None):
     rows_dir = f"data/rows/{doc_id}"
     json_path = f"data/output/{doc_id}.json"
     debug_dir = f"debug/{doc_id}"
@@ -204,7 +204,14 @@ def process_document(doc_id, debug=False):
 
     # Load filiere and map to CSV
     filiere_name = doc_data.get("filiere", {}).get("value", "")
-    mapped_csv_file = map_filiere_to_csv(filiere_name)
+    
+    if csv_override:
+        mapped_csv_file = csv_override
+        print(f"Using explicitly provided CSV: {mapped_csv_file}")
+    else:
+        mapped_csv_file = map_filiere_to_csv(filiere_name)
+        if mapped_csv_file:
+            print(f"Mapped filiere '{filiere_name}' to CSV: {mapped_csv_file}")
     
     if not mapped_csv_file:
         print(f"WARNING: Could not map filiere '{filiere_name}' to any CSV file in config/groups.")
@@ -215,7 +222,6 @@ def process_document(doc_id, debug=False):
             student_df = pd.read_csv(csv_path)
             student_df.columns = student_df.columns.str.strip().str.lower()
             doc_data["student_list_csv"] = mapped_csv_file
-            print(f"Mapped filiere '{filiere_name}' to CSV: {mapped_csv_file}")
         else:
             print(f"ERROR: Mapped CSV {csv_path} does not exist.")
             student_df = pd.DataFrame(columns=["n_apo", "nom", "prenom"])
@@ -397,5 +403,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Extract student absences from row images.")
     parser.add_argument('doc_id', help="Document ID to process (e.g., doc_8)")
     parser.add_argument('--debug', action='store_true', help="Enable debug output")
+    parser.add_argument('--csv', help="Override the CSV file mapping", default=None)
     args = parser.parse_args()
-    process_document(args.doc_id, args.debug)
+    process_document(args.doc_id, args.debug, args.csv)
