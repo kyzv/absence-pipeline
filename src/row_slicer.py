@@ -65,7 +65,7 @@ def process_document(doc_id):
             print(f"  Warning: Could not detect valid horizontal lines in {filename}. Skipping.")
             continue
 
-        # Slice the rows between consecutive horizontal lines
+        is_first_valid_row = True
         for i in range(len(h_lines) - 1):
             y_start = h_lines[i]
             y_end = h_lines[i+1]
@@ -78,6 +78,35 @@ def process_document(doc_id):
                 continue
                 
             row_img = img[y_start:y_end, :]
+            
+            # Check if this first row is a header row (N Apo, Nom, Prenom)
+            if is_first_valid_row:
+                import pytesseract
+                padded_row = cv2.copyMakeBorder(row_img, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=[255, 255, 255])
+                # Remove INTER_CUBIC because it breaks OCR on some images (e.g. doc_4)
+                row_resized = cv2.resize(padded_row, None, fx=2, fy=2)
+                text = pytesseract.image_to_string(row_resized, config='--psm 7').strip().lower()
+                
+                # If text is completely empty, it might be a spurious border line or artifact.
+                # Drop it, and KEEP is_first_valid_row = True to check the next row!
+                if not text:
+                    print(f"  Dropped empty line/artifact from {filename}")
+                    continue
+                    
+                is_first_valid_row = False
+                
+                # If there's an 8 digit Apo number, it is DEFINITELY a student.
+                if not re.search(r'\d{7,10}', text):
+                    # It doesn't have a student number. Is it the header?
+                    # Check for any of the header words.
+                    has_apo = 'apo' in text or 'ap0' in text or 'n°' in text
+                    has_nom = 'nom' in text
+                    has_prenom = 'prenom' in text or 'prénom' in text
+                    has_seance = 'sean' in text or 'séan' in text or 'san' in text
+                    
+                    if has_apo or has_nom or has_prenom or has_seance:
+                        print(f"  Dropped header row from {filename} (Text: {text[:30]})")
+                        continue
             
             # Save the row
             out_path = f"{out_dir}/row_{global_row_counter:03d}.jpg"

@@ -32,26 +32,35 @@ def get_horizontal_lines(img):
 
 def find_anchor_line_y(img, h_lines):
     """
-    Finds the y-coordinate of the bottom line of the 'N° Apo', 'Nom', 'Prenom' row.
-    This marks the exact split point between Header and Table.
+    Verification Loop: Iterates downwards.
+    We are looking for the "N° Apo", "Nom", "Prenom" row.
+    If OCR fails to find it, we look for the FIRST STUDENT ROW (containing a 7+ digit number).
+    If we find a student, we assume the row immediately above it is the header, and crop there.
     """
-    # Look through the first 15 rows
-    for i in range(min(15, len(h_lines) - 1)):
-        # Crop the row
-        row_crop = img[h_lines[i]:h_lines[i+1], :]
-        row_resized = cv2.resize(row_crop, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
+    for i in range(min(25, len(h_lines) - 1)):
+        first_row_crop = img[h_lines[i]:h_lines[i+1], :]
+        if first_row_crop.shape[0] < 15: continue
         
+        row_resized = cv2.resize(first_row_crop, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
         text = pytesseract.image_to_string(row_resized, config='--psm 7').strip().lower()
         
-        # Check for our specific anchor keywords
-        keywords = ['apo', 'ap0', 'nom', 'prenom', 'prénom']
-        matches = sum(1 for kw in keywords if kw in text)
+        # 1. Look for the explicit header
+        has_apo = 'apo' in text or 'ap0' in text or 'n°' in text
+        has_nom = 'nom' in text
+        has_prenom = 'prenom' in text or 'prénom' in text
         
-        if matches >= 1:
-            # Found the anchor row! The table starts strictly below this row.
-            return h_lines[i+1]
+        # Require at least two of the three main column headers to avoid "Nom du module"
+        if (has_apo and has_nom) or (has_nom and has_prenom) or (has_apo and has_prenom):
+            return h_lines[i]
             
-    return -1
+        # 2. Look for a student row (fallback)
+        # Students have N_Apo which is a 7 to 10 digit number.
+        if re.search(r'\d{7,10}', text):
+            # We found a student! The header row MUST be the row right above it.
+            return h_lines[max(0, i - 1)]
+            
+    # Absolute fallback to first line
+    return h_lines[0]
 
 def natural_sorted(files):
     def key(f):
@@ -93,9 +102,8 @@ def process_document(doc_id):
             split_y = find_anchor_line_y(img, h_lines)
             
             if split_y == -1:
-                print("  Warning: Could not find 'N° Apo' anchor via OCR. Assuming row 7.")
-                # Fallback to row 7 (index 8)
-                split_y = h_lines[min(8, len(h_lines)-1)]
+                print("  Warning: Could not find 'N° Apo' anchor via OCR. Falling back to the first horizontal line.")
+                split_y = h_lines[0]
             
             header = img[:split_y, :]
             table = img[split_y:, :]
