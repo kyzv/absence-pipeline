@@ -32,18 +32,23 @@ def get_horizontal_lines(img):
 
 def find_anchor_line_y(img, h_lines):
     """
-    Finds the y-coordinate of the bottom line of the 'N° Apo' row.
+    Finds the y-coordinate of the bottom line of the 'N° Apo', 'Nom', 'Prenom' row.
     This marks the exact split point between Header and Table.
     """
     # Look through the first 15 rows
     for i in range(min(15, len(h_lines) - 1)):
-        # Crop the first 800 pixels of the row (which should contain the Apo/Nom text)
-        row_crop = img[h_lines[i]:h_lines[i+1], :800]
+        # Crop the row
+        row_crop = img[h_lines[i]:h_lines[i+1], :]
         row_resized = cv2.resize(row_crop, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
         
         text = pytesseract.image_to_string(row_resized, config='--psm 7').strip().lower()
-        if 'apo' in text or 'ap0' in text or 'n°' in text or 'n*' in text:
-            # Found the anchor row! The table starts below this row.
+        
+        # Check for our specific anchor keywords
+        keywords = ['apo', 'ap0', 'nom', 'prenom', 'prénom']
+        matches = sum(1 for kw in keywords if kw in text)
+        
+        if matches >= 1:
+            # Found the anchor row! The table starts strictly below this row.
             return h_lines[i+1]
             
     return -1

@@ -114,16 +114,10 @@ def _ocr_for_status(gray_upscaled):
 
 def classify_seance_cell(cell_img):
     """
-    Classify a seance cell as present or absent.
-
-    Returns (is_present: bool, confidence: float [0-100])
-
-    Decision logic:
-      1. Truly blank  (density < 0.012)  → ABSENT  95%
-      2. OCR detects 'A'/'ABS'           → ABSENT  max(ocr_conf, 60)
-      3. OCR detects 'P'/'PR'            → PRESENT max(ocr_conf, 60)
-      4. Contour/Density                 → PRESENT (if max contour > 150 or density > 0.08)
-      5. Ambiguous (mid density, no OCR) → PRESENT ~45% (needs admin review)
+    Classify a seance cell as present or absent using a hybrid approach.
+    1. Blank (Density < 0.015) -> ABSENT (95%)
+    2. Huge Signature (Area > 150 or Density > 0.08) -> PRESENT (85%)
+    3. Small ink (Ambiguous) -> Targeted OCR for 'A'/'ABS'/'P'
     """
     if cell_img is None or cell_img.size == 0:
         return False, 50.0
@@ -132,52 +126,42 @@ def classify_seance_cell(cell_img):
     if h < 4 or w < 4:
         return False, 50.0
 
-    # --- Step 1: pixel density (fixed threshold 200) ---
+    # --- Step 1: Pixel density ---
     gray = cv2.cvtColor(cell_img, cv2.COLOR_BGR2GRAY)
     _, binary = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY_INV)
     dark_pixels = cv2.countNonZero(binary)
     density = dark_pixels / (h * w)
 
-    BLANK_DENSITY = 0.012
-
-    if density < BLANK_DENSITY:
+    if density < 0.015:
         return False, 95.0   # clearly empty → absent
 
-    # --- Step 2: prep image for OCR ---
-    # 3x upscale with bicubic (Tesseract performs better on larger images)
+    # --- Step 2: Explicit wet signature detection ---
+    contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    max_contour_area = max([cv2.contourArea(c) for c in contours]) if contours else 0
+    
+    if density > 0.08 or max_contour_area > 150.0:
+        # It's a signature!
+        conf = min(85.0, round(density * 400 + max_contour_area * 0.1, 1))
+        return True, conf
+
+    # --- Step 3: Targeted OCR for small ambiguous ink ---
+    # It could be 'abs', 'A', 'P', or a small checkmark.
     up = cv2.resize(gray, (w * 3, h * 3), interpolation=cv2.INTER_CUBIC)
-    # CLAHE: normalise contrast (helps with red/faded ink)
     clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(4, 4))
     up = clahe.apply(up)
-    # Otsu binarise (invert so text is white on black for Tesseract)
     _, thresh_up = cv2.threshold(up, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-    # Slight dilation to reconnect broken strokes
     kern = np.ones((2, 2), np.uint8)
     thresh_up = cv2.dilate(thresh_up, kern, iterations=1)
 
     status, ocr_conf = _ocr_for_status(thresh_up)
     if status == 'ABSENT':
-        return False, round(ocr_conf, 1)
+        return False, round(max(ocr_conf, 60.0), 1)
     elif status == 'PRESENT':
-        return True, round(ocr_conf, 1)
+        return True, round(max(ocr_conf, 60.0), 1)
 
-    # --- Step 3: Explicit wet signature detection ---
-    # We use OpenCV contours to find large sprawling structures typical of signatures
-    contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    max_contour_area = max([cv2.contourArea(c) for c in contours]) if contours else 0
-    
-    SIGNATURE_DENSITY_THRESH = 0.08
-    SIGNATURE_AREA_THRESH = 150.0  # Pixels squared. A single "P" or "A" is usually smaller
-
-    if density > SIGNATURE_DENSITY_THRESH or max_contour_area > SIGNATURE_AREA_THRESH:
-        # It's a signature!
-        conf = min(85.0, round(density * 400 + max_contour_area * 0.1, 1))
-        return True, conf
-
-    # --- Step 4: ambiguous zone ---
-    # Small mark but OCR found nothing; could be faint signature or unread 'A'
-    # Default PRESENT with low confidence so admin can review
-    return True, round(density * 300, 1)
+    # If OCR fails to find any text, but ink is present, it might be a small checkmark or unintelligible scrawl.
+    # Default to Absent with low confidence (40%) to force manual review.
+    return False, 40.0
 
 def process_document(doc_id, debug=False, csv_override=None):
     rows_dir = f"data/rows/{doc_id}"

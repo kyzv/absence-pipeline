@@ -1,0 +1,509 @@
+{
+    "filiere": "Informatique décisionnelle et statistiques 2ème année",
+    "annee": "2025-2026",
+    "documents": {
+        "doc_11": {
+            "metadata": {
+                "filiere": "Informatique décisionnelle et statistiques 2ème année",
+                "annee": "2025-2026",
+                "enseignant": "Pr. Rashid AitDaoud",
+                "module": "Exploration des Donnees",
+                "seances": {
+                    "seance1": {
+                        "date": "10/04/2026",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": "exm"
+                    },
+                    "seance2": {
+                        "date": "10/04/2026",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": "exm"
+                    },
+                    "seance3": {
+                        "date": "14/04/2026",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": "rat"
+                    },
+                    "seance4": {
+                        "date": "",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": ""
+                    },
+                    "seance5": {
+                        "date": "",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": ""
+                    },
+                    "seance6": {
+                        "date": "",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": ""
+                    },
+                    "seance7": {
+                        "date": "",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": ""
+                    },
+                    "seance8": {
+                        "date": "",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": ""
+                    },
+                    "seance9": {
+                        "date": "",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": ""
+                    },
+                    "seance10": {
+                        "date": "",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": ""
+                    }
+                }
+            },
+            "student_list_csv": "Informatique_decisionnelle_et_statistiques_2eme_annee.csv",
+            "absences": [
+                {
+                    "n_apo": "24004986",
+                    "nom": "ANAHKAM",
+                    "prenom": "SANA"
+                },
+                {
+                    "n_apo": "24009178",
+                    "nom": "JAWHARI",
+                    "prenom": "MOHAMED-ANOUAR"
+                },
+                {
+                    "n_apo": "24016791",
+                    "nom": "BASSIR",
+                    "prenom": "SALMA"
+                },
+                {
+                    "n_apo": "24016801",
+                    "nom": "ELHARUSH",
+                    "prenom": "IMANE"
+                },
+                {
+                    "n_apo": "24004074",
+                    "nom": "ABIDATE",
+                    "prenom": "BADR"
+                },
+                {
+                    "n_apo": "23009461",
+                    "nom": "CHAKNINE",
+                    "prenom": "IHSSANE"
+                },
+                {
+                    "n_apo": "24016799",
+                    "nom": "EL HADNAOUI",
+                    "prenom": "ILYASSE"
+                },
+                {
+                    "n_apo": "24016772",
+                    "nom": "BELKACEM",
+                    "prenom": "AYA"
+                },
+                {
+                    "n_apo": "24016807",
+                    "nom": "BOUHOUT",
+                    "prenom": "AMINE"
+                },
+                {
+                    "n_apo": "24016815",
+                    "nom": "ABBASSI SABER",
+                    "prenom": "RANIA"
+                },
+                {
+                    "n_apo": "24016823",
+                    "nom": "MAAIZI",
+                    "prenom": "MAROUA"
+                },
+                {
+                    "n_apo": "23002599",
+                    "nom": "ARJILA",
+                    "prenom": "ELMEHDI"
+                },
+                {
+                    "n_apo": "24016820",
+                    "nom": "BEN ZAHOUM",
+                    "prenom": "MOHAMMED AMINE"
+                },
+                {
+                    "n_apo": "24016775",
+                    "nom": "AIT ECHCHEIKH",
+                    "prenom": "MOHAMMED"
+                },
+                {
+                    "n_apo": "24008282",
+                    "nom": "LOUZ",
+                    "prenom": "HAJAR"
+                },
+                {
+                    "n_apo": "24016795",
+                    "nom": "EL HASBI",
+                    "prenom": "YASMINE"
+                },
+                {
+                    "n_apo": "23010280",
+                    "nom": "LAGHYATI",
+                    "prenom": "ZAID"
+                },
+                {
+                    "n_apo": "24007575",
+                    "nom": "FETTAH",
+                    "prenom": "HIBA"
+                },
+                {
+                    "n_apo": "23001847",
+                    "nom": "KAMALI",
+                    "prenom": "IBTISSAM"
+                },
+                {
+                    "n_apo": "24016800",
+                    "nom": "KHAIDOUNE",
+                    "prenom": "SAIF EDDINE"
+                },
+                {
+                    "n_apo": "24016769",
+                    "nom": "AMWAHB",
+                    "prenom": "WIAM"
+                },
+                {
+                    "n_apo": "24016798",
+                    "nom": "BOUCHTA",
+                    "prenom": "ADAM"
+                },
+                {
+                    "n_apo": "24016818",
+                    "nom": "GTAIB",
+                    "prenom": "MOHAMED-AMINE"
+                },
+                {
+                    "n_apo": "24016824",
+                    "nom": "RMITI",
+                    "prenom": "KHADIJA"
+                },
+                {
+                    "n_apo": "24016770",
+                    "nom": "INANE",
+                    "prenom": "OUSSAMA"
+                },
+                {
+                    "n_apo": "24016771",
+                    "nom": "EL BOUSSAKNI",
+                    "prenom": "MOHSINE"
+                },
+                {
+                    "n_apo": "24016810",
+                    "nom": "BENKHALOUK",
+                    "prenom": "AHLAM"
+                },
+                {
+                    "n_apo": "24016764",
+                    "nom": "OUFELLA",
+                    "prenom": "MOHAMED"
+                },
+                {
+                    "n_apo": "23014644",
+                    "nom": "MACHTALAY",
+                    "prenom": "YOUSSEF"
+                },
+                {
+                    "n_apo": "23014638",
+                    "nom": "KHALFI",
+                    "prenom": "NAJWA"
+                },
+                {
+                    "n_apo": "23014518",
+                    "nom": "ACHIB",
+                    "prenom": "HANANE"
+                },
+                {
+                    "n_apo": "24006238",
+                    "nom": "AGOUGIL",
+                    "prenom": "ADAM"
+                },
+                {
+                    "n_apo": "24016767",
+                    "nom": "AHNICH",
+                    "prenom": "IMAD"
+                },
+                {
+                    "n_apo": "23008479",
+                    "nom": "AIDI",
+                    "prenom": "FATIMA-EZZAHRA"
+                },
+                {
+                    "n_apo": "24016788",
+                    "nom": "AIT BOUSSALEM",
+                    "prenom": "SALMAN"
+                },
+                {
+                    "n_apo": "24016780",
+                    "nom": "AIT DAMI",
+                    "prenom": "HAMZA"
+                },
+                {
+                    "n_apo": "24016778",
+                    "nom": "AIT OUAOUCH",
+                    "prenom": "IMRANE"
+                },
+                {
+                    "n_apo": "24016816",
+                    "nom": "ALAOUI MHAMDI",
+                    "prenom": "ABDELLAH"
+                },
+                {
+                    "n_apo": "24016753",
+                    "nom": "ANTAR",
+                    "prenom": "AMINA"
+                },
+                {
+                    "n_apo": "24016761",
+                    "nom": "ASSOUKA",
+                    "prenom": "ABDELMAJID"
+                },
+                {
+                    "n_apo": "24016777",
+                    "nom": "AZALMAD",
+                    "prenom": "KAOUTAR"
+                },
+                {
+                    "n_apo": "24016782",
+                    "nom": "BAALLA",
+                    "prenom": "KAOUTAR"
+                },
+                {
+                    "n_apo": "24016776",
+                    "nom": "BARROU",
+                    "prenom": "ILIASS"
+                },
+                {
+                    "n_apo": "24016789",
+                    "nom": "BENDAMI",
+                    "prenom": "IKRAM"
+                },
+                {
+                    "n_apo": "24016794",
+                    "nom": "BOUBKER",
+                    "prenom": "ABDERRAHMANE"
+                },
+                {
+                    "n_apo": "24004651",
+                    "nom": "BOURHIM",
+                    "prenom": "ISHAQ"
+                },
+                {
+                    "n_apo": "23000279",
+                    "nom": "CHEMMAM",
+                    "prenom": "AYOUB"
+                },
+                {
+                    "n_apo": "24001784",
+                    "nom": "DAMRANE",
+                    "prenom": "NOUHAILA"
+                },
+                {
+                    "n_apo": "24016766",
+                    "nom": "DAOUARI",
+                    "prenom": "ZIAD"
+                },
+                {
+                    "n_apo": "24016819",
+                    "nom": "ED.DARDOURI",
+                    "prenom": "NAJIA"
+                },
+                {
+                    "n_apo": "24005445",
+                    "nom": "EL ALI",
+                    "prenom": "OUMAIMA"
+                },
+                {
+                    "n_apo": "23003670",
+                    "nom": "EL BADIA",
+                    "prenom": "ABDELLAH"
+                },
+                {
+                    "n_apo": "24016814",
+                    "nom": "EL BOUDALI",
+                    "prenom": "ZAKARIA"
+                },
+                {
+                    "n_apo": "23000409",
+                    "nom": "EL HADDAD",
+                    "prenom": "YAHYA"
+                },
+                {
+                    "n_apo": "24016773",
+                    "nom": "EL HAJLY",
+                    "prenom": "BAHAADDINE"
+                },
+                {
+                    "n_apo": "24016765",
+                    "nom": "EL MAHMOUDI",
+                    "prenom": "IKRAM"
+                },
+                {
+                    "n_apo": "24016769",
+                    "nom": "ELAOUANI",
+                    "prenom": "NOUHAILA"
+                },
+                {
+                    "n_apo": "24016787",
+                    "nom": "ESSADDIKI",
+                    "prenom": "DOHA"
+                },
+                {
+                    "n_apo": "24016817",
+                    "nom": "FALFLAOUI",
+                    "prenom": "ILYASSE"
+                },
+                {
+                    "n_apo": "24016796",
+                    "nom": "FARTAS",
+                    "prenom": "HAMZA"
+                },
+                {
+                    "n_apo": "24016813",
+                    "nom": "FIKRI",
+                    "prenom": "EL MEHDI"
+                },
+                {
+                    "n_apo": "24016806",
+                    "nom": "GHANIMI",
+                    "prenom": "IBRAHIM"
+                },
+                {
+                    "n_apo": "24016783",
+                    "nom": "GOUHMID",
+                    "prenom": "AYMANE"
+                },
+                {
+                    "n_apo": "24016781",
+                    "nom": "GUERNAOUI",
+                    "prenom": "FATIMA-EZZAHRAE"
+                },
+                {
+                    "n_apo": "24016756",
+                    "nom": "HAFIDI",
+                    "prenom": "MOHAMED"
+                },
+                {
+                    "n_apo": "24016760",
+                    "nom": "HAJJI",
+                    "prenom": "ACHRAF"
+                },
+                {
+                    "n_apo": "24016785",
+                    "nom": "HAYBOUL",
+                    "prenom": "MARIAM"
+                },
+                {
+                    "n_apo": "24016812",
+                    "nom": "IGOURRAMEN",
+                    "prenom": "SALAH EDDINE"
+                },
+                {
+                    "n_apo": "24001227",
+                    "nom": "KHAYATI",
+                    "prenom": "MOHAMED AMINE"
+                },
+                {
+                    "n_apo": "24016784",
+                    "nom": "LAHYANI",
+                    "prenom": "FATIMA ZAHRA"
+                },
+                {
+                    "n_apo": "24016803",
+                    "nom": "LAKHAL",
+                    "prenom": "AYMEN"
+                },
+                {
+                    "n_apo": "24002578",
+                    "nom": "LEKHDAR",
+                    "prenom": "INSAF"
+                },
+                {
+                    "n_apo": "24016755",
+                    "nom": "MAHDAM",
+                    "prenom": "MOHAMED AMINE"
+                },
+                {
+                    "n_apo": "24016804",
+                    "nom": "MAZGAR",
+                    "prenom": "IMANE"
+                },
+                {
+                    "n_apo": "24016793",
+                    "nom": "MIRI",
+                    "prenom": "OUSSAMA"
+                },
+                {
+                    "n_apo": "24016774",
+                    "nom": "OUIAZANE",
+                    "prenom": "NIAMA"
+                },
+                {
+                    "n_apo": "24001708",
+                    "nom": "OULAAROUSSI",
+                    "prenom": "HIBA"
+                },
+                {
+                    "n_apo": "24016805",
+                    "nom": "SALHI",
+                    "prenom": "GHITA"
+                },
+                {
+                    "n_apo": "24002951",
+                    "nom": "SAMIA",
+                    "prenom": "MAROUA"
+                },
+                {
+                    "n_apo": "24008307",
+                    "nom": "TAOUFIQ",
+                    "prenom": "AYMEN"
+                },
+                {
+                    "n_apo": "24016809",
+                    "nom": "TARCHIHI",
+                    "prenom": "IBTISSAM"
+                },
+                {
+                    "n_apo": "24016790",
+                    "nom": "TMOUH",
+                    "prenom": "YOUSSEF"
+                },
+                {
+                    "n_apo": "24003681",
+                    "nom": "ZAIR",
+                    "prenom": "MOHAMED"
+                },
+                {
+                    "n_apo": "24016768",
+                    "nom": "ZEMZEM",
+                    "prenom": "RIDA"
+                },
+                {
+                    "n_apo": "24016821",
+                    "nom": "ZOUNI",
+                    "prenom": "DOUNIA"
+                },
+                {
+                    "n_apo": "24005158",
+                    "nom": "ZRAIBI",
+                    "prenom": "AYMEN"
+                }
+            ]
+        }
+    }
+}

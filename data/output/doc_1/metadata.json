@@ -14,7 +14,7 @@
     },
     "module": {
         "value": "Python pour le data science",
-        "confidence": 0.59
+        "confidence": 0.63
     },
     "seances": {
         "seance1": {
@@ -28,10 +28,10 @@
             },
             "heure_fin": {
                 "value": "10h30",
-                "confidence": 0.91
+                "confidence": 0.87
             },
             "type": {
-                "value": "CYS",
+                "value": "CVS",
                 "confidence": 0.0
             }
         },
@@ -45,12 +45,12 @@
                 "confidence": 0.0
             },
             "heure_fin": {
-                "value": "12h00",
-                "confidence": 0.72
+                "value": "",
+                "confidence": 0.0
             },
             "type": {
                 "value": "crs",
-                "confidence": 0.8
+                "confidence": 0.75
             }
         },
         "seance3": {
@@ -64,11 +64,11 @@
             },
             "heure_fin": {
                 "value": "14h30",
-                "confidence": 0.52
+                "confidence": 0.53
             },
             "type": {
                 "value": "cnt",
-                "confidence": 0.51
+                "confidence": 0.45
             }
         },
         "seance4": {
@@ -82,11 +82,11 @@
             },
             "heure_fin": {
                 "value": "12h40",
-                "confidence": 0.71
+                "confidence": 0.73
             },
             "type": {
                 "value": "crs",
-                "confidence": 0.42
+                "confidence": 0.47
             }
         },
         "seance5": {
@@ -100,11 +100,11 @@
             },
             "heure_fin": {
                 "value": "10h30",
-                "confidence": 0.93
+                "confidence": 0.91
             },
             "type": {
-                "value": "cigs .",
-                "confidence": 0.29
+                "value": "crs",
+                "confidence": 0.38
             }
         },
         "seance6": {
@@ -113,22 +113,22 @@
                 "confidence": 0.0
             },
             "heure_debut": {
-                "value": "",
-                "confidence": 0.0
+                "value": "10h00",
+                "confidence": 0.62
             },
             "heure_fin": {
                 "value": "12h00",
-                "confidence": 0.69
+                "confidence": 0.62
             },
             "type": {
                 "value": "crs",
-                "confidence": 0.46
+                "confidence": 0.47
             }
         },
         "seance7": {
             "date": {
                 "value": "13/12/2025",
-                "confidence": 0.5
+                "confidence": 0.62
             },
             "heure_debut": {
                 "value": "",
@@ -140,7 +140,7 @@
             },
             "type": {
                 "value": "tp",
-                "confidence": 0.3
+                "confidence": 0.32
             }
         },
         "seance8": {
@@ -158,13 +158,13 @@
             },
             "type": {
                 "value": "tp",
-                "confidence": 0.53
+                "confidence": 0.55
             }
         },
         "seance9": {
             "date": {
-                "value": "12/02/?",
-                "confidence": 0.23
+                "value": "01/02/?",
+                "confidence": 0.17
             },
             "heure_debut": {
                 "value": "",
@@ -176,13 +176,13 @@
             },
             "type": {
                 "value": "p.",
-                "confidence": 0.41
+                "confidence": 0.4
             }
         },
         "seance10": {
             "date": {
                 "value": "29/02/2025",
-                "confidence": 0.54
+                "confidence": 0.52
             },
             "heure_debut": {
                 "value": "",
@@ -194,7 +194,7 @@
             },
             "type": {
                 "value": "crs",
-                "confidence": 0.1
+                "confidence": 0.13
             }
         }
     },
