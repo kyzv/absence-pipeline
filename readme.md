@@ -20,10 +20,14 @@
   - [Structure du projet](#structure-du-projet)
   - [Instalation et configuration](#instalation-et-configuration)
   - [Configuration des dictionnaires](#configuration-des-dictionnaires)
-- [Utilisation](#utilisation)
-  - [Pipeline en ligne de commande](#pipeline-en-ligne-de-commande)
-  - [Démonstration Streamlit](#démonstration-streamlit)
-- [Vue d’ensemble des modules](#vue-densemble-des-modules)
+  - [Utilisation](#utilisation)
+    - [Pipeline en ligne de commande](#pipeline-en-ligne-de-commande)
+    - [Démonstration Streamlit](#démonstration-streamlit)
+  - [Vue d’ensemble des modules](#vue-densemble-des-modules)
+  - [Format de sortie](#format-de-sortie)
+  - [Limitations et évaluation](#limitations-et-évaluation)
+  - [Perspectives d’amélioration](#perspectives-damélioration)
+  - [Remerciements](#remerciements)
 
 ---
 
@@ -140,11 +144,11 @@ Avant d’utiliser le pipeline sur vos propres documents, adaptez les fichiers d
 
 ---
 
-# Utilisation
+## Utilisation
 
 Tous les modules se lancent depuis la racine du projet.
 
-## Pipeline en ligne de commande
+### Pipeline en ligne de commande
 
 1. Placer les scans dans `data/raw/<doc_id>/` sous la forme `as1.jpg`, `as2.jpg`, etc.
 Exemple : `data/raw/doc_1/as1.jpg, as2.jpg`
@@ -182,7 +186,7 @@ Exemple : `data/raw/doc_1/as1.jpg, as2.jpg`
     ```
     ➔ Mise à jour de `data/output/doc_1.json` et création de absences.json et metadata.json dans data/output/doc_1/.
 
-## Démonstration Streamlit
+### Démonstration Streamlit
 
   ```bash
   streamlit run app.py
@@ -190,9 +194,10 @@ Exemple : `data/raw/doc_1/as1.jpg, as2.jpg`
 
 Téléversez un scan, selectioner la base de données appropriée (fichier csv), lancez le pipeline, révisez les données extraites et exportez en JSON.
 
-# Vue d’ensemble des modules
+## Vue d’ensemble des modules
 
-```graph LR
+```mermaid
+  graph LR
 
     A[Image brute] --> B(preprocessing.py<br/>Redressement, CLAHE, recadrage)
     B --> C(cropper.py<br/>Séparation en-tête / tableau)
@@ -201,5 +206,93 @@ Téléversez un scan, selectioner la base de données appropriée (fichier csv),
     E --> F(ocr_students.py<br/>OCR noms + détection absences + matching DB)
     F --> G(JSON structuré)
     D --> G
-    G --> H(app.py<br/>Streamlit demo)
-    ```
+```
+
+| Module | Rôle | Techniques clés |
+| :--- | :--- | :--- |
+| `preprocessing.py` | Préparer l’image pour l’analyse | Correction d’orientation, CLAHE dans l’espace LAB, détection de lignes par morphologie, deskew par Hough, recadrage intelligent |
+| `cropper.py` | Isoler l’en-tête et le tableau | Détection des lignes horizontales, OCR de la ligne « N° Apo », mécanisme de repli sur le numéro Apogée |
+| `ocr_header.py` | Lire les champs manuscrits de l’en-tête | Tesseract PSM-6 pour les titres imprimés, TrOCR pour l’écriture cursive, normalisation par dictionnaires et expressions régulières |
+| `row_slicer.py` | Extraire chaque ligne d’étudiant | Lignes de grille, filtrage des lignes parasites |
+| `ocr_students.py` | OCR des noms, détection de présence/absence, matching | Tesseract, distance de Levenshtein + ratio tokenisé, classification hybride (densité + OCR ciblé “Abs”/“P”) |
+| `name_matcher.py` | Associer une filière à un CSV, matcher un étudiant | Fuzzy matching avec folding des accents, score de confiance |
+| `app.py` | Interface web de démonstration | Streamlit : upload, visualisation, correction manuelle, export CSV/JSON |
+
+
+## Format de sortie
+
+Exemple de fichier JSON final (`data/output/doc_8.json`) :
+```json
+{
+  "doc_id": "doc_8",
+  "filiere": { "value": "Big Data", "confidence": 0.85 },
+  "annee": { "value": "2025-2026", "confidence": 0.9 },
+  "enseignant": { "value": "Karim sakhi", "confidence": 0.72 },
+  "module": { "value": "Exploration et viz données", "confidence": 0.65 },
+  "seances": {
+    "seance1": {
+      "date": { "value": "12/03/2026", "confidence": 0.78 },
+      "heure_debut": { "value": "8h30", "confidence": 0.85 },
+      "heure_fin": { "value": "10h00", "confidence": 0.8 },
+      "type": { "value": "crs", "confidence": 0.95 }
+    }
+  },
+  "absences": [
+    {
+      "row_index": 1,
+      "n_apo": "12345678",
+      "nom": "hamid",
+      "prenom": "ahmed",
+      "match_confidence": 95.5,
+      "ocr_raw_name": "hamd amed",
+      "sessions": {
+        "seance1": { "is_present": true, "confidence": 85.0 },
+        "seance2": { "is_present": false, "confidence": 95.0 },
+        .
+        .
+        .
+        "seance9: {"is_present": true, "confidence": 50.0}
+      }
+    }
+  ]
+}
+```
+
+L’export CSV est également disponible depuis l’interface Streamlit.
+
+---
+
+## Limitations et évaluation
+Ce projet est un Proof of Concept développé dans des conditions réelles, avec des feuilles d’absence extrêmement hétérogènes et souvent mal remplies. Voici les faiblesses majeures, énoncées sans détour :
+
+| Problème | Description |
+| :--- | :--- |
+| **OCR manuscrit non fiable** | TrOCR a été pré-entraîné sur de l’écriture anglaise. Il échoue fréquemment sur l’écriture cursive française, surtout avec la diversité des styles des enseignants. Le fuzzy matching corrige partiellement, mais pas suffisamment. |
+| **Détection d’absences incohérente** | L’heuristique densité + mini-OCR est trop fragile face à la variété des marques : signature appuyée, point discret, trait vertical, « Abs » mal orienté, ratures. Le taux de faux positifs/négatifs reste trop élevé. |
+| **Variabilité extrême des feuilles** | Nombre de colonnes de séances variable (9 à 10), fusion/séparation des colonnes « Nom » et « Prénom », cellules grisées ou non, remplissages négligés. Ratures. signatures en dehors des cellules...etc Les règles de recadrage et de découpage peuvent échouer sur certains documents. |
+| **Absence d’apprentissage supervisé** | Ni le modèle HTR ni le classifieur de présence/absence n’ont été adaptés au domaine via un entraînement sur des données locales annotées. |
+
+
+En résumé : L’architecture, le prétraitement et la modularité sont solides et démontrent la faisabilité. En revanche, les deux briques critiques (reconnaissance de l’écriture et interprétation des émargements) ne sont pas opérationnelles en l’état.
+
+---
+
+## Perspectives d’amélioration
+
+Pour rendre cet outil réellement utilisable, les pistes suivantes sont envisagées :
+
+- Fine‑tuner TrOCR sur un corpus de 200 à 300 zones d’en‑tête manuscrites de l’établissement.
+
+- Remplacer l’heuristique de détection d’absence par un classifieur supervisé (CNN ou SVM) entraîné sur des cellules annotées (Présent/Absent/Incertain).
+
+- Exploiter des API Document AI professionnelles (Google Document AI, Amazon Textract) qui gèrent nativement l’analyse de mise en page.
+
+
+- Ajouter une interface de correction manuelle avec pré‑remplissage / autocompletion intelligent et validation humaine rapide.
+
+---
+
+## Remerciements
+- Pr. Rashid AitDaoud pour son encadrement durant ce stage.
+
+- La communauté open‑source derrière OpenCV, Tesseract, Hugging Face et Streamlit.

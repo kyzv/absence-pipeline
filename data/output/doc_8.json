@@ -1,0 +1,202 @@
+{
+    "doc_id": "doc_8",
+    "filiere": {
+        "value": "Informatique décisionnelle et statistiques 2ème année",
+        "confidence": 1.0
+    },
+    "annee": {
+        "value": "2025-2026",
+        "confidence": 1.0
+    },
+    "enseignant": {
+        "value": "Pr. Rachid Aitdaoud",
+        "confidence": 0.52
+    },
+    "module": {
+        "value": "Exploration et Utilisation Données avec Python",
+        "confidence": 0.76
+    },
+    "seances": {
+        "seance1": {
+            "date": {
+                "value": "17/03/2026",
+                "confidence": 0.61
+            },
+            "heure_debut": {
+                "value": "12h20",
+                "confidence": 0.88
+            },
+            "heure_fin": {
+                "value": "14h00",
+                "confidence": 0.62
+            },
+            "type": {
+                "value": "crs",
+                "confidence": 0.69
+            }
+        },
+        "seance2": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "14h00",
+                "confidence": 0.86
+            },
+            "heure_fin": {
+                "value": "16h00",
+                "confidence": 0.74
+            },
+            "type": {
+                "value": "tp",
+                "confidence": 0.61
+            }
+        },
+        "seance3": {
+            "date": {
+                "value": "28/03/2026",
+                "confidence": 0.51
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "cnt",
+                "confidence": 0.43
+            }
+        },
+        "seance4": {
+            "date": {
+                "value": "28/03/2026",
+                "confidence": 0.55
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "14h40",
+                "confidence": 0.56
+            },
+            "type": {
+                "value": "TP",
+                "confidence": 0.4
+            }
+        },
+        "seance5": {
+            "date": {
+                "value": "31/03/2026",
+                "confidence": 0.53
+            },
+            "heure_debut": {
+                "value": "9h00",
+                "confidence": 0.66
+            },
+            "heure_fin": {
+                "value": "11h00",
+                "confidence": 0.56
+            },
+            "type": {
+                "value": "tp",
+                "confidence": 0.63
+            }
+        },
+        "seance6": {
+            "date": {
+                "value": "31/03/2026",
+                "confidence": 0.61
+            },
+            "heure_debut": {
+                "value": "11h00",
+                "confidence": 0.68
+            },
+            "heure_fin": {
+                "value": "13h00",
+                "confidence": 0.82
+            },
+            "type": {
+                "value": "tp",
+                "confidence": 0.56
+            }
+        },
+        "seance7": {
+            "date": {
+                "value": "31/03/2026",
+                "confidence": 0.5
+            },
+            "heure_debut": {
+                "value": "14h00",
+                "confidence": 0.65
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "tp",
+                "confidence": 0.41
+            }
+        },
+        "seance8": {
+            "date": {
+                "value": "31/03/2026",
+                "confidence": 0.61
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "tp",
+                "confidence": 0.4
+            }
+        },
+        "seance9": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "crs",
+                "confidence": 0.56
+            }
+        },
+        "seance10": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "tp",
+                "confidence": 0.55
+            }
+        }
+    },
+    "absences": []
+}
