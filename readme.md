@@ -273,7 +273,7 @@ Ce projet est un Proof of Concept développé dans des conditions réelles, avec
 | **Absence d’apprentissage supervisé** | Ni le modèle HTR ni le classifieur de présence/absence n’ont été adaptés au domaine via un entraînement sur des données locales annotées. |
 
 
-En résumé : L’architecture, le prétraitement et la modularité sont solides et démontrent la faisabilité. En revanche, les deux briques critiques (reconnaissance de l’écriture et interprétation des émargements) ne sont pas opérationnelles en l’état.
+> En résumé : L’architecture, le prétraitement et la modularité sont solides et démontrent la faisabilité. En revanche, les deux briques critiques (reconnaissance de l’écriture et interprétation des émargements) ne sont pas opérationnelles en l’état.
 
 ---
 
