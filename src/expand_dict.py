@@ -1,3 +1,5 @@
+"""src/expand_dict.py"""
+
 import re
 from typing import List, Dict
 

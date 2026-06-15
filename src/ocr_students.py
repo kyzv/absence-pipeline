@@ -1,3 +1,5 @@
+"""src/ocr_students.py"""
+
 import os
 import cv2
 import glob

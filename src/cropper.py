@@ -1,3 +1,5 @@
+"""src/cropper.py"""
+
 import os
 import cv2
 import glob

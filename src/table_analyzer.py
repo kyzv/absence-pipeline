@@ -1,3 +1,5 @@
+"""src/table_analyzer.py"""
+
 import os
 import cv2
 import csv

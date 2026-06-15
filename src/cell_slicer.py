@@ -1,3 +1,5 @@
+"""src/cell_slicer.py"""
+
 import os
 import cv2
 import numpy as np

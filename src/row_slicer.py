@@ -1,3 +1,5 @@
+"""src/row_slicer.py"""
+
 import os
 import cv2
 import glob

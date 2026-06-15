@@ -1,4 +1,5 @@
-# src/checkbox_detection.py
+"""src/checkbox_detection.py"""
+
 import os
 import json
 import re
