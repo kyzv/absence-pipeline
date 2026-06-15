@@ -1,9 +1,7 @@
 """
 src/preprocessing.py
 --------------------
-Step 1 of the pipeline: prepare a raw scanned absence sheet image for analysis.
 
-What this module does, in order:
   1. Load the image from disk.
   2. Fix orientation  – if the scan is portrait (h > w), rotate it to landscape.
   3. Enhance contrast – CLAHE so ink (red/blue handwriting) pops against the background.
@@ -11,7 +9,6 @@ What this module does, in order:
   5. Deskew – measure the tilt of those lines via HoughLinesP and correct it.
   6. Tight-crop – project the grid-line pixels onto each axis and cut exactly to where lines exist.
 
-Output: a clean, straight, margin-free image ready for OCR and grid analysis.
 """
 
 import cv2
@@ -25,18 +22,7 @@ import re
 
 def prepare(image_path: str) -> np.ndarray:
     """
-    Full preprocessing pipeline for one page image.
-
-    Parameters
-    ----------
-    image_path : str
-        Absolute or relative path to the raw scanned image (.jpg / .png).
-
-    Returns
-    -------
-    np.ndarray
-        A BGR image that is landscape-oriented, contrast-enhanced,
-        deskewed, and cropped to the table boundary.
+    
     """
     img = _load(image_path)
     img = _fix_orientation(img)
@@ -58,9 +44,6 @@ def natural_sort_key(filename: str):
     return [int(t) if t.isdigit() else t.lower() for t in re.split(r'(\d+)', filename)]
 
 
-# ---------------------------------------------------------------------------
-# Private helpers
-# ---------------------------------------------------------------------------
 
 def _load(path: str) -> np.ndarray:
     """Load image from disk and raise a clear error if it fails."""
@@ -101,7 +84,7 @@ def _build_line_kernels(img: np.ndarray):
 
     The horizontal kernel is 150 px wide — only a line spanning at least 150 px
     survives MORPH_OPEN.  The vertical kernel is 100 px tall for the same reason.
-    We use slightly smaller kernels here so that grid lines broken by signatures
+     uses slightly smaller kernels here so that grid lines broken by signatures
     are not completely erased.
     """
     h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (150, 1))
