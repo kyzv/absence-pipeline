@@ -20,6 +20,10 @@
   - [Structure du projet](#structure-du-projet)
   - [Instalation et configuration](#instalation-et-configuration)
   - [Configuration des dictionnaires](#configuration-des-dictionnaires)
+- [Utilisation](#utilisation)
+  - [Pipeline en ligne de commande](#pipeline-en-ligne-de-commande)
+  - [Démonstration Streamlit](#démonstration-streamlit)
+- [Vue d’ensemble des modules](#vue-densemble-des-modules)
 
 ---
 
@@ -133,3 +137,69 @@ Avant d’utiliser le pipeline sur vos propres documents, adaptez les fichiers d
     ```
 - ```config/groups/*.csv```
     Listes officielles d’étudiants, avec les colonnes n_apo, nom, prenom. L’absence de n_apo dégrade la qualité du matching.
+
+---
+
+# Utilisation
+
+Tous les modules se lancent depuis la racine du projet.
+
+## Pipeline en ligne de commande
+
+1. Placer les scans dans `data/raw/<doc_id>/` sous la forme `as1.jpg`, `as2.jpg`, etc.
+Exemple : `data/raw/doc_1/as1.jpg, as2.jpg`
+
+2. Prétraitement
+    ```bash
+    python src/preprocessing.py doc_1
+    ```
+    ➔ `as1.jpg`, `as2.jpg` ...etc pretraiter dans `data/preprocessed/`
+3. Séparation en‑tête / tableau
+
+   ```bash
+   python src/cropper.py doc_1
+   ```
+    ➔ `as1_header.jpg` et `as1_table.jpg` dans d`ata/cropped/doc_1/`.
+
+4. extraction des métadonnées
+
+    ```bash
+    python src/ocr_header.py doc_1
+    ```
+    ➔ `data/output/doc_1.json` (métadonnées).
+
+5. Découpage du tableau en lignes
+
+    ```bash
+    python src/row_slicer.py doc_1
+    ```
+    ➔ Lignes individuelles dans `data/rows/doc_1/row_001`.jpg ...
+
+6. OCR étudiants et détection d’absences
+
+    ```bash
+    python src/ocr_students.py doc_1
+    ```
+    ➔ Mise à jour de `data/output/doc_1.json` et création de absences.json et metadata.json dans data/output/doc_1/.
+
+## Démonstration Streamlit
+
+  ```bash
+  streamlit run app.py
+  ```
+
+Téléversez un scan, selectioner la base de données appropriée (fichier csv), lancez le pipeline, révisez les données extraites et exportez en JSON.
+
+# Vue d’ensemble des modules
+
+```graph LR
+
+    A[Image brute] --> B(preprocessing.py<br/>Redressement, CLAHE, recadrage)
+    B --> C(cropper.py<br/>Séparation en-tête / tableau)
+    C --> D(ocr_header.py<br/>TrOCR + fuzzy matching)
+    C --> E(row_slicer.py<br/>Découpage en lignes)
+    E --> F(ocr_students.py<br/>OCR noms + détection absences + matching DB)
+    F --> G(JSON structuré)
+    D --> G
+    G --> H(app.py<br/>Streamlit demo)
+    ```

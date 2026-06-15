@@ -1,38 +1,38 @@
 {
-    "doc_id": "doc_4",
+    "doc_id": "doc_2",
     "filiere": {
-        "value": "Informatique décisionnelle et statistiques 2ème année",
-        "confidence": 1.0
+        "value": "Bachelor en Technologie Filière Infrastructures, Traitement et Analyse de données Massives (Big Data)",
+        "confidence": 0.87
     },
     "annee": {
         "value": "2025-2026",
         "confidence": 1.0
     },
     "enseignant": {
-        "value": "the President would be written to",
-        "confidence": 0.32
+        "value": "",
+        "confidence": 0.0
     },
     "module": {
-        "value": "Deploiment d' Application Data sous linux",
-        "confidence": 0.7
+        "value": "",
+        "confidence": 0.0
     },
     "seances": {
         "seance1": {
             "date": {
-                "value": "",
-                "confidence": 0.0
+                "value": "20/02/2025",
+                "confidence": 0.63
             },
             "heure_debut": {
-                "value": "10h00",
-                "confidence": 0.72
+                "value": "",
+                "confidence": 0.0
             },
             "heure_fin": {
                 "value": "",
                 "confidence": 0.0
             },
             "type": {
-                "value": "CVS .",
-                "confidence": 0.0
+                "value": "TP",
+                "confidence": 0.46
             }
         },
         "seance2": {
@@ -45,12 +45,12 @@
                 "confidence": 0.0
             },
             "heure_fin": {
-                "value": "",
-                "confidence": 0.0
+                "value": "10h00",
+                "confidence": 0.72
             },
             "type": {
-                "value": "'",
-                "confidence": 0.0
+                "value": "crs",
+                "confidence": 0.5
             }
         },
         "seance3": {
@@ -63,18 +63,18 @@
                 "confidence": 0.0
             },
             "heure_fin": {
-                "value": "",
-                "confidence": 0.0
+                "value": "12h00",
+                "confidence": 0.84
             },
             "type": {
-                "value": "0 0",
-                "confidence": 0.0
+                "value": "tp",
+                "confidence": 0.59
             }
         },
         "seance4": {
             "date": {
-                "value": "21/02/2026",
-                "confidence": 0.57
+                "value": "10/01/2026",
+                "confidence": 0.53
             },
             "heure_debut": {
                 "value": "",
@@ -85,8 +85,8 @@
                 "confidence": 0.0
             },
             "type": {
-                "value": "0 0",
-                "confidence": 0.0
+                "value": "cnt",
+                "confidence": 0.47
             }
         },
         "seance5": {
@@ -103,14 +103,14 @@
                 "confidence": 0.0
             },
             "type": {
-                "value": "2CNB .",
-                "confidence": 0.0
+                "value": "tp",
+                "confidence": 0.67
             }
         },
         "seance6": {
             "date": {
-                "value": "20/02/?",
-                "confidence": 0.24
+                "value": "",
+                "confidence": 0.0
             },
             "heure_debut": {
                 "value": "",
@@ -121,29 +121,11 @@
                 "confidence": 0.0
             },
             "type": {
-                "value": "INS",
+                "value": "0 0",
                 "confidence": 0.0
             }
         },
         "seance7": {
-            "date": {
-                "value": "28/02/2026",
-                "confidence": 0.39
-            },
-            "heure_debut": {
-                "value": "",
-                "confidence": 0.0
-            },
-            "heure_fin": {
-                "value": "",
-                "confidence": 0.0
-            },
-            "type": {
-                "value": "EV",
-                "confidence": 0.0
-            }
-        },
-        "seance8": {
             "date": {
                 "value": "",
                 "confidence": 0.0
@@ -161,6 +143,24 @@
                 "confidence": 0.11
             }
         },
+        "seance8": {
+            "date": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "heure_fin": {
+                "value": "",
+                "confidence": 0.0
+            },
+            "type": {
+                "value": "0 0",
+                "confidence": 0.0
+            }
+        },
         "seance9": {
             "date": {
                 "value": "",
@@ -175,26 +175,8 @@
                 "confidence": 0.0
             },
             "type": {
-                "value": "1961 62",
+                "value": "0 0",
                 "confidence": 0.0
-            }
-        },
-        "seance10": {
-            "date": {
-                "value": "",
-                "confidence": 0.0
-            },
-            "heure_debut": {
-                "value": "",
-                "confidence": 0.0
-            },
-            "heure_fin": {
-                "value": "",
-                "confidence": 0.0
-            },
-            "type": {
-                "value": "1961 62m",
-                "confidence": 0.09
             }
         }
     },

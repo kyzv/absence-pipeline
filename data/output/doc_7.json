@@ -1,5 +1,5 @@
 {
-    "doc_id": "doc_4",
+    "doc_id": "doc_7",
     "filiere": {
         "value": "Informatique décisionnelle et statistiques 2ème année",
         "confidence": 1.0
@@ -9,48 +9,48 @@
         "confidence": 1.0
     },
     "enseignant": {
-        "value": "the President would be written to",
-        "confidence": 0.32
+        "value": "Pr. Rachid Aitdaoud",
+        "confidence": 0.49
     },
     "module": {
-        "value": "Deploiment d' Application Data sous linux",
-        "confidence": 0.7
+        "value": "Deploiment d' Application Datas",
+        "confidence": 0.61
     },
     "seances": {
         "seance1": {
             "date": {
-                "value": "",
-                "confidence": 0.0
+                "value": "14/03/2026",
+                "confidence": 0.59
             },
             "heure_debut": {
-                "value": "10h00",
-                "confidence": 0.72
+                "value": "",
+                "confidence": 1.0
             },
             "heure_fin": {
                 "value": "",
-                "confidence": 0.0
+                "confidence": 1.0
             },
             "type": {
-                "value": "CVS .",
-                "confidence": 0.0
+                "value": "",
+                "confidence": 1.0
             }
         },
         "seance2": {
             "date": {
-                "value": "",
-                "confidence": 0.0
+                "value": "14/03/2026",
+                "confidence": 0.56
             },
             "heure_debut": {
                 "value": "",
-                "confidence": 0.0
+                "confidence": 1.0
             },
             "heure_fin": {
                 "value": "",
-                "confidence": 0.0
+                "confidence": 1.0
             },
             "type": {
-                "value": "'",
-                "confidence": 0.0
+                "value": "",
+                "confidence": 1.0
             }
         },
         "seance3": {
@@ -60,11 +60,11 @@
             },
             "heure_debut": {
                 "value": "",
-                "confidence": 0.0
+                "confidence": 1.0
             },
             "heure_fin": {
                 "value": "",
-                "confidence": 0.0
+                "confidence": 1.0
             },
             "type": {
                 "value": "0 0",
@@ -73,8 +73,8 @@
         },
         "seance4": {
             "date": {
-                "value": "21/02/2026",
-                "confidence": 0.57
+                "value": "28/03/2026",
+                "confidence": 0.62
             },
             "heure_debut": {
                 "value": "",
@@ -82,11 +82,11 @@
             },
             "heure_fin": {
                 "value": "",
-                "confidence": 0.0
+                "confidence": 1.0
             },
             "type": {
-                "value": "0 0",
-                "confidence": 0.0
+                "value": "crs",
+                "confidence": 0.44
             }
         },
         "seance5": {
@@ -100,17 +100,17 @@
             },
             "heure_fin": {
                 "value": "",
-                "confidence": 0.0
+                "confidence": 1.0
             },
             "type": {
-                "value": "2CNB .",
+                "value": "CNS",
                 "confidence": 0.0
             }
         },
         "seance6": {
             "date": {
-                "value": "20/02/?",
-                "confidence": 0.24
+                "value": "04/04/2026",
+                "confidence": 0.49
             },
             "heure_debut": {
                 "value": "",
@@ -118,35 +118,35 @@
             },
             "heure_fin": {
                 "value": "",
-                "confidence": 0.0
+                "confidence": 1.0
             },
             "type": {
-                "value": "INS",
-                "confidence": 0.0
+                "value": "crs",
+                "confidence": 0.54
             }
         },
         "seance7": {
             "date": {
-                "value": "28/02/2026",
-                "confidence": 0.39
-            },
-            "heure_debut": {
                 "value": "",
                 "confidence": 0.0
+            },
+            "heure_debut": {
+                "value": "13h00",
+                "confidence": 0.87
             },
             "heure_fin": {
                 "value": "",
-                "confidence": 0.0
+                "confidence": 1.0
             },
             "type": {
-                "value": "EV",
-                "confidence": 0.0
+                "value": "cnt",
+                "confidence": 0.54
             }
         },
         "seance8": {
             "date": {
-                "value": "",
-                "confidence": 0.0
+                "value": "04/04/2026",
+                "confidence": 0.53
             },
             "heure_debut": {
                 "value": "",
@@ -154,11 +154,11 @@
             },
             "heure_fin": {
                 "value": "",
-                "confidence": 0.0
+                "confidence": 1.0
             },
             "type": {
-                "value": "1961 62m.",
-                "confidence": 0.11
+                "value": "ONS",
+                "confidence": 0.0
             }
         },
         "seance9": {
@@ -172,11 +172,11 @@
             },
             "heure_fin": {
                 "value": "",
-                "confidence": 0.0
+                "confidence": 1.0
             },
             "type": {
-                "value": "1961 62",
-                "confidence": 0.0
+                "value": "TP",
+                "confidence": 0.49
             }
         },
         "seance10": {
@@ -190,11 +190,11 @@
             },
             "heure_fin": {
                 "value": "",
-                "confidence": 0.0
+                "confidence": 1.0
             },
             "type": {
-                "value": "1961 62m",
-                "confidence": 0.09
+                "value": "offs .",
+                "confidence": 0.32
             }
         }
     },
