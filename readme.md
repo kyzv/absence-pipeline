@@ -105,23 +105,16 @@ git clone https://github.com/votre-nom/absence-pipeline.git
 cd absence-pipeline
 ```
 
-1. **Créer un environnement virtuel** (Python 3.12 recommandé)
-```bash
-python -m venv venv
-source venv/bin/activate    # Linux/Mac
-venv\Scripts\activate       # Windows
-```
-
-1. **Installer les dépendances**
+2. **Installer les dépendances**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. **Installer Tesseract OCR**
+3. **Installer Tesseract OCR**
   - Télécharger depuis [https://tesseractocr.org/](https://tesseractocr.org/) et s’assurer que tesseract.exe est dans le PATH, ou ajuster le chemin dans les scripts src/ocr_header.py et src/ocr_students.py.
 
-5. Téléchargement du modèle TrOCR
+4. Téléchargement du modèle TrOCR
   - Le premier lancement de ocr_header.py téléchargera automatiquement microsoft/trocr-large-handwritten (≈2 Go). Une bonne connexion et un espace disque suffisant sont nécessaires.
 
 ## Configuration des dictionnaires
