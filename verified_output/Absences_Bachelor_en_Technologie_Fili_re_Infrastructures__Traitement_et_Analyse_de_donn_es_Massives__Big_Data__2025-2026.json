@@ -339,6 +339,1934 @@
                     "prenom": "MOHAMED"
                 }
             ]
+        },
+        "doc_1": {
+            "metadata": {
+                "filiere": "Bachelor en Technologie Filière Infrastructures, Traitement et Analyse de données Massives (Big Data)",
+                "annee": "2025-2026",
+                "enseignant": "",
+                "module": "Python pour le data science",
+                "seances": {
+                    "seance1": {
+                        "date": "",
+                        "heure_debut": "",
+                        "heure_fin": "10h30",
+                        "type": "CYS"
+                    },
+                    "seance2": {
+                        "date": "",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": "crs"
+                    },
+                    "seance3": {
+                        "date": "",
+                        "heure_debut": "8h30",
+                        "heure_fin": "14h30",
+                        "type": "cnt"
+                    },
+                    "seance4": {
+                        "date": "",
+                        "heure_debut": "",
+                        "heure_fin": "12h40",
+                        "type": "crs"
+                    },
+                    "seance5": {
+                        "date": "",
+                        "heure_debut": "8h00",
+                        "heure_fin": "10h30",
+                        "type": "crs"
+                    },
+                    "seance6": {
+                        "date": "",
+                        "heure_debut": "10h00",
+                        "heure_fin": "12h00",
+                        "type": "cnt"
+                    },
+                    "seance7": {
+                        "date": "13/12/2025",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": "tp"
+                    },
+                    "seance8": {
+                        "date": "",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": "tp"
+                    },
+                    "seance9": {
+                        "date": "01/02/?",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": "tp"
+                    },
+                    "seance10": {
+                        "date": "29/02/2025",
+                        "heure_debut": "",
+                        "heure_fin": "",
+                        "type": "CES"
+                    }
+                }
+            },
+            "student_list_csv": "big_data.csv",
+            "absences": [
+                {
+                    "n_apo": "1",
+                    "nom": "Aouali",
+                    "prenom": "Salma",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "2",
+                    "nom": "ACHERAB",
+                    "prenom": "AYAANE",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "3",
+                    "nom": "Akenrez",
+                    "prenom": "Rayane",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "4",
+                    "nom": "Alouane",
+                    "prenom": "Mohamed Amine",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "5",
+                    "nom": "Babous",
+                    "prenom": "Ilyas",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "6",
+                    "nom": "Bendadab",
+                    "prenom": "Ayoub",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "7",
+                    "nom": "BENGANA",
+                    "prenom": "MOHAMMED",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "8",
+                    "nom": "Bensabou Mohamed Amine",
+                    "prenom": "nan",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "9",
+                    "nom": "Benzaid",
+                    "prenom": "FATIMA",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "10",
+                    "nom": "benzarab",
+                    "prenom": "abderahim",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "11",
+                    "nom": "biguene",
+                    "prenom": "rachid",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "12",
+                    "nom": "BLOKAJ",
+                    "prenom": "Achraf",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "13",
+                    "nom": "Boukhlane",
+                    "prenom": "Mohamed",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "14",
+                    "nom": "Boundia",
+                    "prenom": "samah",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "15",
+                    "nom": "chbana",
+                    "prenom": "MERIEME",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "16",
+                    "nom": "CHOUKI",
+                    "prenom": "Walid",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "17",
+                    "nom": "Damati",
+                    "prenom": "Elmehdi",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "18",
+                    "nom": "EL ATMANE",
+                    "prenom": "BILAL",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "19",
+                    "nom": "El Baz",
+                    "prenom": "Moad",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "20",
+                    "nom": "EL FAIZ",
+                    "prenom": "Tajeddine",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "21",
+                    "nom": "El fati",
+                    "prenom": "Nouhaila",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "22",
+                    "nom": "EL GRAFEL",
+                    "prenom": "FATIMA",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "23",
+                    "nom": "El hadi",
+                    "prenom": "Amine",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "24",
+                    "nom": "EL HAMRAOUI",
+                    "prenom": "YASSMINE",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "25",
+                    "nom": "EL JABARI",
+                    "prenom": "HIBA",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "26",
+                    "nom": "EL OUKAILI",
+                    "prenom": "Yassine",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "27",
+                    "nom": "ELATOUKY",
+                    "prenom": "NAWAL",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "28",
+                    "nom": "ELHAFIANE",
+                    "prenom": "NISRINE",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "29",
+                    "nom": "ELHILALI",
+                    "prenom": "HAJAR",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "30",
+                    "nom": "ELJABALI",
+                    "prenom": "YASSINE",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "31",
+                    "nom": "Etahaa",
+                    "prenom": "Youssef",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "32",
+                    "nom": "farah",
+                    "prenom": "fatima zahrae",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "33",
+                    "nom": "Fatih",
+                    "prenom": "Mohamed",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "34",
+                    "nom": "Hamid",
+                    "prenom": "Oussama",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "35",
+                    "nom": "HAROUAL",
+                    "prenom": "YASSINE",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": true
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "36",
+                    "nom": "IMAM",
+                    "prenom": "Fatima-Ezzahra",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "37",
+                    "nom": "jamti",
+                    "prenom": "maryem",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "38",
+                    "nom": "Jaouhari",
+                    "prenom": "Abdelouahed",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "39",
+                    "nom": "JENNATI",
+                    "prenom": "Abderrahman",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "40",
+                    "nom": "amhaou",
+                    "prenom": "karim",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "41",
+                    "nom": "KATIM",
+                    "prenom": "ILIAS",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "42",
+                    "nom": "Kerroum",
+                    "prenom": "Ali",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "43",
+                    "nom": "khalil",
+                    "prenom": "zohra",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "44",
+                    "nom": "KOUROUB",
+                    "prenom": "OUSSAMA",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "45",
+                    "nom": "Mlik",
+                    "prenom": "Younes",
+                    "seance_1": {
+                        "is_present": true
+                    },
+                    "seance_2": {
+                        "is_present": true
+                    },
+                    "seance_3": {
+                        "is_present": true
+                    },
+                    "seance_4": {
+                        "is_present": true
+                    },
+                    "seance_5": {
+                        "is_present": true
+                    },
+                    "seance_6": {
+                        "is_present": true
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": true
+                    },
+                    "seance_9": {
+                        "is_present": true
+                    },
+                    "seance_10": {
+                        "is_present": true
+                    }
+                },
+                {
+                    "n_apo": "46",
+                    "nom": "MOKABIT",
+                    "prenom": "OMAR",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "47",
+                    "nom": "NAJI",
+                    "prenom": "MOUSSAAB",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "48",
+                    "nom": "NEMRI",
+                    "prenom": "NOUHAILA",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "49",
+                    "nom": "Oubammou",
+                    "prenom": "Mustapha",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "50",
+                    "nom": "SABKI",
+                    "prenom": "RYAD",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "51",
+                    "nom": "tahin",
+                    "prenom": "yasser",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "52",
+                    "nom": "thiti",
+                    "prenom": "inas",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                },
+                {
+                    "n_apo": "53",
+                    "nom": "ZARRA",
+                    "prenom": "MOHAMED",
+                    "seance_1": {
+                        "is_present": false
+                    },
+                    "seance_2": {
+                        "is_present": false
+                    },
+                    "seance_3": {
+                        "is_present": false
+                    },
+                    "seance_4": {
+                        "is_present": false
+                    },
+                    "seance_5": {
+                        "is_present": false
+                    },
+                    "seance_6": {
+                        "is_present": false
+                    },
+                    "seance_7": {
+                        "is_present": false
+                    },
+                    "seance_8": {
+                        "is_present": false
+                    },
+                    "seance_9": {
+                        "is_present": false
+                    },
+                    "seance_10": {
+                        "is_present": false
+                    }
+                }
+            ]
         }
     }
 }
