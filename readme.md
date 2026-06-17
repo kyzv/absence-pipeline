@@ -105,23 +105,16 @@ git clone https://github.com/votre-nom/absence-pipeline.git
 cd absence-pipeline
 ```
 
-1. **Créer un environnement virtuel** (Python 3.12 recommandé)
-```bash
-python -m venv venv
-source venv/bin/activate    # Linux/Mac
-venv\Scripts\activate       # Windows
-```
-
-1. **Installer les dépendances**
+2. **Installer les dépendances**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. **Installer Tesseract OCR**
+3. **Installer Tesseract OCR**
   - Télécharger depuis [https://tesseractocr.org/](https://tesseractocr.org/) et s’assurer que tesseract.exe est dans le PATH, ou ajuster le chemin dans les scripts src/ocr_header.py et src/ocr_students.py.
 
-5. Téléchargement du modèle TrOCR
+4. Téléchargement du modèle TrOCR
   - Le premier lancement de ocr_header.py téléchargera automatiquement microsoft/trocr-large-handwritten (≈2 Go). Une bonne connexion et un espace disque suffisant sont nécessaires.
 
 ## Configuration des dictionnaires
@@ -267,13 +260,15 @@ Ce projet est un Proof of Concept développé dans des conditions réelles, avec
 
 | Problème | Description |
 | :--- | :--- |
+| **Conception des feuilles inadaptée au traitement automatique** | Les feuilles n’ont pas été conçues pour la lecture machine : absence de repères visuels clairs pour le recadrage ou la segmentation, émargement par signature manuscrite  plutôt que par case à cocher, en‑tête entièrement manuscrit sans contrainte de lisibilité pour l’OCR. Le support lui‑même est hostile au traitement automatique, ce qui explique une large part des échecs. |
 | **OCR manuscrit non fiable** | TrOCR a été pré-entraîné sur de l’écriture anglaise. Il échoue fréquemment sur l’écriture cursive française, surtout avec la diversité des styles des enseignants. Le fuzzy matching corrige partiellement, mais pas suffisamment. |
 | **Détection d’absences incohérente** | L’heuristique densité + mini-OCR est trop fragile face à la variété des marques : signature appuyée, point discret, trait vertical, « Abs » mal orienté, ratures. Le taux de faux positifs/négatifs reste trop élevé. |
 | **Variabilité extrême des feuilles** | Nombre de colonnes de séances variable (9 à 10), fusion/séparation des colonnes « Nom » et « Prénom », cellules grisées ou non, remplissages négligés. Ratures. signatures en dehors des cellules...etc Les règles de recadrage et de découpage peuvent échouer sur certains documents. |
 | **Absence d’apprentissage supervisé** | Ni le modèle HTR ni le classifieur de présence/absence n’ont été adaptés au domaine via un entraînement sur des données locales annotées. |
+| 
 
 
-En résumé : L’architecture, le prétraitement et la modularité sont solides et démontrent la faisabilité. En revanche, les deux briques critiques (reconnaissance de l’écriture et interprétation des émargements) ne sont pas opérationnelles en l’état.
+> En résumé : L’architecture, le prétraitement et la modularité sont solides et démontrent la faisabilité. En revanche, les deux briques critiques (reconnaissance de l’écriture et interprétation des émargements) ne sont pas opérationnelles en l’état.
 
 ---
 

@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 
+=======
+"""
+src/preprocessing.py
+--------------------
+
+  1. Load the image from disk.
+  2. Fix orientation  – if the scan is portrait (h > w), rotate it to landscape.
+  3. Enhance contrast – CLAHE so ink (red/blue handwriting) pops against the background.
+  4. Detect the table grid lines using morphological operations (long horizontal/vertical kernels).
+  5. Deskew – measure the tilt of those lines via HoughLinesP and correct it.
+  6. Tight-crop – project the grid-line pixels onto each axis and cut exactly to where lines exist.
+
+"""
+>>>>>>> c7c161267fc4489ac10746773a77ef47e58bc3d2
 
 import cv2
 import numpy as np
@@ -7,7 +22,13 @@ import re
 
 
 def prepare(image_path: str) -> np.ndarray:
+<<<<<<< HEAD
     
+=======
+    """
+    
+    """
+>>>>>>> c7c161267fc4489ac10746773a77ef47e58bc3d2
     img = _load(image_path)
     img = _fix_orientation(img)
     img = _enhance_contrast(img)
@@ -50,6 +71,18 @@ def _enhance_contrast(img: np.ndarray) -> np.ndarray:
 
 
 def _build_line_kernels(img: np.ndarray):
+<<<<<<< HEAD
+=======
+    """
+    Return (h_kernel, v_kernel) sized to detect the full-width table lines
+    while ignoring shorter strokes like individual letters.
+
+    The horizontal kernel is 150 px wide — only a line spanning at least 150 px
+    survives MORPH_OPEN.  The vertical kernel is 100 px tall for the same reason.
+     uses slightly smaller kernels here so that grid lines broken by signatures
+    are not completely erased.
+    """
+>>>>>>> c7c161267fc4489ac10746773a77ef47e58bc3d2
     h_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (150, 1))
     v_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, 100))
     return h_kernel, v_kernel
